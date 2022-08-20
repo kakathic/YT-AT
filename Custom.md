@@ -37,7 +37,7 @@ Xoa=1
 
 **Language filter**
 ---
-> It will delete all other languages ​​except the one listed below 
+> It will delete all other languages ​​except the one listed below <br/>
 > For example: `vi` means vietnam 
 
 Language=vi
