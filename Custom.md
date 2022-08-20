@@ -40,7 +40,7 @@ Xoa=1
 > It will delete all other languages ​​except the one listed below <br/>
 > For example: `vi` means vietnam 
 
-Language=vi
+Language=
 
 
 **Turn off feature**
