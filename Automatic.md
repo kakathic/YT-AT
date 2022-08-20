@@ -5,8 +5,7 @@
 
 **Version**
 ---
-> `17-32-35` >> `17.32.35`
-
+> `17-32-35` >> `17.32.35`<br/>
 > Click here to see the supported YouTube version using the tool: [com.google.android.youtube](https://github.com/revanced/revanced-patches)
 
 
