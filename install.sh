@@ -66,6 +66,10 @@ cp -rf "$Likk/lib/YouTube.apk" "$Likk/lib/YouTube2.apk"
 zip -q -r -9 "$Likk/lib/YouTube.apk" -d lib/*
 zip -q -r -9 "$Likk/lib/YouTube2.apk" -d $lib
 
+unzip -qo "$Likk/lib/YouTube.apk" 'lib/*' -d $Likk/Module
+mv -f $Likk/Module/lib/$(Getpro Device) $Likk/Module/lib/$ach
+
+
 [ "$(Getpro Icons)" == 1 ] && icon="-e custom-branding"
 [ "$(Getpro Amoled)" == 1 ] && amoled="-e amoled"
 
