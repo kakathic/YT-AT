@@ -1,4 +1,5 @@
 # Kakathic
+sudo apt install zipalign >/dev/null
 
 Likk="$GITHUB_WORKSPACE"
 apktool () { java -jar $GITHUB_WORKSPACE/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar -api 33 "$@"; }
@@ -68,8 +69,6 @@ zip -q -r "$Likk/lib/YouTube2.apk" -d $lib
 
 unzip -qo "$Likk/lib/YouTube2.apk" 'lib/*' -d $Likk/Tav
 mv -f $Likk/Tav/lib/$(Getpro Device) $Likk/Tav/lib/$ach
-cd $Likk/Tav
-tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 
 [ "$(Getpro Icons)" == 1 ] && icon="-e custom-branding"
 [ "$(Getpro Amoled)" == 1 ] && amoled="-e amoled"
@@ -82,5 +81,10 @@ java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $
 
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/Up/YouTube_Microg.apk" -t $Likk/tmp --cn=kakathic $(cat $Likk/logk) -e microg-support $icon $amoled --mount >/dev/null
 
+
+
+cd $Likk/Tav
+tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
+
 cd $Likk/Module
-zip -q -r $Likk/Up/YouTube_$Vision_$ach.Zip *
+zip -q -r ''$Likk'/Up/YouTube_'$Vision'_'$ach'.Zip' *
