@@ -15,7 +15,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-          cache: gradle
       - name: Run code
         run: |
           chmod 777 install.sh
