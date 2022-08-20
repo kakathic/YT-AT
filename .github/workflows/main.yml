@@ -19,4 +19,8 @@ jobs:
         run: |
           chmod 777 install.sh
           . install.sh
-          
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: Apks
+          path: apk/*
