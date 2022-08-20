@@ -15,6 +15,16 @@ Taive "https://github.com$Tv2" "$Likk/lib/revanced-patches.jar"
 Tv3="$(Xem https://github.com/revanced/revanced-integrations/releases | grep '/releases/download' | grep -m1 '.apk' | cut -d \" -f2)"
 Taive "https://github.com$Tv3" "$Likk/lib/revanced-integrations.apk"
 
+# Tải Youtube
+Upk="https://www.apkmirror.com"
+User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
+Getlink () { curl -s -k -L -G -H "$User" "$1" | grep -m1 "forcebaseapk=true" | tr ' ' '\n' | grep -m1 "forcebaseapk=true" | cut -d '\"' -f2; }
+Upk1="$Upk$(Getlink "https://www.apkmirror.com/apk/google-inc/youtube/youtube-17-33-35-release/youtube-17-33-35-2-android-apk-download")"
+Upk2="$Upk$(Getlink $Upk1)"
+
+
+curl -# -k -L -H "$User" $Upk2 -o $Likk/lib/YouTube.apk
+
 java -jar $Likk/lib/revanced-cli.jar
 
 ls -1 $Likk/lib
