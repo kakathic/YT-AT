@@ -35,6 +35,14 @@ Amoled=1
 
 Xoa=1
 
+**Language filter**
+---
+> It will delete all other languages ​​except the one listed below 
+> For example: `vi` means vietnam 
+
+Language=vi
+
+
 **Turn off feature**
 ---
 > Take a look at [com.google.android.youtube](https://github.com/revanced/revanced-patches), <br/> To distinguish, add a space, And do not enter a new line
