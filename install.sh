@@ -6,7 +6,6 @@ Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
 Getpro () { grep -m1 "$1=" $Likk/Custom.md | cut -d = -f2; }
 
-
 ListTM="lib
 tmp
 Up
@@ -31,7 +30,7 @@ Upk="https://www.apkmirror.com"
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 Url1="$(curl -s -k -L -G -H "$User" "$Upk/apk/google-inc/youtube/youtube-$(Getpro Version)-release/youtube-$(Getpro Version)$2-android-apk-download/" | grep -m1 'downloadButton' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
 Url2="$Upk$(curl -s -k -L -G -H "$User" "$Upk$Url1" | grep -m1 '>here<' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
-curl -# -k -L -H "$User" $Url2 -o $Likk/lib/$1
+curl -s -k -L -H "$User" $Url2 -o $Likk/lib/$1
 }
 
 Taiyt 'YouTube.apk' '-2'
@@ -42,7 +41,6 @@ Vision2=$(echo $(Getpro Version) | sed 's|-||g')
 
 echo "version=$Vision
 versionCode=$Vision2" >> $Likk/Module/module.prop
-
 
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Module/common
 
@@ -64,7 +62,7 @@ cp -rf $Likk/bin/sqlite3_$ach $Likk/Module/common/sqlite3
 cp -rf "$Likk/lib/YouTube.apk" "$Likk/lib/YouTube2.apk"
 
 zip -q -r -9 "$Likk/lib/YouTube.apk" -d "lib/*"
-zip -q -r -9 "$Likk/lib/YouTube2.apk" -d "$lib"
+zip -q -r -9 "$Likk/lib/YouTube2.apk" -d $lib
 
 unzip -qo "$Likk/lib/YouTube.apk" 'lib/*' -d $Likk/Module
 mv -f $Likk/Module/lib/$(Getpro Device) $Likk/Module/lib/$ach
