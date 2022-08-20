@@ -37,6 +37,13 @@ curl -s -k -L -H "$User" $Upk2 -o $Likk/lib/$1
 Taiyt 'YouTube.apk' '-2'
 Taiyt 'YouTube.apks'
 
+Vision=$(echo $(Getpro Version) | tr '-' '.')
+Vision2=$(echo $(Getpro Version) | sed 's|-||g')
+
+echo "version=$Vision
+versionCode=$Vision2" >> $Likk/Module/module.prop
+
+
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Module/common
 
 if [ "$(Getpro Device)" == "arm64-v8a" ];then
@@ -70,4 +77,5 @@ java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $
 
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/Up/YouTube_Microg.apk" -t $Likk/tmp --cn=kakathic $(cat $Likk/logk) -e microg-support $icon $amoled --mount >/dev/null
 
-
+cd $Likk/Module
+zip -q -r -9 $Likk/Up/YouTube_$Vision.Zip
