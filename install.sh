@@ -28,6 +28,19 @@ Getlink () { curl -s -k -L -G -H "$User" "$1" | grep -m1 'forcebaseapk=true' | t
 Upk1="$Upk$(Getlink "https://www.apkmirror.com/apk/google-inc/youtube/youtube-17-32-35-release/youtube-17-32-35-2-android-apk-download/")"
 Upk2="$Upk$(Getlink $Upk1)"
 
+if [ "$libchek" == "arm64-v8a" ];then
+lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
+ach="arm64"
+elif [ "$libchek" == "x86" ];then
+lib="lib/x86_64/* lib/arm64-v8a/* lib/armeabi-v7a/*"
+ach="x86"
+elif [ "$libchek" == "x86_64" ];then
+lib="lib/x86/* lib/arm64-v8a/* lib/armeabi-v7a/*"
+ach="x86_64"
+else
+lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
+ach="arm"
+fi
 
 curl -s -k -L -H "$User" $Upk2 -o $Likk/lib/YouTube.apk
 
