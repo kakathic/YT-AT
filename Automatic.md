@@ -17,6 +17,6 @@
 
 **Turn off feature**
 ---
-> Take a look at [com.google.android.youtube](https://github.com/revanced/revanced-patches)
+> Take a look at [com.google.android.youtube](https://github.com/revanced/revanced-patches), To distinguish, add a space
 
-- Feature=
+- Feature=hide-shorts-button always-autorepeat hide-autoplay-button 
