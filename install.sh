@@ -38,13 +38,13 @@ Taiyt 'YouTube.apks'
 
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Module/common
 
-if [ "$libchek" == "arm64-v8a" ];then
+if [ "$(Getpro Device)" == "arm64-v8a" ];then
 lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
 ach="arm64"
-elif [ "$libchek" == "x86" ];then
+elif [ "$(Getpro Device)" == "x86" ];then
 lib="lib/x86_64/* lib/arm64-v8a/* lib/armeabi-v7a/*"
 ach="x86"
-elif [ "$libchek" == "x86_64" ];then
+elif [ "$(Getpro Device)" == "x86_64" ];then
 lib="lib/x86/* lib/arm64-v8a/* lib/armeabi-v7a/*"
 ach="x64"
 else
@@ -53,8 +53,9 @@ ach="arm"
 fi
 
 cp -rf $Likk/bin/sqlite3_$ach $Likk/Module/common/sqlite3
-
 zip -q -r -9 "$Likk/apk/YouTube.apk" -d $lib
+
+[ "$(Getpro Icons)" == 1 ] && icon="-e custom-branding"
 
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp --cn=kakathic --mount
 
