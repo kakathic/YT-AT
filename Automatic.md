@@ -8,3 +8,16 @@
 
 - Device=arm64-v8a
 
+**Icons**
+---
+> 0. Revanced icon, 1. Original icon
+
+- Icons=1
+
+**Turn off feature**
+---
+> Take a look at [com.google.android.youtube](https://github.com/revanced/revanced-patches)
+> For example add `amoled` it will turn off the jet black theme
+> Add `microg-support` support rooted devices
+
+- Feature=""
