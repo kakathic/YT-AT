@@ -61,10 +61,10 @@ fi
 cp -rf $Likk/bin/sqlite3_$ach $Likk/Module/common/sqlite3
 cp -rf "$Likk/lib/YouTube.apk" "$Likk/lib/YouTube2.apk"
 
-zip -q -r -9 "$Likk/lib/YouTube.apk" -d "lib/*"
+zip -q -r -9 "$Likk/lib/YouTube.apk" -d 'lib/*'
 zip -q -r -9 "$Likk/lib/YouTube2.apk" -d $lib
 
-unzip -qo "$Likk/lib/YouTube.apk" 'lib/*' -d $Likk/Module
+unzip -qo "$Likk/lib/YouTube2.apk" 'lib/*' -d $Likk/Module
 mv -f $Likk/Module/lib/$(Getpro Device) $Likk/Module/lib/$ach
 
 
