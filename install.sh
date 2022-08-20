@@ -31,7 +31,7 @@ Upk2="$Upk$(Getlink $Upk1)"
 
 curl -s -k -L -H "$User" $Upk2 -o $Likk/lib/YouTube.apk
 
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp --mount
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp --cn=kakathic --mount
 
 
 
