@@ -25,7 +25,7 @@ Taive "https://github.com$Tv3" "$Likk/lib/revanced-integrations.apk"
 Upk="https://www.apkmirror.com"
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 Getlink () { curl -s -k -L -G -H "$User" "$1" | grep -m1 'forcebaseapk=true' | tr ' ' '\n' | grep -m1 'forcebaseapk=true' | cut -d \" -f2; }
-Upk1="$Upk$(Getlink "https://www.apkmirror.com/apk/google-inc/youtube/youtube-17-33-35-release/youtube-17-33-35-2-android-apk-download")"
+Upk1="$Upk$(Getlink "https://www.apkmirror.com/apk/google-inc/youtube/youtube-17-32-35-release/youtube-17-32-35-2-android-apk-download/")"
 Upk2="$Upk$(Getlink $Upk1)"
 
 
