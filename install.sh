@@ -52,8 +52,9 @@ lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
 ach="arm"
 fi
 
-zip -q -r -9 "$Likk/apk/YouTube.apk" -d $lib
+cp -rf $Likk/bin/sqlite3_$ach $Likk/Module/common/sqlite3
 
+zip -q -r -9 "$Likk/apk/YouTube.apk" -d $lib
 
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp --cn=kakathic --mount
 
