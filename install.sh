@@ -36,8 +36,7 @@ curl -s -k -L -H "$User" $Upk2 -o $Likk/lib/$1
 Taiyt 'YouTube.apk' '-2'
 Taiyt 'YouTube.apks'
 
-
-
+unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/apk
 
 if [ "$libchek" == "arm64-v8a" ];then
 lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
