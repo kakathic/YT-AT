@@ -29,6 +29,11 @@ Version=17-32-35
 
 Amoled=1
 
+**Optimization**
+---
+> 0. No, 1. Yes
+
+Xoa=1
 
 **Turn off feature**
 ---
