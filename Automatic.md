@@ -1,4 +1,5 @@
-## Custom
+**Custom**
+---
 
 - Items marked with `=` you can modify it 
 
@@ -17,7 +18,5 @@
 **Turn off feature**
 ---
 > Take a look at [com.google.android.youtube](https://github.com/revanced/revanced-patches)
-> For example add `amoled` it will turn off the jet black theme
-> Add `microg-support` support rooted devices
 
-- Feature=""
+- Feature=
