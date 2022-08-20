@@ -4,7 +4,7 @@ Likk="$GITHUB_WORKSPACE"
 
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
-Getpro () { grep -m1 "$1=" $Likk/Automatic.md | cut -d = -f2; }
+Getpro () { grep -m1 "$1=" $Likk/Custom.md | cut -d = -f2; }
 
 
 ListTM="lib
