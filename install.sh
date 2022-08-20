@@ -82,7 +82,8 @@ apktool d -s -f "$Likk/lib/YouTube2.apk" -o "$Likk/YouTube2"
 
 if [ "$(grep -cm1 'vote_upvote' $Likk/*/res/values-vi/strings.xml)" != 1 ];then
 sed -i 's|</resources>||' $Likk/*/res/values-vi/strings.xml
-cat $Likk/Tools/strings.xml >> $Likk/*/res/values-vi/strings.xml
+cat $Likk/Tools/strings.xml >> $Likk/YouTube/res/values-vi/strings.xml
+cat $Likk/Tools/strings.xml >> $Likk/YouTube2/res/values-vi/strings.xml
 fi
 
 [ "$(Getpro Xoa)" == 1 ] && rm -fr $Likk/*/assets/fonts
