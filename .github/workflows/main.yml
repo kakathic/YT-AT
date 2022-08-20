@@ -1,4 +1,4 @@
-name: YouTube build
+name: YT build
 on:
   push:
     branches: [ "Vip" ]
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run a multi-line script
+      - name: Run code
         run: |
           chmod 777 install.sh
           . install.sh
