@@ -64,12 +64,6 @@ fi
 cp -rf $Likk/bin/sqlite3_$ach $Likk/Module/common/sqlite3
 cp -rf "$Likk/lib/YouTube.apk" "$Likk/lib/YouTube2.apk"
 
-zip -q -r "$Likk/lib/YouTube.apk" -d 'lib/*'
-zip -q -r "$Likk/lib/YouTube2.apk" -d $lib
-
-unzip -qo "$Likk/lib/YouTube2.apk" 'lib/*' -d $Likk/Tav
-mv -f $Likk/Tav/lib/$(Getpro Device) $Likk/Tav/lib/$ach
-
 [ "$(Getpro Icons)" == 1 ] && icon="-e custom-branding"
 [ "$(Getpro Amoled)" == 1 ] && amoled="-e amoled"
 
@@ -77,9 +71,9 @@ for vakl in $(Getpro Feature); do
 echo -n "-e $vakl " >> $Likk/logk
 done
 
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support $icon $amoled --mount
 
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/apk/YouTube2.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support $icon $amoled --mount
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/apk/YouTube2.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
 
 apktool d -s "$Likk/lib/YouTube.apk" -o "$Likk/YouTube"
 apktool d -s "$Likk/lib/YouTube2.apk" -o "$Likk/YouTube2"
@@ -89,7 +83,15 @@ sed -i 's|</resources>||' $Likk/*/res/values-vi/strings.xml
 cat $Likk/Tools/strings.xml >> $Likk/*/res/values-vi/strings.xml
 fi
 
+[ "$(Getpro Xoa)" == 1 ] && rm -fr $Likk/*/assets/fonts
+#[ "$(Getpro Name)" == 1 ] &&
 
+
+zip -q -r "$Likk/lib/YouTube.apk" -d 'lib/*'
+zip -q -r "$Likk/lib/YouTube2.apk" -d $lib
+
+unzip -qo "$Likk/lib/YouTube2.apk" 'lib/*' -d $Likk/Tav
+mv -f $Likk/Tav/lib/$(Getpro Device) $Likk/Tav/lib/$ach
 
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
