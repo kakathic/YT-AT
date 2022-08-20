@@ -2,8 +2,8 @@
 sudo apt install zipalign >/dev/null
 
 Likk="$GITHUB_WORKSPACE"
-apktool () { java -jar $GITHUB_WORKSPACE/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar "$@"; }
-apksign () { java -jar $GITHUB_WORKSPACE/Tools/apksigner.jar sign --cert "$GITHUB_WORKSPACE/Tools/releasekey.x509.pem" --key "$GITHUB_WORKSPACE/Tools/releasekey.pk8" --out "$2" "$1"; }
+apktool () { java -jar $Likk/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar "$@"; }
+apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"; }
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
 Getpro () { grep -m1 "$1=" $Likk/Custom.md | cut -d = -f2; }
@@ -84,6 +84,10 @@ java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $
 apktool d -s "$Likk/lib/YouTube.apk" -o "$Likk/YouTube"
 apktool d -s "$Likk/lib/YouTube2.apk" -o "$Likk/YouTube2"
 
+if [ "$(grep -cm1 'vote_upvote' $Likk/*/res/values-vi/strings.xml)" != 1 ];then
+sed -i 's|</resources>||' $Likk/*/res/values-vi/strings.xml
+cat $Likk/Tools/strings.xml >> $Likk/*/res/values-vi/strings.xml
+fi
 
 
 
