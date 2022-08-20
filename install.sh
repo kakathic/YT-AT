@@ -108,7 +108,7 @@ mv -f $Likk/Tav/lib/$(Getpro Device) $Likk/Tav/lib/$ach
 
 zipalign -f 4 "$Likk/YouTube.apk" "$Likk/Tav/YouTube.apk"
 zipalign -f 4 "$Likk/YouTube2.apk" "$Likk/tmp/YouTube2.apk"
-apksign "$Likk/tmp/YouTube2.apk" "$Likk/Up/YouTube-$Vision-$ach.apk"
+#apksign "$Likk/tmp/YouTube2.apk" "$Likk/Up/YouTube-$Vision-$ach.apk"
 
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
