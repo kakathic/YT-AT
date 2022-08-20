@@ -2,7 +2,7 @@
 sudo apt install zipalign >/dev/null
 
 Likk="$GITHUB_WORKSPACE"
-apktool () { java -jar $Likk/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar --use-aapt2 "$@"; }
+apktool () { java -jar $Likk/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar -api 33 --use-aapt2 "$@"; }
 apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"; }
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
