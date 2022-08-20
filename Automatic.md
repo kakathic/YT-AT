@@ -3,6 +3,14 @@
 
 - Items marked with `=` you can modify it 
 
+**Version**
+---
+> `17-32-35` >> `17.32.35`
+> Click here to see the supported YouTube version using the tool: [com.google.android.youtube](https://github.com/revanced/revanced-patches)
+
+
+Version=17-32-35
+
 **Device**
 ---
 > armeabi-v7a, arm64-v8a, x86, x86_64
