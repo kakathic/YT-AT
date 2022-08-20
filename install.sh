@@ -25,13 +25,13 @@ Tv3="$(Xem https://github.com/revanced/revanced-integrations/releases | grep '/r
 Taive "https://github.com$Tv3" "$Likk/lib/revanced-integrations.apk"
 
 # Tải Youtube
+
 Taiyt () {
 Upk="https://www.apkmirror.com"
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
-Getlink () { curl -s -k -L -G -H "$User" "$1" | grep -m1 'forcebaseapk=true' | tr ' ' '\n' | grep -m1 'forcebaseapk=true' | cut -d \" -f2; }
-Upk1="$Upk$(Getlink "https://www.apkmirror.com/apk/google-inc/youtube/youtube-$(Getpro Version)-release/youtube-$(Getpro Version)$2-android-apk-download/")"
-Upk2="$Upk$(Getlink $Upk1)"
-curl -s -k -L -H "$User" $Upk2 -o $Likk/lib/$1
+Url1="$(curl -s -k -L -G -H "$User" "$Upk/apk/google-inc/youtube/youtube-$(Getpro Version)-release/youtube-$(Getpro Version)$2-android-apk-download/" | grep -m1 'downloadButton' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
+Url2="$Upk$(curl -s -k -L -G -H "$User" "$Upk$Url1" | grep -m1 '>here<' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
+curl -# -k -L -H "$User" $Url2 -o $Likk/lib/$1
 }
 
 Taiyt 'YouTube.apk' '-2'
