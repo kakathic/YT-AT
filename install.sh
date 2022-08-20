@@ -78,4 +78,4 @@ java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/Up/YouTube_Microg.apk" -t $Likk/tmp --cn=kakathic $(cat $Likk/logk) -e microg-support $icon $amoled --mount >/dev/null
 
 cd $Likk/Module
-zip -q -r -9 $Likk/Up/YouTube_$Vision.Zip
+zip -q -r -9 $Likk/Up/YouTube_$Vision_$ach.Zip
