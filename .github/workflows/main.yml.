@@ -19,7 +19,7 @@ jobs:
         run: |
           chmod 777 install.sh
           . install.sh
-      - name: Tải lên Zip
+      - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
           name: YT-AT
