@@ -45,7 +45,7 @@ Vision2="$(echo $(Getpro Version) | sed 's|-||g')"
 echo "version=$Vision
 versionCode=$Vision2" >> $Likk/Module/module.prop
 
-unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Module/common
+unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 
 if [ "$(Getpro Device)" == "arm64-v8a" ];then
 lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
@@ -61,6 +61,7 @@ lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
 ach="arm"
 fi
 
+cp -rf $Likk/Tools/Microg.apk $Likk/Up
 cp -rf $Likk/bin/sqlite3_$ach $Likk/Module/common/sqlite3
 cp -rf "$Likk/lib/YouTube.apk" "$Likk/lib/YouTube2.apk"
 
@@ -75,8 +76,8 @@ java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $
 
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/apk/YouTube2.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
 
-apktool d -s "$Likk/lib/YouTube.apk" -o "$Likk/YouTube"
-apktool d -s "$Likk/lib/YouTube2.apk" -o "$Likk/YouTube2"
+apktool d -s -f "$Likk/lib/YouTube.apk" -o "$Likk/YouTube"
+apktool d -s -f "$Likk/lib/YouTube2.apk" -o "$Likk/YouTube2"
 
 if [ "$(grep -cm1 'vote_upvote' $Likk/*/res/values-vi/strings.xml)" != 1 ];then
 sed -i 's|</resources>||' $Likk/*/res/values-vi/strings.xml
@@ -84,14 +85,19 @@ cat $Likk/Tools/strings.xml >> $Likk/*/res/values-vi/strings.xml
 fi
 
 [ "$(Getpro Xoa)" == 1 ] && rm -fr $Likk/*/assets/fonts
-#[ "$(Getpro Name)" == 1 ] &&
 
+apktool b -c -f "$Likk/YouTube" -o "$Likk/YouTube.apk"
+apktool b -c -f "$Likk/YouTube2" -o "$Likk/YouTube2.apk"
 
-zip -q -r "$Likk/lib/YouTube.apk" -d 'lib/*'
-zip -q -r "$Likk/lib/YouTube2.apk" -d $lib
+zip -q -r "$Likk/YouTube.apk" -d 'lib/*'
+zip -q -r "$Likk/YouTube2.apk" -d $lib
 
-unzip -qo "$Likk/lib/YouTube2.apk" 'lib/*' -d $Likk/Tav
+unzip -qo "$Likk/YouTube2.apk" 'lib/*' -d $Likk/Tav
 mv -f $Likk/Tav/lib/$(Getpro Device) $Likk/Tav/lib/$ach
+
+zipalign -f 4 "$Likk/YouTube.apk" "$Likk/Tav/YouTube.apk"
+zipalign -f 4 "$Likk/YouTube2.apk" "$Likk/tmp/YouTube2.apk"
+apksign "$Likk/tmp/YouTube2.apk" "$Likk/Up/YouTube-$Vision-$ach.apk"
 
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
