@@ -36,7 +36,7 @@ lib="lib/x86_64/* lib/arm64-v8a/* lib/armeabi-v7a/*"
 ach="x86"
 elif [ "$libchek" == "x86_64" ];then
 lib="lib/x86/* lib/arm64-v8a/* lib/armeabi-v7a/*"
-ach="x86_64"
+ach="x64"
 else
 lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
 ach="arm"
