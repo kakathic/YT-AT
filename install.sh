@@ -11,6 +11,7 @@ Getpro () { grep -m1 "$1=" $Likk/Custom.md | cut -d = -f2; }
 ListTM="lib
 tmp
 Up
+Nn
 Tav
 apk"
 
@@ -85,6 +86,15 @@ cat $Likk/Tools/strings.xml >> $Likk/*/res/values-vi/strings.xml
 fi
 
 [ "$(Getpro Xoa)" == 1 ] && rm -fr $Likk/*/assets/fonts
+
+if [ "$(Getpro Language)" ];then
+cp -rf $Likk/*/res/values-"$(Getpro Language)"* $Likk/Nn
+cp -rf $Likk/*/res/values $Likk/Nn
+for kggh in $Likk/*/res/*/strings.xml; do
+rm -fr ${kggh%/*}
+done
+cp -rf $Likk/Nn/* $Likk/*/res
+fi
 
 apktool b -c -f "$Likk/YouTube" -o "$Likk/YouTube.apk"
 apktool b -c -f "$Likk/YouTube2" -o "$Likk/YouTube2.apk"
