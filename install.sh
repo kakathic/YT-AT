@@ -9,6 +9,7 @@ Getpro () { grep -m1 "$1=" $Likk/Automatic.md | cut -d = -f2; }
 
 ListTM="lib
 tmp
+Up
 apk"
 
 for Vak in $ListTM; do
@@ -53,10 +54,10 @@ ach="arm"
 fi
 
 cp -rf $Likk/bin/sqlite3_$ach $Likk/Module/common/sqlite3
-cp -rf "$Likk/apk/YouTube.apk" "$Likk/apk/YouTube2.apk"
+cp -rf "$Likk/lib/YouTube.apk" "$Likk/lib/YouTube2.apk"
 
-zip -q -r -9 "$Likk/apk/YouTube.apk" -d lib/*
-zip -q -r -9 "$Likk/apk/YouTube2.apk" -d $lib
+zip -q -r -9 "$Likk/lib/YouTube.apk" -d lib/*
+zip -q -r -9 "$Likk/lib/YouTube2.apk" -d $lib
 
 [ "$(Getpro Icons)" == 1 ] && icon="-e custom-branding"
 [ "$(Getpro Amoled)" == 1 ] && amoled="-e amoled"
@@ -65,8 +66,8 @@ for vakl in $(Getpro Feature); do
 echo -n "-e $vakl " >> $Likk/logk
 done
 
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp --cn=kakathic $(cat $Likk/logk) $icon $amoled --mount
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Module/common/YouTube.apk" -t $Likk/tmp --cn=kakathic $(cat $Likk/logk) $icon $amoled --mount
 
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/apk/YouTube_Microg.apk" -t $Likk/tmp --cn=kakathic $(cat $Likk/logk) -e microg-support $icon $amoled --mount >/dev/null
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/Up/YouTube_Microg.apk" -t $Likk/tmp --cn=kakathic $(cat $Likk/logk) -e microg-support $icon $amoled --mount >/dev/null
 
 
