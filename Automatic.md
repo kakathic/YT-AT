@@ -23,6 +23,13 @@ Version=17-32-35
 
 - Icons=1
 
+**Amoled**
+---
+> 0. Black, 1. Dark
+
+Amoled=1
+
+
 **Turn off feature**
 ---
 > Take a look at [com.google.android.youtube](https://github.com/revanced/revanced-patches), <br/> To distinguish, add a space, And do not enter a new line
