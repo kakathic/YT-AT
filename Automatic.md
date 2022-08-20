@@ -6,6 +6,7 @@
 **Version**
 ---
 > `17-32-35` >> `17.32.35`
+
 > Click here to see the supported YouTube version using the tool: [com.google.android.youtube](https://github.com/revanced/revanced-patches)
 
 
@@ -25,6 +26,6 @@ Version=17-32-35
 
 **Turn off feature**
 ---
-> Take a look at [com.google.android.youtube](https://github.com/revanced/revanced-patches), To distinguish, add a space, And do not enter a new line
+> Take a look at [com.google.android.youtube](https://github.com/revanced/revanced-patches), <br/> To distinguish, add a space, And do not enter a new line
 
 - Feature=hide-shorts-button always-autorepeat hide-autoplay-button 
