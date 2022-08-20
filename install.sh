@@ -4,6 +4,8 @@ Likk="$GITHUB_WORKSPACE"
 
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
+Getpro () { grep -m1 "$1=" $Likk/Automatic | cut -d = -f2; }
+
 
 ListTM="lib
 tmp
@@ -22,11 +24,20 @@ Tv3="$(Xem https://github.com/revanced/revanced-integrations/releases | grep '/r
 Taive "https://github.com$Tv3" "$Likk/lib/revanced-integrations.apk"
 
 # Tải Youtube
+Taiyt () {
 Upk="https://www.apkmirror.com"
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 Getlink () { curl -s -k -L -G -H "$User" "$1" | grep -m1 'forcebaseapk=true' | tr ' ' '\n' | grep -m1 'forcebaseapk=true' | cut -d \" -f2; }
-Upk1="$Upk$(Getlink "https://www.apkmirror.com/apk/google-inc/youtube/youtube-17-32-35-release/youtube-17-32-35-2-android-apk-download/")"
+Upk1="$Upk$(Getlink "https://www.apkmirror.com/apk/google-inc/youtube/youtube-$(Getpro Version)-release/youtube-$(Getpro Version)$2-android-apk-download/")"
 Upk2="$Upk$(Getlink $Upk1)"
+curl -s -k -L -H "$User" $Upk2 -o $Likk/lib/$1
+}
+
+Taiyt 'YouTube.apk' '-2'
+Taiyt 'YouTube.apks'
+
+
+
 
 if [ "$libchek" == "arm64-v8a" ];then
 lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
@@ -44,7 +55,6 @@ fi
 
 zip -q -r -9 "$Likk/apk/YouTube.apk" -d $lib
 
-curl -s -k -L -H "$User" $Upk2 -o $Likk/lib/YouTube.apk
 
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp --cn=kakathic --mount
 
