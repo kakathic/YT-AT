@@ -37,6 +37,8 @@ curl -s -k -L -H "$User" $Upk2 -o $Likk/lib/$1
 Taiyt 'YouTube.apk' '-2'
 Taiyt 'YouTube.apks'
 
+ls $Likk/lib
+
 Vision=$(echo $(Getpro Version) | tr '-' '.')
 Vision2=$(echo $(Getpro Version) | sed 's|-||g')
 
