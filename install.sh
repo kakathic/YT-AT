@@ -56,8 +56,9 @@ cp -rf $Likk/bin/sqlite3_$ach $Likk/Module/common/sqlite3
 zip -q -r -9 "$Likk/apk/YouTube.apk" -d $lib
 
 [ "$(Getpro Icons)" == 1 ] && icon="-e custom-branding"
+[ "$(Getpro Amoled)" == 1 ] && amoled="-e amoled"
 
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp --cn=kakathic --mount
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp --cn=kakathic $icon $amoled --mount
 
 
 
