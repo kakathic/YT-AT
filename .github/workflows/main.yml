@@ -13,4 +13,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           chmod 777 install.sh
-          . install
+          . install.sh
