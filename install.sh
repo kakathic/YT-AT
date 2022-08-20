@@ -77,9 +77,12 @@ for vakl in $(Getpro Feature); do
 echo -n "-e $vakl " >> $Likk/logk
 done
 
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Module/common/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
 
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/Up/YouTube_Microg.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support $icon $amoled --mount >/dev/null
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/apk/YouTube2.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support $icon $amoled --mount
+
+apktool d -s "$Likk/lib/YouTube.apk" -o "$Likk/YouTube"
+apktool d -s "$Likk/lib/YouTube2.apk" -o "$Likk/YouTube2"
 
 
 
