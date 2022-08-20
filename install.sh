@@ -37,8 +37,6 @@ curl -# -k -L -H "$User" $Url2 -o $Likk/lib/$1
 Taiyt 'YouTube.apk' '-2'
 Taiyt 'YouTube.apks'
 
-ls $Likk/lib
-
 Vision=$(echo $(Getpro Version) | tr '-' '.')
 Vision2=$(echo $(Getpro Version) | sed 's|-||g')
 
@@ -65,8 +63,8 @@ fi
 cp -rf $Likk/bin/sqlite3_$ach $Likk/Module/common/sqlite3
 cp -rf "$Likk/lib/YouTube.apk" "$Likk/lib/YouTube2.apk"
 
-zip -q -r -9 "$Likk/lib/YouTube.apk" -d lib/*
-zip -q -r -9 "$Likk/lib/YouTube2.apk" -d $lib
+zip -q -r -9 "$Likk/lib/YouTube.apk" -d "lib/*"
+zip -q -r -9 "$Likk/lib/YouTube2.apk" -d "$lib"
 
 unzip -qo "$Likk/lib/YouTube.apk" 'lib/*' -d $Likk/Module
 mv -f $Likk/Module/lib/$(Getpro Device) $Likk/Module/lib/$ach
