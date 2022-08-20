@@ -2,7 +2,7 @@
 sudo apt install zipalign >/dev/null
 
 Likk="$GITHUB_WORKSPACE"
-apktool () { java -jar $GITHUB_WORKSPACE/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar -api 33 "$@"; }
+apktool () { java -jar $GITHUB_WORKSPACE/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar "$@"; }
 apksign () { java -jar $GITHUB_WORKSPACE/Tools/apksigner.jar sign --cert "$GITHUB_WORKSPACE/Tools/releasekey.x509.pem" --key "$GITHUB_WORKSPACE/Tools/releasekey.pk8" --out "$2" "$1"; }
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
@@ -77,9 +77,9 @@ for vakl in $(Getpro Feature); do
 echo -n "-e $vakl " >> $Likk/logk
 done
 
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Module/common/YouTube.apk" -t $Likk/tmp --cn=kakathic $(cat $Likk/logk) $icon $amoled --mount
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Module/common/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
 
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/Up/YouTube_Microg.apk" -t $Likk/tmp --cn=kakathic $(cat $Likk/logk) -e microg-support $icon $amoled --mount >/dev/null
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/Up/YouTube_Microg.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support $icon $amoled --mount >/dev/null
 
 
 
