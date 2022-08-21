@@ -17,17 +17,8 @@ Getp () { grep_prop $1 $TMPDIR/module.prop; }
 
 # Giới thiệu
 print_modname() {
-
-if [ "$(settings get system system_locales)" == "vi-VN" ];then
-TT="EAQCAIHBXOTG4ZZANDQ3XGIKBIQCAIBAKRSWG23PNVRGC3TLHIQDCOJQGM2DSMBSGYYDIMBRG4FA
-UIBAEAQE233NN4WCAVTJMV2HIZLMEBIGC6J2EAYDGNBUGQYTGMJVHEFAUIBAEAQFM5LJEBWMHMTO
-M4QGW2GDWRXGOIDH4G5Y22JAYSIWTYN3Q5XCA5WDUBXSA47BXOISBRERNHQ3XB3OEB2GQ37BXKQW
-SIDD4G52OYJAOTB3I2JANDB2G6JANZUODOVPNYQHI2LOEB2ODO43NEXAUIBAEAQAUIBAEAQEXQ5K
-NZUCAVDFNRSWO4TBNU5CAQDUN5XWY5TJBI======"
-else
-TT="EAQCAIHBXOTG4ZZANDQ3XGIKBIQCAIBAKBQXS4DBNQ5CA2DUORYDULZPOBQXS4DBNQXG2ZJPNNQW
-WYLUNBUWGCRAEAQCACRAEAQCAS6DVJXGQICUMVWGKZ3SMFWTUICAORXW63DWNEFA===="
-fi
+TT="IRXW4YLUMUFAUIBAEAQFAYLZOBQWYORANB2HI4B2F4XXAYLZOBQWYLTNMUXWWYLLMF2GQ2LDBIFC
+AIBAEBBWQYLONZSWY4ZAKRSWYZLHOJQW2ORAIB2G633MOZUQU==="
 
 ui_print
 ui_print2 "Name: $(Getp name)"
@@ -41,7 +32,7 @@ ui_print
 # Bắt đầu cài đặt
 on_install() {
 
-[ "$ARCH" == "arm64" ] || abort "    This module only supports arm64 devices
+[ -e "$TMPDIR/$ARCH" ] || abort "    This module only supports arm64 devices
 "
 
 ui_print2 "Automatic..."
@@ -72,10 +63,11 @@ apks=/data/local/tmp/apks
 rm -rf $apks
 mkdir -p $apks
 
+tar -xJf $TMPDIR/lib.tar.xz -C $TMPDIR
 cp -f $TMPDIR/base.apk $apks
-pm install -r $apks/*.apk
+pm install -r $apks/*.apk >&2
 hhkkdf="$( pm path com.google.android.youtube | grep base | cut -d : -f2 )"
-unzip -qo "$ZIPFILE" "lib/*" ${hhkkdf%/*} 
+cp -af $TMPDIR/lib ${hhkkdf%/*} 
 
 cp -f $TMPDIR/YouTube.apk $MODPATH/YouTube.apk >&2
 chcon u:object_r:apk_data_file:s0 "$MODPATH/YouTube.apk"
