@@ -1,0 +1,34 @@
+name: YT build
+on: 
+  push:
+    branches: [ "Vip" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+      - name: Run code
+        run: |
+          chmod 777 install.sh
+          . install.sh
+      - name: Upload json
+        uses: softprops/action-gh-release@v1
+        with:
+          tag: Up
+          name: Update
+          tag_name: Up
+          files: Up*.json
+          prerelease: true
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          tag: YT
+          name: YT-AT
+          tag_name: Download
+          files: Up/*
