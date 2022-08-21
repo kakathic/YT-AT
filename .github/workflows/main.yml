@@ -25,3 +25,9 @@ jobs:
           name: YT-AT
           tag_name: Download
           files: Up/*
+      - name: Upload json
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Update
+          tag_name: Up
+          files: Up*.json
