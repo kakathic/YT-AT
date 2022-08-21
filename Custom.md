@@ -27,7 +27,7 @@ Version=17-32-35
 ---
 > 0. Black, 1. Dark
 
-Amoled=0
+Amoled=1
 
 **Optimization**
 ---
