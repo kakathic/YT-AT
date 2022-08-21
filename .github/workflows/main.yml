@@ -1,5 +1,5 @@
 name: YT build
-on:
+on: [pull_request_target, issues]
   push:
     branches: [ "Vip" ]
   pull_request:
