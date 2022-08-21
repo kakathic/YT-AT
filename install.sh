@@ -61,7 +61,20 @@ fi
 
 echo > $Likk/Module/common/$ach
 cp -rf $Likk/bin/sqlite3_$ach $Likk/Module/common/sqlite3
-cp -rf "$Likk/lib/YouTube.apk" "$Likk/lib/YouTube2.apk"
+
+unzip -qo "$Likk/lib/YouTube.apk" "lib/$(Getpro Device)/*" -d $Likk/Tav
+mv -f $Likk/Tav/lib/$(Getpro Device) $Likk/Tav/lib/$ach
+
+[ "$(Getpro Xoa)" == 1 ] && xoa2='assets/fonts/*'
+
+if [ "$(Getpro Type)" != 1 ];then
+Taiyt 'YouTube.apks'
+unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
+zip -q -9 "$Likk/lib/YouTube.apk" -d 'lib/*' $xoa2
+else
+zip -q -9 "$Likk/lib/YouTube.apk" -d $lib $xoa2
+cp -rf $Likk/Tools/Microg.apk $Likk/Up
+fi
 
 [ "$(Getpro Icons)" == 1 ] && icon="-e custom-branding"
 if [ "$(Getpro Amoled)" == 1 ];then
@@ -73,25 +86,13 @@ for vakl in $(Getpro Feature); do
 echo -n "-e $vakl " >> $Likk/logk
 done
 
-[ "$(Getpro Xoa)" == 1 ] && xoa2='assets/fonts/*'
-
 if [ "$(Getpro Type)" != 1 ];then
-Taiyt 'YouTube.apks'
-unzip -qo "$Likk/apk/YouTube.apk" "lib/$(Getpro Device)/*" -d $Likk/Tav
-mv -f $Likk/Tav/lib/$(Getpro Device) $Likk/Tav/lib/$ach
-unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support $icon $amoled --mount
-zip -q "$Likk/apk/YouTube.apk" -d 'lib/*' $xoa2
-zipalign -f 4 "$Likk/apk/YouTube.apk" "$Likk/Tav/YouTube.apk"
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support $icon $amoled --mount
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
 zip -q -r ''$Likk'/Up/YouTube_Magisk_'$Vision'_'$ach$amoled2'.Zip' *
 else
-cp -rf $Likk/Tools/Microg.apk $Likk/Up
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/apk/YouTube2.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
-zip -q "$Likk/apk/YouTube2.apk" -d $lib $xoa2
-zipalign -f -p 4 "$Likk/apk/YouTube2.apk" "$Likk/tmp/YouTube2.apk"
-apksign "$Likk/tmp/YouTube2.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk"
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
 fi
 
