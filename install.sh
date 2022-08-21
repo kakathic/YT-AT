@@ -88,10 +88,9 @@ cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
 zip -q -r ''$Likk'/Up/YouTube_Magisk_'$Vision'_'$ach$amoled2'.Zip' *
-echo "version=$Vision
-versionCode=$Vision2
-updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-$ach$amoled2.json
-" >> $Likk/Module/module.prop
+echo 'version='$Vision'
+versionCode='$Vision2'
+updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
 echo '{
 "version": "'$Vision'",
 "versionCode": "'$Vision2'",
