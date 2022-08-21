@@ -88,18 +88,16 @@ cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
 zip -q -r ''$Likk'/Up/YouTube_Magisk_'$Vision'_'$ach$amoled2'.Zip' *
-else
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
-fi
-
 echo "version=$Vision
 versionCode=$Vision2
 updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-$ach$amoled2.json
 " >> $Likk/Module/module.prop
-
 echo '{
 "version": "'$Vision'",
 "versionCode": "'$Vision2'",
 "zipUrl": "https://github.com/kakathic/YT-AT/releases/download/Download/YouTube_Magisk_'$Vision'_'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/kakathic/YT-AT/Vip/Chaglog.md"
 }' > $Likk/Up-$ach$amoled2.json
+else
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
+fi
