@@ -4,7 +4,7 @@ Likk="$GITHUB_WORKSPACE"
 sudo apt install zip >/dev/null
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
-Getpro () { grep -m1 "$1=" $Likk/Custom.md | cut -d = -f2; }
+Getpro () { grep -m1 "$1=" $Likk/YouTube_Custom.md | cut -d = -f2; }
 apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"; }
 
 ListTM="lib
