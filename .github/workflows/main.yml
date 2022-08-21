@@ -2,8 +2,6 @@ name: YT build
 on: 
   push:
     branches: [ "Vip" ]
-  pull_request:
-    branches: [ "Vip" ]
   workflow_dispatch:
 jobs:
   build:
