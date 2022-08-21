@@ -80,17 +80,17 @@ java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $
 [ "$(Getpro Xoa)" == 1 ] && xoa2='assets/fonts/*'
 
 zip -q -r "$Likk/apk/YouTube.apk" -d 'lib/*' $xoa2
-zip -q -r "$Likk/apk/YouTube2.apk" -d $lib $xoa2
+zip -q -r -9 "$Likk/apk/YouTube2.apk" -d $lib $xoa2
 
 unzip -qo "$Likk/apk/YouTube2.apk" 'lib/*' -d $Likk/Tav
 mv -f $Likk/Tav/lib/$(Getpro Device) $Likk/Tav/lib/$ach
 
 zipalign -f 4 "$Likk/apk/YouTube.apk" "$Likk/Tav/YouTube.apk"
 zipalign -f 4 "$Likk/apk/YouTube2.apk" "$Likk/tmp/YouTube2.apk"
-apksign "$Likk/tmp/YouTube2.apk" "$Likk/Up/YouTube-$Vision-$ach.apk"
+apksign "$Likk/tmp/YouTube2.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach.apk"
 
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 
 cd $Likk/Module
-zip -q -r ''$Likk'/Up/YouTube_'$Vision'_'$ach'.Zip' *
+zip -q -r ''$Likk'/Up/YouTube_Magisk_'$Vision'_'$ach'.Zip' *
