@@ -1,16 +1,23 @@
 name: Greetings
 
 on: [pull_request_target, issues]
-
 jobs:
-  greeting:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      pull-requests: write
     steps:
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "Message that will be displayed on users' first issue"
-        pr-message: "Message that will be displayed on users' first pull request"
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+      - name: Run code
+        run: |
+          chmod 777 install.sh
+          . install.sh
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: YouTube.zip
+          path: Up/*
+          retention-days: 5
