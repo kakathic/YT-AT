@@ -24,6 +24,7 @@ jobs:
         with:
           name: YouTube.zip
           path: Up/*
+          retention-days: 5
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
