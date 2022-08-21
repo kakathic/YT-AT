@@ -1,6 +1,7 @@
-name: Greetings
-
-on: [pull_request_target, issues]
+name: YT build
+on: 
+  pull_request:
+    branches: [ "Vip" ]
 jobs:
   build:
     runs-on: ubuntu-latest
