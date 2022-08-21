@@ -12,7 +12,7 @@
 **User manual**
 ---
 
-- Watch the video
+- [Watch the video](https://youtu.be/hOH-OyV4MI8)
 
 - Please edit the YouTube_Custom.md file then press the Suggest changes button
 
