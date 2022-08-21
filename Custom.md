@@ -35,12 +35,11 @@ Amoled=1
 
 Xoa=1
 
-**Language filter**
+**Type**
 ---
-> It will delete all other languages ​​except the one listed below <br/>
-> For example: `vi` means vietnam 
+> 0. Root, 1. NoRoot
 
-Language=
+Type=1
 
 
 **Turn off feature**
