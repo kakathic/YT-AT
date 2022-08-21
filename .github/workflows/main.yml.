@@ -27,6 +27,7 @@ jobs:
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
+          tag: Up
           name: Update
           tag_name: Up
           files: Up*.json
@@ -34,6 +35,7 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
+          tag: YT
           name: YT-AT
           tag_name: Download
           files: Up/*
