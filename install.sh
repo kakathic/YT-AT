@@ -70,7 +70,6 @@ unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 zip -q -9 "$Likk/lib/YouTube.apk" -d 'lib/*' $xoa2
 else
 zip -q -9 "$Likk/lib/YouTube.apk" -d $lib $xoa2
-cp -rf $Likk/Tools/Microg.apk $Likk/Up
 fi
 
 [ "$(Getpro Icons)" == 1 ] && icon="-e custom-branding"
