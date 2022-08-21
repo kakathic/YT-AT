@@ -22,9 +22,9 @@
 
 **Donate**
 
-- các bạn nên ủng hộ đội ngũ phát triển revanced vì đã làm công cụ rất hay.
+- You should support the revanced development team for making a great tool.
 
-- Tôi chỉ là người viết ra công cụ tự động trên github này.
+- I'm just the author of this github automation tool.
 
 > [Paypal](http://paypal.me/kakathic)
 
