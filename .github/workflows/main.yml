@@ -19,15 +19,16 @@ jobs:
         run: |
           chmod 777 install.sh
           . install.sh
-      - name: Upload File
-        uses: softprops/action-gh-release@v1
-        with:
-          name: YT-AT
-          tag_name: Download
-          files: Up/*
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
           name: Update
           tag_name: Up
           files: Up*.json
+          prerelease: true
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-AT
+          tag_name: Download
+          files: Up/*
