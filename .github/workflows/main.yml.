@@ -19,6 +19,11 @@ jobs:
         run: |
           chmod 777 install.sh
           . install.sh
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: YouTube.zip
+          path: Up/*
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
