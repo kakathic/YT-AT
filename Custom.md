@@ -15,7 +15,7 @@ Version=17-32-35
 ---
 > armeabi-v7a, arm64-v8a, x86, x86_64
 
-- Device=x86
+- Device=arm64-v8a
 
 **Icons**
 ---
@@ -27,13 +27,13 @@ Version=17-32-35
 ---
 > 0. Black, 1. Dark
 
-Amoled=0
+Amoled=1
 
 **Type**
 ---
 > 0. Root, 1. NoRoot
 
-Type=0
+Type=1
 
 **Optimization**
 ---
