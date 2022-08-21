@@ -33,7 +33,7 @@ Amoled=0
 ---
 > 0. Root, 1. NoRoot
 
-Type=1
+Type=0
 
 **Optimization**
 ---
