@@ -90,7 +90,7 @@ zip -q -r ''$Likk'/Up/YouTube_Magisk_'$Vision'_'$ach$amoled2'.Zip' *
 else
 cp -rf $Likk/Tools/Microg.apk $Likk/Up
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/apk/YouTube2.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
-zip -q -9 "$Likk/apk/YouTube2.apk" -d $lib $xoa2
+7z d "$Likk/apk/YouTube2.apk" $lib $xoa2
 zipalign -f 4 "$Likk/apk/YouTube2.apk" "$Likk/tmp/YouTube2.apk"
 apksign "$Likk/tmp/YouTube2.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk"
 fi
