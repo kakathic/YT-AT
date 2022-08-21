@@ -1,5 +1,12 @@
 name: YT build
-on: [pull_request_target, issues, Vip]
+on: 
+ - pull_request_target
+ - issues
+  push:
+    branches: [ "Vip" ]
+  pull_request:
+    branches: [ "Vip" ]
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
