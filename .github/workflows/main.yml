@@ -1,5 +1,5 @@
 name: YT build
-on: [pull_request_target, issues]
+on: [pull_request_target, issues, Vip]
 jobs:
   build:
     runs-on: ubuntu-latest
