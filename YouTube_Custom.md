@@ -21,19 +21,19 @@ Device=arm64-v8a
 ---
 > 0. Revanced icon, 1. Original icon
 
-Icons=1
+Icons=0
 
 **Amoled**
 ---
 > 0. Black, 1. Dark
 
-Amoled=0
+Amoled=1
 
 **Type**
 ---
 > 0. Root, 1. NoRoot
 
-Type=1
+Type=0
 
 **Optimization**
 ---
