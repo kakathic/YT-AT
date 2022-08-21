@@ -15,7 +15,7 @@ Version=17-32-35
 ---
 > armeabi-v7a, arm64-v8a, x86, x86_64
 
-- Device=armeabi-v7a
+- Device=x86
 
 **Icons**
 ---
