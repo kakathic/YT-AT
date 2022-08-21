@@ -3,9 +3,8 @@ on:
   push:
     branches: [ "Vip" ]
   pull_request:
+    branches: [ "Vip" ]
   workflow_dispatch:
-  issues:
-  pull_request_target:
 jobs:
   build:
     runs-on: ubuntu-latest
