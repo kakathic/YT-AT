@@ -17,13 +17,15 @@ Getp () { grep_prop $1 $TMPDIR/module.prop; }
 
 # Giới thiệu
 print_modname() {
-TT="IRXW4YLUMUFAUIBAEAQFAYLZOBQWYORANB2HI4B2F4XXAYLZOBQWYLTNMUXWWYLLMF2GQ2LDBIFC
-AIBAEBBWQYLONZSWY4ZAKRSWYZLHOJQW2ORAIB2G633MOZUQU==="
+TT="EAQCAICQMF4XAYLMHIQGQ5DUOA5C6L3QMF4XAYLMFZWWKL3LMFVWC5DINFRQUCRAEAQCAQ3IMFXG
+4ZLMOMQFIZLMMVTXEYLNHIQEA5DPN5WHM2IK"
 
 ui_print
 ui_print2 "Name: $(Getp name)"
 ui_print
-ui_print2 "Version: $(Getp version) | Author: $(Getp author)"
+ui_print2 "Version: $(Getp version)"
+ui_print
+ui_print2 "Author: $(Getp author)"
 ui_print
 ui_print2 "$TT" | base32 -d
 ui_print
@@ -35,7 +37,7 @@ on_install() {
 [ -e "$TMPDIR/$ARCH" ] || abort "    This module only supports $ARCH devices
 "
 
-ui_print2 "Automatic..."
+ui_print2 "Auto..."
 ui_print
 
 # Giải nén
@@ -73,7 +75,7 @@ cp -f $TMPDIR/YouTube.apk $MODPATH/YouTube.apk >&2
 chcon u:object_r:apk_data_file:s0 "$MODPATH/YouTube.apk"
 su -mm -c mount -o bind "$MODPATH/YouTube.apk" "$hhkkdf"
 
-ui_print2 "Turn off updates"
+ui_print2 "Turn off update"
 ui_print
 
 Sqlite3=$MODPATH/sqlite3
@@ -96,7 +98,7 @@ fi
 ui_print2 "Clean up"
 ui_print
 rm -fr /data/local/tmp/apks
-ui_print2 "Remember to save the LOG if there is an error."
+ui_print2 "Remember save the LOG if there is an error"
 ui_print
 
 if [ -z "$(pm path com.google.android.youtube)" ];then
