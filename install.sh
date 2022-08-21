@@ -5,6 +5,7 @@ Likk="$GITHUB_WORKSPACE"
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
 Getpro () { grep -m1 "$1=" $Likk/Custom.md | cut -d = -f2; }
+apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"; }
 
 ListTM="lib
 tmp
@@ -98,5 +99,6 @@ echo '{
 "changelog": "https://raw.githubusercontent.com/kakathic/YT-AT/Vip/Chaglog.md"
 }' > $Likk/Up-$ach$amoled2.json
 else
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
+apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk"
 fi
