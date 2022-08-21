@@ -15,7 +15,7 @@ Version=17-32-35
 ---
 > armeabi-v7a, arm64-v8a, x86, x86_64
 
-Device=arm64-v8a
+Device=armeabi-v7a
 
 **Icons**
 ---
@@ -27,7 +27,7 @@ Icons=1
 ---
 > 0. Black, 1. Dark
 
-Amoled=1
+Amoled=0
 
 **Type**
 ---
