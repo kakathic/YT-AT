@@ -37,7 +37,7 @@ on_install() {
 [ -e "$TMPDIR/$ARCH" ] || abort "    This module only supports $ARCH devices
 "
 
-ui_print2 "Auto..."
+ui_print2 "Processing"
 ui_print
 
 # Giải nén
