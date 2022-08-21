@@ -27,13 +27,13 @@ Version=17-32-35
 ---
 > 0. Black, 1. Dark
 
-Amoled=1
+Amoled=0
 
 **Type**
 ---
 > 0. Root, 1. NoRoot
 
-Type=1
+Type=0
 
 **Optimization**
 ---
