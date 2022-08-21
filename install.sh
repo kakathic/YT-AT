@@ -77,37 +77,16 @@ java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $
 
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube2.apk" -o "$Likk/apk/YouTube2.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
 
-apktool d -s -f "$Likk/lib/YouTube.apk" -o "$Likk/YouTube"
-apktool d -s -f "$Likk/lib/YouTube2.apk" -o "$Likk/YouTube2"
+[ "$(Getpro Xoa)" == 1 ] && xoa2='assets/fonts/*'
 
-if [ "$(grep -cm1 'vote_upvote' $Likk/*/res/values-vi/strings.xml)" != 1 ];then
-sed -i 's|</resources>||' $Likk/*/res/values-vi/strings.xml
-cat $Likk/Tools/strings.xml >> $Likk/YouTube/res/values-vi/strings.xml
-cat $Likk/Tools/strings.xml >> $Likk/YouTube2/res/values-vi/strings.xml
-fi
+zip -q -r "$Likk/apk/YouTube.apk" -d 'lib/*' $xoa2
+zip -q -r "$Likk/apk/YouTube2.apk" -d $lib $xoa2
 
-[ "$(Getpro Xoa)" == 1 ] && rm -fr $Likk/*/assets/fonts
-
-if [ "$(Getpro Language)" ];then
-cp -rf $Likk/*/res/values-"$(Getpro Language)"* $Likk/Nn
-cp -rf $Likk/*/res/values $Likk/Nn
-for kggh in $Likk/*/res/*/strings.xml; do
-rm -fr ${kggh%/*}
-done
-cp -rf $Likk/Nn/* $Likk/*/res
-fi
-
-apktool b -c -f "$Likk/YouTube" -o "$Likk/YouTube.apk" --use-aapt2
-apktool b -c -f "$Likk/YouTube2" -o "$Likk/YouTube2.apk" --use-aapt2
-
-zip -q -r "$Likk/YouTube.apk" -d 'lib/*'
-zip -q -r "$Likk/YouTube2.apk" -d $lib
-
-unzip -qo "$Likk/YouTube2.apk" 'lib/*' -d $Likk/Tav
+unzip -qo "$Likk/apk/YouTube2.apk" 'lib/*' -d $Likk/Tav
 mv -f $Likk/Tav/lib/$(Getpro Device) $Likk/Tav/lib/$ach
 
-zipalign -f 4 "$Likk/YouTube.apk" "$Likk/Tav/YouTube.apk"
-zipalign -f 4 "$Likk/YouTube2.apk" "$Likk/tmp/YouTube2.apk"
+zipalign -f 4 "$Likk/apk/YouTube.apk" "$Likk/Tav/YouTube.apk"
+zipalign -f 4 "$Likk/apk/YouTube2.apk" "$Likk/tmp/YouTube2.apk"
 apksign "$Likk/tmp/YouTube2.apk" "$Likk/Up/YouTube-$Vision-$ach.apk"
 
 cd $Likk/Tav
