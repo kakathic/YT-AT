@@ -17,8 +17,10 @@ jobs:
           distribution: 'adopt'
       - name: Run code
         run: |
+          7z
+          ls bin
           chmod 777 install.sh
-          . install.sh
+          #. install.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
