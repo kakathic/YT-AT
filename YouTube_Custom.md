@@ -33,7 +33,7 @@ Amoled=1
 ---
 > 0. Root, 1. NoRoot
 
-Type=0
+Type=1
 
 **Optimization**
 ---
@@ -52,4 +52,4 @@ Round=1
 ---
 > Take a look at [com.google.android.youtube](https://github.com/revanced/revanced-patches), <br/> To distinguish, add a space, And do not enter a new line
 
-- Feature=hide-shorts-button always-autorepeat hide-autoplay-button 
+- Feature=hide-shorts-button always-autorepeat hide-autoplay-button disable-create-button
