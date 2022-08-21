@@ -10,6 +10,6 @@
 
 **User manual**
 
-- 
+- Watch the video
 
 - 
