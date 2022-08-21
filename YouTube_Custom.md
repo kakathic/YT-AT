@@ -1,7 +1,7 @@
 **Custom**
 ---
 
-- Items marked with `=` you can modify it 
+Items marked with `=` you can modify it 
 
 **Version**
 ---
@@ -15,13 +15,13 @@ Version=17-32-35
 ---
 > armeabi-v7a, arm64-v8a, x86, x86_64
 
-- Device=arm64-v8a
+Device=arm64-v8a
 
 **Icons**
 ---
 > 0. Revanced icon, 1. Original icon
 
-- Icons=1
+Icons=1
 
 **Amoled**
 ---
@@ -52,4 +52,4 @@ Round=1
 ---
 > Take a look at [com.google.android.youtube](https://github.com/revanced/revanced-patches), <br/> To distinguish, add a space, And do not enter a new line
 
-- Feature=hide-shorts-button always-autorepeat hide-autoplay-button disable-create-button
+Feature=hide-shorts-button always-autorepeat hide-autoplay-button disable-create-button
