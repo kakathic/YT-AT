@@ -29,17 +29,17 @@ Version=17-32-35
 
 Amoled=1
 
+**Type**
+---
+> 0. Root, 1. NoRoot
+
+Type=0
+
 **Optimization**
 ---
 > 0. No, 1. Yes
 
 Xoa=1
-
-**Type**
----
-> 0. Root, 1. NoRoot
-
-Type=1
 
 **Round the PiP**
 ---
