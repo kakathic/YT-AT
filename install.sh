@@ -66,6 +66,7 @@ cp -rf "$Likk/lib/YouTube.apk" "$Likk/lib/YouTube2.apk"
 [ "$(Getpro Icons)" == 1 ] && icon="-e custom-branding"
 if [ "$(Getpro Amoled)" == 1 ];then
 amoled="-e amoled"
+else
 amoled2=".Amoled"
 fi
 for vakl in $(Getpro Feature); do
