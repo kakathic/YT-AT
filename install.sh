@@ -2,7 +2,7 @@
 sudo apt install zipalign >/dev/null
 
 Likk="$GITHUB_WORKSPACE"
-apktool () { java -jar $Likk/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar -api 33 --use-aapt2 "$@"; }
+apktool () { java -jar $Likk/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar "$@"; }
 apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"; }
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
@@ -97,8 +97,8 @@ done
 cp -rf $Likk/Nn/* $Likk/*/res
 fi
 
-apktool b -c -f "$Likk/YouTube" -o "$Likk/YouTube.apk"
-apktool b -c -f "$Likk/YouTube2" -o "$Likk/YouTube2.apk"
+apktool b -c -f "$Likk/YouTube" -o "$Likk/YouTube.apk" --use-aapt2
+apktool b -c -f "$Likk/YouTube2" -o "$Likk/YouTube2.apk" --use-aapt2
 
 zip -q -r "$Likk/YouTube.apk" -d 'lib/*'
 zip -q -r "$Likk/YouTube2.apk" -d $lib
