@@ -41,6 +41,12 @@ Xoa=1
 
 Type=1
 
+**Round the PiP**
+---
+> 0. No, 1. Yes
+
+Round=1
+
 
 **Turn off feature**
 ---
