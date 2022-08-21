@@ -32,7 +32,7 @@ ui_print
 # Bắt đầu cài đặt
 on_install() {
 
-[ -e "$TMPDIR/$ARCH" ] || abort "    This module only supports arm64 devices
+[ -e "$TMPDIR/$ARCH" ] || abort "    This module only supports $ARCH devices
 "
 
 ui_print2 "Automatic..."
