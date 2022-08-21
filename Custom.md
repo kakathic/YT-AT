@@ -39,7 +39,7 @@ Xoa=1
 ---
 > 0. Root, 1. NoRoot
 
-Type=1
+Type=0
 
 **Round the PiP**
 ---
