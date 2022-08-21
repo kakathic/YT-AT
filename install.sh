@@ -64,6 +64,7 @@ unzip -qo "$Likk/lib/YouTube.apk" "lib/$(Getpro Device)/*" -d $Likk/Tav
 mv -f $Likk/Tav/lib/$(Getpro Device) $Likk/Tav/lib/$ach
 
 [ "$(Getpro Xoa)" == 1 ] && xoa2='assets/fonts/*'
+[ "$(Getpro Round)" == 1 ] || rm -fr $Likk/Module/system
 
 if [ "$(Getpro Type)" != 1 ];then
 Taiyt 'YouTube.apks'
