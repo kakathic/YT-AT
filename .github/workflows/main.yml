@@ -24,8 +24,9 @@ on:
           - x86_64
       ICONS:
         description: 'Original icon'
-        required: true
+        required: false
         type: boolean
+        default: true
 jobs:
   build:
     runs-on: ubuntu-latest
