@@ -22,7 +22,7 @@ on:
           - arm64-v8a
           - x86
           - x86_64
-       ICONS:
+      ICONS:
         description: 'Original icon'
         required: true
         type: boolean
