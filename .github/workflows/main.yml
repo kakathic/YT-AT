@@ -1,7 +1,9 @@
 name: YT build
 on: 
   push:
-    branches: [ "Vip" ]
+    branches: 
+      - Vip
+      - YouTube_Custom.md
   workflow_dispatch:
 jobs:
   build:
