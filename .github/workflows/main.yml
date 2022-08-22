@@ -58,8 +58,16 @@ jobs:
       - name: Run code
         env:
           VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          ICONS: ${{ inputs.ICONS }}
+          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
+          AMOLED: ${{ inputs.AMOLED }}
+          FEATURE: ${{ inputs.FEATURE }}
+          ROUND: ${{ inputs.ROUND }}
+          TYPE: ${{ inputs.TYPE }}
+
         run: |
-          echo "$VERSION"
+          echo "Show: $VERSION - $DEVICE - $ICONS - $OPTIMIZATION - $AMOLED - $FEATURE - $TYPE - $ROUND"
           chmod 777 install.sh
           . install.sh
       - name: Upload json
