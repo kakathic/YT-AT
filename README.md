@@ -21,7 +21,7 @@
 
 - I'm just the author of this github automation tool.
 
-> [Paypal](http://paypal.me/kakathic)
+- [Paypal](http://paypal.me/kakathic)
 
 
 
