@@ -16,6 +16,10 @@ on:
           - arm64-v8a
           - x86
           - x86_64
+      FEATURE:
+        description: 'Turn off the feature. To distinguish, add a space, And do not enter a new line'
+        required: true
+        default: 'hide-shorts-button always-autorepeat hide-autoplay-button disable-create-button'
       ICONS:
         description: 'Original icon'
         required: false
@@ -41,10 +45,6 @@ on:
         required: false
         type: boolean
         default: true
-      FEATURE:
-        description: 'Turn off the feature. To distinguish, add a space, And do not enter a new line'
-        required: true
-        default: 'hide-shorts-button always-autorepeat hide-autoplay-button disable-create-button'
 jobs:
   build:
     runs-on: ubuntu-latest
