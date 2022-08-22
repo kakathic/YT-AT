@@ -5,8 +5,8 @@ on:
       - edited
   push:
     branches: 
-      - '*/*/*/main.yaml'
-      - '*/*/*/*/main.yaml'
+      - '*/*/*/main.yml'
+      - '*/*/main.yml'
   workflow_dispatch:
 jobs:
   build:
