@@ -40,6 +40,6 @@
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd9.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd10.jpg" height="auto" width="100%" />
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd11.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd12.jpg" height="auto" width="100%" />
 
-- Update
+- Branch sync
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/ud.jpg" height="auto" width="100%" />
 
