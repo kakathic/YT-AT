@@ -1,4 +1,4 @@
-name: YT build
+name: YT build Main
 on: 
   label:
     types:
