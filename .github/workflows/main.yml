@@ -3,7 +3,7 @@ on:
   push:
     branches: 
       - Vip
-      - 'YouTube_Custom.md'
+      - 'releases/YouTube_Custom.md'
   workflow_dispatch:
 jobs:
   build:
