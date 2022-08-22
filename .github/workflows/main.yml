@@ -1,8 +1,11 @@
 name: YT build
 on: 
+  label:
+    types:
+      - edited
   push:
     branches: 
-      - Vip/YouTube_Custom.md
+      - 'Vip/YouTube_Custom.md'
   workflow_dispatch:
 jobs:
   build:
