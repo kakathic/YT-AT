@@ -5,7 +5,7 @@ on:
       - edited
   push:
     branches: 
-      - '**Vip**main**'
+      - Vip
   workflow_dispatch:
 jobs:
   build:
