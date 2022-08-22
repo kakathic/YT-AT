@@ -30,6 +30,9 @@
 
 - [Paypal](http://paypal.me/kakathic)
 
+**Instructions with pictures**
+---
+
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd1.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd2.jpg" height="auto" width="100%" />
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd3.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd4.jpg" height="auto" width="100%" />
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd5.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd6.jpg" height="auto" width="100%" />
