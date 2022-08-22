@@ -12,17 +12,18 @@ on:
         description: '17-32-35 => 17.32.35 is the YouTube version that revanced supports tool'
         required: true
         default: '17-32-35'
-        attributes:
-        label: Type
+
+      DEVICE:
+        description: 'Log level'
+        required: true
+        default: 'arm64-v8a'
+        type: choice
         options:
           - armeabi-v7a
           - arm64-v8a
           - x86
           - x86_64
-        validations:
-          required: true
-          default: 'arm64-v8a'
-        
+
 jobs:
   build:
     runs-on: ubuntu-latest
