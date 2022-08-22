@@ -84,7 +84,7 @@ done
 echo '
 version='$Vision'
 versionCode='$Vision2'
-updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
+updateJson=https://github.com/$GITHUB_REPOSITORY/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
 
 
 if [ "$TYPE" != 'true' ];then
@@ -96,8 +96,8 @@ zip -q -r ''$Likk'/Up/YouTube_Magisk_'$Vision'_'$ach$amoled2'.Zip' *
 echo '{
 "version": "'$Vision'",
 "versionCode": "'$Vision2'",
-"zipUrl": "https://github.com/kakathic/YT-AT/releases/download/Download/YouTube_Magisk_'$Vision'_'$ach$amoled2'.Zip",
-"changelog": "https://raw.githubusercontent.com/kakathic/YT-AT/Vip/Zhaglog.md"
+"zipUrl": "https://github.com/$GITHUB_REPOSITORY/releases/download/Download/YouTube_Magisk_'$Vision'_'$ach$amoled2'.Zip",
+"changelog": "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/Vip/Zhaglog.md"
 }' > $Likk/Up-$ach$amoled2.json
 else
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
