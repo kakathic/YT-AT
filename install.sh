@@ -1,5 +1,7 @@
 # Kakathic
 
+echo "${{ github.event.inputs.FEATURE }}"
+
 Likk="$GITHUB_WORKSPACE"
 
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
