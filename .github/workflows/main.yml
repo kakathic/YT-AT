@@ -12,7 +12,6 @@ on:
         description: '17-32-35 => 17.32.35 is the YouTube version that revanced supports tool'
         required: true
         default: '17-32-35'
-      - type: dropdown
         attributes:
         label: Type
         options:
