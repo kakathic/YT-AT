@@ -1,6 +1,6 @@
 # Kakathic
 
-echo "${{ github.event.inputs.FEATURE }}"
+echo "$VERSION"
 
 Likk="$GITHUB_WORKSPACE"
 
