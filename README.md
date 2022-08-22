@@ -9,7 +9,7 @@
 
 - [Homepage](https://github.com/revanced)
 
-- Watch YouTube [version](https://github.com/revanced/revanced-patches)
+- YouTube [version](https://github.com/revanced/revanced-patches)
 
 **User manual**
 ---
