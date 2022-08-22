@@ -7,7 +7,7 @@
 
 - This is revanced's YouTube mod tool they made this tool out please support them.
 
-- Homepage: [Link](https://github.com/revanced)
+- [Homepage](https://github.com/revanced)
 
 **User manual**
 ---
