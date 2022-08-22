@@ -14,6 +14,11 @@
 
 - [Watch the video](https://youtu.be/tCeE34jEurA)
 
+**Available builds**
+---
+
+- [Download](https://github.com/kakathic/YT-AT/releases/tag/Download)
+
 **Donate**
 ---
 
