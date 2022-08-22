@@ -7,6 +7,15 @@ on:
     branches: 
       - Vip
   workflow_dispatch:
+    inputs:
+      PHIEN_BAN:
+        description: '17-32-35 => 17.32.35 is the YouTube version that revanced supports tool'
+        required: true
+        default: '17-32-35'
+      DEVICE:
+        description: 'Select the following items: armeabi-v7a, arm64-v8a, x86, x86_64'
+        required: true
+        default: 'arm64-v8a'
 jobs:
   build:
     runs-on: ubuntu-latest
