@@ -1,4 +1,4 @@
-name: Building Youtube Revanced
+name: YT-AT
 on: 
   workflow_dispatch:
     inputs:
