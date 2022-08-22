@@ -13,9 +13,16 @@ on:
         required: true
         default: '17-32-35'
       DEVICE:
-        description: 'Select the following items: armeabi-v7a, arm64-v8a, x86, x86_64'
-        required: true
-        default: 'arm64-v8a'
+        label: Type
+        options:
+          - armeabi-v7a
+          - arm64-v8a
+          - x86
+          - x86_64
+        validations:
+          required: true
+          default: 'arm64-v8a'
+        
 jobs:
   build:
     runs-on: ubuntu-latest
