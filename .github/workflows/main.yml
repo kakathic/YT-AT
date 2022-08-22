@@ -1,4 +1,4 @@
-name: BUILDING YOUTUBE REVANCED
+name: Building Youtube Revanced
 on: 
   workflow_dispatch:
     inputs:
@@ -58,7 +58,7 @@ jobs:
       - name: Run code
         run: |
           chmod 777 install.sh
-          #. install.sh
+          . install.sh
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
