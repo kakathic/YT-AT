@@ -1,4 +1,4 @@
-name: AUTO BUILDING YOUTUBE REVANCED
+name: BUILDING YOUTUBE REVANCED
 on: 
   workflow_dispatch:
     inputs:
