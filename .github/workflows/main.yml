@@ -56,8 +56,10 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - name: Run code
+        env:
+          VERSION: ${{ inputs.VERSION }}
         run: |
-          echo "${{ github.event.inputs.VERSION }}"
+          echo "$VERSION"
           chmod 777 install.sh
           . install.sh
       - name: Upload json
