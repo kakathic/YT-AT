@@ -30,15 +30,15 @@ Taive "https://github.com$Tv3" "$Likk/lib/revanced-integrations.apk"
 Taiyt () {
 Upk="https://www.apkmirror.com"
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
-Url1="$(curl -s -k -L -G -H "$User" "$Upk/apk/google-inc/youtube/youtube-${{ github.event.inputs.PHIEN_BAN }}-release/youtube-${{ github.event.inputs.PHIEN_BAN }}$2-android-apk-download/" | grep -m1 'downloadButton' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
+Url1="$(curl -s -k -L -G -H "$User" "$Upk/apk/google-inc/youtube/youtube-${{ github.event.inputs.VERSION }}-release/youtube-${{ github.event.inputs.VERSION }}$2-android-apk-download/" | grep -m1 'downloadButton' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
 Url2="$Upk$(curl -s -k -L -G -H "$User" "$Upk$Url1" | grep -m1 '>here<' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
 curl -s -k -L -H "$User" $Url2 -o $Likk/lib/$1
 }
 
 Taiyt 'YouTube.apk' '-2'
 
-Vision="$(echo ${{ github.event.inputs.PHIEN_BAN }} | tr '-' '.')"
-Vision2="$(echo ${{ github.event.inputs.PHIEN_BAN }} | sed 's|-||g')"
+Vision="$(echo ${{ github.event.inputs.VERSION }} | tr '-' '.')"
+Vision2="$(echo ${{ github.event.inputs.VERSION }} | sed 's|-||g')"
 
 if [ "${{ github.event.inputs.DEVICE }}" == "arm64-v8a" ];then
 lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
