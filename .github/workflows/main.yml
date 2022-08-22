@@ -22,11 +22,13 @@ on:
           - arm64-v8a
           - x86
           - x86_64
+<br/>
       ICONS:
         description: 'Original icon'
         required: false
         type: boolean
         default: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
