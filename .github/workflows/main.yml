@@ -2,7 +2,7 @@ name: YT build
 on: 
   push:
     branches: 
-      - 'releases/YouTube_Custom.md'
+      - 'Vip/*.md'
   workflow_dispatch:
 jobs:
   build:
