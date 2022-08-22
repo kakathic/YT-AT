@@ -14,7 +14,7 @@
 
 - [Watch the video](https://youtu.be/tCeE34jEurA)
 
-**Available builds**
+**Builds**
 ---
 
 - [Download](https://github.com/kakathic/YT-AT/releases/tag/Download)
