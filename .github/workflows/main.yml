@@ -57,6 +57,7 @@ jobs:
           distribution: 'adopt'
       - name: Run code
         run: |
+          echo "${{ github.event.inputs.FEATURE }}"
           chmod 777 install.sh
           . install.sh
       - name: Upload json
