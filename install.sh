@@ -60,10 +60,10 @@ cp -rf $Likk/bin/sqlite3_$ach $Likk/Module/common/sqlite3
 unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
 [ "$DEVICE" == 'x86' ] || mv -f $Likk/Tav/lib/$DEVICE $Likk/Tav/lib/$ach
 
-[ "$OPTIMIZATION" == 1 ] && xoa2='assets/fonts/*'
-[ "$ROUND" == 1 ] || rm -fr $Likk/Module/system
+[ "$OPTIMIZATION" == 'true' ] && xoa2='assets/fonts/*'
+[ "$ROUND" == 'true' ] || rm -fr $Likk/Module/system
 
-if [ "$TYPE" != 1 ];then
+if [ "$TYPE" != 'true' ];then
 Taiyt 'YouTube.apks'
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 zip -q -9 "$Likk/lib/YouTube.apk" -d 'lib/*' $xoa2
@@ -71,8 +71,8 @@ else
 zip -q -9 "$Likk/lib/YouTube.apk" -d $lib $xoa2
 fi
 
-[ "$ICONS" == 1 ] && icon="-e custom-branding"
-if [ "$AMOLED" == 1 ];then
+[ "$ICONS" == 'true' ] && icon="-e custom-branding"
+if [ "$AMOLED" == 'true' ];then
 amoled="-e amoled"
 else
 amoled2=".Amoled"
@@ -87,7 +87,7 @@ versionCode='$Vision2'
 updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
 
 
-if [ "$TYPE" != 1 ];then
+if [ "$TYPE" != 'true' ];then
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support $icon $amoled --mount
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
