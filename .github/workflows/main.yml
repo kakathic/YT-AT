@@ -5,7 +5,7 @@ on:
       - edited
   push:
     branches: 
-      - '**.yml'
+      - '**.**'
   workflow_dispatch:
 jobs:
   build:
