@@ -27,7 +27,7 @@ Icons=1
 ---
 > 0. Black, 1. Dark
 
-Amoled=0
+Amoled=1
 
 **Type**
 ---
