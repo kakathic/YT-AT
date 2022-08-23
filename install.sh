@@ -2,23 +2,25 @@
 
 Likk="$GITHUB_WORKSPACE"
 
+
+Dx(){ java -jar dx.jar --dex --no-strict --min-sdk-version 26 --core-library "$1" --output "$2"; }
+smali(){ java -jar smali-2.5.2.jar "$@"; }
+baksmali(){ java -jar baksmali-2.5.2.jar "$@"; }
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
 apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"; }
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 VHstring(){
-if [ "$LANGUAGE" != 'en-US' ];then
 echo '<?xml version="1.0" encoding="utf-8"?>
 <resources>' >> $3
 for vahhd in $(grep 'name=' $2 | cut -d \" -f2); do
-[ "$(grep -cm1 'name=\"'$vahhd'\"' $1)" == 1 ] && Stv="$(grep 'name=\"'$vahhd'\"' $1 | cut -d '>' -f2 | cut -d '<' -f1)" || Stv="$(grep 'name=\"'$vahhd'\"' $2 | cut -d '>' -f2 | cut -d '<' -f1)"
+[ "$(grep -cm1 'name=\"'$vahhd'\"' $1)" == 1 ] && Stv="$(grep -m1 'name=\"'$vahhd'\"' $1 | cut -d '>' -f2 | cut -d '<' -f1)" || Stv="$(grep -m1 'name=\"'$vahhd'\"' $2 | cut -d '>' -f2 | cut -d '<' -f1)"
 echo '<string name="'$vahhd'">'$Stv'</string>' >> $3
 sed -i '/name=\"'$vahhd'\"/d' $2
 done
 echo '</resources>'  >> $3
 cp -rf $3 $2
-fi
 }
 ListTM="lib
 tmp
@@ -105,17 +107,29 @@ updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$LAN
 
 # Xử lý revanced patches
 unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
-if [ -z "$(grep -Rl "$Vision" $Likk/Pak)" ];then
-TK="$(echo -n "$SVision" | XHex)"
-TT="$(echo -n "$Vision" | XHex)"
-for vak in $(grep -Rl "$SVision" $Likk/Pak); do
-cp -rf $vak $Likk/tmp/test
-XHex "$Likk/tmp/test" | sed -e "s/$TK/$TT/" | ZHex > $vak
-done
+mkdir -p $Likk/Pak/smali
+baksmali d $Likk/Pak/classes.dex -o $Likk/Pak/smali
 
+if [ "$SVision" != "$Vision" ];then
+for vak in $(grep -Rl "$SVision" $Likk/Pak/smali); do
+sed -i "s/$SVision/$Vision/g" $vak
+done
+fi
+
+if [ "$LANGUAGE" != 'en-US' ];then
+for wngn in $(grep '=' $Likk/Language/strings.xml | cut -d = -f1); do
+Stvi="$(grep -m1 '\"'$wngn'\"' $Likk/Language/$LANGUAGE/strings.xml | cut -d '>' -f2 | cut -d '<' -f1)"
+Sten="$(grep -m1 "$wngn=" $Likk/Language/strings.xml | cut -d = -f2)"
+sed -i "s|\"$Sten\"|\"$Stvi\"|g" "$(grep -Rl '\"'$wngn'\"' $Likk/Pak/smali)"
+done
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/downloads/host/values/strings.xml $Likk/downloads.xml
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/sponsorblock/host/values/strings.xml $Likk/sponsorblock.xml
+fi
+
+smali a $Likk/Pak/smali -o $Likk/Pak/classes.dex
+Dx $Likk/Pak/classes.dex $Likk/Pak/Test.jar
+unzip -qo $Likk/Pak/Test.jar -d $Likk/Pak
 
 cd $Likk/Pak
 zip -qr "$Likk/revanced-patches.zip" *
