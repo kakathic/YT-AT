@@ -99,7 +99,7 @@ done
 echo '
 version='$Vision'
 versionCode='$Vision2'
-updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
+updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$LANGUAGE-$ach$amoled2'.json' >> $Likk/Module/module.prop
 
 # Xử lý revanced patches
 
@@ -126,14 +126,14 @@ java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
-zip -q -r ''$Likk'/Up/YouTube_Magisk_'$Vision'_'$ach$amoled2'.Zip' *
+zip -q -r "$Likk/Up/YouTube-Magisk-$Vision-$LANGUAGE-$ach$amoled2.Zip" *
 echo '{
 "version": "'$Vision'",
 "versionCode": "'$Vision2'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Download/YouTube_Magisk_'$Vision'_'$ach$amoled2'.Zip",
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Download/YouTube-Magisk-'$Vision'-'$LANGUAGE-$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
-}' > $Likk/Up-$ach$amoled2.json
+}' > $Likk/Up-$LANGUAGE-$ach$amoled2.json
 else
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
-apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk"
+apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$LANGUAGE-$ach$amoled2.apk"
 fi
