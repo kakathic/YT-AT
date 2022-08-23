@@ -1,10 +1,10 @@
-sed -i "s|\"Settings related to interactions\"|\"Cài đặt liên quan đến tương tác\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch$PreferenceScreen.smali
-sed -i "s|\"Interaction\"|\"Sự tương tác\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch$PreferenceScreen.smali
-sed -i "s|\"Settings related to the layout\"|\"Cài đặt liên quan đến bố cục\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch$PreferenceScreen.smali
+sed -i "s|\"Settings related to interactions\"|\"Cài đặt liên quan đến tương tác\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch\$PreferenceScreen.smali
+sed -i "s|\"Interaction\"|\"Sự tương tác\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch\$PreferenceScreen.smali
+sed -i "s|\"Settings related to the layout\"|\"Cài đặt liên quan đến bố cục\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch\$PreferenceScreen.smali
 sed -i "s|\"MicroG Settings\"|\"Cài đặt MicroG\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/microg/patch/resource/MicroGResourcePatch.smali
 sed -i "s|\"Settings for MicroG\"|\"Cài đặt cho microg\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/microg/patch/resource/MicroGResourcePatch.smali
-sed -i "s|\"Miscellaneous patches\"|\"Bản vá linh tinh\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch$PreferenceScreen.smali
-sed -i "s|\"Miscellaneous\"|\"Điều khoản khác\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch$PreferenceScreen.smali
+sed -i "s|\"Miscellaneous patches\"|\"Bản vá linh tinh\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch\$PreferenceScreen.smali
+sed -i "s|\"Miscellaneous\"|\"Điều khoản khác\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch\$PreferenceScreen.smali
 sed -i "s|\"General ads are shown\"|\"Quảng cáo chung được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"General ads are hidden\"|\"Quảng cáo chung được ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Remove general ads\"|\"Xóa quảng cáo chung\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
