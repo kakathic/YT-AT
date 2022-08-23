@@ -78,7 +78,7 @@ jobs:
         run: |
           SVision="17.32.35"
           chmod 777 install.sh
-          . install.sh
+          . install.sh 2>&1 | tee -a Log.txt
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
@@ -92,3 +92,8 @@ jobs:
           name: YT-AT
           tag_name: Download
           files: Up/*
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: Log
+          path: Log.txt    
