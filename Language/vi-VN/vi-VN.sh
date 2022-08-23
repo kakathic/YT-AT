@@ -67,7 +67,7 @@ sed -i "s|\"Video buffer settings\"|\"Cài đặt bộ đệm video\"|" $Likk/Pa
 sed -i "s|\"Download button is hidden\"|\"Nút tải xuống được ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
 sed -i "s|\"Download button is visible\"|\"Nút tải xuống có thể hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
 sed -i "s|\"Show download button\"|\"Hiển thị nút tải xuống\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
-sed -i "s|\"Package name of the downloader app such as NewPipe's or PowerTube's\"|\"Tên gói của ứng dụng tải xuống như NewPipe\'s hoặc PowerTube\'s\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
+sed -i "s|\"Package name of the downloader app such as NewPipe\'s or PowerTube\'s\"|\"Tên gói của ứng dụng tải xuống như NewPipe\'s hoặc PowerTube\'s\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
 sed -i "s|\"Downloader package name\"|\"Tên gói tải xuống\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
 sed -i "s|\"Settings related to downloads\"|\"Cài đặt liên quan đến tải xuống\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
 sed -i "s|\"Download settings\"|\"Tải xuống cài đặt\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
