@@ -49,7 +49,7 @@ on:
         type: boolean
         default: true
       ROUND:
-        description: 'Window rounded feature is only for root'
+        description: 'Pip rounded (root)'
         required: false
         type: boolean
         default: true
