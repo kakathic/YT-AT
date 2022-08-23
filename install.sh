@@ -122,15 +122,8 @@ done
 fi
 
 if [ "$LANGUAGE" != 'en-US' ];then
-for vah in $(grep = $Likk/Language/strings.xml | cut -d '"' -f2); do
-envb="$(grep -m1 '\"'$vah'\"' $Likk/Language/strings.xml | cut -d '>' -f2 | cut -d '<' -f1)"
-pd=$(grep -Rl "$envb" $Likk/Pak/smali)
-vivb="$(grep -m1 '\"'$vah'\"' $Likk/Language/$LANGUAGE/strings.xml | cut -d '>' -f2 | cut -d '<' -f1)"
-echo 'sed -i "s|\"'$envb'\"|\"'$vivb'\"|" '$pd'' >> $Likk/sed.sh
-done
-
-chmod 777 $Likk/sed.sh
-. $Likk/sed.sh
+chmod 777 $Likk/Language/$LANGUAGE/$LANGUAGE.sh
+. $Likk/Language/$LANGUAGE/$LANGUAGE.sh
 
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/downloads/host/values/strings.xml $Likk/downloads.xml
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
