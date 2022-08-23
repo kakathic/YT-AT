@@ -29,7 +29,7 @@ on:
         required: true
         default: 'always-autorepeat disable-create-button hide-autoplay-button hide-shorts-button'
       ICONS:
-        description: 'Original icon'
+        description: 'Original icon & Name'
         required: false
         type: boolean
         default: true
@@ -39,12 +39,12 @@ on:
         type: boolean
         default: true
       OPTIMIZATION:
-        description: 'Increase video download speed '
+        description: 'Video loaded speed'
         required: false
         type: boolean
         default: true
       TYPE:
-        description: 'Sign in with microg (No Root)'
+        description: 'Sign in microg (No Root)'
         required: false
         type: boolean
         default: true
