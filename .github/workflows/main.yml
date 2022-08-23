@@ -55,7 +55,7 @@ on:
         default: true
 jobs:
   build:
-    name: 'AUTO BUILD...'
+    name: 'OPEN BUILD...'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
