@@ -111,7 +111,7 @@ baksmali d $Likk/Pak/classes.dex -o $Likk/Pak/smali
 
 if [ "$SVision" != "$Vision" ];then
 for vak in $(grep -Rl "$SVision" $Likk/Pak/smali); do
-sed -i "s|$SVision|$Vision|g" $vak
+[ -e "$vak" ] && sed -i "s|$SVision|$Vision|g" $vak
 done
 fi
 
@@ -119,7 +119,8 @@ if [ "$LANGUAGE" != 'en-US' ];then
 for wngn in $(grep '=' $Likk/Language/strings.xml | cut -d = -f1); do
 Stvi="$(grep -m1 '\"'$wngn'\"' $Likk/Language/$LANGUAGE/strings.xml | cut -d '>' -f2 | cut -d '<' -f1)"
 Sten="$(grep -m1 "$wngn=" $Likk/Language/strings.xml | cut -d = -f2)"
-sed -i "s|\"$Sten\"|\"$Stvi\"|g" "$(grep -Rl '\"'$wngn'\"' $Likk/Pak/smali)"
+Pathkffhg="$(grep -Rl '\"'$wngn'\"' $Likk/Pak/smali)"
+[ -e ”$Pathkffhg” ] && sed -i "s|\"$Sten\"|\"$Stvi\"|g" $Pathkffhg
 done
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/downloads/host/values/strings.xml $Likk/downloads.xml
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
@@ -129,6 +130,7 @@ fi
 smali a $Likk/Pak/smali -o $Likk/Pak/classes.dex
 Dx $Likk/Pak/classes.dex $Likk/Pak/Test.jar
 unzip -qo $Likk/Pak/Test.jar -d $Likk/Pak
+rm -fr $Likk/Pak/Test.jar $Likk/Pak/smali
 
 cd $Likk/Pak
 zip -qr "$Likk/revanced-patches.zip" *
