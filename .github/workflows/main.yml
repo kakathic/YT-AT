@@ -78,7 +78,7 @@ jobs:
         run: |
           SVision="17.32.35"
           chmod 777 install.sh
-          . install.sh 2>&1 | tee -a Log.txt
+          . install.sh | tee -a Log.txt
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
