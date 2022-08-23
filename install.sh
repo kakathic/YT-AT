@@ -111,7 +111,7 @@ baksmali d $Likk/Pak/classes.dex -o $Likk/Pak/smali
 
 if [ "$SVision" != "$Vision" ];then
 for vak in $(grep -Rl "$SVision" $Likk/Pak/smali); do
-sed -i "s/$SVision/$Vision/g" $vak
+sed -i "s|$SVision|$Vision|g" $vak
 done
 fi
 
