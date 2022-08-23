@@ -108,7 +108,7 @@ updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$LAN
 unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
 mkdir -p $Likk/Pak/smali
 baksmali d $Likk/Pak/classes.dex -o $Likk/Pak/smali
-
+rm -fr $Likk/Pak/classes.dex
 
 if [ "$SVision" != "$Vision" ];then
 for vak in $(grep -Rl "$SVision" $Likk/Pak/smali); do
@@ -128,7 +128,7 @@ VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/downloads/host/values/st
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/sponsorblock/host/values/strings.xml $Likk/sponsorblock.xml
 fi
-rm -fr $Likk/Pak/classes.dex
+
 smali ass $Likk/Pak/smali -o $Likk/Pak/classes.dex
 Dx $Likk/Pak/classes.dex $Likk/Pak/Test.jar
 unzip -qo $Likk/Pak/Test.jar -d $Likk/Pak
