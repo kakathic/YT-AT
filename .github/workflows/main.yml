@@ -27,7 +27,7 @@ on:
       FEATURE:
         description: 'Turn off the feature. To distinguish, add a space, And do not enter a new line'
         required: true
-        default: 'hide-shorts-button always-autorepeat hide-autoplay-button disable-create-button'
+        default: 'always-autorepeat'
       ICONS:
         description: 'Original icon'
         required: false
@@ -53,6 +53,22 @@ on:
         required: false
         type: boolean
         default: true
+      AUTOPLAY:
+        description: 'Show auto play button'
+        required: false
+        type: boolean
+        default: true
+      CREATE:
+        description: 'Show create video button'
+        required: false
+        type: boolean
+        default: true
+      SHORTS:
+        description: 'Show shorts button'
+        required: false
+        type: boolean
+        default: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -74,6 +90,9 @@ jobs:
           ROUND: ${{ inputs.ROUND }}
           TYPE: ${{ inputs.TYPE }}
           LANGUAGE: ${{ inputs.LANGUAGE }}
+          AUTOPLAY: ${{ inputs.AUTOPLAY }}
+          CREATE: ${{ inputs.CREATE }}
+          SHORTS: ${{ inputs.SHORTS }}
 
         run: |
           SVision="17.32.35"
