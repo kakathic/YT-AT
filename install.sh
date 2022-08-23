@@ -7,7 +7,17 @@ Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
 apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"; }
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
-
+VHstring(){
+echo '<?xml version="1.0" encoding="utf-8"?>
+<resources>' >> $3
+for vahhd in $(grep 'name=' $2 | cut -d \" -f2); do
+[ "$(grep -cm1 'name=\"'$vahhd'\"' $1)" == 1 ] && Stv="$(grep 'name=\"'$vahhd'\"' $1 | cut -d '>' -f2 | cut -d '<' -f1)" || Stv="$(grep 'name=\"'$vahhd'\"' $2 | cut -d '>' -f2 | cut -d '<' -f1)"
+echo '<string name="'$vahhd'">'$Stv'</string>' >> $3
+sed -i '/name=\"'$vahhd'\"/d' $2
+done
+echo '</resources>'  >> $3
+cp -rf $3 $2
+}
 ListTM="lib
 tmp
 Up
@@ -99,6 +109,11 @@ for vak in $(grep -Rl "$SVision" $Likk/Pak); do
 cp -rf $vak $Likk/tmp/test
 XHex "$Likk/tmp/test" | sed -e "s/$TK/$TT/" | ZHex > $vak
 done
+
+VHstring stringvh $Likk/Pak/downloads/host/values/strings.xml $Likk/downloads.xml
+VHstring stringvh $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
+VHstring stringvh $Likk/Pak/sponsorblock/host/values/strings.xml $Likk/sponsorblock.xml
+
 cd $Likk/Pak
 zip -qr "$Likk/revanced-patches.zip" *
 mv -f "$Likk/revanced-patches.zip" "$Likk/lib/revanced-patches.jar"
