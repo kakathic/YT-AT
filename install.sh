@@ -2,10 +2,9 @@
 
 Likk="$GITHUB_WORKSPACE"
 
-
-Dx(){ java -jar dx.jar --dex --no-strict --min-sdk-version 26 --core-library "$1" --output "$2"; }
-smali(){ java -jar smali-2.5.2.jar "$@"; }
-baksmali(){ java -jar baksmali-2.5.2.jar "$@"; }
+Dx(){ java -jar $Likk/Tools/dx.jar --dex --no-strict --min-sdk-version 26 --core-library "$1" --output "$2"; }
+smali(){ java -jar $Likk/Tools/smali-2.5.2.jar "$@"; }
+baksmali(){ java -jar $Likk/Tools/baksmali-2.5.2.jar "$@"; }
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
 apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"; }
