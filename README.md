@@ -23,7 +23,7 @@ curl -# -L http://Link-Magisk-Youtube.zip -o YouTube.zip && magisk --install-mod
 
 - Replace `Link-Magisk-Youtube.zip` with your link.
 
-**Builds**
+**Builds Download**
 ---
 
 - [Download](https://github.com/kakathic/YT-AT/releases/tag/Download)
