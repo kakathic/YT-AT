@@ -1,5 +1,4 @@
 # Kakathic
-echo "$SVision"
 
 Likk="$GITHUB_WORKSPACE"
 
@@ -92,7 +91,7 @@ updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach
 
 # Xử lý revanced patches
 
-unzip -qo "$Likk/lib/revanced-patches.jar" $Likk/Pak
+unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
 if [ -z "$(grep -Rl "$Vision" $Likk/Pak)" ];then
 TK="$(echo -n "$SVision" | XHex)"
 TT="$(echo -n "$Vision" | XHex)"
