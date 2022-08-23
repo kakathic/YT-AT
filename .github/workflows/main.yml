@@ -55,6 +55,7 @@ on:
         default: true
 jobs:
   build:
+    name: 'Auto Build'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
