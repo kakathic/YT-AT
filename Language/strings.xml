@@ -1,4 +1,11 @@
-
+interactions_summary=Settings related to interactions
+interactions_title=Interaction
+layout_summary=Settings related to the layout
+layout_title=Layout
+microg_settings=MicroG Settings
+microg_settings_summary=Settings for MicroG
+misc_summary=Miscellaneous patches
+misc_title=Miscellaneous
 revanced_adremover_ad_removal_enabled_summary_off=General ads are shown
 revanced_adremover_ad_removal_enabled_summary_on=General ads are hidden
 revanced_adremover_ad_removal_enabled_title=Remove general ads
@@ -126,4 +133,3 @@ revanced_video_ads_removal_title=Hide video ads
 revanced_wide_searchbar_enabled_title=Enable wide search bar
 revanced_wide_searchbar_summary_off=Wide search bar is disabled
 revanced_wide_searchbar_summary_on=Wide search bar is enabled
-
