@@ -77,6 +77,7 @@ jobs:
 
         run: |
           SVision="17.32.35"
+          chmod -R 777 Tools/*
           chmod 777 install.sh
           . install.sh
       - name: Upload json
