@@ -67,7 +67,7 @@ jobs:
           TYPE: ${{ inputs.TYPE }}
 
         run: |
-          echo "Show: $VERSION - $DEVICE - $ICONS - $OPTIMIZATION - $AMOLED - $FEATURE - $TYPE - $ROUND"
+          SVision="17.32.35"
           chmod 777 install.sh
           . install.sh
       - name: Upload json
