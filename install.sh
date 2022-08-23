@@ -86,10 +86,10 @@ else
 zip -q -9 "$Likk/lib/YouTube.apk" -d $lib $xoa2
 fi
 
-[ "$ICONS" == 'true' ] && echo -n "-e custom-branding" >> $Likk/logk
+[ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
 
 if [ "$AMOLED" == 'true' ];then
-echo -n "-e amoled" >> $Likk/logk
+echo -n "-e amoled " >> $Likk/logk
 else
 amoled2=".Amoled"
 fi
