@@ -129,8 +129,8 @@ VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/returnyoutubedislike/hos
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/sponsorblock/host/values/strings.xml $Likk/sponsorblock.xml
 fi
 
-smali ass $Likk/Pak/smali -o $Likk/Pak/classes.dex
-Dx $Likk/Pak/classes.dex $Likk/Pak/Test.jar
+smali a "$Likk/Pak/smali" -o "$Likk/Pak/classes.dex"
+Dx "$Likk/Pak/classes.dex" $Likk/Pak/Test.jar
 unzip -qo $Likk/Pak/Test.jar -d $Likk/Pak
 rm -fr $Likk/Pak/Test.jar $Likk/Pak/smali
 
