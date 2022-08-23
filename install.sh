@@ -117,12 +117,13 @@ done
 fi
 
 if [ "$LANGUAGE" != 'en-US' ];then
-echo 123
+
 for wngn in $(grep '=' $Likk/Language/strings.xml | cut -d = -f1); do
 Stvi="$(grep -m1 '\"'$wngn'\"' $Likk/Language/$LANGUAGE/strings.xml | cut -d '>' -f2 | cut -d '<' -f1)"
 Sten="$(grep -m1 "$wngn=" $Likk/Language/strings.xml | cut -d = -f2)"
 Pathkffhg="$(grep -Rl '\"'$wngn'\"' $Likk/Pak/smali)"
-[ -e ”$Pathkffhg” ] && sed -i 's|\"'$Sten'\"|\"'$Stvi'\"|g' "$Pathkffhg"
+echo "$Stvi - $Sten - $Pathkffhg"
+[ -e ”$Pathkffhg” ] && sed -i "s|$Sten|$Stvi|g" "$Pathkffhg"
 done
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/downloads/host/values/strings.xml $Likk/downloads.xml
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
