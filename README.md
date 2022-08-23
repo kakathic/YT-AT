@@ -30,6 +30,8 @@
 
 - [Paypal](http://paypal.me/kakathic)
 
+- Techcombank: 19034902604017
+
 **Instructions with pictures**
 ---
 
