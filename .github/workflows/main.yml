@@ -25,7 +25,8 @@ on:
           - 'en-US'
           - 'vi-VN'
       FEATURE:
-        description: 'Turn off the feature. To distinguish, add a space, And do not enter a new line'
+        name: 'Turn off the feature'
+        description: 'Please add spaces to distinguish each feature'
         required: true
         default: 'always-autorepeat disable-create-button hide-autoplay-button hide-shorts-button'
       ICONS:
