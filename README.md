@@ -17,9 +17,9 @@
 - Download the YouTube magisk file and flash
 
 - To update without rebooting try the following command:
-```
-curl -# -L http://Link-Magisk-Youtube.zip -o YouTube.zip && magisk --install-module YouTube.zip && cp -rf /data/adb/modules_update/YouTube /data/adb/modules && rm -fr /data/adb/modules_update/YouTube /data/adb/modules/YouTube/update
-```
+
+> ###### curl -# -L http://Link-Magisk-Youtube.zip -o YouTube.zip && magisk --install-module YouTube.zip && cp -rf /data/adb/modules_update/YouTube /data/adb/modules && rm -fr /data/adb/modules_update/YouTube /data/adb/modules/YouTube/update
+
 
 - Replace `Link-Magisk-Youtube.zip` with your link.
 
