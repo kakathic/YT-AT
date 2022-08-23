@@ -1,4 +1,5 @@
 # Kakathic
+echo "$SVision"
 
 Likk="$GITHUB_WORKSPACE"
 
