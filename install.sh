@@ -2,7 +2,7 @@
 
 Likk="$GITHUB_WORKSPACE"
 
-Dx(){ java -jar $Likk/Tools/dx.jar --dex --no-strict --min-sdk-version 26 --core-library "$1" --output "$2"; }
+Dx(){ java -jar $Likk/Tools/dx.jar --dex --no-strict --min-sdk-version 26 --core-library --output "$2" "$1"; }
 smali(){ java -jar $Likk/Tools/smali-2.5.2.jar "$@"; }
 baksmali(){ java -jar $Likk/Tools/baksmali-2.5.2.jar "$@"; }
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
