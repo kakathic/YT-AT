@@ -73,6 +73,7 @@ jobs:
           FEATURE: ${{ inputs.FEATURE }}
           ROUND: ${{ inputs.ROUND }}
           TYPE: ${{ inputs.TYPE }}
+          LANGUAGE: ${{ inputs.LANGUAGE }}
 
         run: |
           SVision="17.32.35"
