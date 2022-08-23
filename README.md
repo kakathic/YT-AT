@@ -11,10 +11,14 @@
 
 - [YouTube version](https://github.com/revanced/revanced-patches)
 
-**User manual**
+**Module Magisk**
 ---
 
-- [Watch the video](https://youtu.be/tCeE34jEurA)
+- Download the YouTube magisk file and flash
+
+- To update without rebooting try the following command
+
+> `curl -# -L https://github.com/kakathic/YT-AT/releases/download/Download/YouTube-Magisk-17.32.39-arm64.vi-VN.Zip -o YouTube.zip && magisk --install-module YouTube.zip && cp -rf /data/adb/modules_update/YouTube /data/adb/modules && rm -fr /data/adb/modules_update/YouTube /data/adb/modules/YouTube/update`
 
 **Builds**
 ---
@@ -38,6 +42,8 @@
 - Turn on website mode for computer
 
 - And follow the following
+
+- [Watch the video](https://youtu.be/tCeE34jEurA)
 
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd1.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd2.jpg" height="auto" width="100%" />
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd3.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd4.jpg" height="auto" width="100%" />
