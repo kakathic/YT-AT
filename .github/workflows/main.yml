@@ -17,7 +17,7 @@ on:
           - x86
           - x86_64
       LANGUAGE:
-        description: 'Add additional language settings revanced '
+        description: 'Add language settings revanced mod'
         required: true
         default: 'en-US'
         type: choice
