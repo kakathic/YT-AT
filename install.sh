@@ -5,12 +5,15 @@ Likk="$GITHUB_WORKSPACE"
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
 apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"; }
+XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
+ZHex(){ xxd -r -p "$@"; }
 
 ListTM="lib
 tmp
 Up
 Nn
 Tav
+Pak
 apk"
 
 for Vak in $ListTM; do
@@ -86,6 +89,20 @@ version='$Vision'
 versionCode='$Vision2'
 updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
 
+# Xử lý revanced patches
+
+unzip -qo "$Likk/lib/revanced-patches.jar" $Likk/Pak
+if [ "$(grep -Rlcm1 '$Vision' $Likk/Pak)" != 1 ];then
+TK="$(echo -n "$SVision" | XHex)"
+TT="$(echo -n "$Vision" | XHex)"
+for vak in $(grep -Rl '$SVision' $Likk/Pak); do
+cp -rf $vak $Likk/tmp/test
+XHex "$Likk/tmp/test" | sed -e "s/$TK/$TT/" | ZHex > $vak
+done
+cd $Likk/Pak
+zip -qr "$Likk/revanced-patches.zip" *
+mv -f "$Likk/revanced-patches.zip" "$Likk/lib/revanced-patches.jar"
+fi
 
 if [ "$TYPE" != 'true' ];then
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support $icon $amoled --mount
