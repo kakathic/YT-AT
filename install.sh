@@ -105,6 +105,7 @@ versionCode='$Vision2'
 updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$LANGUAGE-$ach$amoled2'.json' >> $Likk/Module/module.prop
 
 # Xử lý revanced patches
+if [ "$SVision" != "$Vision" ] || [ "$LANGUAGE" != 'en-US' ];then
 unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
 mkdir -p $Likk/Pak/smali
 baksmali d $Likk/Pak/classes.dex -o $Likk/Pak/smali
@@ -118,11 +119,11 @@ fi
 
 if [ "$LANGUAGE" != 'en-US' ];then
 for wngn in $(grep '=' $Likk/Language/strings.xml | cut -d = -f1); do
-Stvi="$(grep -m1 '\"'$wngn'\"' $Likk/Language/$LANGUAGE/strings.xml | cut -d '>' -f2 | cut -d '<' -f1)"
+Stvi="$(grep -m1 '"'$wngn'"' $Likk/Language/$LANGUAGE/strings.xml | cut -d '>' -f2 | cut -d '<' -f1)"
 Sten="$(grep -m1 "$wngn=" $Likk/Language/strings.xml | cut -d = -f2)"
-Pathkffhg="$(grep -Rl '\"'$wngn'\"' $Likk/Pak/smali)"
+Pathkffhg="$(grep -Rl '"'$wngn'"' $Likk/Pak/smali)"
 echo "$Stvi - $Sten - $Pathkffhg"
-[ -e ”$Pathkffhg” ] && sed -i 's|\"'$Sten'\"|\"'$Stvi'\"|g' "$Pathkffhg"
+[ -e ”$Pathkffhg” ] && sed -i 's|"'$Sten'"|"'$Stvi'"|g' "$Pathkffhg"
 done
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/downloads/host/values/strings.xml $Likk/downloads.xml
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
