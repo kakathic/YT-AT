@@ -93,10 +93,10 @@ updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach
 # Xử lý revanced patches
 
 unzip -qo "$Likk/lib/revanced-patches.jar" $Likk/Pak
-if [ "$(grep -Rlcm1 '$Vision' $Likk/Pak)" != 1 ];then
+if [ -z "$(grep -Rl "$Vision" $Likk/Pak)" ];then
 TK="$(echo -n "$SVision" | XHex)"
 TT="$(echo -n "$Vision" | XHex)"
-for vak in $(grep -Rl '$SVision' $Likk/Pak); do
+for vak in $(grep -Rl "$SVision" $Likk/Pak); do
 cp -rf $vak $Likk/tmp/test
 XHex "$Likk/tmp/test" | sed -e "s/$TK/$TT/" | ZHex > $vak
 done
