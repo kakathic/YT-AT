@@ -135,7 +135,7 @@ VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/sponsorblock/host/values
 fi
 
 smali a "$Likk/Pak/smali" -o "$Likk/Pak/classes.dex"
-$Likk/Tools/d2j-dex2jar.sh -f "$Likk/Pak/classes.dex" -o $Likk/Pak/Test.jar
+$Likk/Tools/d2j-dex2jar.sh -f "$Likk/Pak/classes.dex" -o $Likk/Pak/Test.jar >/dev/null 2>/dev/null
 unzip -qo $Likk/Pak/Test.jar -d $Likk/Pak
 rm -fr $Likk/Pak/Test.jar $Likk/Pak/smali
 
