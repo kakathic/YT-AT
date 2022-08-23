@@ -8,6 +8,7 @@ apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releas
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 VHstring(){
+if [ "$LANGUAGE" != 'en_US' ];then
 echo '<?xml version="1.0" encoding="utf-8"?>
 <resources>' >> $3
 for vahhd in $(grep 'name=' $2 | cut -d \" -f2); do
@@ -17,6 +18,7 @@ sed -i '/name=\"'$vahhd'\"/d' $2
 done
 echo '</resources>'  >> $3
 cp -rf $3 $2
+fi
 }
 ListTM="lib
 tmp
