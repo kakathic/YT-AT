@@ -2,6 +2,9 @@
 
 export Likk="$GITHUB_WORKSPACE"
 
+[ "$LANGUAGE" == 'en-US' ] && LANGUAGE=''
+[ "$LANGUAGE" == 'en-US' ] || LANGUAGE2=".$LANGUAGE2"
+
 Dx(){ java -jar $Likk/Tools/dx.jar --dex --no-strict --min-sdk-version 26 --core-library --output "$2" "$1"; }
 smali(){ java -jar $Likk/Tools/smali-2.5.2.jar "$@"; }
 baksmali(){ java -jar $Likk/Tools/baksmali-2.5.2.jar "$@"; }
@@ -106,10 +109,10 @@ done
 echo '
 version='$Vision'
 versionCode='$Vision2'
-updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$LANGUAGE-$ach$amoled2'.json' >> $Likk/Module/module.prop
+updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2$LANGUAGE2'.json' >> $Likk/Module/module.prop
 
 # Xử lý revanced patches
-if [ "$SVision" != "$Vision" ] || [ "$LANGUAGE" != 'en-US' ];then
+if [ "$SVision" != "$Vision" ] || [ "$LANGUAGE" ];then
 unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
 mkdir -p $Likk/Pak/smali
 baksmali d $Likk/Pak/classes.dex -o $Likk/Pak/smali
@@ -121,10 +124,11 @@ for vak in $(grep -Rl "$SVision" $Likk/Pak/smali); do
 done
 fi
 
-if [ "$LANGUAGE" != 'en-US' ];then
+if [ "$LANGUAGE" ];then
+if [ -e $Likk/Language/$LANGUAGE/$LANGUAGE.sh ];then
 chmod 777 $Likk/Language/$LANGUAGE/$LANGUAGE.sh
 . $Likk/Language/$LANGUAGE/$LANGUAGE.sh
-
+fi
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/downloads/host/values/strings.xml $Likk/downloads.xml
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
 VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/sponsorblock/host/values/strings.xml $Likk/sponsorblock.xml
@@ -146,14 +150,14 @@ java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
-zip -q -r "$Likk/Up/YouTube-Magisk-$Vision-$LANGUAGE-$ach$amoled2.Zip" *
+zip -q -r "$Likk/Up/YouTube-Magisk-$Vision-$ach$amoled2$LANGUAGE2.Zip" *
 echo '{
 "version": "'$Vision'",
 "versionCode": "'$Vision2'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Download/YouTube-Magisk-'$Vision'-'$LANGUAGE-$ach$amoled2'.Zip",
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Download/YouTube-Magisk-'$Vision'-'$ach$amoled2$LANGUAGE2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
-}' > $Likk/Up-$LANGUAGE-$ach$amoled2.json
+}' > $Likk/Up-$ach$amoled2$LANGUAGE2.json
 else
 java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
-apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$LANGUAGE-$ach$amoled2.apk"
+apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2$LANGUAGE2.apk"
 fi
