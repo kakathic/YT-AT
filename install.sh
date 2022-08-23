@@ -1,6 +1,6 @@
 # Kakathic
 
-Likk="$GITHUB_WORKSPACE"
+export Likk="$GITHUB_WORKSPACE"
 
 Dx(){ java -jar $Likk/Tools/dx.jar --dex --no-strict --min-sdk-version 26 --core-library --output "$2" "$1"; }
 smali(){ java -jar $Likk/Tools/smali-2.5.2.jar "$@"; }
