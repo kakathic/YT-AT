@@ -10,17 +10,21 @@ Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
 apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"; }
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
+
 VHstring(){
 echo '<?xml version="1.0" encoding="utf-8"?>
 <resources>' >> $3
 for vahhd in $(grep 'name=' $2 | cut -d \" -f2); do
 [ "$(grep -cm1 'name=\"'$vahhd'\"' $1)" == 1 ] && Stv="$(grep -m1 'name=\"'$vahhd'\"' $1 | cut -d '>' -f2 | cut -d '<' -f1)" || Stv="$(grep -m1 'name=\"'$vahhd'\"' $2 | cut -d '>' -f2 | cut -d '<' -f1)"
-echo '<string name="'$vahhd'">'$Stv'</string>' >> $3
+[ "$(grep -m1 'name=\"'$vahhd'\"' $1 | grep -c 'formatted=')" == 1 ] && Format=' formatted="false"'
+[ "$(grep -m1 'name=\"'$vahhd'\"' $2 | grep -c 'formatted=')" == 1 ] && Format=' formatted="false"'
+echo '<string name="'$vahhd'"'$Format'>'$Stv'</string>' >> $3
 sed -i '/name=\"'$vahhd'\"/d' $2
 done
 echo '</resources>'  >> $3
 cp -rf $3 $2
 }
+
 ListTM="lib
 tmp
 Up
