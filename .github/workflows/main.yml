@@ -25,10 +25,9 @@ on:
           - 'en-US'
           - 'vi-VN'
       FEATURE:
-        name: 'Turn off the feature'
-        description: 'Please add spaces to distinguish each feature'
+        description: 'Turn off the feature, Add spaces to distinguish each feature'
         required: true
-        default: 'always-autorepeat disable-create-button hide-autoplay-button hide-shorts-button'
+        default: ''
       ICONS:
         description: 'Original icon'
         required: false
