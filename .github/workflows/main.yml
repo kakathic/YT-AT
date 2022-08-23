@@ -93,7 +93,6 @@ jobs:
           AUTOPLAY: ${{ inputs.AUTOPLAY }}
           CREATE: ${{ inputs.CREATE }}
           SHORTS: ${{ inputs.SHORTS }}
-
         run: |
           SVision="17.32.35"
           chmod 777 install.sh
