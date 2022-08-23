@@ -96,5 +96,5 @@ jobs:
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
         with:
-          name: Log
-          path: kk/*
+          name: YouTube
+          path: Up/*
