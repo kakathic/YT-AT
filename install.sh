@@ -86,12 +86,17 @@ else
 zip -q -9 "$Likk/lib/YouTube.apk" -d $lib $xoa2
 fi
 
-[ "$ICONS" == 'true' ] && icon="-e custom-branding"
+[ "$ICONS" == 'true' ] && echo -n "-e custom-branding" >> $Likk/logk
+[ "$SHORTS" == 'true' ] && echo -n "-e hide-shorts-button" >> $Likk/logk
+[ "$AUTOPLAY" == 'true' ] && echo -n "-e hide-autoplay-button" >> $Likk/logk
+[ "$CREATE" == 'true' ] && echo -n "-e disable-create-button" >> $Likk/logk
+
 if [ "$AMOLED" == 'true' ];then
-amoled="-e amoled"
+echo -n "-e amoled" >> $Likk/logk
 else
 amoled2=".Amoled"
 fi
+
 for vakl in $FEATURE; do
 echo -n "-e $vakl " >> $Likk/logk
 done
@@ -102,7 +107,6 @@ versionCode='$Vision2'
 updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$LANGUAGE-$ach$amoled2'.json' >> $Likk/Module/module.prop
 
 # Xử lý revanced patches
-
 unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
 if [ -z "$(grep -Rl "$Vision" $Likk/Pak)" ];then
 TK="$(echo -n "$SVision" | XHex)"
@@ -121,8 +125,9 @@ zip -qr "$Likk/revanced-patches.zip" *
 mv -f "$Likk/revanced-patches.zip" "$Likk/lib/revanced-patches.jar"
 fi
 
+# Xây dựng 
 if [ "$TYPE" != 'true' ];then
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support $icon $amoled --mount
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
@@ -134,6 +139,6 @@ echo '{
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
 }' > $Likk/Up-$LANGUAGE-$ach$amoled2.json
 else
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) $icon $amoled --mount
+java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$LANGUAGE-$ach$amoled2.apk"
 fi
