@@ -1,3 +1,4 @@
+echo $Likk
 sed -i "s|\"Settings related to interactions\"|\"Cài đặt liên quan đến tương tác\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch$PreferenceScreen.smali
 sed -i "s|\"Interaction\"|\"Sự tương tác\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch$PreferenceScreen.smali
 sed -i "s|\"Settings related to the layout\"|\"Cài đặt liên quan đến bố cục\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch$PreferenceScreen.smali
