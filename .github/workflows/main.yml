@@ -17,12 +17,12 @@ on:
           - x86
           - x86_64
       LANGUAGE:
-        description: 'Add language settings revanced mod'
+        description: 'Add language revanced mod'
         required: true
-        default: 'en-US'
+        default: 'Default'
         type: choice
         options:
-          - 'en-US'
+          - 'Default'
           - 'vi-VN'
       FEATURE:
         description: 'Turn off the feature, Add spaces to distinguish each feature'
