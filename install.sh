@@ -110,9 +110,9 @@ cp -rf $vak $Likk/tmp/test
 XHex "$Likk/tmp/test" | sed -e "s/$TK/$TT/" | ZHex > $vak
 done
 
-VHstring stringvh $Likk/Pak/downloads/host/values/strings.xml $Likk/downloads.xml
-VHstring stringvh $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
-VHstring stringvh $Likk/Pak/sponsorblock/host/values/strings.xml $Likk/sponsorblock.xml
+VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/downloads/host/values/strings.xml $Likk/downloads.xml
+VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
+VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/sponsorblock/host/values/strings.xml $Likk/sponsorblock.xml
 
 cd $Likk/Pak
 zip -qr "$Likk/revanced-patches.zip" *
