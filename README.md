@@ -5,7 +5,7 @@
 **Language**
 ---
 
-- [Vietnam's](README-Vi.md)
+> [Việt Nam](README-Vi.md)
 
 **Use Revanced cli**
 ---
