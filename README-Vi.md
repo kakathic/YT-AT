@@ -10,7 +10,9 @@
 
 - [Trang chủ](https://github.com/revanced)
 
-- [Phiên bản YouTube hỗ trợ](https://github.com/revanced/revanced-patches)
+- [Phiên bản hỗ trợ](https://github.com/revanced/revanced-patches)
+
+- Là phiên bản mà Revanced họ hỗ trợ sử dụng tool
 
 **Mô-đun Magisk**
 ---
