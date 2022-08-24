@@ -53,7 +53,7 @@
 **Branch sync**
 ---
 
-- Please press Branch sync to update the latest tool 
+- Press update branch to keep this tool up to date.
 
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/ud.jpg" height="auto" width="100%" />
 
