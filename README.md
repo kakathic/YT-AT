@@ -26,7 +26,7 @@
 **Builds Download**
 ---
 
-- [Download](https://github.com/kakathic/YT-AT/releases/tag/Download)
+- [Download](/releases/tag/Download)
 
 **Donate**
 ---
