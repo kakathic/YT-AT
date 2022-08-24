@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       VERSION:
-        description: '17-32-39 => 17.32.39 is the YouTube version that revanced supports tool'
+        description: '17-32-35 => 17.32.35 is the YouTube version that revanced supports tool'
         required: true
-        default: '17-32-39'
+        default: '17-32-35'
       DEVICE:
         description: 'Select device'
         required: true
