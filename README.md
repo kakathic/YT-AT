@@ -2,7 +2,7 @@
 
 - YouTube mod tool automatically
 
-- [Việt Nam](README-Vi.md)
+- [Việt Nam](/Web/README-Vi.md)
 
 **Use Revanced cli**
 ---
