@@ -58,4 +58,4 @@
 
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/ud.jpg" height="auto" width="100%" />
 
-Chúc bạn thành công!
+- Chúc bạn thành công!
