@@ -16,6 +16,8 @@
 
 - [YouTube version](https://github.com/revanced/revanced-patches)
 
+- See the version that Revanced they support for the latest build.
+
 **Module Magisk**
 ---
 
