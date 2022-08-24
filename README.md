@@ -2,6 +2,11 @@
 
 - YouTube mod tool automatically
 
+**Language**
+---
+
+- [Vietnam's](README-Vi.md)
+
 **Use Revanced cli**
 ---
 
