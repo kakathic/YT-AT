@@ -26,7 +26,7 @@
 **Builds Download**
 ---
 
-- [Download](/releases/tag/Download)
+- [Download](/Vip/releases/tag/Download)
 
 **Donate**
 ---
