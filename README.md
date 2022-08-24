@@ -23,11 +23,6 @@
 
 - Replace `Link-Magisk-Youtube.zip` with your link.
 
-**Builds Download**
----
-
-- [Download](*/releases/tag/Download)
-
 **Donate**
 ---
 
