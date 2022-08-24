@@ -39,7 +39,7 @@
 
 - Techcombank: 19034902604017
 
-**Instructions with pictures**
+**Instructions**
 ---
 
 - Turn on website mode for computer
