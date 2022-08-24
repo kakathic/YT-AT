@@ -3,6 +3,8 @@
 
 - Công cụ mod YouTube tự động
 
+- [English](https://github.com/kakathic/YT-AT)
+
 **Sử dụng Revanced cli**
 ---
 
