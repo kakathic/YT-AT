@@ -2,9 +2,6 @@
 
 - YouTube mod tool automatically
 
-**Language**
----
-
 - [Việt Nam](README-Vi.md)
 
 **Use Revanced cli**
