@@ -2,9 +2,6 @@
 
 export Likk="$GITHUB_WORKSPACE"
 
-[ "$LANGUAGE" == 'Default' ] && LANGUAGE=''
-[ "$LANGUAGE" == 'Default' ] || LANGUAGE2=".$LANGUAGE"
-
 Dx(){ java -jar $Likk/Tools/dx.jar --dex --no-strict --min-sdk-version 26 --core-library --output "$2" "$1"; }
 smali(){ java -jar $Likk/Tools/smali-2.5.2.jar "$@"; }
 baksmali(){ java -jar $Likk/Tools/baksmali-2.5.2.jar "$@"; }
@@ -14,18 +11,18 @@ apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releas
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 
-VHstring(){
-echo '<?xml version="1.0" encoding="utf-8"?>
-<resources>' >> $3
-for vahhd in $(grep 'name=' $2 | cut -d \" -f2); do
-[ "$(grep -cm1 'name=\"'$vahhd'\"' $1)" == 1 ] && Stv="$(grep -m1 'name=\"'$vahhd'\"' $1 | cut -d '>' -f2 | cut -d '<' -f1)" || Stv="$(grep -m1 'name=\"'$vahhd'\"' $2 | cut -d '>' -f2 | cut -d '<' -f1)"
-[ "$(grep -m1 'name=\"'$vahhd'\"' $1 | grep -c 'formatted=')" == 1 ] && Format=' formatted="false"'
-[ "$(grep -m1 'name=\"'$vahhd'\"' $2 | grep -c 'formatted=')" == 1 ] && Format=' formatted="false"'
-echo '<string name="'$vahhd'"'$Format'>'$Stv'</string>' >> $3
-sed -i '/name=\"'$vahhd'\"/d' $2
+cpnn(){
+while true; do
+[ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 done
-echo '</resources>'  >> $3
-cp -rf $3 $2
+for vakdll in $Likk/Language/*; do
+cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
+sed -i "/<\/resources>/d" $Likk/tmp/res/${vakdll##*/}/strings.xml
+echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
+done
+while true; do
+[ -e "$Likk/done.txt" ] && break || sleep 1
+done
 }
 
 ListTM="lib
@@ -59,6 +56,7 @@ curl -s -k -L -H "$User" $Url2 -o $Likk/lib/$1
 }
 
 Taiyt 'YouTube.apk' '-2'
+[ -e $Likk/lib/YouTube.apk ] || (echo "- Lỗi tải Youtube.apk"; logout)
 
 Vision="$(echo $VERSION | tr '-' '.')"
 Vision2="$(echo $VERSION | sed 's|-||g')"
@@ -86,15 +84,9 @@ unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
 [ "$OPTIMIZATION" == 'true' ] && xoa2='assets/fonts/*'
 [ "$ROUND" == 'true' ] || rm -fr $Likk/Module/system
 
-if [ "$TYPE" != 'true' ];then
-Taiyt 'YouTube.apks'
-unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
-zip -q -9 "$Likk/lib/YouTube.apk" -d 'lib/*' $xoa2
-else
-zip -q -9 "$Likk/lib/YouTube.apk" -d $lib $xoa2
-fi
-
 [ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
+[ "$SHORTS" == 'true' ] && echo -n "-e hide-shorts-button " >> $Likk/logk
+[ "$CREATE" == 'true' ] && echo -n "-e disable-create-button " >> $Likk/logk
 
 if [ "$AMOLED" == 'true' ];then
 echo -n "-e amoled " >> $Likk/logk
@@ -109,55 +101,41 @@ done
 echo '
 version='$Vision'
 versionCode='$Vision2'
-updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2$LANGUAGE2'.json' >> $Likk/Module/module.prop
+updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
 
 # Xử lý revanced patches
-if [ "$SVision" != "$Vision" ] || [ "$LANGUAGE" ];then
-unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
-mkdir -p $Likk/Pak/smali
-baksmali d $Likk/Pak/classes.dex -o $Likk/Pak/smali
-rm -fr $Likk/Pak/classes.dex
-
 if [ "$SVision" != "$Vision" ];then
-for vak in $(grep -Rl "$SVision" $Likk/Pak/smali); do
-[ -e "$vak" ] && sed -i "s|$SVision|$Vision|g" $vak
+unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
+for vak in $(grep -Rl "$SVision" $Likk/Pak); do
+cp -rf $vak $Likk/tmp/test
+XHex "$Likk/tmp/test" | sed -e "s/$(echo -n "$SVision" | XHex)/$(echo -n "$Vision" | XHex)/" | ZHex > $vak
 done
-fi
-
-if [ "$LANGUAGE" ];then
-if [ -e $Likk/Language/$LANGUAGE/$LANGUAGE.sh ];then
-chmod 777 $Likk/Language/$LANGUAGE/$LANGUAGE.sh
-. $Likk/Language/$LANGUAGE/$LANGUAGE.sh
-fi
-VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/downloads/host/values/strings.xml $Likk/downloads.xml
-VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
-VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/sponsorblock/host/values/strings.xml $Likk/sponsorblock.xml
-fi
-
-smali a "$Likk/Pak/smali" -o "$Likk/Pak/classes.dex"
-$Likk/Tools/d2j-dex2jar.sh -f "$Likk/Pak/classes.dex" -o $Likk/Pak/Test.jar >/dev/null 2>/dev/null
-unzip -qo $Likk/Pak/Test.jar -d $Likk/Pak
-rm -fr $Likk/Pak/Test.jar $Likk/Pak/smali
-
 cd $Likk/Pak
-zip -qr "$Likk/revanced-patches.zip" *
-mv -f "$Likk/revanced-patches.zip" "$Likk/lib/revanced-patches.jar"
+zip -qr "$Likk/lib/revanced-patches.jar" *
 fi
 
 # Xây dựng 
 if [ "$TYPE" != 'true' ];then
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
+( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
+Taiyt 'YouTube.apks'
+unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
+zip -qr "$Likk/Tav/YouTube.apk" -d 'lib/*' $xoa2
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
-zip -q -r "$Likk/Up/YouTube-Magisk-$Vision-$ach$amoled2$LANGUAGE2.Zip" *
+zip -q -r "$Likk/Up/YouTube-Magisk-$Vision-$ach$amoled2.Zip" *
 echo '{
 "version": "'$Vision'",
 "versionCode": "'$Vision2'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Download/YouTube-Magisk-'$Vision'-'$ach$amoled2$LANGUAGE2'.Zip",
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Download/YouTube-Magisk-'$Vision'-'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
-}' > $Likk/Up-$ach$amoled2$LANGUAGE2.json
+}' > $Likk/Up-$ach$amoled2.json 
+echo > $Likk/done.txt ) & cpnn
+
 else
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
-apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2$LANGUAGE2.apk"
+
+( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
+zip -qr -9 "$Likk/apk/YouTube.apk" -d $lib $xoa2
+apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" 
+echo > $Likk/done.txt ) & cpnn
 fi

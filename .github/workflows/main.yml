@@ -16,18 +16,10 @@ on:
           - arm64-v8a
           - x86
           - x86_64
-      LANGUAGE:
-        description: 'Add language revanced mod'
-        required: true
-        default: 'Default'
-        type: choice
-        options:
-          - 'Default'
-          - 'vi-VN'
       FEATURE:
         description: 'Turn off the feature, Add spaces to distinguish each feature'
         required: true
-        default: 'always-autorepeat disable-create-button hide-autoplay-button hide-shorts-button'
+        default: 'always-autorepeat hide-autoplay-button '
       ICONS:
         description: 'Original icon & Name'
         required: false
@@ -53,9 +45,19 @@ on:
         required: false
         type: boolean
         default: true
+      CREATE:
+        description: 'Show create video button'
+        required: false
+        type: boolean
+        default: true
+      SHORTS:
+        description: 'Show button shorts video'
+        required: false
+        type: boolean
+        default: true
 jobs:
   build:
-    name: 'Open Build...'
+    name: 'Open build...'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -74,7 +76,8 @@ jobs:
           FEATURE: ${{ inputs.FEATURE }}
           ROUND: ${{ inputs.ROUND }}
           TYPE: ${{ inputs.TYPE }}
-          LANGUAGE: ${{ inputs.LANGUAGE }}
+          SHORTS: ${{ inputs.SHORTS }}
+          CREATE: ${{ inputs.CREATE }}
 
         run: |
           SVision="17.32.35"
@@ -89,7 +92,7 @@ jobs:
           files: Up*.json
           prerelease: true
       - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: YouTube
           path: Up/*
