@@ -19,7 +19,6 @@ for vakdll in $Likk/Language/*; do
 cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 sed -i "/<\/resources>/d" $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
-cp -rf $Likk/tmp/res/${vakdll##*/}/strings.xml $Likk/Up
 done
 while true; do
 [ -e "$Likk/done.txt" ] && break || sleep 1
@@ -89,9 +88,8 @@ if [ "$TYPE" != 'true' ];then
 Taiyt 'YouTube.apks'
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 zip -qr "$Likk/lib/YouTube.apk" -d 'lib/*' $xoa2
-else
-zip -qr -9 "$Likk/lib/YouTube.apk" -d $lib $xoa2
-cp -rf "$Likk/lib/YouTube.apk" $Likk/Up
+
+
 fi
 
 [ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
@@ -140,6 +138,7 @@ echo '{
 echo > $Likk/done.txt ) & cpnn
 else
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
+zip -qr -9 "$Likk/lib/YouTube.apk" -d $lib $xoa2
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" 
 echo > $Likk/done.txt ) & cpnn
 fi
