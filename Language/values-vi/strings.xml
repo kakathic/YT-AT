@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
     <string name="revanced_ryd_title">Bật khôi phục lượt Dislike</string>
     <string name="revanced_ryd_summary">Bật tùy chọn này để xem lại số lượt Dislike</string>
     <string name="revanced_ryd_attribution_title">Bản vá khôi phục lượt Dislike</string>
@@ -146,4 +144,4 @@
     <string name="api_url_changed">API URL đã thay đổi</string>
     <string name="api_url_reset">Đặt lại API URL</string>
     <string name="api_url_invalid">URL API được cung cấp không hợp lệ</string>
-</resources>
+
