@@ -16,20 +16,16 @@ ZHex(){ xxd -r -p "$@"; }
 
 cpnn(){
 while true; do
-[ -e "$Likk/tmp/res/values/strings.xml" ] && break || sleep 2
+[ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 done
-sleep 20
 for vakdll in $Likk/Language/*; do
 sed -i '/</resources>/d' $Likk/tmp/res/${vakdll##*/}/strings.xml
 cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 cat $vakdll/strings.xml
-echo
-echo
-cat $Likk/tmp/res/${vakdll##*/}/strings.xml
 done
 while true; do
-[ -e "$Likk/done.txt" ] && break || sleep 2
+[ -e "$Likk/done.txt" ] && break || sleep 1
 done
 }
 
