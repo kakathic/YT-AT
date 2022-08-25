@@ -16,8 +16,9 @@ ZHex(){ xxd -r -p "$@"; }
 
 cpnn(){
 while true; do
-[ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 2
+[ -e "$Likk/tmp/res/values/strings.xml" ] && break || sleep 2
 done
+sleep 2
 for vakdll in $Likk/Language/*; do
 cat $Likk/tmp/res/${vakdll##*/}/strings.xml
 sed -i '/</resources>/d' $Likk/tmp/res/${vakdll##*/}/strings.xml
