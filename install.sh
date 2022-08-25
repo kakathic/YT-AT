@@ -18,9 +18,8 @@ cpnn(){
 while true; do
 [ -e "$Likk/tmp/res/values/strings.xml" ] && break || sleep 2
 done
-sleep 2
+sleep 5
 for vakdll in $Likk/Language/*; do
-cat $Likk/tmp/res/${vakdll##*/}/strings.xml
 sed -i '/</resources>/d' $Likk/tmp/res/${vakdll##*/}/strings.xml
 cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
