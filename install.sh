@@ -1,9 +1,8 @@
 # Kakathic
 
 export Likk="$GITHUB_WORKSPACE"
-
-[ "$LANGUAGE" == 'Default' ] && LANGUAGE=''
 [ "$LANGUAGE" == 'Default' ] && LANGUAGE2='' || LANGUAGE2=".$LANGUAGE"
+[ "$LANGUAGE" == 'Default' ] && LANGUAGE=''
 
 Dx(){ java -jar $Likk/Tools/dx.jar --dex --no-strict --min-sdk-version 26 --core-library --output "$2" "$1"; }
 smali(){ java -jar $Likk/Tools/smali-2.5.2.jar "$@"; }
@@ -22,6 +21,7 @@ for vakdll in $Likk/Language/*; do
 sed -i '/</resources>/d' $Likk/tmp/res/${vakdll##*/}/strings.xml
 cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
+cp -rf $Likk/tmp/res/${vakdll##*/}/strings.xml $Likk/Up
 cat $vakdll/strings.xml
 done
 while true; do
