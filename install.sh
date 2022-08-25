@@ -15,18 +15,15 @@ XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 
 cpnn(){
-sleep 5
-while true; do
+sleep 10
 if [ -e "$Likk/tmp/res/values-vi" ];then
 for vakdll in $Likk/Language/*; do
+echo $vakdll
 sed -i '/</resources>/d' $Likk/tmp/res/${vakdll##*/}/strings.xml
 cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 done
-else
-sleep 2
 fi
-done
 }
 
 ListTM="lib
