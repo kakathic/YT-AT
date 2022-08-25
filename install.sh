@@ -15,13 +15,13 @@ XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 
 cpnn(){
+sleep 5
 while true; do
 if [ -e "$Likk/tmp/res/values-vi" ];then
 for vakdll in $Likk/Language/*; do
 sed -i '/</resources>/d' $Likk/tmp/res/${vakdll##*/}/strings.xml
 cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
-echo '
-</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
+echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 done
 else
 sleep 2
@@ -125,7 +125,7 @@ fi
 
 # Xây dựng 
 if [ "$TYPE" != 'true' ];then
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount & cpnn
+( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount ) & cpnn
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
@@ -137,6 +137,6 @@ echo '{
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
 }' > $Likk/Up-$ach$amoled2$LANGUAGE2.json
 else
-java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount & cpnn
+( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount ) & cpnn
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2$LANGUAGE2.apk"
 fi
