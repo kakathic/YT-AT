@@ -15,17 +15,17 @@ XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 
 cpnn(){
-sleep 10
-if [ -e "$Likk/tmp/res/values-vi" ];then
+while true; do
+[ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 2
+done
 for vakdll in $Likk/Language/*; do
 cat $Likk/tmp/res/${vakdll##*/}/strings.xml
 sed -i '/</resources>/d' $Likk/tmp/res/${vakdll##*/}/strings.xml
 cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 done
-fi
 while true; do
-[ -e "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2$LANGUAGE2.apk" ] && break || sleep 2
+[ -e "$Likk/done.txt" ] && break || sleep 2
 done
 }
 
@@ -136,8 +136,10 @@ echo '{
 "versionCode": "'$Vision2'",
 "zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Download/YouTube-Magisk-'$Vision'-'$ach$amoled2$LANGUAGE2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
-}' > $Likk/Up-$ach$amoled2$LANGUAGE2.json ) & cpnn
+}' > $Likk/Up-$ach$amoled2$LANGUAGE2.json 
+echo > $Likk/done.txt ) & cpnn
 else
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
-apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2$LANGUAGE2.apk" ) & cpnn
+apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2$LANGUAGE2.apk" 
+echo > $Likk/done.txt ) & cpnn
 fi
