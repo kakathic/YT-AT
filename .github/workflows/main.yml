@@ -40,11 +40,6 @@ on:
         required: false
         type: boolean
         default: true
-      ROUND:
-        description: 'Pip rounded (root)'
-        required: false
-        type: boolean
-        default: true
       CREATE:
         description: 'Show create video button'
         required: false
@@ -52,6 +47,11 @@ on:
         default: true
       SHORTS:
         description: 'Show button shorts video'
+        required: false
+        type: boolean
+        default: true
+      ROUND:
+        description: 'Pip rounded (root)'
         required: false
         type: boolean
         default: true
