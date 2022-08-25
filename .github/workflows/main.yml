@@ -55,7 +55,7 @@ on:
         default: true
 jobs:
   build:
-    name: 'Open Build...'
+    name: 'Open build...'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -89,7 +89,7 @@ jobs:
           files: Up*.json
           prerelease: true
       - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: YouTube
           path: Up/*
