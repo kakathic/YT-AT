@@ -15,7 +15,7 @@ XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 
 cpnn(){
-sleep 10
+sleep 20
 if [ -e "$Likk/tmp/res/values-vi" ];then
 for vakdll in $Likk/Language/*; do
 echo $vakdll
