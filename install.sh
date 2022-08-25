@@ -26,7 +26,6 @@ while true; do
 done
 }
 
-sudo apt install zipalign >/dev/null
 ListTM="lib
 tmp
 Up
@@ -91,7 +90,8 @@ Taiyt 'YouTube.apks'
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 zip -qr "$Likk/lib/YouTube.apk" -d 'lib/*' $xoa2
 else
-zip -qr "$Likk/lib/YouTube.apk" -d $lib $xoa2
+zip -qr -9 "$Likk/lib/YouTube.apk" -d $lib $xoa2
+cp -rf "$Likk/lib/YouTube.apk" $Likk/Up
 fi
 
 [ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
@@ -140,11 +140,6 @@ echo '{
 echo > $Likk/done.txt ) & cpnn
 else
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
-rm -fr $Likk/tmp/*
-unzip -qo $Likk/apk/YouTube.apk -d $Likk/tmp
-cd $Likk/tmp
-zip -qr -9 $Likk/YouTube.apk *
-zipalign -f 4 $Likk/YouTube.apk $Likk/apk/YouTube.apk
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" 
 echo > $Likk/done.txt ) & cpnn
 fi
