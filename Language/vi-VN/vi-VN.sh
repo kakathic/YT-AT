@@ -35,24 +35,24 @@ sed -i "s|\"Hide latest posts\"|\"Ẩn các bài viết mới nhất\"|" $Likk/P
 sed -i "s|\"Suggestions are shown\"|\"Đề xuất được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Suggestions are hidden\"|\"Đề xuất đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Hide suggestions\"|\"Ẩn đề xuất\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
-sed -i "s|\"Merchandise banners are shown\"|\"Biểu ngữ hàng hóa được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
-sed -i "s|\"Merchandise banners are hidden\"|\"Biểu ngữ hàng hóa đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
+sed -i "s|\"Merchandise banners are shown\"|\"Biểu ngữ sản phẩm được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
+sed -i "s|\"Merchandise banners are hidden\"|\"Biểu ngữ sản phẩm đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Remove info panels\"|\"Xóa bảng thông tin\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Medical panels are shown\"|\"Bảng y tế được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Medical panels are hidden\"|\"Bảng y tế đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Remove medical panels\"|\"Loại bỏ bảng y tế\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
-sed -i "s|\"Merchandise banners are shown\"|\"Biểu ngữ hàng hóa được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
-sed -i "s|\"Merchandise banners are hidden\"|\"Biểu ngữ hàng hóa đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
-sed -i "s|\"Remove merchandise banners\"|\"Loại bỏ các biểu ngữ hàng hóa\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
+sed -i "s|\"Merchandise banners are shown\"|\"Biểu ngữ sản phẩm được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
+sed -i "s|\"Merchandise banners are hidden\"|\"Biểu ngữ sản phẩm đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
+sed -i "s|\"Remove merchandise banners\"|\"Loại bỏ các biểu ngữ sản phẩm\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Movies section is shown\"|\"Đoạn phim được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Movies section is hidden\"|\"Đoạn phim đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Remove movies section\"|\"Xóa đoạn phim\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Paid content is shown\"|\"Nội dung trả phí được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Paid content is hidden\"|\"Nội dung trả phí đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Remove paid content\"|\"Xóa nội dung trả phí\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
-sed -i "s|\"Shorts shelves are shown\"|\"Short được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
-sed -i "s|\"Shorts shelves are hidden\"|\"Short đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
-sed -i "s|\"Remove shorts shelf\"|\"Loại bỏ short\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
+sed -i "s|\"Shorts shelves are shown\"|\"Video ngắn đang bật\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
+sed -i "s|\"Shorts shelves are hidden\"|\"Video ngắn đã tắt\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
+sed -i "s|\"Remove shorts shelf\"|\"Loại bỏ video ngắn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Personal suggestions are shown\"|\"Đề xuất cá nhân được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Personal suggestions are hidden\"|\"Đề xuất cá nhân đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Remove personal suggestions\"|\"Loại bỏ đề xuất cá nhân\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
@@ -77,9 +77,9 @@ sed -i "s|\"Fullscreen panels are shown\"|\"Bảng toàn màn hình được hi�
 sed -i "s|\"Enable auto HDR brightness\"|\"Bật độ sáng tự động HDR\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/hdrbrightness/patch/HDRBrightnessPatch.smali
 sed -i "s|\"Auto HDR brightness is disabled\"|\"Độ sáng HDR tự động đã tắt\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/hdrbrightness/patch/HDRBrightnessPatch.smali
 sed -i "s|\"Auto HDR brightness is enabled\"|\"Độ sáng tự động HDR được bật\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/hdrbrightness/patch/HDRBrightnessPatch.smali
-sed -i "s|\"Home ads are shown\"|\"Quảng cáo gia đình được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
-sed -i "s|\"Home ads are hidden\"|\"Quảng cáo gia đình đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
-sed -i "s|\"Remove home ads\"|\"Xóa quảng cáo trang chủ\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
+sed -i "s|\"Home ads are shown\"|\"Quảng cáo ở trang chủ đang bật\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
+sed -i "s|\"Home ads are hidden\"|\"Quảng cáo ở trang chủ đã tắt\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
+sed -i "s|\"Remove home ads\"|\"Xóa quảng cáo ở trang chủ\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/general/bytecode/patch/GeneralBytecodeAdsPatch.smali
 sed -i "s|\"Info-cards are hidden\"|\"Thẻ thông tin đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/infocardsuggestions/patch/HideInfocardSuggestionsPatch.smali
 sed -i "s|\"Info-cards are shown\"|\"Thẻ thông tin được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/infocardsuggestions/patch/HideInfocardSuggestionsPatch.smali
 sed -i "s|\"Show info-cards\"|\"Hiển thị thẻ thông tin\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/infocardsuggestions/patch/HideInfocardSuggestionsPatch.smali
