@@ -19,7 +19,7 @@ on:
       FEATURE:
         description: 'Turn off the feature, Add spaces to distinguish each feature'
         required: true
-        default: 'always-autorepeat disable-create-button hide-autoplay-button hide-shorts-button'
+        default: 'always-autorepeat hide-autoplay-button '
       ICONS:
         description: 'Original icon & Name'
         required: false
@@ -45,6 +45,16 @@ on:
         required: false
         type: boolean
         default: true
+      CREATE:
+        description: 'Show create video button'
+        required: false
+        type: boolean
+        default: true
+      SHORTS:
+        description: 'Show button shorts video'
+        required: false
+        type: boolean
+        default: true
 jobs:
   build:
     name: 'Open build...'
@@ -66,6 +76,8 @@ jobs:
           FEATURE: ${{ inputs.FEATURE }}
           ROUND: ${{ inputs.ROUND }}
           TYPE: ${{ inputs.TYPE }}
+          SHORTS: ${{ inputs.SHORTS }}
+          CREATE: ${{ inputs.CREATE }}
 
         run: |
           SVision="17.32.35"
