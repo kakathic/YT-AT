@@ -14,20 +14,6 @@ apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releas
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 
-VHstring(){
-echo '<?xml version="1.0" encoding="utf-8"?>
-<resources>' >> $3
-for vahhd in $(grep 'name=' $2 | cut -d \" -f2); do
-[ "$(grep -cm1 'name=\"'$vahhd'\"' $1)" == 1 ] && Stv="$(grep -m1 'name=\"'$vahhd'\"' $1 | cut -d '>' -f2 | cut -d '<' -f1)" || Stv="$(grep -m1 'name=\"'$vahhd'\"' $2 | cut -d '>' -f2 | cut -d '<' -f1)"
-[ "$(grep -m1 'name=\"'$vahhd'\"' $1 | grep -c 'formatted=')" == 1 ] && Format=' formatted="false"'
-[ "$(grep -m1 'name=\"'$vahhd'\"' $2 | grep -c 'formatted=')" == 1 ] && Format=' formatted="false"'
-echo '<string name="'$vahhd'"'$Format'>'$Stv'</string>' >> $3
-sed -i '/name=\"'$vahhd'\"/d' $2
-done
-echo '</resources>'  >> $3
-cp -rf $3 $2
-}
-
 ListTM="lib
 tmp
 Up
@@ -112,33 +98,12 @@ versionCode='$Vision2'
 updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2$LANGUAGE2'.json' >> $Likk/Module/module.prop
 
 # Xử lý revanced patches
-if [ "$SVision" != "$Vision" ] || [ "$LANGUAGE" ];then
-unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
-mkdir -p $Likk/Pak/smali
-baksmali d $Likk/Pak/classes.dex -o $Likk/Pak/smali
-rm -fr $Likk/Pak/classes.dex
-
 if [ "$SVision" != "$Vision" ];then
-for vak in $(grep -Rl "$SVision" $Likk/Pak/smali); do
-[ -e "$vak" ] && sed -i "s|$SVision|$Vision|g" $vak
+unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
+for vak in $(grep -Rl "$SVision" $Likk/Pak); do
+cp -rf $vak $Likk/tmp/test
+XHex "$Likk/tmp/test" | sed -e "s/$(echo -n "$SVision" | XHex)/$(echo -n "$Vision" | XHex)/" | ZHex > $vak
 done
-fi
-
-if [ "$LANGUAGE" ];then
-if [ -e $Likk/Language/$LANGUAGE/$LANGUAGE.sh ];then
-chmod 777 $Likk/Language/$LANGUAGE/$LANGUAGE.sh
-. $Likk/Language/$LANGUAGE/$LANGUAGE.sh
-fi
-VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/downloads/host/values/strings.xml $Likk/downloads.xml
-VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/returnyoutubedislike/host/values/strings.xml $Likk/returnyoutubedislike.xml
-VHstring $Likk/Language/$LANGUAGE/strings.xml $Likk/Pak/sponsorblock/host/values/strings.xml $Likk/sponsorblock.xml
-fi
-
-smali a "$Likk/Pak/smali" -o "$Likk/Pak/classes.dex"
-$Likk/Tools/d2j-dex2jar.sh -f "$Likk/Pak/classes.dex" -o $Likk/Pak/Test.jar >/dev/null 2>/dev/null
-unzip -qo $Likk/Pak/Test.jar -d $Likk/Pak
-rm -fr $Likk/Pak/Test.jar $Likk/Pak/smali
-
 cd $Likk/Pak
 zip -qr "$Likk/revanced-patches.zip" *
 mv -f "$Likk/revanced-patches.zip" "$Likk/lib/revanced-patches.jar"
