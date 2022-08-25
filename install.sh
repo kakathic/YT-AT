@@ -3,7 +3,7 @@
 export Likk="$GITHUB_WORKSPACE"
 
 [ "$LANGUAGE" == 'Default' ] && LANGUAGE=''
-[ "$LANGUAGE" == 'Default' ] || LANGUAGE2=".$LANGUAGE"
+[ "$LANGUAGE" == 'Default' ] && LANGUAGE2='' || LANGUAGE2=".$LANGUAGE"
 
 Dx(){ java -jar $Likk/Tools/dx.jar --dex --no-strict --min-sdk-version 26 --core-library --output "$2" "$1"; }
 smali(){ java -jar $Likk/Tools/smali-2.5.2.jar "$@"; }
