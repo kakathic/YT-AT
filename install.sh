@@ -95,6 +95,8 @@ zip -qr "$Likk/lib/YouTube.apk" -d $lib $xoa2
 fi
 
 [ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
+[ "$SHORTS" == 'true' ] && echo -n "-e hide-shorts-button " >> $Likk/logk
+[ "$CREATE" == 'true' ] && echo -n "-e disable-create-button " >> $Likk/logk
 
 if [ "$AMOLED" == 'true' ];then
 echo -n "-e amoled " >> $Likk/logk
