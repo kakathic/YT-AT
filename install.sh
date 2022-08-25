@@ -23,6 +23,10 @@ for vakdll in $Likk/Language/*; do
 sed -i '/</resources>/d' $Likk/tmp/res/${vakdll##*/}/strings.xml
 cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
+cat $vakdll/strings.xml
+echo
+echo
+cat $Likk/tmp/res/${vakdll##*/}/strings.xml
 done
 while true; do
 [ -e "$Likk/done.txt" ] && break || sleep 2
