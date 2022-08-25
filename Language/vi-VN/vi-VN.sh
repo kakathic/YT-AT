@@ -124,7 +124,7 @@ sed -i "s|\"Volume swipe is disabled\"|\"Điều khiển vuốt cho âm lượng
 sed -i "s|\"Volume swipe is enabled\"|\"Điều khiển vuốt cho âm lượng đã bật\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/swipecontrols/patch/resource/SwipeControlsResourcePatch.smali
 sed -i "s|\"Tablet Mini-player is disabled\"|\"Đã tắt trình phát thu nhỏ của máy tính bảng\"|" $Likk/Pak/smali/app/revanced/patches/youtube/layout/tabletminiplayer/patch/TabletMiniPlayerPatch.smali
 sed -i "s|\"Tablet Mini-player is enabled\"|\"Đang bật trình phát thu nhỏ của máy tính bảng\"|" $Likk/Pak/smali/app/revanced/patches/youtube/layout/tabletminiplayer/patch/TabletMiniPlayerPatch.smali
-sed -i "s|\"Enable the tablet Mini-player\"|\"Bật trình phát mini máy tính bảng\"|" $Likk/Pak/smali/app/revanced/patches/youtube/layout/tabletminiplayer/patch/TabletMiniPlayerPatch.smali
+sed -i "s|\"Enable the tablet Mini-player\"|\"Bật trình phát thu nhỏ của máy tính bảng\"|" $Likk/Pak/smali/app/revanced/patches/youtube/layout/tabletminiplayer/patch/TabletMiniPlayerPatch.smali
 sed -i "s|\"Video ads are shown\"|\"Quảng cáo video được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/video/patch/VideoAdsPatch.smali
 sed -i "s|\"Video ads are hidden\"|\"Quảng cáo video đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/video/patch/VideoAdsPatch.smali
 sed -i "s|\"Hide video ads\"|\"Ẩn quảng cáo video\"|" $Likk/Pak/smali/app/revanced/patches/youtube/ad/video/patch/VideoAdsPatch.smali
