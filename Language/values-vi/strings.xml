@@ -1,286 +1,353 @@
-    <string name="revanced_ryd_title">Bật khôi phục lượt Dislike</string>
-    <string name="revanced_ryd_summary">Bật tùy chọn này để xem lại số lượt Dislike</string>
-    <string name="revanced_ryd_attribution_title">Bản vá khôi phục lượt Dislike</string>
-    <string name="revanced_ryd_attribution_summary">Bản vá này sử dụng API Return YouTube Dislike từ https://returnyoutubedislike.com. Nhấn để tìm hiểu thêm</string>
-    <string name="downloader_not_installed_warning">không được cài đặt</string>
-    <string name="enable_sb">Bật SponsorBlock</string>
-    <string name="enable_sb_sum">SponsorBlock là một hệ thống có nguồn gốc từ cộng đồng để bỏ qua các phần gây khó chịu trong video YouTube</string>
-    <string name="enable_segmadding">Bật thêm phân đoạn mới</string>
-    <string name="enable_segmadding_sum">Tùy chọn này dùng để mở tính năng thêm phân đoạn thử nghiệm (Sẽ có vấn đề về khả năng hiển thị nút)</string>
-    <string name="diff_segments">Phải làm gì với các phân đoạn khác nhau</string>
-    <string name="general">Chung</string>
-    <string name="general_skiptoast">Hiển thị thông báo ngắn khi tự động bỏ qua phân đoạn</string>
-    <string name="general_skiptoast_sum">Nhấp để xem một ví dụ về thông báo ngắn</string>
-    <string name="general_skipcount">Bỏ qua theo dõi số lượng</string>
-    <string name="general_skipcount_sum">Điều này cho phép hệ thống bảng xếp hạng SponsorBlock biết mọi người đã tiết kiệm được bao nhiêu thời gian. Tiện ích sẽ gửi thông tin đến máy chủ mỗi khi bạn bỏ qua một phân đoạn</string>
-    <string name="general_adjusting">Điều chỉnh phân đoạn mới</string>
-    <string name="general_adjusting_sum">Đây là số mili giây (ms) bạn có thể di chuyển để điều chỉnh thời gian trong khi thêm phân đoạn mới</string>
-    <string name="general_min_duration">Thời gian tối thiểu của phân đoạn</string>
-    <string name="general_min_duration_sum">Các phân đoạn ngắn hơn giá trị đã đặt (tính bằng giây) sẽ không bị bỏ qua hoặc hiển thị trong trình phát</string>
-    <string name="general_uuid">ID người dùng của bạn</string>
-    <string name="general_uuid_sum">ID này nên được giữ riêng tư. Nó giống như mật khẩu và không nên được chia sẻ với bất kỳ ai. Nếu ai đó có ID của bạn, họ có thể mạo danh bạn</string>
-    <string name="settings_ie">Nhập/Xuất cài đặt</string>
-    <string name="settings_ie_sum">Đây là toàn bộ cấu hình của bạn có thể áp dụng trong tiện ích mở rộng dành cho máy tính để bàn trong JSON. Điều này bao gồm userID của bạn, vì vậy hãy đảm bảo chia sẻ điều này một cách khôn ngoan.</string>
-    <string name="general_api_url">Thay đổi API URL</string>
-    <string name="general_api_url_sum">Địa chỉ SponsorBlock được dùng để thực hiện các kết nối đến máy chủ.&lt;b> Đừng thay đổi trừ khi bạn biết mình đang làm gì.&lt;/b></string>
-    <string name="settings_import_successful">Cài đặt đã được nhập thành công</string>
-    <string name="settings_import_failed">Không nhập được cài đặt</string>
-    <string name="settings_export_failed">Không xuất được cài đặt</string>
-    <string name="general_cache">Bộ nhớ cache nội bộ của các phân đoạn</string>
-    <string name="general_cache_sum">Các video thường xem (ví dụ: nhạc, phim) có thể lưu trữ các phân đoạn trong bộ nhớ cache của ứng dụng để giúp việc bỏ qua các phân đoạn nhanh hơn</string>
-    <string name="general_cache_clear">Xóa bộ nhớ cache phân đoạn SponsorBlock</string>
-    <string name="segments_sponsor">Nhà tài trợ</string>
-    <string name="segments_sponsor_sum">Quảng cáo trả phí, giới thiệu có trả tiền và quảng cáo trực tiếp</string>
-    <string name="segments_intermission">Hoạt ảnh ngắt quãng/phần giới thiệu</string>
-    <string name="segments_intermission_sum">Khoảng thời gian không có nội dung thực tế. Có thể tạm dừng, khung hình tĩnh, hoạt ảnh lặp lại</string>
-    <string name="segments_endcards">Endcards/Credits</string>
-    <string name="segments_endcards_sum">Credits or when the YouTube endcards appear. Not for spoken conclusions</string>
-    <string name="segments_subscribe">Nhắc nhở tương tác (Đăng ký)</string>
-    <string name="segments_subscribe_sum">Khi có lời nhắc ngắn hãy thích, đăng ký hoặc theo dõi chúng ở giữa nội dung</string>
-    <string name="segments_selfpromo">Không phải trả tiền/Tự quảng cáo</string>
-    <string name="segments_selfpromo_sum">Khi có quảng cáo chưa thanh toán hoặc tự quảng cáo. Điều này bao gồm các phần cụ thể về hàng hóa, khoản đóng góp hoặc thông tin về những người họ đã cộng tác</string>
-    <string name="segments_nomusic">Âm nhạc: không phải âm nhạc</string>
-    <string name="segments_nomusic_sum">Chỉ để sử dụng trong trình phát âm nhạc. Điều này bao gồm phần giới thiệu hoặc phần giới thiệu trong video âm nhạc</string>
-    <string name="segments_filler">Tiếp tuyến/Nói đùa</string>
-    <string name="segments_filler_sum">Các cảnh tiếp theo chỉ được thêm vào để bổ sung hoặc hài hước không bắt buộc để hiểu nội dung chính của trình phát. Điều này không nên bao gồm các chi tiết bối cảnh hoặc nền</string>
-    <string name="skipped_segment">Bỏ qua một phân đoạn nhà tài trợ</string>
-    <string name="skipped_sponsor">Đã bỏ qua nhà tài trợ</string>
-    <string name="skipped_intermission">Đã bỏ qua phần giới thiệu</string>
-    <string name="skipped_endcard">Đã bỏ qua phần kết thúc</string>
-    <string name="skipped_subscribe">Đã bỏ qua lời nhắc làm phiền</string>
-    <string name="skipped_selfpromo">Đã bỏ qua quảng cáo bản thân</string>
-    <string name="skipped_nomusic">Đã bỏ qua phần không phải âm nhạc</string>
-    <string name="skipped_preview">Đã bỏ qua bản xem trước</string>
-    <string name="skipped_filler">Bỏ qua filler</string>
-    <string name="skipped_unsubmitted">Bỏ qua phân đoạn chưa gửi</string>
-    <string name="skip_automatically">Tự động bỏ qua</string>
-    <string name="skip_showbutton">Hiển thị nút bỏ qua</string>
-    <string name="skip_ignore">Đừng làm gì cả</string>
-    <string name="skip_sponsor">Bỏ qua phân đoạn</string>
     <string name="about">Thông tin</string>
     <string name="about_api">Ứng dụng này sử dụng API từ SponsorBlock</string>
-    <string name="about_api_sum">Nhấn để tìm hiểu thêm và tải xuống cho các nền tảng khác tại: sponsor.ajay.app</string>
-    <string name="about_madeby">Tổng hợp bởi JakubWeg, lập trình lại bởi oSumAtrIX</string>
-    <string name="tap_skip">Nhấn để bỏ qua</string>
-
-    <string name="submit_failed_unknown_error" formatted="false">Không thể gửi phân đoạn: Trạng thái: %d %s</string>
-    <string name="submit_failed_rate_limit">Không thể gửi phân đoạn.\nTỷ lệ giới hạn (Quá nhiều từ cùng một người dùng hoặc IP)</string>
-    <string name="submit_failed_forbidden" formatted="false">Không thể gửi phân đoạn.\n\n%s</string>
-    <string name="submit_failed_duplicate">Không thể gửi phân đoạn.\nĐã tồn tại</string>
-    <string name="submit_succeeded">Phân đoạn được gửi thành công</string>
-    <string name="submit_started">Đang gửi phân đoạn…</string>
-
-    <string name="vote_failed_unknown_error" formatted="false">Không thể bỏ phiếu cho phân đoạn: Trạng thái: %d %s</string>
-    <string name="vote_failed_rate_limit">Không thể gửi phân đoạn.\nTỷ lệ giới hạn (Quá nhiều từ cùng một người dùng hoặc IP)</string>
-    <string name="vote_failed_forbidden" formatted="false">Không thể gửi phân đoạn.\n\n%s</string>
-    <string name="vote_succeeded">Đã bình chọn thành công</string>
-    <string name="vote_started">Bỏ phiếu cho phân đoạn…</string>
-    <string name="vote_upvote">Ủng hộ</string>
-    <string name="vote_downvote">Phản đối</string>
-    <string name="vote_category">Đổi danh mục</string>
-    <string name="vote_no_segments">Không có phân đoạn nào để bỏ phiếu</string>
+    <string name="about_api_sum">Nhấn để tìm hiểu thêm, và xem tải xuống cho các nền tảng khác tại: spons.ajay.app</string>
+    <string name="about_madeby">Tích hợp được thực hiện bởi JakubWeg, mã hoá lại bởi oSumAtrIX</string>
+    <string name="action_browser">Trình duyệt SB</string>
+    <string name="action_segments">Phân đoạn</string>
+    <string name="api_url_changed">URL API đã thay đổi</string>
+    <string name="api_url_invalid">URL API được cung cấp không hợp lệ</string>
+    <string name="api_url_reset">Đặt lại URL API</string>
+    <string name="change">Thay đổi</string>
+    <string name="color_change">Bạn đang muốn thay đổi màu sắc?</string>
+    <string name="color_changed">Đã thay đổi màu sắc</string>
+    <string name="color_change_sum">Bây giờ bạn có thể thay đổi màu của danh mục bằng cách nhấp vào phía trên.</string>
+    <string name="color_choose_category">Chọn danh mục</string>
+    <string name="color_invalid">Mã hex không hợp lệ</string>
+    <string name="color_reset">Khôi phục màu sắc</string>
+    <string name="diff_segments">Bạn làm gì với các phân đoạn khác nhau</string>
+    <string name="enable_sb">Bật SponsorBlock</string>
+    <string name="enable_sb_sum">SponsorBlock là một tiện ích được đóng góp từ cộng đồng để bỏ qua các đoạn video gây khó chịu trong video của YouTube</string>
+    <string name="enable_segmadding">Bật thêm phân đoạn mới</string>
+    <string name="enable_segmadding_sum">Tùy chọn này dùng để mở tính năng thêm phân đoạn thử nghiệm (Sẽ có vấn đề về khả năng hiển thị nút)</string>
     <string name="enable_voting">Bật tính năng bỏ phiếu</string>
     <string name="enable_voting_sum">Bật tùy chọn này để cho phép bỏ phiếu.</string>
-
-    <string name="new_segment_choose_category">Chọn danh mục</string>
-    <string name="new_segment_disabled_category">Bạn đã tắt danh mục này trong cài đặt, kích hoạt lại để có thể sử dụng</string>
-    <string name="new_segment_title">Tạo phân đoạn SponsorBlock mới</string>
-    <string name="new_segment_mark_time_as_question" formatted="false">Đặt %02d:%02d:%04d làm phần đầu hay phần cuối của phân đoạn?</string>
-    <string name="new_segment_mark_start">bắt đầu</string>
-    <string name="new_segment_mark_end">kết thúc</string>
-    <string name="new_segment_now">bây giờ</string>
-    <string name="new_segment_time_start">Thời gian của phân đoạn bắt đầu lúc</string>
-    <string name="new_segment_time_end">Thời gian kết thúc phân đoạn lúc</string>
-    <string name="new_segment_time_start_set">Đặt thời gian bắt đầu phân đoạn</string>
-    <string name="new_segment_time_end_set">Kết thúc đặt phân đoạn</string>
-    <string name="new_segment_confirm_title">Thời gian có chính xác không?</string>
-    <string name="new_segment_confirm_content" formatted="false">Phân đoạn có thời gian từ %02d:%02d đến %02d:%02d (%d phút %02d giây) \nBạn đã sẵn sàng để gửi ?</string>
-    <string name="new_segment_mark_locations_first">Đánh dấu hai vị trí phân đoạn trên thanh thời gian trước</string>
-    <string name="new_segment_edit_by_hand_title">Sửa thời gian của phân đoạn bằng cách thủ công</string>
-    <string name="new_segment_edit_by_hand_content">Bạn có muốn chỉnh sửa thời gian bắt đầu hoặc kết thúc của phân đoạn?</string>
-    <string name="new_segment_edit_by_hand_saved">Xong</string>
-    <string name="new_segment_edit_by_hand_parse_error">Thời gian đã đặt không hợp lệ</string>
-
-    <string name="sb_guidelines_preference_title">Xem nguyên tắc</string>
-    <string name="sb_guidelines_preference_sum">Nguyên tắc bao gồm các mẹo và quy tắc về việc gửi phân đoạn</string>
-    <string name="sb_guidelines_popup_title">Có các nguyên tắc</string>
-    <string name="sb_guidelines_popup_content">Bạn nên đọc các nguyên tắc của SponsorBlock trước khi gửi bất kỳ phân đoạn nào</string>
-    <string name="sb_guidelines_popup_already_read">Đã đọc</string>
-    <string name="sb_guidelines_popup_open">Cho tôi xem</string>
-
-    <string name="general_time_without_sb">Hiển thị thời gian không có phân đoạn</string>
-    <string name="general_time_without_sb_sum">Thời gian này xuất hiện trong ngoặc bên cạnh thời gian hiện tại. Điều này hiển thị tổng thời gian video trừ đi bất kỳ phân đoạn nào.</string>
-    <string name="general_whitelisting">Danh sách kênh cho phép</string>
-    <string name="general_whitelisting_sum">Sử dụng nút Phân đoạn bên dưới trình phát để thêm kênh vào danh sách trắng</string>
+    <string name="general">Cài đặt chung</string>
+    <string name="general_adjusting">Điều chỉnh phân đoạn mới</string>
+    <string name="general_adjusting_sum">Đây là số mili giây (ms) bạn có thể di chuyển để điều chỉnh thời gian trong khi thêm phân đoạn mới</string>
+    <string name="general_api_url">Thay đổi URL API</string>
+    <string name="general_api_url_sum">Địa chỉ SponsorBlock được dùng để thực hiện các kết nối đến máy chủ.&lt;b&gt; Đừng thay đổi trừ khi bạn biết mình đang làm gì.&lt;/b&gt;</string>
     <string name="general_browser_button">Bật nút Trình duyệt SB</string>
     <string name="general_browser_button_sum">Nhấp vào nút bên dưới trình phát này để mở sb.ltn.fi nơi mà bạn có thể xem tất cả phân đoạn trên video.</string>
+    <string name="general_cache">Bộ nhớ cache nội bộ của các phân đoạn</string>
+    <string name="general_cache_clear">Xóa bộ nhớ cache phân đoạn SponsorBlock</string>
+    <string name="general_cache_sum">Các video thường xem (ví dụ: nhạc, phim) có thể lưu trữ các phân đoạn trong bộ nhớ cache của ứng dụng để giúp việc bỏ qua các phân đoạn nhanh hơn</string>
+    <string name="general_min_duration">Thời lượng phân đoạn tối thiểu</string>
+    <string name="general_min_duration_sum">Các phân đoạn ngắn hơn giá trị đã đặt (tính bằng giây) sẽ không bị bỏ qua hoặc hiển thị trong trình phát</string>
+    <string name="general_skipcount">Bỏ qua theo dõi số lượng</string>
+    <string name="general_skipcount_sum">Điều này cho phép hệ thống bảng xếp hạng SponsorBlock biết mọi người đã tiết kiệm được bao nhiêu thời gian. Tiện ích sẽ gửi thông tin đến máy chủ mỗi khi bạn bỏ qua một phân đoạn</string>
+    <string name="general_skiptoast">Hiển thị thông báo ngắn khi tự động bỏ qua phân đoạn</string>
+    <string name="general_skiptoast_sum">Nhấp để xem một ví dụ về thông báo ngắn</string>
+    <string name="general_time_without_sb">Hiển thị thời gian không có phân đoạn</string>
+    <string name="general_time_without_sb_sum">Thời gian này xuất hiện trong ngoặc bên cạnh thời gian hiện tại. Điều này hiển thị tổng thời lượng video trừ đi bất kỳ phân đoạn nào.</string>
+    <string name="general_uuid">ID người dùng của bạn</string>
+    <string name="general_uuid_sum">ID này nên được giữ riêng tư. Nó giống như mật khẩu và không nên được chia sẻ với bất kỳ ai. Nếu ai đó có ID của bạn, họ có thể mạo danh bạn</string>
+    <string name="general_whitelisting">Thêm kênh vào Danh sách trắng</string>
+    <string name="general_whitelisting_sum">Sử dụng nút Phân đoạn bên dưới trình phát để thêm kênh vào danh sách trắng</string>
+    <string name="litho_channel_guidelines">Loại bỏ Nguyên tắc kênh</string>
+    <string name="litho_channel_guidelines_off">Loại bỏ Nguyên tắc kênh đã tắt</string>
+    <string name="litho_channel_guidelines_on">Loại bỏ Nguyên tắc kênh đã bật</string>
+    <string name="litho_comments">Loại bỏ Bình luận</string>
+    <string name="litho_comments_off">Loại bỏ Bình luận đã tắt (bình luận mới/chỉ dành cho điện thoại)</string>
+    <string name="litho_comments_on">Loại bỏ Bình luận đã bật (bình luận mới / chỉ dành cho điện thoại)</string>
+    <string name="litho_community_guidelines">Loại bỏ Nguyên tắc cộng đồng</string>
+    <string name="litho_community_guidelines_off">Loại bỏ Nguyên tắc cộng đồng đã tắt</string>
+    <string name="litho_community_guidelines_on">Loại bỏ Nguyên tắc cộng đồng đã bật</string>
+    <string name="litho_community_posts">Loại bỏ Bài đăng cộng đồng</string>
+    <string name="litho_community_posts_off">Loại bỏ Bài đăng cộng đồng đã tắt</string>
+    <string name="litho_community_posts_on">Loại bỏ Bài đăng cộng đồng đã bật</string>
+    <string name="litho_compact_banner">Loại bỏ Biểu ngữ thu gọn</string>
+    <string name="litho_compact_banner_off">Loại bỏ Biểu ngữ thu gọn đã tắt</string>
+    <string name="litho_compact_banner_on">Loại bỏ Biểu ngữ thu gọn đã bật</string>
+    <string name="litho_compact_movie">Loại bỏ Phim thu gọn</string>
+    <string name="litho_compact_movie_off">Loại bỏ Phim thu gọn đã tắt</string>
+    <string name="litho_compact_movie_on">Loại bỏ Phim thu gọn đã bật</string>
+    <string name="litho_emergency_box">Loại bỏ Hộp khẩn cấp</string>
+    <string name="litho_emergency_box_off">Loại bỏ Hộp khẩn cấp đã tắt</string>
+    <string name="litho_emergency_box_on">Loại bỏ Hộp khẩn cấp đã bật</string>
+    <string name="litho_general_ad_removal">Loại bỏ Quảng cáo ở bố cục chung</string>
+    <string name="litho_general_ad_removal_off">Loại bỏ Quảng cáo ở bố cục chung đã tắt</string>
+    <string name="litho_general_ad_removal_on">Loại bỏ Quảng cáo ở bố cục chung đã bật</string>
+    <string name="litho_hide_suggestions">Loại bỏ Đề xuất chung</string>
+    <string name="litho_hide_suggestions_off">Loại bỏ Đề xuất chung đã tắt</string>
+    <string name="litho_hide_suggestions_on">Loại bỏ Đề xuất chung đã bật</string>
+    <string name="litho_horizontal_movie_shelf">Loại bỏ Thẻ phim</string>
+    <string name="litho_horizontal_movie_shelf_off">Loại bỏ Thẻ phim đã tắt</string>
+    <string name="litho_horizontal_movie_shelf_on">Loại bỏ Thẻ phim đã bật</string>
+    <string name="litho_info_panel">Loại bỏ Bảng thông tin</string>
+    <string name="litho_info_panel_off">Loại bỏ Bảng thông tin đã tắt</string>
+    <string name="litho_info_panel_on">Loại bỏ Thẻ thông tin đã bật</string>
+    <string name="litho_in_feed_survey">Loại bỏ Khảo sát</string>
+    <string name="litho_in_feed_survey_off">Loại bỏ Khảo sát đã tắt</string>
+    <string name="litho_in_feed_survey_on">Loại bỏ Khảo sát đã bật</string>
+    <string name="litho_latest_posts">Loại bỏ Bài đăng mới nhất</string>
+    <string name="litho_latest_posts_off">Loại bỏ Bài đăng mới nhất đã tắt</string>
+    <string name="litho_latest_posts_on">Loại bỏ Bài đăng mới nhất đã bật</string>
+    <string name="litho_medical_panel">Loại bỏ Bảng y tế</string>
+    <string name="litho_medical_panel_off">Loại bỏ Bảng y tế đã tắt</string>
+    <string name="litho_medical_panel_on">Loại bỏ Bảng y tế đã bật</string>
+    <string name="litho_merchandise">Loại bỏ Quảng cáo bán hàng</string>
+    <string name="litho_merchandise_off">Loại bỏ Quảng cáo bán hàng đã tắt</string>
+    <string name="litho_merchandise_on">Loại bỏ Quảng cáo bán hàng đã bật</string>
+    <string name="litho_movie_upsell">Loại bỏ Quảng cáo bán phim</string>
+    <string name="litho_movie_upsell_off">Loại bỏ Quảng cáo bán phim đã tắt</string>
+    <string name="litho_movie_upsell_on">Loại bỏ Quảng cáo bán phim đã bật</string>
+    <string name="litho_paid_content">Loại bỏ Nội dung trả phí</string>
+    <string name="litho_paid_content_off">Loại bỏ Nội dung trả phí đã tắt</string>
+    <string name="litho_paid_content_on">Loại bỏ Nội dung trả phí đã bật</string>
+    <string name="litho_shorts_shelf">Loại bỏ Thẻ Shorts</string>
+    <string name="litho_shorts_shelf_off">Loại bỏ Thẻ Shorts đã tắt</string>
+    <string name="litho_shorts_shelf_on">Loại bỏ Thẻ Shorts đã bật</string>
+    <string name="litho_suggested">Loại bỏ Đề xuất cho bạn</string>
+    <string name="litho_suggested_off">Loại bỏ Đề xuất cho bạn đã tắt</string>
+    <string name="litho_suggested_on">Loại bỏ Đề xuất cho bạn đã bật</string>
+    <string name="microg_notification_settings">Cài đặt thông báo</string>
+    <string name="microg_notification_settings_summary">"1. Cần bật tính năng đăng ký thiết bị Google và Cloud Messaging để nhận thông báo.
+2. ReVanced cần được hiển thị như đã đăng ký trong Cloud Messaging.
+3. Trạng thái hiện tại trong Cloud Messaging phải được Kết nối."</string>
+    <string name="microg_settings">Cài đặt MicroG</string>
+    <string name="minutes">phút</string>
+    <string name="new_segment_choose_category">Chọn danh mục phân đoạn</string>
+    <string name="new_segment_confirm_content" formatted="false">Phân đoạn có thời gian từ %02d:%02d đến %02d:%02d (%d phút %02d giây) \n Bạn đã sẵn sàng để gửi ?</string>
+    <string name="new_segment_confirm_title">Thời gian có chính xác không ?</string>
+    <string name="new_segment_disabled_category">Bạn đã tắt danh mục này trong cài đặt, hãy kích hoạt lại để có thể sử dụng</string>
+    <string name="new_segment_edit_by_hand_content">Bạn có muốn chỉnh sửa thời gian bắt đầu hoặc kết thúc phân đoạn không?</string>
+    <string name="new_segment_edit_by_hand_parse_error">Thời gian đã đặt không hợp lệ</string>
+    <string name="new_segment_edit_by_hand_saved">Hoàn thành</string>
+    <string name="new_segment_edit_by_hand_title">Chỉnh sửa thời gian của phân đoạn theo cách thủ công</string>
+    <string name="new_segment_mark_end">kết thúc</string>
+    <string name="new_segment_mark_locations_first">Đánh dấu hai vị trí phân đoạn trên thanh thời gian trước</string>
+    <string name="new_segment_mark_start">bắt đầu</string>
+    <string name="new_segment_mark_time_as_question" formatted="false">Đặt %02d:%02d:%04d làm phần đầu hay phần cuối của một phân đoạn mới?</string>
+    <string name="new_segment_now">ngay bây giờ</string>
+    <string name="new_segment_time_end">Thời gian phân đoạn kết thúc lúc</string>
+    <string name="new_segment_time_end_set">Kết thúc đặt phân đoạn</string>
+    <string name="new_segment_time_start">Thời gian của phân đoạn bắt đầu lúc</string>
+    <string name="new_segment_time_start_set">Đặt thời gian bắt đầu phân đoạn</string>
+    <string name="new_segment_title">Tạo phân đoạn SponsorBlock mới</string>
+    <string name="pref_subtitles_scale_normal">Bình thường</string>
+    <string name="reset">Đặt lại</string>
+    <string name="revanced_ad_settings_title">Cài đặt Quảng cáo</string>
+    <string name="revanced_autoplay_button_summary_off">Nút Tự động phát đã ẩn</string>
+    <string name="revanced_autoplay_button_summary_on">Nút Tự động phát được hiển thị</string>
+    <string name="revanced_autoplay_button_title">Nút Tự động phát</string>
+    <string name="revanced_auto_captions_summary_off">Phụ đề không được bật tự động ở mức âm lượng 0% </string>
+    <string name="revanced_auto_captions_summary_on">Phụ đề được bật tự động ở mức âm lượng 0%</string>
+    <string name="revanced_auto_captions_title">Phụ đề tự động</string>
+    <string name="revanced_auto_repeat_button_summary_off">"Không hiển thị nút Tự động lặp lại trong trình phát. Sử dụng nút chuyển đổi bên dưới để điều khiển tự động lặp lại"</string>
+    <string name="revanced_auto_repeat_button_summary_on">Nút Tự động lặp lại được hiển thị trong trình phát</string>
+    <string name="revanced_auto_repeat_button_title">Nút Tự động lặp lại</string>
+    <string name="revanced_auto_repeat_summary_off">Luôn tự động lặp lại đang tắt</string>
+    <string name="revanced_auto_repeat_summary_on">Luôn Tự động lặp lại đang bật</string>
+    <string name="revanced_auto_repeat_title">Luôn tự động lặp lại</string>
+    <string name="revanced_branding_watermark_summary_off">Hình mờ video đã ẩn</string>
+    <string name="revanced_branding_watermark_summary_on">Hình mờ video được hiển thị</string>
+    <string name="revanced_branding_watermark_title">Hình mờ video</string>
+    <string name="revanced_buffer_title">Cài đặt bộ đệm</string>
+    <string name="revanced_button_location_entry_both">Cả hai</string>
+    <string name="revanced_button_location_entry_buttoncontainer">Phía duới trình phát</string>
+    <string name="revanced_button_location_entry_none">Đã ẩn</string>
+    <string name="revanced_button_location_entry_player">Trong trình phát</string>
+    <string name="revanced_cast_button_summary_off">Nút Chiếu đã ẩn</string>
+    <string name="revanced_cast_button_summary_on">Nút Chiếu được hiển thị</string>
+    <string name="revanced_cast_button_title">Nút Chiếu</string>
+    <string name="revanced_codec_override_title">Ghi đè Codec</string>
+    <string name="revanced_copy_video_url_summary_off">Nút Sao chép liên kết đã ẩn khỏi trình phát</string>
+    <string name="revanced_copy_video_url_summary_on">Nút Sao chép liên kết được hiển thị trong trình phát</string>
+    <string name="revanced_copy_video_url_timestamp_summary_off">Nút Sao chép liên kết với thời gian đã ẩn khỏi trình phát</string>
+    <string name="revanced_copy_video_url_timestamp_summary_on">Nút Sao chép liên kết với thời gian được hiển thị trong trình phát</string>
+    <string name="revanced_copy_video_url_timestamp_title">Nút Sao chép liên kết với Thời gian</string>
+    <string name="revanced_copy_video_url_title">Nút Sao chép liên kết</string>
+    <string name="revanced_create_button_summary_off">Nút Tạo video đã ẩn</string>
+    <string name="revanced_create_button_summary_on">Nút Tạo video được hiển thị</string>
+    <string name="revanced_create_button_title">Nút Tạo video</string>
+    <string name="revanced_custom_playback_speed">Tùy chỉnh Tốc độ phát</string>
+    <string name="revanced_custom_playback_speed_off">Tùy chỉnh tốc độ phát đã tắt</string>
+    <string name="revanced_custom_playback_speed_on">Tốc độ phát lại tùy chỉnh đã được bật</string>
+    <string name="revanced_debug_summary_off">Nhật ký gỡ lỗi bổ sung đã tắt</string>
+    <string name="revanced_debug_summary_on">Nhật ký gỡ lỗi bổ sung đã bật</string>
+    <string name="revanced_debug_title">Chế độ sửa lỗi</string>
+    <string name="revanced_discord_summary">Nhấn để tham gia ReVanced trên Discord</string>
+    <string name="revanced_discord_title">Máy chủ Discord</string>
+    <string name="revanced_fullscreen_panels_summary_off">Bảng toàn màn hình đã ẩn</string>
+    <string name="revanced_fullscreen_panels_summary_on">Bảng toàn màn hình được hiển thị</string>
+    <string name="revanced_fullscreen_panels_title">Bảng toàn màn hình</string>
+    <string name="revanced_hdr_full_brightness_summary_off">Độ sáng được đặt tối đa trên video HDR ở chế độ màn hình ngang</string>
+    <string name="revanced_hdr_full_brightness_summary_on">Độ sáng của video sẽ theo độ sáng thiết bị của bạn trên video HDR nằm ngang</string>
+    <string name="revanced_hdr_full_brightness_title">Ghi đè độ sáng trên video HDR</string>
+    <string name="revanced_home_ads_summary_off">Quảng cáo ở Trang chủ đã ẩn</string>
+    <string name="revanced_home_ads_summary_on">Quảng cáo trên Trang chủ được hiển thị</string>
+    <string name="revanced_home_ads_title">Quảng cáo trên trang chủ</string>
+    <string name="revanced_info_cards_summary_off">Thẻ thông tin đã ẩn</string>
+    <string name="revanced_info_cards_summary_on">Thẻ thông tin được hiển thị</string>
+    <string name="revanced_info_cards_title">Thẻ thông tin</string>
+    <string name="revanced_layout_settings_title">Cài đặt giao diện</string>
+    <string name="revanced_maximum_buffer_summary">"Thời lượng tối đa của phương tiện mà trình phát sẽ cố gắng lưu vào bộ đệm (tính bằng mili giây)
+        Mặc định: 120000"</string>
+    <string name="revanced_maximum_buffer_title">Bộ đệm tối đa</string>
+    <string name="revanced_minimized_playback">Phát lại trong nền</string>
+    <string name="revanced_minimized_playback_off">Phát lại trong nền đã tắt</string>
+    <string name="revanced_minimized_playback_on">Phát lại trong nền đã bật</string>
+    <string name="revanced_misc_title">Cài đặt khác</string>
+    <string name="revanced_new_actionbar_summary_off">Kiểu thanh tìm kiếm do ứng dụng xác định</string>
+    <string name="revanced_new_actionbar_summary_on">Buộc thanh tìm kiếm rộng</string>
+    <string name="revanced_new_actionbar_title">Thanh tìm kiếm rộng</string>
+    <string name="revanced_old_style_quality_settings_summary_off">Sử dụng cài đặt chất lượng video kiểu mặc định</string>
+    <string name="revanced_old_style_quality_settings_summary_on">Sử dụng cài đặt chất lượng video kiểu cũ</string>
+    <string name="revanced_old_style_quality_settings_title">Kiểu cài đặt chất lượng</string>
+    <string name="revanced_playback_start_summary">"Thời lượng phương tiện phải được lưu vào bộ đệm để phát lại bắt đầu hoặc tiếp tục sau một hành động của người dùng, chẳng hạn như tìm kiếm (tính bằng mili giây)
+        Mặc định: 2500"</string>
+    <string name="revanced_playback_start_title">Bắt đầu phát lại</string>
+    <string name="revanced_preferred_video_speed_summary">Chọn tốc độ video ưa thích</string>
+    <string name="revanced_preferred_video_speed_title">Tốc độ video ưa thích</string>
+    <string name="revanced_rebuffer_summary">"Thời lượng phương tiện phải được lưu vào bộ đệm để phát lại tiếp tục sau bộ đệm lại (tính bằng mili giây). Bộ đệm lại được xác định là do cạn bộ đệm chứ không phải do người dùng thực hiện
+        Mặc định: 5000"</string>
+    <string name="revanced_rebuffer_title">Bộ đệm lại</string>
+    <string name="revanced_reel_summary_off">Câu chuyện đã ẩn</string>
+    <string name="revanced_reel_summary_on">Câu chuyện được hiển thị</string>
+    <string name="revanced_reel_title">Câu chuyện trên YouTube</string>
+    <string name="revanced_ryd_attribution_summary">Tích hợp này sử dụng API RYD từ https://returnyoutubedislike.com. Nhấn để tìm hiểu thêm</string>
+    <string name="revanced_ryd_attribution_title">Trả lại nút Không thích trên YouTube</string>
+    <string name="revanced_ryd_settings_summary">Sử dụng API RYD</string>
+    <string name="revanced_ryd_settings_title">Trả lại nút không thích trên YouTube</string>
+    <string name="revanced_ryd_summary">Bật tùy chọn này để xem lại số lượt Không thích</string>
+    <string name="revanced_ryd_title">Bật RYD</string>
+    <string name="revanced_seekbar_tapping">Chạm để tua</string>
+    <string name="revanced_seekbar_tapping_off">Chạm để tua (thanh tiến trình video) đã tắt</string>
+    <string name="revanced_seekbar_tapping_on">Chạm để tua (thanh tiến trình video) đã bật</string>
+    <string name="revanced_settings">Cài đặt ReVanced</string>
+    <string name="revanced_shorts_button_summary_off">Nút Shorts đã ẩn</string>
+    <string name="revanced_shorts_button_summary_on">Nút Shorts được hiển thị</string>
+    <string name="revanced_shorts_button_title">Nút Short</string>
+    <string name="revanced_suggestion_summary_off">Màn hình kết thúc đã ẩn</string>
+    <string name="revanced_suggestion_summary_on">Màn hình kết thúc được hiển thị</string>
+    <string name="revanced_suggestion_title">Màn hình kết thúc</string>
+    <string name="revanced_support_summary">Liên kết hỗ trợ</string>
+    <string name="revanced_support_title">Hỗ trợ</string>
+    <string name="revanced_swipe_brightness_summary_off">Điều khiển vuốt cho độ sáng đã tắt</string>
+    <string name="revanced_swipe_brightness_summary_on">Điều khiển vuốt cho độ sáng đã bật</string>
+    <string name="revanced_swipe_brightness_title">Điều khiển vuốt cho độ sáng</string>
+    <string name="revanced_swipe_magnitude_threshold_summary">Độ lớn tối thiểu trước khi phát hiện vuốt</string>
+    <string name="revanced_swipe_magnitude_threshold_title">Độ rộng vuốt</string>
+    <string name="revanced_swipe_overlay_bg_alpha_summary">Giá trị trong suốt của nền lớp phủ (0–255)</string>
+    <string name="revanced_swipe_overlay_bg_alpha_title">Độ trong suốt của lớp phủ</string>
+    <string name="revanced_swipe_overlay_text_size_summary">Kích thước văn bản trên lớp phủ</string>
+    <string name="revanced_swipe_overlay_text_size_title">Kích thước văn bản lớp phủ</string>
+    <string name="revanced_swipe_overlay_timeout_summary">Khoảng thời gian lớp phủ được hiển thị sau khi thay đổi (mili giây)</string>
+    <string name="revanced_swipe_overlay_timeout_title">Thời gian chờ lớp phủ</string>
+    <string name="revanced_swipe_pts_haptic_summary_off">Bạn sẽ không nhận được phản hồi xúc giác khi kích hoạt Nhấn để vuốt</string>
+    <string name="revanced_swipe_pts_haptic_summary_on">Bạn sẽ nhận được phản hồi xúc giác khi kích hoạt Nhấn để vuốt</string>
+    <string name="revanced_swipe_pts_haptic_title">Rung khi nhấn để vuốt</string>
+    <string name="revanced_swipe_pts_summary_off">Các điều khiển vuốt luôn hoạt động</string>
+    <string name="revanced_swipe_pts_summary_on">Điều khiển vuốt yêu cầu nhấn giữ trước khi kích hoạt</string>
+    <string name="revanced_swipe_pts_title">Nhấn để vuốt</string>
+    <string name="revanced_swipe_screen_summary">Điều khiển vuốt cho Độ sáng và Âm lượng</string>
+    <string name="revanced_swipe_tablet_summary_off">Kiểu máy tính bảng đã tắt</string>
+    <string name="revanced_swipe_tablet_summary_on">Kiểu máy tính bảng đã bật. Ví dụ: các video được đề xuất chỉ hoạt động một phần</string>
+    <string name="revanced_swipe_tablet_title">Kiểu máy tính bảng</string>
+    <string name="revanced_swipe_title">Điều khiển vuốt</string>
+    <string name="revanced_swipe_volume_summary_off">Điều khiển vuốt cho âm lượng đã tắt</string>
+    <string name="revanced_swipe_volume_summary_on">Điều khiển vuốt cho âm lượng đã bật</string>
+    <string name="revanced_swipe_volume_title">Điều khiển vuốt cho Âm lượng</string>
+    <string name="revanced_tablet_miniplayer_summary_off">Trình phát máy tính bảng thu nhỏ không được sử dụng</string>
+    <string name="revanced_tablet_miniplayer_summary_on">Trình phát máy tính bảng thu nhỏ đang được sử dụng</string>
+    <string name="revanced_tablet_miniplayer_title">Trình phát máy tính bảng thu nhỏ</string>
+    <string name="revanced_videoadwhitelisting_summary_off">Danh sách cho phép quảng cáo video đã bị tắt</string>
+    <string name="revanced_videoadwhitelisting_summary_on">Đã bật danh sách cho phép quảng cáo trình phát. Sử dụng nút QUẢNG CÁO bên dưới trình phát để đưa kênh vào danh sách trắng</string>
+    <string name="revanced_videoadwhitelisting_title">Danh sách trắng của quảng cáo trình phát</string>
+    <string name="revanced_video_ads_summary_off">Quảng cáo video đã ẩn</string>
+    <string name="revanced_video_ads_summary_on">Quảng cáo video được hiển thị</string>
+    <string name="revanced_video_ads_title">QUẢNG CÁO trình phát</string>
+    <string name="revanced_video_settings_title">Cài đặt trình phát</string>
+    <string name="revanced_video_quality_common_error">Lỗi không đặt được chất lượng</string>
+    <string name="revanced_video_quality_internet_error">Không có kết nối mạng</string>
+    <string name="revanced_video_quality_wifi">Thay đổi chất lượng Wi-Fi mặc định thành: </string>
+    <string name="revanced_video_quality_wifi_error">Không thể thay đổi chất lượng WI-FI mặc định</string>
+    <string name="revanced_video_quality_mobile">Thay đổi chất lượng dữ liệu di động mặc định thành: </string>
+    <string name="revanced_video_quality_mobile_error">Không thể thay đổi chất lượng dữ liệu di động mặc định</string>
+    <string name="revanced_vp9_summary">Nhấn để buộc sử dụng codec VP9</string>
+    <string name="revanced_vp9_summary_off">Codec VP9 không bị buộc dừng</string>
+    <string name="revanced_vp9_summary_on">Codec VP9 được bật theo mặc định cho các thiết bị được hỗ trợ, hãy tắt nếu bạn gặp phải hiện tượng giật / chậm trong trình phát</string>
+    <string name="revanced_vp9_title">Codec VP9</string>
+    <string name="revanced_website_summary">Nhấn để mở trang web của chúng tôi</string>
+    <string name="revanced_website_title">Trang web ReVanced</string>
+    <string name="revanced_whitelisting_added" formatted="false">Kênh %s đã được thêm vào %s danh sách trắng</string>
+    <string name="revanced_whitelisting_add_failed" formatted="false">Không thể thêm kênh %s vào %s danh sách trắng</string>
+    <string name="revanced_whitelisting_ads">Quảng cáo</string>
+    <string name="revanced_whitelisting_fetch_failed" formatted="false">Không truy xuất được chi tiết kênh, đã nhận được mã %d</string>
+    <string name="revanced_whitelisting_removed" formatted="false">Kênh %s đã bị xóa khỏi danh sách trắng %s</string>
+    <string name="revanced_whitelisting_remove_failed" formatted="false">Không xóa được kênh %s khỏi danh sách trắng %s</string>
+    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
+    <string name="revanced_zoom_to_fit_vertical_summary_off">Trình phát động được xác định tự động</string>
+    <string name="revanced_zoom_to_fit_vertical_summary_on">Trình phát động bắt buộc trên video vuông và dọc</string>
+    <string name="revanced_zoom_to_fit_vertical_title">Trình phát động</string>
+    <string name="sb_guidelines_popup_already_read">Đã đọc</string>
+    <string name="sb_guidelines_popup_content">Bạn nên đọc các nguyên tắc của tiện ích SponsorBlock trước khi gửi bất kỳ phân đoạn nào</string>
+    <string name="sb_guidelines_popup_open">Hãy cho tôi xem</string>
+    <string name="sb_guidelines_popup_title">Có hướng dẫn</string>
+    <string name="sb_guidelines_preference_sum">Nguyên tắc bao gồm các mẹo về quy tắc về việc gửi phân đoạn</string>
+    <string name="sb_guidelines_preference_title">Xem nguyên tắc</string>
+    <string name="sb_settings">Cài đặt SponsorBlock</string>
+    <string name="sb_summary">Sử dụng API spons.ajay.app</string>
+    <string name="segments_endcards">Thẻ kết thúc / Danh đề</string>
+    <string name="segments_endcards_sum">Danh đề hoặc khi thẻ kết thúc YouTube xuất hiện. Không dành cho kết thúc bằng giọng nói</string>
+    <string name="segments_filler">Nội dung không liên quan/Câu đùa</string>
+    <string name="segments_filler_sum">Các cảnh tiếp theo chỉ được thêm vào để bổ sung hoặc hài hước không bắt buộc để hiểu nội dung chính của video. Điều này không nên bao gồm các chi tiết bối cảnh hoặc nền</string>
+    <string name="segments_intermission">Hoạt ảnh ngắt quãng / Intro</string>
+    <string name="segments_intermission_sum">Khoảng thời gian không có nội dung thực tế. Có thể là tạm dừng, khung hình tĩnh, hoạt ảnh lặp lại</string>
+    <string name="segments_nomusic">Âm nhạc: Phần không phải âm nhạc</string>
+    <string name="segments_nomusic_sum">Chỉ để sử dụng trong video âm nhạc. Điều này bao gồm phần giới thiệu hoặc phần giới thiệu trong video âm nhạc</string>
     <string name="segments_preview">Xem trước/Tóm tắt</string>
-    <string name="segments_preview_sum">Tóm tắt các tập trước đó hoặc xem trước những gì sẽ xảy ra sau trong video hiện tại hoặc các trình phát tương lai trong cùng một chuỗi. Dành cho các đoạn phát được chỉnh sửa cùng nhau mà không cung cấp thêm thông tin.</string>
-    <string name="stats">Thống kênh</string>
+    <string name="segments_preview_sum">Tóm tắt các tập trước đó hoặc xem trước những gì sẽ xảy ra sau trong video hiện tại hoặc các video tương lai trong cùng một chuỗi. Dành cho các clip được chỉnh sửa cùng nhau mà không cung cấp thêm thông tin.</string>
+    <string name="segments_selfpromo">Chưa thanh toán/Tự quảng cáo</string>
+    <string name="segments_selfpromo_sum">Khi có quảng cáo chưa thanh toán hoặc tự quảng cáo. Điều này bao gồm các phần cụ thể về hàng hóa, khoản đóng góp hoặc thông tin về những người họ đã cộng tác</string>
+    <string name="segments_sponsor">Nhà tài trợ</string>
+    <string name="segments_sponsor_sum">Quảng cáo trả phí, giới thiệu có trả tiền và quảng cáo trực tiếp</string>
+    <string name="segments_subscribe">Nhắc nhở tương tác (Đăng ký)</string>
+    <string name="segments_subscribe_sum">Khi có lời nhắc ngắn hãy thích, đăng ký hoặc theo dõi chúng ở giữa nội dung</string>
+    <string name="settings_export_failed">Không xuất được cài đặt</string>
+    <string name="settings_ie">Nhập/Xuất cài đặt</string>
+    <string name="settings_ie_sum">Đây là toàn bộ cấu hình của bạn có thể áp dụng trong tiện ích mở rộng dành cho máy tính để bàn trong JSON. Điều này bao gồm userID của bạn, vì vậy hãy đảm bảo chia sẻ điều này một cách khôn ngoan.</string>
+    <string name="settings_import_failed">Không nhập được cài đặt</string>
+    <string name="settings_import_successful">Cài đặt đã được nhập thành công</string>
+    <string name="skipped_endcard">Đã bỏ qua outro</string>
+    <string name="skipped_filler">Đã bỏ qua nội dung không liên quan</string>
+    <string name="skipped_intermission">Đã bỏ qua intro</string>
+    <string name="skipped_nomusic">Đã bỏ qua phần không phải âm nhạc</string>
+    <string name="skipped_preview">Đã bỏ qua bản xem trước</string>
+    <string name="skipped_segment">Đã bỏ qua một phân đoạn nhà tài trợ</string>
+    <string name="skipped_selfpromo">Đã bỏ qua quảng cáo bản thân</string>
+    <string name="skipped_sponsor">Đã bỏ qua nhà tài trợ</string>
+    <string name="skipped_subscribe">Đã bỏ qua lời nhắc làm phiền</string>
+    <string name="skipped_unsubmitted">Đã bỏ qua phân đoạn chưa gửi</string>
+    <string name="skip_automatically">Bỏ qua tự động</string>
+    <string name="skip_ignore">Đừng làm gì cả</string>
+    <string name="skip_showbutton">Hiển thị nút bỏ qua</string>
+    <string name="skip_sponsor">Bỏ qua phân đoạn</string>
+    <string name="stats">Thống kê</string>
     <string name="stats_loading">Đang tải..</string>
+    <string name="stats_saved">Bạn đã giúp mọi người bỏ qua &lt;b&gt;%s&lt;/b&gt; phân đoạn.</string>
+    <string name="stats_saved_sum">Tương đương với &lt;b&gt;%s&lt;/b&gt; trong cuộc đời của họ. Nhấn để xem bảng xếp hạng</string>
     <string name="stats_sb_disabled">SponsorBlock đã tắt</string>
+    <string name="stats_self_saved">Bạn đã bỏ qua &lt;b&gt;%s&lt;/b&gt; phân đoạn.</string>
+    <string name="stats_self_saved_sum">Tổng thời gian là &lt;b&gt;%s&lt;/b&gt;.</string>
+    <string name="stats_submissions">Đệ trình: &lt;b&gt;%s&lt;/b&gt;</string>
     <string name="stats_username" formatted="false">Tên người dùng của bạn: &lt;b&gt;%s&lt;/b&gt;</string>
     <string name="stats_username_change">Nhấp để thay đổi tên người dùng của bạn</string>
+    <string name="stats_username_changed">Tên người dùng đã được đổi thành công</string>
     <string name="stats_username_change_unknown_error" formatted="false">Không thể thay đổi tên người dùng: Trạng thái: %d %s</string>
-    <string name="stats_username_changed">ên người dùng đã được đổi thành công</string>
-    <string name="stats_submissions">Gửi: &lt;b&gt;%s&lt;/b&gt;</string>
-    <string name="stats_saved">Bạn đã cứu mọi người khỏi &lt;b&gt;%s&lt;/b&gt; phân đoạn.</string>
-    <string name="stats_saved_sum">Đó là &lt;b&gt;%s&lt;/b&gt; cuộc sống của họ. Nhấp để xem bảng xếp hạng</string>
-    <string name="stats_self_saved">Bạn đã bỏ qua &lt;b&gt;%s&lt;/b&gt; phân đoạn.</string>
-    <string name="stats_self_saved_sum">Đó là &lt;b&gt;%s&lt;/b&gt;.</string>
-    <string name="minutes">phút</string>
-    <string name="color_change">Bạn đang muốn thay đổi màu sắc?</string>
-    <string name="color_change_sum">Bây giờ bạn có thể thay đổi màu của một danh mục bằng cách nhấp vào nó ở trên.</string>
-    <string name="color_choose_category">Chọn danh mục</string>
-    <string name="color_changed">Màu đã đổi</string>
-    <string name="color_reset">Đặt lại màu</string>
-    <string name="color_invalid">Mã hex không hợp lệ</string>
-    <string name="change">Thay đổi</string>
-    <string name="reset">Đặt lại</string>
-
-    <string name="action_segments">Phân đoạn</string>
-    <string name="action_browser">Trình duyệt SB</string>
-
-    <string name="api_url_changed">API URL đã thay đổi</string>
-    <string name="api_url_reset">Đặt lại API URL</string>
-    <string name="api_url_invalid">URL API được cung cấp không hợp lệ</string>
-<string name="ads_summary" public="false">Cài đặt liên quan đến quảng cáo</string>
-<string name="ads_title" public="false">Quảng cáo</string>
-<string name="layout_title" public="false">Bố cục</string>
-<string name="revanced_settings" public="false">ReVanced</string>
-<string name="revanced_ryd_settings_summary" public="false">Cài đặt khôi phục lượt Dislike</string>
-<string name="revanced_ryd_settings_title" public="false">Khôi phục lượt Dislike</string>
-<string name="interactions_summary" public="false">Cài đặt liên quan đến tương tác</string>
-<string name="interactions_title" public="false">Tương tác</string>
-<string name="layout_summary" public="false">Cài đặt liên quan đến bố cục</string>
-<string name="microg_settings" public="false">Cài đặt MicroG</string>
-<string name="microg_settings_summary" public="false">Cài đặt cho MicroG</string>
-<string name="misc_summary" public="false">Các bản vá lỗi khác</string>
-<string name="misc_title" public="false">Khác</string>
-<string name="revanced_adremover_ad_removal_enabled_summary_off" public="false">Đang hiện quảng cáo chung</string>
-<string name="revanced_adremover_ad_removal_enabled_summary_on" public="false">Đã ẩn quảng cáo chung</string>
-<string name="revanced_adremover_ad_removal_enabled_title" public="false">Xoá quảng cáo chung</string>
-<string name="revanced_adremover_comments_enabled_summary_off" public="false">Đang hiện bình luận</string>
-<string name="revanced_adremover_comments_enabled_summary_on" public="false">Đã ẩn bình luận</string>
-<string name="revanced_adremover_comments_enabled_title" public="false">Xoá phần bình luận</string>
-<string name="revanced_adremover_community_guidelines_enabled_summary_off" public="false">Đang hiện nguyên tắc cộng đồng</string>
-<string name="revanced_adremover_community_guidelines_enabled_summary_on" public="false">Đã ẩn nguyên tắc cộng đồng</string>
-<string name="revanced_adremover_community_guidelines_enabled_title" public="false">Xoá nguyên tắc cộng đồng</string>
-<string name="revanced_adremover_community_posts_enabled_summary_off" public="false">Đang hiện bài đăng trên cộng đồng</string>
-<string name="revanced_adremover_community_posts_enabled_summary_on" public="false">Đã ẩn bài đăng trên cộng đồng</string>
-<string name="revanced_adremover_community_posts_enabled_title" public="false">Xóa bài đăng trên cộng đồng</string>
-<string name="revanced_adremover_compact_banner_enabled_summary_off" public="false">Đang hiện biểu ngữ nhỏ gọn</string>
-<string name="revanced_adremover_compact_banner_enabled_summary_on" public="false">Đã ẩn biểu ngữ nhỏ gọn</string>
-<string name="revanced_adremover_compact_banner_enabled_title" public="false">Xoá các biểu ngữ nhỏ gọn</string>
-<string name="revanced_adremover_emergency_box_enabled_summary_off" public="false">Đang hiện hộp khẩn cấp</string>
-<string name="revanced_adremover_emergency_box_enabled_summary_on" public="false">Đã ẩn hộp khẩn cấp</string>
-<string name="revanced_adremover_emergency_box_enabled_title" public="false">Xoá hộp khẩn cấp</string>
-<string name="revanced_adremover_feed_survey_enabled_summary_off" public="false">Đang hiện khảo sát</string>
-<string name="revanced_adremover_feed_survey_enabled_summary_on" public="false">Đã ẩn khảo sát</string>
-<string name="revanced_adremover_feed_survey_enabled_title" public="false">Xoá khảo sát</string>
-<string name="revanced_adremover_hide_channel_guidelines_enabled_summary_off" public="false">Đang hiện nguyên tắc kênh</string>
-<string name="revanced_adremover_hide_channel_guidelines_enabled_summary_on" public="false">Đã ẩn nguyên tắc kênh</string>
-<string name="revanced_adremover_hide_channel_guidelines_enabled_title" public="false">Ẩn nguyên tắc kênh</string>
-<string name="revanced_adremover_hide_latest_posts_enabled_summary_off" public="false">Đang hiện bài đăng mới nhất</string>
-<string name="revanced_adremover_hide_latest_posts_enabled_summary_on" public="false">Đã ẩn bài đăng mới nhất</string>
-<string name="revanced_adremover_hide_latest_posts_enabled_title" public="false">Ẩn các bài đăng mới nhất</string>
-<string name="revanced_adremover_hide_suggestions_enabled_summary_off" public="false">Đã bật đề xuất</string>
-<string name="revanced_adremover_hide_suggestions_enabled_summary_on" public="false">Đã ẩn đề xuất</string>
-<string name="revanced_adremover_hide_suggestions_enabled_title" public="false">Ẩn đề xuất</string>
-<string name="revanced_adremover_info_panel_enabled_summary_off" public="false">Đang hiện biểu ngữ buôn bán</string>
-<string name="revanced_adremover_info_panel_enabled_summary_on" public="false">Đã ẩn biểu ngữ buôn bán</string>
-<string name="revanced_adremover_info_panel_enabled_title" public="false">Xóa bảng thông tin</string>
-<string name="revanced_adremover_medical_panel_enabled_summary_off" public="false">Đang hiện bảng y tế</string>
-<string name="revanced_adremover_medical_panel_enabled_summary_on" public="false">Đã ẩn bảng y tế</string>
-<string name="revanced_adremover_medical_panel_enabled_title" public="false">Xoá bảng y tế</string>
-<string name="revanced_adremover_merchandise_enabled_summary_off" public="false">Đang hiện biểu ngữ buôn bán</string>
-<string name="revanced_adremover_merchandise_enabled_summary_on" public="false">Đã ẩn biểu ngữ buôn bán</string>
-<string name="revanced_adremover_merchandise_enabled_title" public="false">Xoá biểu ngữ buôn bán</string>
-<string name="revanced_adremover_movie_enabled_summary_off" public="false">Đang hiện đoạn phim</string>
-<string name="revanced_adremover_movie_enabled_summary_on" public="false">Đã ẩn đoạn phim</string>
-<string name="revanced_adremover_movie_enabled_title" public="false">Xóa đoạn phim</string>
-<string name="revanced_adremover_paid_content_enabled_summary_off" public="false">Đang hiện nội dung trả phí</string>
-<string name="revanced_adremover_paid_content_enabled_summary_on" public="false">Đã ẩn nội dung trả phí</string>
-<string name="revanced_adremover_paid_content_enabled_title" public="false">Xóa nội dung trả phí</string>
-<string name="revanced_adremover_shorts_shelf_enabled_summary_off" public="false">Đang hiện Short thử nghiệm</string>
-<string name="revanced_adremover_shorts_shelf_enabled_summary_on" public="false">Đã ẩn Short thử nghiệm</string>
-<string name="revanced_adremover_shorts_shelf_enabled_title" public="false">Xoá Short thử nghiệm</string>
-<string name="revanced_adremover_suggested_enabled_summary_off" public="false">Đang hiện đề xuất cá nhân</string>
-<string name="revanced_adremover_suggested_enabled_summary_on" public="false">Đã ẩn đề xuất cá nhân</string>
-<string name="revanced_adremover_suggested_enabled_title" public="false">Xoá đề xuất cá nhân</string>
-<string name="revanced_branding_watermark_enabled_title" public="false">Đang hiện hình mờ thương hiệu</string>
-<string name="revanced_branding_watermark_summary_off" public="false">Đã ẩn hình mờ thương hiệu</string>
-<string name="revanced_branding_watermark_summary_on" public="false">Đang hiện hình mờ thương hiệu</string>
-<string name="revanced_cast_button_enabled_title" public="false">Đang hiện nút truyền</string>
-<string name="revanced_cast_button_summary_off" public="false">Đã ẩn nút truyền</string>
-<string name="revanced_cast_button_summary_on" public="false">Đang hiện nút truyền</string>
-<string name="revanced_custom_video_buffer_summary" public="false">Cài đặt tùy chỉnh bộ đệm video</string>
-<string name="revanced_custom_video_buffer_title" public="false">Cài đặt bộ đệm video</string>
-<string name="revanced_downloads_enabled_summary_off" public="false">Đã ẩn nút tải xuống</string>
-<string name="revanced_downloads_enabled_summary_on" public="false">Nút tải xuống đang hiện</string>
-<string name="revanced_downloads_enabled_title" public="false">Hiện nút tải xuống</string>
-<string name="revanced_downloads_package_name_summary" public="false">Tên gói của ứng dụng trình tải xuống, chẳng hạn như NewPipe hoặc PowerTube</string>
-<string name="revanced_downloads_package_name_title" public="false">Tên gói trình tải xuống</string>
-<string name="revanced_downloads_summary" public="false">Cài đặt liên quan đến tải xuống</string>
-<string name="revanced_downloads_title" public="false">Cài đặt tải xuống</string>
-<string name="revanced_fullscreen_panels_enabled_title" public="false">Hiển thị bảng toàn màn hình</string>
-<string name="revanced_fullscreen_panels_summary_off" public="false">Đang ẩn bảng toàn màn hình</string>
-<string name="revanced_fullscreen_panels_summary_on" public="false">Đang hiện bảng toàn màn hình</string>
-<string name="revanced_hdr_autobrightness_enabled_title" public="false">Bật độ sáng HDR tự động</string>
-<string name="revanced_hdr_autobrightness_summary_off" public="false">Đã tắt độ sáng HDR tự động</string>
-<string name="revanced_hdr_autobrightness_summary_on" public="false">Đang bật độ sáng HDR tự động</string>
-<string name="revanced_home_ads_removal_summary_off" public="false">Đang hiện quảng cáo trang chủ</string>
-<string name="revanced_home_ads_removal_summary_on" public="false">Đang ẩn quảng cáo trang chủ</string>
-<string name="revanced_home_ads_removal_title" public="false">Xóa quảng cáo trang chủ</string>
-<string name="revanced_info_cards_enabled_summary_off" public="false">Đang ẩn thẻ thông tin</string>
-<string name="revanced_info_cards_enabled_summary_on" public="false">Đang hiện thẻ thông tin</string>
-<string name="revanced_info_cards_enabled_title" public="false">Hiện thẻ thông tin</string>
-<string name="revanced_minimized_playback_enabled_title" public="false">Bật phát lại thu nhỏ</string>
-<string name="revanced_minimized_playback_summary_off" public="false">Đang tắt tính năng phát lại thu nhỏ</string>
-<string name="revanced_minimized_playback_summary_on" public="false">Đang bật tính năng phát lại thu nhỏ</string>
-<string name="revanced_old_style_quality_settings_enabled_title" public="false">Sử dụng bố cục chất lượng cũ</string>
-<string name="revanced_old_style_quality_settings_summary_off" public="false">Đang hiện cài đặt chất lượng mới</string>
-<string name="revanced_old_style_quality_settings_summary_on" public="false">Đang hiện cài đặt chất lượng cũ</string>
-<string name="revanced_pref_buffer_for_playback_after_rebuffer_ms_summary" public="false">Kích thước tối đa của bộ đệm để phát lại sau bộ đệm</string>
-<string name="revanced_pref_buffer_for_playback_after_rebuffer_ms_title" public="false">Bộ đệm tối đa để phát lại sau bộ đệm</string>
-<string name="revanced_pref_buffer_for_playback_ms_summary" public="false">Kích thước tối đa của bộ đệm để phát lại</string>
-<string name="revanced_pref_buffer_for_playback_ms_title" public="false">Bộ đệm tối đa để phát lại</string>
-<string name="revanced_pref_max_buffer_ms_summary" public="false">Kích thước tối đa của bộ đệm để phát lại</string>
-<string name="revanced_pref_max_buffer_ms_title" public="false">Kích thước bộ đệm tối đa</string>
-<string name="revanced_press_to_swipe_enabled_title" public="false">Bật cử chỉ nhấn để vuốt</string>
-<string name="revanced_press_to_swipe_summary_off" public="false">Đã tắt nhấn để vuốt</string>
-<string name="revanced_press_to_swipe_summary_on" public="false">Đã bật nhấn để vuốt</string>
-<string name="revanced_seekbar_tapping_enabled_title" public="false">Bật chạm để tua</string>
-<string name="revanced_seekbar_tapping_summary_off" public="false">Đã tắt chạm để tua</string>
-<string name="revanced_seekbar_tapping_summary_on" public="false">Đã bật chạm để tua</string>
-<string name="revanced_settings_summary" public="false">Cài đặt ReVanced</string>
-<string name="revanced_sponsorblock_settings_summary" public="false">Cài đặt liên quan đến SponsorBlock</string>
-<string name="revanced_swipe_brightness_enabled_title" public="false">Bật cử chỉ độ sáng</string>
-<string name="revanced_swipe_brightness_summary_off" public="false">Điều khiển độ sáng đã tắt</string>
-<string name="revanced_swipe_brightness_summary_on" public="false">Điều khiển độ sáng đã bật</string>
-<string name="revanced_swipe_controls_summary" public="false">Điều khiển âm lượng và độ sáng</string>
-<string name="revanced_swipe_controls_title" public="false">Điều khiển vuốt</string>
-<string name="revanced_swipe_haptic_feedback_enabled_title" public="false">Đã bật phản hồi xúc giác</string>
-<string name="revanced_swipe_haptic_feedback_summary_off" public="false">Đã tắt phản hồi xúc giác</string>
-<string name="revanced_swipe_haptic_feedback_summary_on" public="false">Đang bật phản hồi xúc giác</string>
-<string name="revanced_swipe_magnitude_threshold_summary" public="false">Độ lớn tối thiểu trước khi phát hiện vuốt</string>
-<string name="revanced_swipe_magnitude_threshold_title" public="false">Độ rộng vuốt</string>
-<string name="revanced_swipe_overlay_background_alpha_summary" public="false">Giá trị trong suốt của nền lớp phủ</string>
-<string name="revanced_swipe_overlay_background_alpha_title" public="false">Độ trong suốt của lớp phủ</string>
-<string name="revanced_swipe_overlay_text_size_summary" public="false">Kích thước văn bản trên lớp phủ</string>
-<string name="revanced_swipe_overlay_text_size_title" public="false">Kích thước văn bản lớp phủ</string>
-<string name="revanced_swipe_overlay_timeout_summary" public="false">Khoảng thời gian lớp phủ được hiển thị sau khi thay đổi (mili giây)</string>
-<string name="revanced_swipe_overlay_timeout_title" public="false">Thời gian chờ lớp phủ</string>
-<string name="revanced_swipe_volume_enabled_title" public="false">Điều khiển vuốt cho âm lượng</string>
-<string name="revanced_swipe_volume_summary_off" public="false">Điều khiển vuốt cho âm lượng đã bị tắt</string>
-<string name="revanced_swipe_volume_summary_on" public="false">Điều khiển vuốt cho âm lượng đã bật</string>
-<string name="revanced_tablet_miniplayer_summary_off" public="false">Đã tắt trình phát mini máy tính bảng</string>
-<string name="revanced_tablet_miniplayer_summary_on" public="false">Đã bật trình phát mini máy tính bảng</string>
-<string name="revanced_tablet_miniplayer_title" public="false">Bật trình phát mini máy tính bảng</string>
-<string name="revanced_video_ads_removal_summary_off" public="false">Đang hiện quảng cáo video</string>
-<string name="revanced_video_ads_removal_summary_on" public="false">Đã ẩn quảng cáo video</string>
-<string name="revanced_video_ads_removal_title" public="false">Ẩn quảng cáo video</string>
-<string name="revanced_wide_searchbar_enabled_title" public="false">Bật thanh tìm kiếm rộng</string>
-<string name="revanced_wide_searchbar_summary_off" public="false">Tắt thanh tìm kiếm rộng</string>
-<string name="revanced_wide_searchbar_summary_on" public="false">Bật thanh tìm kiếm rộng</string>
-
+    <string name="submit_failed_duplicate">Không thể gửi phân đoạn.\nĐã tồn tại</string>
+    <string name="submit_failed_forbidden" formatted="false">Không thể gửi phân đoạn.\n\n%s</string>
+    <string name="submit_failed_rate_limit">Không thể gửi phân đoạn.\nTỷ lệ giới hạn (Quá nhiều từ cùng một người dùng hoặc IP)</string>
+    <string name="submit_failed_unknown_error" formatted="false">Không thể gửi phân đoạn: Trạng thái: %d %s</string>
+    <string name="submit_started">Đang gửi phân đoạn…</string>
+    <string name="submit_succeeded">Phân đoạn được gửi thành công</string>
+    <string name="tap_skip">Nhấn để bỏ qua</string>
+    <string name="vote_category">Đổi danh mục</string>
+    <string name="vote_downvote">Phản đối</string>
+    <string name="vote_failed_forbidden" formatted="false">Không thể bỏ phiếu cho phân đoạn.\n\n%s</string>
+    <string name="vote_failed_rate_limit">Không thể bỏ phiếu cho phân đoạn.\nTỷ lệ giới hạn (Quá nhiều từ cùng một người dùng hoặc IP)</string>
+    <string name="vote_failed_unknown_error" formatted="false">Không thể bỏ phiếu cho phân đoạn: Trạng thái: %d %s</string>
+    <string name="vote_no_segments">Không có phân đoạn nào để bỏ phiếu</string>
+    <string name="vote_started">Bỏ phiếu cho phân đoạn…</string>
+    <string name="vote_succeeded">Đã bình chọn thành công</string>
+    <string name="vote_upvote">Ủng hộ</string>
