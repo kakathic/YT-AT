@@ -75,9 +75,9 @@ unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
 if [ "$TYPE" != 'true' ];then
 Taiyt 'YouTube.apks'
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
-zip -q -9 "$Likk/lib/YouTube.apk" -d 'lib/*' $xoa2
+zip -qr "$Likk/lib/YouTube.apk" -d 'lib/*' $xoa2
 else
-zip -q -9 "$Likk/lib/YouTube.apk" -d $lib $xoa2
+zip -qr "$Likk/lib/YouTube.apk" -d $lib $xoa2
 fi
 
 [ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
@@ -105,8 +105,7 @@ cp -rf $vak $Likk/tmp/test
 XHex "$Likk/tmp/test" | sed -e "s/$(echo -n "$SVision" | XHex)/$(echo -n "$Vision" | XHex)/" | ZHex > $vak
 done
 cd $Likk/Pak
-zip -qr "$Likk/revanced-patches.zip" *
-mv -f "$Likk/revanced-patches.zip" "$Likk/lib/revanced-patches.jar"
+zip -qr "$Likk/lib/revanced-patches.jar" *
 fi
 
 # Xây dựng 
