@@ -16,14 +16,6 @@ on:
           - arm64-v8a
           - x86
           - x86_64
-      LANGUAGE:
-        description: 'Add language revanced mod'
-        required: true
-        default: 'Default'
-        type: choice
-        options:
-          - 'Default'
-          - 'vi-VN'
       FEATURE:
         description: 'Turn off the feature, Add spaces to distinguish each feature'
         required: true
@@ -74,7 +66,6 @@ jobs:
           FEATURE: ${{ inputs.FEATURE }}
           ROUND: ${{ inputs.ROUND }}
           TYPE: ${{ inputs.TYPE }}
-          LANGUAGE: ${{ inputs.LANGUAGE }}
 
         run: |
           SVision="17.32.35"
