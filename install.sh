@@ -20,13 +20,13 @@ cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 sed -i "/<\/resources>/d" $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 cp -rf $Likk/tmp/res/${vakdll##*/}/strings.xml $Likk/Up
-cat $vakdll/strings.xml
 done
 while true; do
 [ -e "$Likk/done.txt" ] && break || sleep 1
 done
 }
 
+sudo apt install zipalign >/dev/null
 ListTM="lib
 tmp
 Up
@@ -140,6 +140,11 @@ echo '{
 echo > $Likk/done.txt ) & cpnn
 else
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
+rm -fr $Likk/tmp/*
+unzip -qo $Likk/apk/YouTube.apk -d $Likk/tmp
+cd $Likk/tmp
+zip -qr -9 $Likk/YouTube.apk *
+zipalign -f 4 $Likk/YouTube.apk $Likk/apk/YouTube.apk
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" 
 echo > $Likk/done.txt ) & cpnn
 fi
