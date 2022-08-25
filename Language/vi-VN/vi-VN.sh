@@ -1,5 +1,5 @@
 sed -i "s|\"Settings related to interactions\"|\"Cài đặt liên quan đến tương tác\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch\$PreferenceScreen.smali
-sed -i "s|\"Interaction\"|\"Sự tương tác\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch\$PreferenceScreen.smali
+sed -i "s|\"Interaction\"|\"Tương tác\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch\$PreferenceScreen.smali
 sed -i "s|\"Settings related to the layout\"|\"Cài đặt liên quan đến bố cục\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/settings/bytecode/patch/SettingsPatch\$PreferenceScreen.smali
 sed -i "s|\"MicroG Settings\"|\"Cài đặt MicroG\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/microg/patch/resource/MicroGResourcePatch.smali
 sed -i "s|\"Settings for MicroG\"|\"Cài đặt cho Microg\"|" $Likk/Pak/smali/app/revanced/patches/youtube/misc/microg/patch/resource/MicroGResourcePatch.smali
