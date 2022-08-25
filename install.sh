@@ -1,8 +1,6 @@
 # Kakathic
 
 export Likk="$GITHUB_WORKSPACE"
-[ "$LANGUAGE" == 'Default' ] && LANGUAGE2='' || LANGUAGE2=".$LANGUAGE"
-[ "$LANGUAGE" == 'Default' ] && LANGUAGE=''
 
 Dx(){ java -jar $Likk/Tools/dx.jar --dex --no-strict --min-sdk-version 26 --core-library --output "$2" "$1"; }
 smali(){ java -jar $Likk/Tools/smali-2.5.2.jar "$@"; }
@@ -111,7 +109,7 @@ done
 echo '
 version='$Vision'
 versionCode='$Vision2'
-updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2$LANGUAGE2'.json' >> $Likk/Module/module.prop
+updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
 
 # Xử lý revanced patches
 if [ "$SVision" != "$Vision" ];then
@@ -130,16 +128,16 @@ if [ "$TYPE" != 'true' ];then
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
-zip -q -r "$Likk/Up/YouTube-Magisk-$Vision-$ach$amoled2$LANGUAGE2.Zip" *
+zip -q -r "$Likk/Up/YouTube-Magisk-$Vision-$ach$amoled2.Zip" *
 echo '{
 "version": "'$Vision'",
 "versionCode": "'$Vision2'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Download/YouTube-Magisk-'$Vision'-'$ach$amoled2$LANGUAGE2'.Zip",
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Download/YouTube-Magisk-'$Vision'-'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
-}' > $Likk/Up-$ach$amoled2$LANGUAGE2.json 
+}' > $Likk/Up-$ach$amoled2.json 
 echo > $Likk/done.txt ) & cpnn
 else
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
-apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2$LANGUAGE2.apk" 
+apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" 
 echo > $Likk/done.txt ) & cpnn
 fi
