@@ -20,8 +20,8 @@ on:
         description: 'Turn off the feature, Add spaces to distinguish each feature'
         required: true
         default: 'always-autorepeat hide-autoplay-button '
-      ICONS:
-        description: 'Original icon & Name'
+      TYPE:
+        description: 'Sign in microg (No Root)'
         required: false
         type: boolean
         default: true
@@ -30,13 +30,13 @@ on:
         required: false
         type: boolean
         default: true
-      OPTIMIZATION:
-        description: 'Video loaded speed'
+      ICONS:
+        description: 'Original icon & Name'
         required: false
         type: boolean
         default: true
-      TYPE:
-        description: 'Sign in microg (No Root)'
+      OPTIMIZATION:
+        description: 'Video loaded speed'
         required: false
         type: boolean
         default: true
