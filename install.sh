@@ -15,7 +15,7 @@ XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 
 cpnn(){
-while 1; do
+while true; do
 if [ -e "$Likk/tmp/res/values-vi" ];then
 for vakdll in $Likk/Language/*; do
 sed -i '/</resources>/d' $Likk/tmp/res/${vakdll##*/}/strings.xml
