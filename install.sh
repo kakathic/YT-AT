@@ -18,8 +18,8 @@ while true; do
 [ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 done
 for vakdll in $Likk/Language/*; do
-sed -i '/</resources>/d' $Likk/tmp/res/${vakdll##*/}/strings.xml
 cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
+sed -i "/<\/resources>/d" $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 cp -rf $Likk/tmp/res/${vakdll##*/}/strings.xml $Likk/Up
 cat $vakdll/strings.xml
