@@ -70,7 +70,7 @@ sed -i "s|\"Show download button\"|\"Hiển thị nút tải xuống\"|" $Likk/P
 sed -i "s|\"Package name of the downloader app such as NewPipe\'s or PowerTube\'s\"|\"Tên gói của ứng dụng tải xuống như NewPipe\'s hoặc PowerTube\'s\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
 sed -i "s|\"Downloader package name\"|\"Tên gói tải xuống\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
 sed -i "s|\"Settings related to downloads\"|\"Cài đặt liên quan đến tải xuống\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
-sed -i "s|\"Download settings\"|\"Cài đặt Tải xuống\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
+sed -i "s|\"Download settings\"|\"Cài đặt tải xuống\"|" $Likk/Pak/smali/app/revanced/patches/youtube/interaction/downloads/resource/patch/DownloadsResourcePatch.smali
 sed -i "s|\"Show fullscreen panels\"|\"Hiển thị bảng điều khiển toàn màn hình\"|" $Likk/Pak/smali/app/revanced/patches/youtube/layout/fullscreenpanels/patch/FullscreenPanelsRemoverPatch.smali
 sed -i "s|\"Fullscreen panels are hidden\"|\"Bảng toàn màn hình đã ẩn\"|" $Likk/Pak/smali/app/revanced/patches/youtube/layout/fullscreenpanels/patch/FullscreenPanelsRemoverPatch.smali
 sed -i "s|\"Fullscreen panels are shown\"|\"Bảng toàn màn hình được hiển thị\"|" $Likk/Pak/smali/app/revanced/patches/youtube/layout/fullscreenpanels/patch/FullscreenPanelsRemoverPatch.smali
