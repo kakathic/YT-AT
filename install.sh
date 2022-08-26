@@ -22,6 +22,8 @@ sed -i "/<\/resources>/d" $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 fi
 done
+Taiyt 'YouTube.apks'
+unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 while true; do
 [ -e "$Likk/done.txt" ] && break || sleep 1
 done
@@ -119,8 +121,6 @@ fi
 # Xây dựng 
 if [ "$TYPE" != 'true' ];then
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
-Taiyt 'YouTube.apks'
-unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 zip -qr "$Likk/Tav/YouTube.apk" -d 'lib/*' $xoa2
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
