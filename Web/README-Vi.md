@@ -25,8 +25,16 @@
 
 > <sup>curl -# -L http://Link-Magisk-Youtube.zip -o YouTube.zip && magisk --install-module YouTube.zip && cp -rf /data/adb/modules_update/YouTube /data/adb/modules && rm -fr /data/adb/modules_update/YouTube /data/adb/modules/YouTube/update</sup>
 
-
 - Thay thế `Link-Magisk-Youtube.zip` với liên kết của bạn.
+
+**Microg không Root**
+---
+
+- Ứng dụng này để đăng nhập tài khoản google, hãy nhấn vào liên kết bên dưới để tải về.
+
+- [TeamVanced](https://github.com/TeamVanced/VancedMicroG)
+
+- [inotia00](https://github.com/inotia00/VancedMicroG)
 
 **Ủng hộ**
 ---
