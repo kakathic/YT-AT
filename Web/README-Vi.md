@@ -27,10 +27,10 @@
 
 - Thay thế `Link-Magisk-Youtube.zip` với liên kết của bạn.
 
-**Microg không Root**
+**Microg No Root**
 ---
 
-- Ứng dụng này để đăng nhập tài khoản google, hãy nhấn vào liên kết bên dưới để tải về.
+- Ứng dụng này để đăng nhập tài khoản google vào YouTube, hãy nhấn vào liên kết bên dưới để tải về.
 
 - [TeamVanced](https://github.com/TeamVanced/VancedMicroG)
 
