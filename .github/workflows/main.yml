@@ -99,6 +99,6 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT
+          name: YT-AT ${{ github.event.inputs.VERSION }}
           tag_name: V${{ github.event.inputs.VERSION }}
           files: Up/*
