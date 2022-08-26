@@ -94,11 +94,11 @@ jobs:
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v3
         with:
-          name: YouTube
+          name: YouTube_${{ github.event.inputs.VERSION }}
           path: Up/*
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
           name: YT-AT
-          tag_name: Download
+          tag_name: V${{ github.event.inputs.VERSION }}
           files: Up/*
