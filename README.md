@@ -27,6 +27,15 @@
 
 - Replace `Link-Magisk-Youtube.zip` with your link.
 
+**Microg No Root**
+---
+
+- To login no root version, download
+
+- [TeamVanced](https://github.com/TeamVanced/VancedMicroG)
+
+- [inotia00](https://github.com/inotia00/VancedMicroG)
+
 **Donate**
 ---
 
