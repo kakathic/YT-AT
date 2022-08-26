@@ -1,4 +1,4 @@
-name: autoupdate
+name: Auto update
 on:
   # This will trigger on all pushes to all branches.
   push: {}
@@ -9,7 +9,7 @@ on:
   #     - unstable
 jobs:
   autoupdate:
-    name: autoupdate
+    name: Auto update
     runs-on: ubuntu-20.04
     steps:
       - uses: docker://chinthakagodawita/autoupdate-action:v1
