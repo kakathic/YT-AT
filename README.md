@@ -15,6 +15,10 @@
 
 - See the version that Revanced they support for the latest build.
 
+- YouTube latest version
+
+- [Latest version](https://www.apkmirror.com/apk/google-inc/youtube/)
+
 **Module Magisk**
 ---
 
