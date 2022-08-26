@@ -3,18 +3,22 @@
 
 - Công cụ mod YouTube tự động
 
-- [English](https://github.com/kakathic/YT-AT)
+  > [English](https://github.com/kakathic/YT-AT)
 
 **Sử dụng Revanced cli**
 ---
 
 - Đây là công cụ mod YouTube của Revanced, họ đã tạo ra công cụ này, hãy ủng hộ cho họ.
 
-- [Trang chủ](https://github.com/revanced)
+  > [Trang chủ](https://github.com/revanced)
 
-- [Phiên bản hỗ trợ](https://github.com/revanced/revanced-patches)
+- Xem phiên bản Revanced mà họ hỗ trợ cho bản dựng mới nhất.
 
-- Là phiên bản mà Revanced họ hỗ trợ sử dụng tool
+  > [YouTube](https://github.com/revanced/revanced-patches)
+
+- YouTube phiên bản mới nhất
+
+  > [Mới nhất](https://www.apkmirror.com/apk/google-inc/youtube/)
 
 **Mô-đun Magisk**
 ---
@@ -23,7 +27,7 @@
 
 - Để cập nhật mà không cần khởi động lại, hãy thử lệnh sau:
 
-> <sup>curl -# -L http://Link-Magisk-Youtube.zip -o YouTube.zip && magisk --install-module YouTube.zip && cp -rf /data/adb/modules_update/YouTube /data/adb/modules && rm -fr /data/adb/modules_update/YouTube /data/adb/modules/YouTube/update</sup>
+  > <sup>curl -# -L http://Link-Magisk-Youtube.zip -o YouTube.zip && magisk --install-module YouTube.zip && cp -rf /data/adb/modules_update/YouTube /data/adb/modules && rm -fr /data/adb/modules_update/YouTube /data/adb/modules/YouTube/update</sup>
 
 - Thay thế `Link-Magisk-Youtube.zip` với liên kết của bạn.
 
@@ -32,9 +36,9 @@
 
 - Ứng dụng này để đăng nhập tài khoản google vào YouTube, hãy nhấn vào liên kết bên dưới để tải về.
 
-- [TeamVanced](https://github.com/TeamVanced/VancedMicroG)
+  > [TeamVanced](https://github.com/TeamVanced/VancedMicroG)
 
-- [inotia00](https://github.com/inotia00/VancedMicroG)
+  > [inotia00](https://github.com/inotia00/VancedMicroG)
 
 **Ủng hộ**
 ---
@@ -43,7 +47,7 @@
 
 - Tôi chỉ là tác giả của công cụ tự động hóa github này.
 
-- [Paypal](http://paypal.me/kakathic)
+  > [Paypal](http://paypal.me/kakathic)
 
 - Techcombank: 19034902604017
 
@@ -54,7 +58,7 @@
 
 - Và theo dõi sau đây
 
-- [Xem video](https://youtu.be/tCeE34jEurA)
+  > [Xem video](https://youtu.be/tCeE34jEurA)
 
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd1.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd2.jpg" height="auto" width="100%" />
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd3.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd4.jpg" height="auto" width="100%" />
@@ -70,4 +74,4 @@
 
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/ud.jpg" height="auto" width="100%" />
 
-- Chúc bạn thành công!
+> Chúc bạn thành công!
