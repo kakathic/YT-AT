@@ -27,7 +27,7 @@
 
 - Thay thế `Link-Magisk-Youtube.zip` với liên kết của bạn.
 
-**Microg No Root**
+**Microg**
 ---
 
 - Ứng dụng này để đăng nhập tài khoản google vào YouTube, hãy nhấn vào liên kết bên dưới để tải về.
