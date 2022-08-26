@@ -2,7 +2,7 @@
 
 - YouTube mod tool automatically
 
-- [Việt Nam](/Web/README-Vi.md)
+    - [Việt Nam](/Web/README-Vi.md)
 
 **Use Revanced cli**
 ---
@@ -26,7 +26,7 @@
 
 - To update without rebooting try the following command:
 
-> <sup>curl -# -L http://Link-Magisk-Youtube.zip -o YouTube.zip && magisk --install-module YouTube.zip && cp -rf /data/adb/modules_update/YouTube /data/adb/modules && rm -fr /data/adb/modules_update/YouTube /data/adb/modules/YouTube/update</sup>
+  > <sup>curl -# -L http://Link-Magisk-Youtube.zip -o YouTube.zip && magisk --install-module YouTube.zip && cp -rf /data/adb/modules_update/YouTube /data/adb/modules && rm -fr /data/adb/modules_update/YouTube /data/adb/modules/YouTube/update</sup>
 
 
 - Replace `Link-Magisk-Youtube.zip` with your link.
@@ -36,9 +36,9 @@
 
 - Use to log non-root version, click on the link below to download.
 
-- [TeamVanced](https://github.com/TeamVanced/VancedMicroG)
+    - [TeamVanced](https://github.com/TeamVanced/VancedMicroG)
 
-- [inotia00](https://github.com/inotia00/VancedMicroG)
+    - [inotia00](https://github.com/inotia00/VancedMicroG)
 
 **Donate**
 ---
@@ -47,7 +47,7 @@
 
 - I'm just the author of this github automation tool.
 
-- [Paypal](http://paypal.me/kakathic)
+    - [Paypal](http://paypal.me/kakathic)
 
 - Techcombank: 19034902604017
 
@@ -58,7 +58,7 @@
 
 - And follow the following
 
-- [Watch the video](https://youtu.be/tCeE34jEurA)
+  > [Watch the video](https://youtu.be/tCeE34jEurA)
 
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd1.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd2.jpg" height="auto" width="100%" />
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd3.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd4.jpg" height="auto" width="100%" />
