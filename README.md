@@ -2,22 +2,22 @@
 
 - YouTube mod tool automatically
 
-    - [Việt Nam](/Web/README-Vi.md)
+   > [Việt Nam](/Web/README-Vi.md)
 
 **Use Revanced cli**
 ---
 
 - This is revanced's YouTube mod tool they made this tool out please support them.
 
-    - [Homepage](https://github.com/revanced)
+   > [Homepage](https://github.com/revanced)
 
 - See the version that Revanced they support for the latest build.
 
-    - [YouTube version](https://github.com/revanced/revanced-patches)
+   > [YouTube version](https://github.com/revanced/revanced-patches)
 
 - YouTube latest version
 
-    - [Latest version](https://www.apkmirror.com/apk/google-inc/youtube/)
+   > [Latest version](https://www.apkmirror.com/apk/google-inc/youtube/)
 
 **Module Magisk**
 ---
@@ -36,9 +36,9 @@
 
 - Use to log non-root version, click on the link below to download.
 
-    - [TeamVanced](https://github.com/TeamVanced/VancedMicroG)
+   > [TeamVanced](https://github.com/TeamVanced/VancedMicroG)
 
-    - [inotia00](https://github.com/inotia00/VancedMicroG)
+   > [inotia00](https://github.com/inotia00/VancedMicroG)
 
 **Donate**
 ---
@@ -47,7 +47,7 @@
 
 - I'm just the author of this github automation tool.
 
-    - [Paypal](http://paypal.me/kakathic)
+  > [Paypal](http://paypal.me/kakathic)
 
 - Techcombank: 19034902604017
 
@@ -74,4 +74,4 @@
 
 <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/ud.jpg" height="auto" width="100%" />
 
-- Good luck!
+> Good luck!
