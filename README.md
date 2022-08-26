@@ -9,15 +9,15 @@
 
 - This is revanced's YouTube mod tool they made this tool out please support them.
 
-- [Homepage](https://github.com/revanced)
+    - [Homepage](https://github.com/revanced)
 
 - See the version that Revanced they support for the latest build.
 
-- [YouTube version](https://github.com/revanced/revanced-patches)
+    - [YouTube version](https://github.com/revanced/revanced-patches)
 
 - YouTube latest version
 
-- [Latest version](https://www.apkmirror.com/apk/google-inc/youtube/)
+    - [Latest version](https://www.apkmirror.com/apk/google-inc/youtube/)
 
 **Module Magisk**
 ---
