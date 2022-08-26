@@ -11,9 +11,9 @@
 
 - [Homepage](https://github.com/revanced)
 
-- [YouTube version](https://github.com/revanced/revanced-patches)
-
 - See the version that Revanced they support for the latest build.
+
+- [YouTube version](https://github.com/revanced/revanced-patches)
 
 - YouTube latest version
 
