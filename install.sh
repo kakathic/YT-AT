@@ -129,7 +129,7 @@ zip -q -r "$Likk/Up/YouTube-Magisk-$Vision-$ach$amoled2.Zip" *
 echo '{
 "version": "'$Vision'",
 "versionCode": "'$Vision2'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Download/YouTube-Magisk-'$Vision'-'$ach$amoled2'.Zip",
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$Vision'/YouTube-Magisk-'$Vision'-'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
 }' > $Likk/Up-$ach$amoled2.json 
 echo > $Likk/done.txt ) & cpnn
