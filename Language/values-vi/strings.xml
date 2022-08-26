@@ -1,6 +1,6 @@
-    <string name="revanced_ryd_title">Bật khôi phục lượt Dislike</string>
-    <string name="revanced_ryd_summary">Bật tùy chọn này để xem lại số lượt Dislike</string>
-    <string name="revanced_ryd_attribution_title">Bản vá khôi phục lượt Dislike</string>
+    <string name="revanced_ryd_title">Bật khôi phục lượt dislike</string>
+    <string name="revanced_ryd_summary">Bật tùy chọn này để xem lại số lượt dislike</string>
+    <string name="revanced_ryd_attribution_title">Bản vá khôi phục lượt dislike</string>
     <string name="revanced_ryd_attribution_summary">Bản vá này sử dụng API Return YouTube Dislike từ https://returnyoutubedislike.com. Nhấn để tìm hiểu thêm</string>
     <string name="downloader_not_installed_warning">không được cài đặt</string>
     <string name="enable_sb">Bật SponsorBlock</string>
@@ -34,7 +34,7 @@
     <string name="segments_intermission">Hoạt ảnh ngắt quãng/phần giới thiệu</string>
     <string name="segments_intermission_sum">Khoảng thời gian không có nội dung thực tế. Có thể tạm dừng, khung hình tĩnh, hoạt ảnh lặp lại</string>
     <string name="segments_endcards">Endcards/Credits</string>
-    <string name="segments_endcards_sum">Credits or when the YouTube endcards appear. Not for spoken conclusions</string>
+    <string name="segments_endcards_sum">Credits hoặc khi màn hình kết thúc Youtube xuất hiện. Không cho nói khi kết thúc</string>
     <string name="segments_subscribe">Nhắc nhở tương tác (Đăng ký)</string>
     <string name="segments_subscribe_sum">Khi có lời nhắc ngắn hãy thích, đăng ký hoặc theo dõi chúng ở giữa nội dung</string>
     <string name="segments_selfpromo">Không phải trả tiền/Tự quảng cáo</string>
@@ -148,8 +148,8 @@
 <string name="ads_title" public="false">Quảng cáo</string>
 <string name="layout_title" public="false">Bố cục</string>
 <string name="revanced_settings" public="false">ReVanced</string>
-<string name="revanced_ryd_settings_summary" public="false">Cài đặt khôi phục lượt Dislike</string>
-<string name="revanced_ryd_settings_title" public="false">Khôi phục lượt Dislike</string>
+<string name="revanced_ryd_settings_summary" public="false">Cài đặt khôi phục lượt dislike</string>
+<string name="revanced_ryd_settings_title" public="false">Khôi phục lượt dislike</string>
 <string name="interactions_summary" public="false">Cài đặt liên quan đến tương tác</string>
 <string name="interactions_title" public="false">Tương tác</string>
 <string name="layout_summary" public="false">Cài đặt liên quan đến bố cục</string>
@@ -193,18 +193,18 @@
 <string name="revanced_adremover_medical_panel_enabled_summary_off" public="false">Đang hiện bảng y tế</string>
 <string name="revanced_adremover_medical_panel_enabled_summary_on" public="false">Đã ẩn bảng y tế</string>
 <string name="revanced_adremover_medical_panel_enabled_title" public="false">Xoá bảng y tế</string>
-<string name="revanced_adremover_merchandise_enabled_summary_off" public="false">Đang hiện biểu ngữ buôn bán</string>
-<string name="revanced_adremover_merchandise_enabled_summary_on" public="false">Đã ẩn biểu ngữ buôn bán</string>
-<string name="revanced_adremover_merchandise_enabled_title" public="false">Xoá biểu ngữ buôn bán</string>
+<string name="revanced_adremover_merchandise_enabled_summary_off" public="false">Đang hiện biểu ngữ hàng hoá</string>
+<string name="revanced_adremover_merchandise_enabled_summary_on" public="false">Đã ẩn biểu ngữ hàng hoá</string>
+<string name="revanced_adremover_merchandise_enabled_title" public="false">Xoá biểu ngữ hàng hoá</string>
 <string name="revanced_adremover_movie_enabled_summary_off" public="false">Đang hiện đoạn phim</string>
 <string name="revanced_adremover_movie_enabled_summary_on" public="false">Đã ẩn đoạn phim</string>
 <string name="revanced_adremover_movie_enabled_title" public="false">Xóa đoạn phim</string>
 <string name="revanced_adremover_paid_content_enabled_summary_off" public="false">Đang hiện nội dung trả phí</string>
 <string name="revanced_adremover_paid_content_enabled_summary_on" public="false">Đã ẩn nội dung trả phí</string>
 <string name="revanced_adremover_paid_content_enabled_title" public="false">Xóa nội dung trả phí</string>
-<string name="revanced_adremover_shorts_shelf_enabled_summary_off" public="false">Đang hiện Short thử nghiệm</string>
-<string name="revanced_adremover_shorts_shelf_enabled_summary_on" public="false">Đã ẩn Short thử nghiệm</string>
-<string name="revanced_adremover_shorts_shelf_enabled_title" public="false">Xoá Short thử nghiệm</string>
+<string name="revanced_adremover_shorts_shelf_enabled_summary_off" public="false">Đang hiện video ngắn</string>
+<string name="revanced_adremover_shorts_shelf_enabled_summary_on" public="false">Đã ẩn video ngắn</string>
+<string name="revanced_adremover_shorts_shelf_enabled_title" public="false">Xoá video ngắn</string>
 <string name="revanced_adremover_suggested_enabled_summary_off" public="false">Đang hiện đề xuất cá nhân</string>
 <string name="revanced_adremover_suggested_enabled_summary_on" public="false">Đã ẩn đề xuất cá nhân</string>
 <string name="revanced_adremover_suggested_enabled_title" public="false">Xoá đề xuất cá nhân</string>
@@ -274,9 +274,9 @@
 <string name="revanced_swipe_volume_enabled_title" public="false">Điều khiển vuốt cho âm lượng</string>
 <string name="revanced_swipe_volume_summary_off" public="false">Điều khiển vuốt cho âm lượng đã bị tắt</string>
 <string name="revanced_swipe_volume_summary_on" public="false">Điều khiển vuốt cho âm lượng đã bật</string>
-<string name="revanced_tablet_miniplayer_summary_off" public="false">Đã tắt trình phát mini máy tính bảng</string>
-<string name="revanced_tablet_miniplayer_summary_on" public="false">Đã bật trình phát mini máy tính bảng</string>
-<string name="revanced_tablet_miniplayer_title" public="false">Bật trình phát mini máy tính bảng</string>
+<string name="revanced_tablet_miniplayer_summary_off" public="false">Đã tắt trình phát thu nhỏ máy tính bảng</string>
+<string name="revanced_tablet_miniplayer_summary_on" public="false">Đã bật trình phát thu nhỏ máy tính bảng</string>
+<string name="revanced_tablet_miniplayer_title" public="false">Bật trình phát thu nhỏ máy tính bảng</string>
 <string name="revanced_video_ads_removal_summary_off" public="false">Đang hiện quảng cáo video</string>
 <string name="revanced_video_ads_removal_summary_on" public="false">Đã ẩn quảng cáo video</string>
 <string name="revanced_video_ads_removal_title" public="false">Ẩn quảng cáo video</string>
