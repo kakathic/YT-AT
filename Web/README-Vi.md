@@ -12,13 +12,13 @@
 
   > [Trang chủ](https://github.com/revanced)
 
-- Xem phiên bản Revanced mà họ hỗ trợ cho bản dựng mới nhất.
+- Phiên bản Revanced mà họ hỗ trợ cho bản dựng mới nhất.
 
-  > [YouTube](https://github.com/revanced/revanced-patches)
+  > [Xem](https://github.com/revanced/revanced-patches)
 
 - YouTube phiên bản mới nhất
 
-  > [Mới nhất](https://www.apkmirror.com/apk/google-inc/youtube/)
+  > [Xem](https://www.apkmirror.com/apk/google-inc/youtube/)
 
 **Mô-đun Magisk**
 ---
