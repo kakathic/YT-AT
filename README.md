@@ -13,11 +13,11 @@
 
 - See the version that Revanced they support for the latest build.
 
-   > [YouTube version](https://github.com/revanced/revanced-patches)
+   > [Link](https://github.com/revanced/revanced-patches)
 
 - YouTube latest version
 
-   > [Latest version](https://www.apkmirror.com/apk/google-inc/youtube/)
+   > [Link](https://www.apkmirror.com/apk/google-inc/youtube/)
 
 **Module Magisk**
 ---
