@@ -7,7 +7,7 @@
 **Use Revanced cli**
 ---
 
-- This is revanced's YouTube mod tool they made this tool out please support them.
+- This is the mod Youtube tool from Revanced, they made it, let support them.
 
    > [Homepage](https://github.com/revanced)
 
@@ -15,7 +15,7 @@
 
    > [Link](https://github.com/revanced/revanced-patches)
 
-- YouTube latest version
+- The latest Youtube version
 
    > [Link](https://www.apkmirror.com/apk/google-inc/youtube/)
 
