@@ -1,10 +1,10 @@
-    <string name="revanced_ryd_title">Bật khôi phục lượt dislike</string>
-    <string name="revanced_ryd_summary">Bật tùy chọn này để xem lại số lượt dislike</string>
-    <string name="revanced_ryd_attribution_title">Bản vá khôi phục lượt dislike</string>
+    <string name="revanced_ryd_title">Bật khôi phục lượt Dislike</string>
+    <string name="revanced_ryd_summary">Bật tùy chọn này để xem lại số lượt Dislike</string>
+    <string name="revanced_ryd_attribution_title">Trả lại nút Dislike trên YouTube</string>
     <string name="revanced_ryd_attribution_summary">Bản vá này sử dụng API Return YouTube Dislike từ https://returnyoutubedislike.com. Nhấn để tìm hiểu thêm</string>
     <string name="downloader_not_installed_warning">không được cài đặt</string>
     <string name="enable_sb">Bật SponsorBlock</string>
-    <string name="enable_sb_sum">SponsorBlock là một hệ thống có nguồn gốc từ cộng đồng để bỏ qua các phần gây khó chịu trong video YouTube</string>
+    <string name="enable_sb_sum">SponsorBlock là một tiện ích được đóng góp từ cộng đồng để bỏ qua các đoạn video gây khó chịu trong video của YouTube</string>
     <string name="enable_segmadding">Bật thêm phân đoạn mới</string>
     <string name="enable_segmadding_sum">Tùy chọn này dùng để mở tính năng thêm phân đoạn thử nghiệm (Sẽ có vấn đề về khả năng hiển thị nút)</string>
     <string name="diff_segments">Phải làm gì với các phân đoạn khác nhau</string>
@@ -32,17 +32,17 @@
     <string name="segments_sponsor">Nhà tài trợ</string>
     <string name="segments_sponsor_sum">Quảng cáo trả phí, giới thiệu có trả tiền và quảng cáo trực tiếp</string>
     <string name="segments_intermission">Hoạt ảnh ngắt quãng/phần giới thiệu</string>
-    <string name="segments_intermission_sum">Khoảng thời gian không có nội dung thực tế. Có thể tạm dừng, khung hình tĩnh, hoạt ảnh lặp lại</string>
-    <string name="segments_endcards">Endcards/Credits</string>
-    <string name="segments_endcards_sum">Credits hoặc khi màn hình kết thúc Youtube xuất hiện. Không cho nói khi kết thúc</string>
+    <string name="segments_intermission_sum">Khoảng thời gian không có nội dung thực tế. Có thể là tạm dừng, khung hình tĩnh, hoạt ảnh lặp lại</string>
+    <string name="segments_endcards">Thẻ kết thúc/Danh đề</string>
+    <string name="segments_endcards_sum">Danh đề hoặc khi thẻ kết thúc YouTube xuất hiện. Không dành cho kết thúc bằng giọng nói</string>
     <string name="segments_subscribe">Nhắc nhở tương tác (Đăng ký)</string>
     <string name="segments_subscribe_sum">Khi có lời nhắc ngắn hãy thích, đăng ký hoặc theo dõi chúng ở giữa nội dung</string>
-    <string name="segments_selfpromo">Không phải trả tiền/Tự quảng cáo</string>
+    <string name="segments_selfpromo">Chưa thanh toán/Tự quảng cáo</string>
     <string name="segments_selfpromo_sum">Khi có quảng cáo chưa thanh toán hoặc tự quảng cáo. Điều này bao gồm các phần cụ thể về hàng hóa, khoản đóng góp hoặc thông tin về những người họ đã cộng tác</string>
-    <string name="segments_nomusic">Âm nhạc: không phải âm nhạc</string>
-    <string name="segments_nomusic_sum">Chỉ để sử dụng trong trình phát âm nhạc. Điều này bao gồm phần giới thiệu hoặc phần giới thiệu trong video âm nhạc</string>
-    <string name="segments_filler">Tiếp tuyến/Nói đùa</string>
-    <string name="segments_filler_sum">Các cảnh tiếp theo chỉ được thêm vào để bổ sung hoặc hài hước không bắt buộc để hiểu nội dung chính của trình phát. Điều này không nên bao gồm các chi tiết bối cảnh hoặc nền</string>
+    <string name="segments_nomusic">Âm nhạc: Phần không phải âm nhạc</string>
+    <string name="segments_nomusic_sum">Chỉ để sử dụng trong video âm nhạc. Điều này bao gồm phần giới thiệu hoặc phần giới thiệu trong video âm nhạc</string>
+    <string name="segments_filler">Nội dung không liên quan/Câu đùa</string>
+    <string name="segments_filler_sum">Các cảnh tiếp theo chỉ được thêm vào để bổ sung hoặc hài hước không bắt buộc để hiểu nội dung chính của video. Điều này không nên bao gồm các chi tiết bối cảnh hoặc nền</string>
     <string name="skipped_segment">Bỏ qua một phân đoạn nhà tài trợ</string>
     <string name="skipped_sponsor">Đã bỏ qua nhà tài trợ</string>
     <string name="skipped_intermission">Đã bỏ qua phần giới thiệu</string>
@@ -51,7 +51,7 @@
     <string name="skipped_selfpromo">Đã bỏ qua quảng cáo bản thân</string>
     <string name="skipped_nomusic">Đã bỏ qua phần không phải âm nhạc</string>
     <string name="skipped_preview">Đã bỏ qua bản xem trước</string>
-    <string name="skipped_filler">Bỏ qua filler</string>
+    <string name="skipped_filler">Đã bỏ qua nội dung không liên quan</string>
     <string name="skipped_unsubmitted">Bỏ qua phân đoạn chưa gửi</string>
     <string name="skip_automatically">Tự động bỏ qua</string>
     <string name="skip_showbutton">Hiển thị nút bỏ qua</string>
@@ -122,10 +122,10 @@
     <string name="stats_username" formatted="false">Tên người dùng của bạn: &lt;b&gt;%s&lt;/b&gt;</string>
     <string name="stats_username_change">Nhấp để thay đổi tên người dùng của bạn</string>
     <string name="stats_username_change_unknown_error" formatted="false">Không thể thay đổi tên người dùng: Trạng thái: %d %s</string>
-    <string name="stats_username_changed">ên người dùng đã được đổi thành công</string>
-    <string name="stats_submissions">Gửi: &lt;b&gt;%s&lt;/b&gt;</string>
-    <string name="stats_saved">Bạn đã cứu mọi người khỏi &lt;b&gt;%s&lt;/b&gt; phân đoạn.</string>
-    <string name="stats_saved_sum">Đó là &lt;b&gt;%s&lt;/b&gt; cuộc sống của họ. Nhấp để xem bảng xếp hạng</string>
+    <string name="stats_username_changed">Tên người dùng đã được đổi thành công</string>
+    <string name="stats_submissions">Đệ trình: &lt;b&gt;%s&lt;/b&gt;</string>
+    <string name="stats_saved">Bạn đã giúp mọi người bỏ qua &lt;b&gt;%s&lt;/b&gt; phân đoạn.</string>
+    <string name="stats_saved_sum">Tương đương với &lt;b&gt;%s&lt;/b&gt; trong cuộc đời của họ. Nhấn để xem bảng xếp hạng</string>
     <string name="stats_self_saved">Bạn đã bỏ qua &lt;b&gt;%s&lt;/b&gt; phân đoạn.</string>
     <string name="stats_self_saved_sum">Đó là &lt;b&gt;%s&lt;/b&gt;.</string>
     <string name="minutes">phút</string>
@@ -202,9 +202,9 @@
 <string name="revanced_adremover_paid_content_enabled_summary_off" public="false">Đang hiện nội dung trả phí</string>
 <string name="revanced_adremover_paid_content_enabled_summary_on" public="false">Đã ẩn nội dung trả phí</string>
 <string name="revanced_adremover_paid_content_enabled_title" public="false">Xóa nội dung trả phí</string>
-<string name="revanced_adremover_shorts_shelf_enabled_summary_off" public="false">Đang hiện video ngắn</string>
-<string name="revanced_adremover_shorts_shelf_enabled_summary_on" public="false">Đã ẩn video ngắn</string>
-<string name="revanced_adremover_shorts_shelf_enabled_title" public="false">Xoá video ngắn</string>
+<string name="revanced_adremover_shorts_shelf_enabled_summary_off" public="false">Đang hiện thẻ video ngắn</string>
+<string name="revanced_adremover_shorts_shelf_enabled_summary_on" public="false">Đã ẩn thẻ video ngắn</string>
+<string name="revanced_adremover_shorts_shelf_enabled_title" public="false">Xoá thẻ video ngắn</string>
 <string name="revanced_adremover_suggested_enabled_summary_off" public="false">Đang hiện đề xuất cá nhân</string>
 <string name="revanced_adremover_suggested_enabled_summary_on" public="false">Đã ẩn đề xuất cá nhân</string>
 <string name="revanced_adremover_suggested_enabled_title" public="false">Xoá đề xuất cá nhân</string>
@@ -239,10 +239,10 @@
 <string name="revanced_minimized_playback_summary_off" public="false">Đang tắt tính năng phát lại thu nhỏ</string>
 <string name="revanced_minimized_playback_summary_on" public="false">Đang bật tính năng phát lại thu nhỏ</string>
 <string name="revanced_old_style_quality_settings_enabled_title" public="false">Sử dụng bố cục chất lượng cũ</string>
-<string name="revanced_old_style_quality_settings_summary_off" public="false">Đang hiện cài đặt chất lượng mới</string>
-<string name="revanced_old_style_quality_settings_summary_on" public="false">Đang hiện cài đặt chất lượng cũ</string>
-<string name="revanced_pref_buffer_for_playback_after_rebuffer_ms_summary" public="false">Kích thước tối đa của bộ đệm để phát lại sau bộ đệm</string>
-<string name="revanced_pref_buffer_for_playback_after_rebuffer_ms_title" public="false">Bộ đệm tối đa để phát lại sau bộ đệm</string>
+<string name="revanced_old_style_quality_settings_summary_off" public="false">Đang hiện cài đặt video chất lượng mới</string>
+<string name="revanced_old_style_quality_settings_summary_on" public="false">Đang hiện cài đặt video chất lượng cũ</string>
+<string name="revanced_pref_buffer_for_playback_after_rebuffer_ms_summary" public="false">Kích thước tối đa của bộ đệm để phát lại sau khi đệm</string>
+<string name="revanced_pref_buffer_for_playback_after_rebuffer_ms_title" public="false">Bộ đệm tối đa để phát lại sau khi đệm</string>
 <string name="revanced_pref_buffer_for_playback_ms_summary" public="false">Kích thước tối đa của bộ đệm để phát lại</string>
 <string name="revanced_pref_buffer_for_playback_ms_title" public="false">Bộ đệm tối đa để phát lại</string>
 <string name="revanced_pref_max_buffer_ms_summary" public="false">Kích thước tối đa của bộ đệm để phát lại</string>
