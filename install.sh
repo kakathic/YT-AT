@@ -13,7 +13,7 @@ ZHex(){ xxd -r -p "$@"; }
 
 apktoolur(){
 apktool d -r -s -f "$1" -o $Likk/Nn
-apktool b -c -f $Likk/Nn -o "$Likk/Nn.apk"
+apktool b -f $Likk/Nn -o "$Likk/Nn.apk"
 apksign "$Likk/Nn.apk" "$2"
 }
 
