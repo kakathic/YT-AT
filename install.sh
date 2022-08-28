@@ -16,7 +16,7 @@ ZHex(){ xxd -r -p "$@"; }
 
 apktoolur(){
 apktool d -rs -m -f "$1" -o "$Likk/Nn"
-apktool b -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
+apktool b -c "$Likk/Nn" -f -o "$Likk/Nn.apk" | tee 1.txt
 cp -rf "$Likk/Nn.apk" "$1"
 }
 
