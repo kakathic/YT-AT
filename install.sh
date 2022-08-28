@@ -16,7 +16,9 @@ ZHex(){ xxd -r -p "$@"; }
 
 apktoolur(){
 apktool d -rs -m -f "$1" -o "$Likk/Nn"
-apktool b -c "$Likk/Nn" -f -o "$1"; }
+apktool b -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
+cp -rf "$Likk/Nn.apk" "$1"
+}
 
 cpnn(){
 while true; do
