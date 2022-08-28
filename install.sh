@@ -143,8 +143,8 @@ echo > $Likk/done.txt ) & cpnn
 else
 
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
-zip -qr -9 "$Likk/apk/YouTube.apk" -d $lib $xoa2
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/apk/YouTube.apk"
+zip -qr -9 "$Likk/apk/YouTube.apk" -d $lib $xoa2
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" 
 echo > $Likk/done.txt ) & cpnn
 fi
