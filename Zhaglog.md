@@ -1,9 +1,5 @@
 **Updated**
 
-17.32.39
+28.08.2022
 
-- Up
-
-17.32.35
-
-- Up
++ Update more YouTube optimization features 
