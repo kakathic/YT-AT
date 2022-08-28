@@ -13,7 +13,7 @@ ZHex(){ xxd -r -p "$@"; }
 
 apktoolur(){
 apktool d -r -s -f "$1" -o "$Likk/Nn"
-apktool b -c -f "$Likk/Nn" -o "$1" --use-aapt2
+apktool b --use-aapt2 -c -f "$Likk/Nn" -o "$1"
 }
 
 cpnn(){
