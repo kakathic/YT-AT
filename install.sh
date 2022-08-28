@@ -127,7 +127,7 @@ fi
 # Xây dựng 
 if [ "$TYPE" != 'true' ];then
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
-[ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk" 
+[ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk" "$Likk/Tav/YouTube.apk" || cp -rf "$Likk/apk/YouTube.apk" "$Likk/Tav/YouTube.apk"
 zip -qr "$Likk/Tav/YouTube.apk" -d 'lib/*' $xoa2
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
