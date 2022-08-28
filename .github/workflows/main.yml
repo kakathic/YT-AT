@@ -91,11 +91,6 @@ jobs:
           tag_name: Up
           files: Up*.json
           prerelease: true
-      - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v3
-        with:
-          name: YouTube ${{ github.event.inputs.VERSION }}
-          path: Up/*
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
