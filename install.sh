@@ -94,7 +94,7 @@ cp -rf $Likk/Tools/sqlite3_$ach $Likk/Module/common/sqlite3
 unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
 [ "$DEVICE" == 'x86' ] || mv -f $Likk/Tav/lib/$DEVICE $Likk/Tav/lib/$ach
 
-[ "$OPTIMIZATION" == 'true' ] && xoa2='assets/fonts/*'
+[ "$OPTIMIZATION" == 'true' ] && xoa2='stamp-cert-sha256 assets/fonts/*'
 [ "$ROUND" == 'true' ] || rm -fr $Likk/Module/system
 
 [ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
@@ -130,7 +130,7 @@ fi
 # Xây dựng 
 if [ "$TYPE" != 'true' ];then
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
-zip -qr "$Likk/Tav/YouTube.apk" -d 'lib/*' $xoa2 stamp-cert-sha256
+zip -qr "$Likk/Tav/YouTube.apk" -d 'lib/*' $xoa2
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk"
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
@@ -147,7 +147,7 @@ echo > $Likk/done.txt ) & cpnn
 else
 
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
-zip -qr -9 "$Likk/apk/YouTube.apk" -d $lib $xoa2 stamp-cert-sha256
+zip -qr -9 "$Likk/apk/YouTube.apk" -d $lib $xoa2
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/apk/YouTube.apk"
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" 
 echo > $Likk/done.txt ) & cpnn
