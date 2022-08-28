@@ -15,9 +15,8 @@ XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 
 apktoolur(){
-apktool d -r -s -f "$1" -o "$Likk/Nn"
-apktool b -c "$Likk/Nn" -f -o "$1"
-}
+apktool d -rs -m -f "$1" -o "$Likk/Nn"
+apktool b -c "$Likk/Nn" -f -o "$1"; }
 
 cpnn(){
 while true; do
