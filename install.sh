@@ -1,7 +1,7 @@
 # Kakathic
 
 export Likk="$GITHUB_WORKSPACE"
-
+apktool(){ java -jar $Likk/Tools/apktool-2.6.2.jar "$@"; }
 Dx(){ java -jar $Likk/Tools/dx.jar --dex --no-strict --min-sdk-version 26 --core-library --output "$2" "$1"; }
 smali(){ java -jar $Likk/Tools/smali-2.5.2.jar "$@"; }
 baksmali(){ java -jar $Likk/Tools/baksmali-2.5.2.jar "$@"; }
