@@ -54,7 +54,7 @@ on:
         description: 'Pip rounded (root)'
         required: false
         type: boolean
-        default: false
+        default: true
 jobs:
   build:
     name: 'Open build...'
