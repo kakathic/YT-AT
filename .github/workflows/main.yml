@@ -5,7 +5,7 @@ on:
       VERSION:
         description: '17-32-35 => 17.32.35 is the YouTube version that revanced supports tool, can import higher version that they support revanced but may be broken some features.'
         required: true
-        default: '17-32-39'
+        default: '17-33-42'
       DEVICE:
         description: 'Select device'
         required: true
@@ -80,7 +80,7 @@ jobs:
           CREATE: ${{ inputs.CREATE }}
 
         run: |
-          SVision="17.32.35"
+          SVision="17.33.42"
           chmod -R 777 Tools/*
           chmod 777 install.sh
           . install.sh
