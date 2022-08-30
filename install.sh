@@ -92,9 +92,9 @@ unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
 [ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
 [ "$SHORTS" == 'true' ] && echo -n "-e hide-shorts-button " >> $Likk/logk
 [ "$CREATE" == 'true' ] && echo -n "-e disable-create-button " >> $Likk/logk
-[ "$TYPE" != 'true' ] && lib2='lib/*/*'
+[ "$TYPE" != 'true' ] && lib='lib/*/*'
 
-zip -qr "$Likk/lib/YouTube.apk" -d $lib $lib2
+zip -qr "$Likk/lib/YouTube.apk" -d $lib
 
 if [ "$AMOLED" == 'true' ];then
 echo -n "-e amoled " >> $Likk/logk
@@ -137,9 +137,7 @@ echo '{
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
 }' > $Likk/Up-$ach$amoled2.json 
 echo > $Likk/done.txt ) & cpnn
-
 else
-
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/apk/YouTube.apk"
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" 
