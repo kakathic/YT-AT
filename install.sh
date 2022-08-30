@@ -91,6 +91,10 @@ unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
 [ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
 [ "$SHORTS" == 'true' ] && echo -n "-e hide-shorts-button " >> $Likk/logk
 [ "$CREATE" == 'true' ] && echo -n "-e disable-create-button " >> $Likk/logk
+[ "$OPTIMIZATION" == 'true' ] && xoa2='assets/fonts/*'
+[ "$TYPE" != 'true' ] && lib2='lib/*' || lib2="$lib"
+
+zip -qr -9 "$Likk/lib/YouTube.apk" -d $lib2 $xoa2 
 
 if [ "$AMOLED" == 'true' ];then
 echo -n "-e amoled " >> $Likk/logk
@@ -121,8 +125,6 @@ fi
 # Xây dựng 
 if [ "$TYPE" != 'true' ];then
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
-[ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk"
-zip -qr "$Likk/Tav/YouTube.apk" -d 'lib/*' $xoa2
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
