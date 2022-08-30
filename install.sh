@@ -92,10 +92,9 @@ unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
 [ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
 [ "$SHORTS" == 'true' ] && echo -n "-e hide-shorts-button " >> $Likk/logk
 [ "$CREATE" == 'true' ] && echo -n "-e disable-create-button " >> $Likk/logk
-[ "$OPTIMIZATION" == 'true' ] && xoa2='assets/fonts/*'
 [ "$TYPE" != 'true' ] && lib='lib/*'
 
-zip -qr "$Likk/lib/YouTube.apk" -d $lib $xoa2 
+zip -qr "$Likk/lib/YouTube.apk" -d $lib
 
 if [ "$AMOLED" == 'true' ];then
 echo -n "-e amoled " >> $Likk/logk
