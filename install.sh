@@ -10,7 +10,7 @@ ZHex(){ xxd -r -p "$@"; }
 apktoolur(){
 apktool d -rs -m -f "$1" -o "$Likk/Nn"
 rm -fr "$Likk/Nn"/assets/fonts/*
-apktool b -c "$Likk/Nn" -f -o "$Likk/Nn.apk" | tee 1.txt
+apktool b -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
 cp -rf "$Likk/Nn.apk" "$1"
 }
 cpnn(){
@@ -29,6 +29,7 @@ unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 while true; do
 [ -e "$Likk/done.txt" ] && break || sleep 1
 done
+sleep 2
 }
 
 ListTM="lib
@@ -92,9 +93,9 @@ unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
 [ "$SHORTS" == 'true' ] && echo -n "-e hide-shorts-button " >> $Likk/logk
 [ "$CREATE" == 'true' ] && echo -n "-e disable-create-button " >> $Likk/logk
 [ "$OPTIMIZATION" == 'true' ] && xoa2='assets/fonts/*'
-[ "$TYPE" != 'true' ] && lib2='lib/*' || lib2="$lib"
+[ "$TYPE" != 'true' ] && lib='lib/*'
 
-zip -qr -9 "$Likk/lib/YouTube.apk" -d $lib2 $xoa2 
+zip -qr "$Likk/lib/YouTube.apk" -d $lib $xoa2 
 
 if [ "$AMOLED" == 'true' ];then
 echo -n "-e amoled " >> $Likk/logk
