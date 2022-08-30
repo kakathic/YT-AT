@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       VERSION:
-        description: '17-32-35 => 17.32.35 is the YouTube version that revanced supports tool, can import higher version that they support revanced but may be broken some features.'
+        description: '17-32-35 => 17.33.42 is the YouTube version that revanced supports tool, you can import higher version but maybe broken some features.'
         required: true
         default: '17-33-42'
       DEVICE:
