@@ -1,22 +1,16 @@
 # Kakathic
 
 export Likk="$GITHUB_WORKSPACE"
-apktool(){ java -jar $Likk/Tools/apktool-2.6.2.jar "$@"; }
-Dx(){ java -jar $Likk/Tools/dx.jar --dex --no-strict --min-sdk-version 26 --core-library --output "$2" "$1"; }
-smali(){ java -jar $Likk/Tools/smali-2.5.2.jar "$@"; }
-baksmali(){ java -jar $Likk/Tools/baksmali-2.5.2.jar "$@"; }
+apktool(){ java -jar $Likk/Tools/kikfox.jar "$@"; }
 Taive () { curl -s -L --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L --connect-timeout 20 "$1"; }
-apksign () {
-java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"
-rm -fr "$2".idsig
-}
+apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/releasekey.x509.pem" --key "$Likk/Tools/releasekey.pk8" --out "$2" "$1"; }
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 
 apktoolur(){
 apktool d -rs -m -f "$1" -o "$Likk/Nn"
-#rm -fr
+rm -fr "$Likk/Nn"/assets/fonts/*
 apktool b -c "$Likk/Nn" -f -o "$Likk/Nn.apk" | tee 1.txt
 cp -rf "$Likk/Nn.apk" "$1"
 }
