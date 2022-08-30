@@ -150,5 +150,6 @@ else
 zip -qr -9 "$Likk/apk/YouTube.apk" -d $lib $xoa2
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/apk/YouTube.apk"
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$Vision-$ach$amoled2.apk" 
+cp -rf "$Likk/Tools/Microg.apk" "$Likk/Up"
 echo > $Likk/done.txt ) & cpnn
 fi
