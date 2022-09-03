@@ -83,7 +83,7 @@ jobs:
           SVision="17.33.42"
           chmod -R 777 Tools/*
           chmod 777 install.sh
-          . install.sh
+          . .github/install.sh
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
