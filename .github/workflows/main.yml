@@ -87,6 +87,7 @@ jobs:
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
+          token: ${{ github.token }}
           name: Update
           tag_name: Up
           files: Up*.json
@@ -94,6 +95,7 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
+          token: ${{ github.token }}
           name: YT-AT ${{ github.event.inputs.VERSION }}
           tag_name: V${{ github.event.inputs.VERSION }}
           files: Up/*
