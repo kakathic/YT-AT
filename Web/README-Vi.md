@@ -1,4 +1,4 @@
-# YT-AT
+# YT-AT [![YT-AT](https://github.com/kakathic/YT-AT/actions/workflows/main.yml/badge.svg?event=workflow_dispatch)](https://github.com/kakathic/YT-AT/actions/workflows/main.yml)
 
 - Công cụ mod YouTube tự động
 
