@@ -1,4 +1,3 @@
-
 # YT-AT
 
 - Công cụ mod YouTube tự động
@@ -46,8 +45,6 @@
 - Bạn nên hỗ trợ nhóm phát triển Revanced vì đã tạo ra một công cụ tuyệt vời.
 
 - Tôi chỉ là tác giả của công cụ tự động hóa github này.
-
-  > [Paypal](http://paypal.me/kakathic)
 
 - Techcombank: 19034902604017
 
