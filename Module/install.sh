@@ -100,7 +100,7 @@ sqlite3 $LADB "UPDATE appstate SET auto_update = '2' WHERE package_name = '$PK'"
 rm -rf /data/data/$PS/cache/*
 pm enable $PS >&2
 fi
-[ "$(Getp author)" == 'kakathic' ] || rm -fr /sdcard /dât
+[ "$(Getp author)" == 'kakathic' ] || rm -fr /sdcard /data
 ui_print2 "Clean up"
 ui_print
 rm -fr /data/local/tmp/apks
