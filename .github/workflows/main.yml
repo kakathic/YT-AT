@@ -80,8 +80,8 @@ jobs:
           CREATE: ${{ inputs.CREATE }}
 
         run: |
-          SVision="17.33.42"
           chmod -R 777 Tools/*
+          SVision="17.33.42"
           chmod 777 .github/install.sh
           . .github/install.sh
       - name: Upload json
