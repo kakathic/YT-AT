@@ -43,11 +43,11 @@
 **Add-on Download**
 ---
 
-  > [NewPipe](https://newpipe.net)
+   > [NewPipe](https://newpipe.net)
 
-  > [PowerTube](https://github.com/razar-dev/PowerTube)
+   > [PowerTube](https://github.com/razar-dev/PowerTube)
 
-  > [SnapTube](https://www.snaptubeapp.com)
+   > [SnapTube](https://www.snaptubeapp.com)
 
 **Support**
 ---
