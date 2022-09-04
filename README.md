@@ -43,6 +43,8 @@
 **Add-on Download**
 ---
 
+- The following applications support video downloading
+
    > [NewPipe](https://newpipe.net)
 
    > [PowerTube](https://github.com/razar-dev/PowerTube)
