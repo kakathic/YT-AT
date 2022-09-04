@@ -40,7 +40,16 @@
 
    > [inotia00](https://github.com/inotia00/VancedMicroG)
 
-**Donate**
+**Add-on Download**
+---
+
+- [NewPipe](https://newpipe.net)
+
+- [PowerTube](https://github.com/razar-dev/PowerTube)
+
+- [SnapTube](https://www.snaptubeapp.com)
+
+**Support**
 ---
 
 - You should support the revanced development team for making a great tool.
