@@ -42,11 +42,11 @@
 **Tiện ích bổ sung**
 ---
 
-- [NewPipe](https://newpipe.net)
+  > [NewPipe](https://newpipe.net)
 
-- [PowerTube](https://github.com/razar-dev/PowerTube)
+  > [PowerTube](https://github.com/razar-dev/PowerTube)
 
-- [SnapTube](https://www.snaptubeapp.com)
+  > [SnapTube](https://www.snaptubeapp.com)
 
 
 **Hỗ trợ**
