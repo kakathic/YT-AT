@@ -42,6 +42,8 @@
 **Tiện ích bổ sung**
 ---
 
+- Các ứng dụng dưới đây hỗ trợ cho việc tải xuống các video
+
   > [NewPipe](https://newpipe.net)
 
   > [PowerTube](https://github.com/razar-dev/PowerTube)
