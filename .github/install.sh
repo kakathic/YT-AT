@@ -46,19 +46,17 @@ done
 echo "- Tải xuống công cụ cli..."
 
 # Tải tool Revanced
-Tv1="$(Xem https://github.com/revanced/revanced-cli/releases | grep '/releases/download' | grep -m1 '.jar' | cut -d \" -f2)"
-Taive "https://github.com$Tv1" "$Likk/lib/revanced-cli.jar"
-Tv2="$(Xem https://github.com/revanced/revanced-patches/releases | grep '/releases/download' | grep -m1 '.jar' | cut -d \" -f2)"
-Taive "https://github.com$Tv2" "$Likk/lib/revanced-patches.jar"
-Tv3="$(Xem https://github.com/revanced/revanced-integrations/releases | grep '/releases/download' | grep -m1 '.apk' | cut -d \" -f2)"
-Taive "https://github.com$Tv3" "$Likk/lib/revanced-integrations.apk"
-echo 123
+
+Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-cli.jar"       
+Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-patches/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-patches.jar"
+Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-integrations/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-integrations.apk"
+
 # Tải Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 hide-shorts-button | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
 [ "$VERSION" ] || VERSION="$Vidon"
 Kvision="$(echo $VERSION | tr '.' '-')"
 Vision2="$(echo $VERSION | sed 's|.||g')"
-echo 321
+
 Taiyt () {
 Upk="https://www.apkmirror.com"
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
