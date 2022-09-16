@@ -48,7 +48,8 @@ done
 echo "- Tải xuống công cụ cli..."
 
 # Tải tool Revanced
-Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-cli.jar"       
+Vsionnnnn="$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/revanced-cli/tree' | sed 's|v||g' | cut -d \" -f2)"
+Taive "https://github.com/revanced/revanced-cli/releases/download/v${Vsionnnnn##*/}/revanced-cli-${Vsionnnnn##*/}-all.jar" "$Likk/lib/revanced-cli.jar"       
 Taive "https://github.com$(Xem "https://github.com/revanced/revanced-patches/releases" | grep -m1 '/releases/download' | cut -d \" -f2)" "$Likk/lib/revanced-patches.jar"
 Taive "https://github.com$(Xem "https://github.com/revanced/revanced-integrations/releases" | grep -m1 '/releases/download' | cut -d \" -f2)" "$Likk/lib/revanced-integrations.apk"
 
