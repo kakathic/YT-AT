@@ -54,6 +54,10 @@ Tv3="$(Xem https://github.com/revanced/revanced-integrations/releases | grep '/r
 Taive "https://github.com$Tv3" "$Likk/lib/revanced-integrations.apk"
 
 # Tải Youtube
+Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 hide-shorts-button | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
+[ "$VERSION" ] || VERSION="$Vidon"
+Kvision="$(echo $VERSION | tr '.' '-')"
+Vision2="$(echo $VERSION | sed 's|.||g')"
 
 Taiyt () {
 Upk="https://www.apkmirror.com"
@@ -63,13 +67,7 @@ Url2="$Upk$(curl -s -k -L -G -H "$User" "$Upk$Url1" | grep -m1 '>here<' | tr ' '
 curl -s -k -L -H "$User" $Url2 -o $Likk/lib/$1
 }
 
-Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 hide-shorts-button | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
-[ "$VERSION" ] || VERSION="$Vidon"
-Kvision="$(echo $VERSION | tr '.' '-')"
-Vision2="$(echo $VERSION | sed 's|.||g')"
-
 echo "- Tải xuống YouTube: $VERSION"
-
 Taiyt 'YouTube.apk' '-2'
 [ -e $Likk/lib/YouTube.apk ] || (echo "- Lỗi tải Youtube.apk"; logout)
 
