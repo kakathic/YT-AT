@@ -94,8 +94,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ github.token }}
-          name: YT-AT ${{ github.event.inputs.VERSION }}
-          tag_name: V${{ github.event.inputs.VERSION }}
+          name: YT-AT
+          tag_name: Vip
           files: Up/*
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
