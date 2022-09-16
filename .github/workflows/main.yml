@@ -8,7 +8,7 @@ on:
         default: ''
       DEVICE:
         description: 'Select device'
-        required: true
+        required: false
         default: 'arm64-v8a'
         type: choice
         options:
@@ -18,7 +18,7 @@ on:
           - x86_64
       FEATURE:
         description: 'Turn off the feature, Add spaces to distinguish each feature'
-        required: true
+        required: false
         default: 'always-autorepeat hide-autoplay-button '
       TYPE:
         description: 'Sign in microg (No Root)'
