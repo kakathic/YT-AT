@@ -53,22 +53,21 @@ Taive "https://github.com/revanced/revanced-cli/releases/download/v${Vsionnnnn##
 Vsiogddh="$(Xem https://github.com/revanced/revanced-patches/releases | grep -m1 '/revanced-patches/tree' | sed 's|v||g' | cut -d \" -f2)"
 Taive "https://github.com/revanced/revanced-patches/releases/download/v${Vsiogddh##*/}/revanced-patches-${Vsiogddh##*/}.jar" "$Likk/lib/revanced-patches.jar"       
 Taive "https://github.com$(Xem "https://github.com/revanced/revanced-integrations/releases" | grep -m1 '/releases/download' | cut -d \" -f2)" "$Likk/lib/revanced-integrations.apk"
+
 ls $Likk/lib
 
 # Tải Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 hide-shorts-button | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
 [ "$VERSION" ] || VERSION="$Vidon"
-Kvision="$(echo $VERSION | tr '\.' '-')"
-Vision2="$(echo $VERSION | sed 's|\.||g')"
 
 Taiyt () {
 Upk="https://www.apkmirror.com"
-Url1="$(curl -s -k -L -G -H "$User" "$Upk/apk/google-inc/youtube/youtube-$Kvision-release/youtube-$Kvision$2-android-apk-download/" | grep -m1 'downloadButton' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
+Url1="$(curl -s -k -L -G -H "$User" "$Upk/apk/google-inc/youtube/youtube-${VERSION//./-}-release/youtube-${VERSION//./-}$2-android-apk-download/" | grep -m1 'downloadButton' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
 Url2="$Upk$(curl -s -k -L -G -H "$User" "$Upk$Url1" | grep -m1 '>here<' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
 curl -s -k -L -H "$User" $Url2 -o $Likk/lib/$1
 }
 
-echo "- Tải xuống YouTube: $VERSION-$Vision2_$Kvision"
+echo "- Tải xuống YouTube: $VERSION-${VERSION//./}_${VERSION//./-}"
 Taiyt 'YouTube.apk' '-2'
 [ -e $Likk/lib/YouTube.apk ] || (echo "- Lỗi tải Youtube.apk"; exit 0)
 
@@ -112,7 +111,7 @@ done
 
 echo '
 version='$VERSION'
-versionCode='$Vision2'
+versionCode='${VERSION//./}'
 updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
 
 # Xử lý revanced patches
@@ -137,7 +136,7 @@ cd $Likk/Module
 zip -q -r "$Likk/Up/YouTube-Magisk-$VERSION-$ach$amoled2.Zip" *
 echo '{
 "version": "'$VERSION'",
-"versionCode": "'$Vision2'",
+"versionCode": "'${VERSION//./}'",
 "zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Vip/YouTube-Magisk-'$VERSION'-'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
 }' > $Likk/Up-$ach$amoled2.json 
