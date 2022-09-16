@@ -58,7 +58,7 @@ ls $Likk/lib
 
 # Tải Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 hide-shorts-button | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
-[ "$VERSION" ] || VERSION="$Vidon"
+[ "$VERSION" == "Default" ] && VERSION="$Vidon"
 
 Taiyt () {
 Upk="https://www.apkmirror.com"
@@ -69,7 +69,7 @@ curl -s -k -L -H "$User" $Url2 -o $Likk/lib/$1
 
 echo "- Tải xuống YouTube: $VERSION"
 Taiyt 'YouTube.apk' '-2'
-if [ -e $Likk/lib/YouTube.apk ];then
+if [ ! -e $Likk/lib/YouTube.apk ];then
 echo "- Lỗi tải Youtube.apk"
 exit 0
 fi
