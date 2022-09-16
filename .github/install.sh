@@ -48,9 +48,9 @@ done
 echo "- Tải xuống công cụ cli..."
 
 # Tải tool Revanced
-Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-cli.jar" | tee 1.txt
-Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-patches/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-patches.jar" | tee 1.txt
-Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-integrations/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-integrations.apk" | tee 1.txt
+Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-cli/releases | tac | tac | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | tac | tac | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-cli.jar" | tee 1.txt
+Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-patches/releases | tac | tac | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | tac | tac | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-patches.jar" | tee 1.txt
+Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-integrations/releases | tac | tac | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | tac | tac | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-integrations.apk" | tee 1.txt
 
 # Tải Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 hide-shorts-button | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
