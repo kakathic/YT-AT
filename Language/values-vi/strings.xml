@@ -208,12 +208,12 @@
 <string name="revanced_adremover_suggested_enabled_summary_off" public="false">Đang hiện đề xuất cá nhân</string>
 <string name="revanced_adremover_suggested_enabled_summary_on" public="false">Đã ẩn đề xuất cá nhân</string>
 <string name="revanced_adremover_suggested_enabled_title" public="false">Xoá đề xuất cá nhân</string>
-<string name="revanced_branding_watermark_enabled_title" public="false">Đang hiện hình mờ thương hiệu</string>
-<string name="revanced_branding_watermark_summary_off" public="false">Đã ẩn hình mờ thương hiệu</string>
-<string name="revanced_branding_watermark_summary_on" public="false">Đang hiện hình mờ thương hiệu</string>
-<string name="revanced_cast_button_enabled_title" public="false">Đang hiện nút truyền</string>
-<string name="revanced_cast_button_summary_off" public="false">Đã ẩn nút truyền</string>
-<string name="revanced_cast_button_summary_on" public="false">Đang hiện nút truyền</string>
+<string name="revanced_branding_watermark_enabled_title" public="false">Hình mờ thương hiệu</string>
+<string name="revanced_branding_watermark_summary_off" public="false">Đã ẩn</string>
+<string name="revanced_branding_watermark_summary_on" public="false">Đang hiện</string>
+<string name="revanced_cast_button_enabled_title" public="false">Nút truyền sang Tivi</string>
+<string name="revanced_cast_button_summary_off" public="false">Đã ẩn</string>
+<string name="revanced_cast_button_summary_on" public="false">Đang hiện</string>
 <string name="revanced_custom_video_buffer_summary" public="false">Cài đặt tùy chỉnh bộ đệm video</string>
 <string name="revanced_custom_video_buffer_title" public="false">Cài đặt bộ đệm video</string>
 <string name="revanced_downloads_enabled_summary_off" public="false">Đã ẩn nút tải xuống</string>
