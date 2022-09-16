@@ -283,3 +283,6 @@
 <string name="revanced_wide_searchbar_enabled_title" public="false">Bật thanh tìm kiếm rộng</string>
 <string name="revanced_wide_searchbar_summary_off" public="false">Tắt thanh tìm kiếm rộng</string>
 <string name="revanced_wide_searchbar_summary_on" public="false">Bật thanh tìm kiếm rộng</string>
+<string name="revanced_autocaptions_enabled_title">Tắt phụ đề tự động</string>
+<string name="revanced_autocaptions_summary_on">Phụ đề tự động bị tắt</string>
+<string name="revanced_autocaptions_summary_off">Phụ đề tự động được bật</string>
