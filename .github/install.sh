@@ -49,6 +49,7 @@ echo "- Tải xuống công cụ cli..."
 # Tải tool Revanced
 CTv1="$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')"
 CTv2="$(Xem "$CTv1" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')"
+echo "$CTv1 $CTv2"
 Taive "https://github.com$CTv2" "$Likk/lib/revanced-cli.jar"
 PTv1="$(Xem https://github.com/revanced/revanced-patches.jar/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')"
 PTv2="$(Xem "$PTv1" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')"
