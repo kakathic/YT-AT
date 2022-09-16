@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       VERSION:
-        description: '17-32-35 > 17.32.35 is the YouTube version that revanced supports tool, you can import higher version but maybe broken some features.'
+        description: 'Leaving blank will be the latest version that revanced support builds. You can build the latest version of YouTube, but errors may occur.'
         required: true
-        default: '17-33-42'
+        default: ''
       DEVICE:
         description: 'Select device'
         required: true
@@ -80,9 +80,7 @@ jobs:
           CREATE: ${{ inputs.CREATE }}
 
         run: |
-          chmod -R 777 Tools/*
-          SVision="17.33.42"
-          chmod 777 .github/install.sh
+          # kakathic
           . .github/install.sh
       - name: Upload json
         uses: softprops/action-gh-release@v1
