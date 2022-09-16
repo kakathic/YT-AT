@@ -81,8 +81,7 @@ jobs:
 
         run: |
           # kakathic
-          chmod 777 .github/install.sh
-          . .github/install.sh
+          bash .github/install.sh
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
