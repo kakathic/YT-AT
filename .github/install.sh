@@ -8,9 +8,9 @@ apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/testke
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 apktoolur(){
-apktool d -rs -m -f "$1" -o "$Likk/Nn"
+apktool d -q -rs -m -f "$1" -o "$Likk/Nn"
 rm -fr "$Likk/Nn"/assets/fonts/*
-apktool b -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
+apktool b -q -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
 cp -rf "$Likk/Nn.apk" "$1"
 }
 cpnn(){
