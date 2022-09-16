@@ -47,10 +47,15 @@ done
 echo "- Tải xuống công cụ cli..."
 
 # Tải tool Revanced
-
-Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-cli.jar"       
-Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-patches/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-patches.jar"
-Taive "https://github.com$(Xem "$(Xem https://github.com/revanced/revanced-integrations/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')" "$Likk/lib/revanced-integrations.apk"
+CTv1="$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')"
+CTv2="$(Xem "$CTv1" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')"
+Taive "https://github.com$CTv2" "$Likk/lib/revanced-cli.jar"
+PTv1="$(Xem https://github.com/revanced/revanced-patches.jar/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')"
+PTv2="$(Xem "$PTv1" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')"
+Taive "https://github.com$PTv2" "$Likk/lib/revanced-patches.jar"
+ITv1="$(Xem https://github.com/revanced/revanced-integrations/releases | grep -m1 '/releases/expanded_assets' | tr '\"' '\n' | grep -m1 '/releases/expanded_assets')"
+ITv2="$(Xem "$ITv1" | grep -m1 '/releases/download' | tr '\"' '\n' | grep -m1 '/releases/download')"
+Taive "https://github.com$ITv2" "$Likk/lib/revanced-integrations.apk"
 
 # Tải Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 hide-shorts-button | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
