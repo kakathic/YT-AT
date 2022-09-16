@@ -43,6 +43,8 @@ for Vak in $ListTM; do
 mkdir -p $Vak
 done
 
+echo "- Tải xuống công cụ cli..."
+
 # Tải tool Revanced
 Tv1="$(Xem https://github.com/revanced/revanced-cli/releases | grep '/releases/download' | grep -m1 '.jar' | cut -d \" -f2)"
 Taive "https://github.com$Tv1" "$Likk/lib/revanced-cli.jar"
@@ -65,6 +67,8 @@ Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations
 [ "$VERSION" ] || VERSION="$Vidon"
 Kvision="$(echo $VERSION | tr '.' '-')"
 Vision2="$(echo $VERSION | sed 's|.||g')"
+
+echo "- Tải xuống YouTube: $VERSION"
 
 Taiyt 'YouTube.apk' '-2'
 [ -e $Likk/lib/YouTube.apk ] || (echo "- Lỗi tải Youtube.apk"; logout)
@@ -124,6 +128,7 @@ zip -qr "$Likk/lib/revanced-patches.jar" *
 fi
 
 # Xây dựng 
+echo "- Xây dựng..."
 if [ "$TYPE" != 'true' ];then
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk"
@@ -145,3 +150,5 @@ apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$VERSION-$ach$amoled2.a
 cp -rf "$Likk/Tools/Microg.apk" "$Likk/Up"
 echo > $Likk/done.txt ) & cpnn
 fi
+
+echo "- Hoàn thành."
