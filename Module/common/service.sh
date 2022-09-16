@@ -1,10 +1,11 @@
-while [ "$(getprop sys.boot_completed | tr -d '\r')" != "1" ]; do sleep 1; done
+while [ "$(getprop sys.boot_completed)" != "1" ]; do sleep 1; done
 sleep 1
 
+RD="$RANDOM"
 while true; do
-echo > /sdcard/1998kk
-if [ -e /sdcard/1998kk ];then
-rm -fr /sdcard/1998kk
+echo > /sdcard/$RD
+if [ -e /sdcard/$RD ];then
+rm -fr /sdcard/$RD
 break
 else
 sleep 2
@@ -22,6 +23,13 @@ stock_path=$( pm path $PK | grep base | sed 's/package://g' )
 if [ "$stock_path" ];then
 chcon u:object_r:apk_data_file:s0 $base_path
 mount -o bind $base_path $stock_path
+else
+pm install -r ${0%/*}/base.apk
+apk_path=$( pm path $PK | grep base | sed 's/package://g' )
+cp -rf ${0%/*}/lib ${apk_path%/*}
+chcon u:object_r:apk_data_file:s0 $base_path
+mount -o bind $base_path $apk_path
+fi
 
 PS=com.android.vending
 DB=/data/data/$PS/databases
@@ -37,5 +45,4 @@ if [ "$GET_LDB" != "25" ]; then
 	sqlite3 $LADB "UPDATE appstate SET auto_update = '2' WHERE package_name = '$PK'";
 	rm -rf /data/data/$PS/cache/*
 	pm enable $PS > /dev/null 2>&1
-fi
 fi
