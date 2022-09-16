@@ -1,8 +1,11 @@
 # kakathic 
+sudo apt update && sudo apt upgrade
+sudo apt install curl
+
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 apktool(){ java -jar $Likk/Tools/kikfox.jar "$@"; }
-Taive () { curl -s -L -N -H "$User" --connect-timeout 20 "$1" -o "$2"; }
-Xem () { curl -s -G -L -N -H "$User" --connect-timeout 20 "$1"; }
+Taive () { curl -s -L -H "$User" --connect-timeout 20 "$1" -o "$2"; }
+Xem () { curl -s -G -L -H "$User" --connect-timeout 20 "$1"; }
 apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/testkey.x509.pem" --key "$Likk/Tools/testkey.pk8" --out "$2" "$1"; }
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
