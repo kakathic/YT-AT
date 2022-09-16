@@ -18,7 +18,7 @@ ${0%/*}/sqlite3 "$@"
 
 PK=com.google.android.youtube
 base_path="${0%/*}/YouTube.apk"
-stock_path=$( pm path $PK | grep base | sed 's/package://g' )
+stock_path=$(pm path $PK | cut -d : -f2)
 
 if [ "$stock_path" ];then
 chcon u:object_r:apk_data_file:s0 $base_path
