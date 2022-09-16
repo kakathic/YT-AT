@@ -68,7 +68,7 @@ curl -s -k -L -H "$User" $Url2 -o $Likk/lib/$1
 
 echo "- Tải xuống YouTube: $VERSION"
 Taiyt 'YouTube.apk' '-2'
-[ -e $Likk/lib/YouTube.apk ] || (echo "- Lỗi tải Youtube.apk"; logout)
+[ -e $Likk/lib/YouTube.apk ] || (echo "- Lỗi tải Youtube.apk"; exit 0)
 
 if [ "$DEVICE" == "arm64-v8a" ];then
 lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
