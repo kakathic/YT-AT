@@ -52,6 +52,7 @@ Vsionnnnn="$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/
 Taive "https://github.com/revanced/revanced-cli/releases/download/v${Vsionnnnn##*/}/revanced-cli-${Vsionnnnn##*/}-all.jar" "$Likk/lib/revanced-cli.jar"       
 Taive "https://github.com$(Xem "https://github.com/revanced/revanced-patches/releases" | grep -m1 '/releases/download' | cut -d \" -f2)" "$Likk/lib/revanced-patches.jar"
 Taive "https://github.com$(Xem "https://github.com/revanced/revanced-integrations/releases" | grep -m1 '/releases/download' | cut -d \" -f2)" "$Likk/lib/revanced-integrations.apk"
+ls $Likk/lib
 
 # Tải Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 hide-shorts-button | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
