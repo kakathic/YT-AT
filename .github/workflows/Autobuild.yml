@@ -59,7 +59,7 @@ jobs:
           . .github/install.sh
 
   build3:
-    name: 'Amoled NO ROOT...'
+    name: 'AMOLED NO ROOT...'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -86,7 +86,7 @@ jobs:
           . .github/install.sh
 
   build4:
-    name: 'Amoled ROOT...'
+    name: 'AMOLED ROOT...'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
