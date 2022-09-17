@@ -177,7 +177,7 @@ jobs:
           AMOLED: 'false'
           FEATURE: ${{ inputs.FEATURE }}
           ROUND: ${{ inputs.ROUND }}
-          TYPE: 'true'
+          TYPE: 'false'
           SHORTS: ${{ inputs.SHORTS }}
           CREATE: ${{ inputs.CREATE }}
 
