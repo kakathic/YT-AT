@@ -46,7 +46,9 @@ for Vak in $ListTM; do
 mkdir -p $Vak
 done
 
-echo "- Tải xuống công cụ cli..."
+echo "
+- Download cli tool...
+"
 
 # Tải tool Revanced
 Vsionnnnn="$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/revanced-cli/tree' | sed 's|v||g' | cut -d \" -f2)"
@@ -68,10 +70,14 @@ Url2="$Upk$(curl -s -k -L -G -H "$User" "$Upk$Url1" | grep -m1 '>here<' | tr ' '
 curl -s -k -L -H "$User" $Url2 -o $Likk/lib/$1
 }
 
-echo "- Tải xuống YouTube: $VERSION"
+echo "
+- Download YouTube: $VERSION
+"
 Taiyt 'YouTube.apk' '-2'
 if [ ! -e $Likk/lib/YouTube.apk ];then
-echo "- Lỗi tải Youtube.apk"
+echo "
+- Lỗi tải Youtube.apk
+"
 exit 0
 fi
 
@@ -130,7 +136,9 @@ zip -qr "$Likk/lib/revanced-patches.jar" *
 fi
 
 # Xây dựng 
-echo "- Xây dựng..."
+echo "
+- Build...
+"
 if [ "$TYPE" != 'true' ];then
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk" || zipalign -f 4 "$Likk/YouT.apk" "$Likk/Tav/YouTube.apk"
@@ -153,4 +161,5 @@ cp -rf "$Likk/Tools/Microg.apk" "$Likk/Up"
 echo > $Likk/done.txt ) & cpnn
 fi
 
-echo "- Hoàn thành."
+echo "
+- Complete"
