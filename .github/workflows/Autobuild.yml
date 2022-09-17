@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   build1:
-    name: 'Open build NO ROOT...'
+    name: 'NO ROOT...'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -32,7 +32,7 @@ jobs:
           . .github/install.sh
 
   build2:
-    name: 'Open build ROOT...'
+    name: 'ROOT...'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -59,7 +59,7 @@ jobs:
           . .github/install.sh
 
   build3:
-    name: 'Open build Amoled NO ROOT...'
+    name: 'Amoled NO ROOT...'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -86,7 +86,7 @@ jobs:
           . .github/install.sh
 
   build4:
-    name: 'Open build Amoled ROOT...'
+    name: 'Amoled ROOT...'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -115,6 +115,11 @@ jobs:
   build5:
     name: 'Upload...'
     runs-on: ubuntu-22.04
+    needs:
+      - build1
+      - build2
+      - build3
+      - build4
     steps:
       - uses: actions/checkout@v3
       - name: Upload json
