@@ -46,8 +46,7 @@ for Vak in $ListTM; do
 mkdir -p $Vak
 done
 
-echo "
-- Download cli tool...
+echo "- Download cli tool...
 "
 
 # Tải tool Revanced
