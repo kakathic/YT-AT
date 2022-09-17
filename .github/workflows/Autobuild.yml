@@ -2,7 +2,7 @@ name: YT-AU
 on:
   schedule:
     - cron: '30 5 1 * *'
-workflow_dispatch:
+  workflow_dispatch:
     inputs:
       VERSION:
         description: 'Leaving blank will be the latest version that revanced support builds. You can build the latest version of YouTube, but errors may occur. Example: 17.35.36'
