@@ -1,5 +1,6 @@
 # kakathic 
 Likk="$GITHUB_WORKSPACE"
+sudo apt install zipalign >/dev/null
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 apktool(){ java -jar $Likk/Tools/kikfox.jar "$@"; }
 Taive () { curl -s -L -N -H "$User" --connect-timeout 20 "$1" -o "$2"; }
@@ -8,10 +9,10 @@ apksign () { java -jar $Likk/Tools/apksigner.jar sign --cert "$Likk/Tools/testke
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 apktoolur(){
-apktool d -q -rs -m -f "$1" -o "$Likk/Nn"
+apktool d -q -rs -m -f "$Likk/YouT.apk" -o "$Likk/Nn"
 rm -fr "$Likk/Nn"/assets/fonts/*
 apktool b -q -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
-cp -rf "$Likk/Nn.apk" "$1"
+zipalign -f 4 "$Likk/Nn.apk" "$1"
 }
 cpnn(){
 while true; do
@@ -131,8 +132,8 @@ fi
 # Xây dựng 
 echo "- Xây dựng..."
 if [ "$TYPE" != 'true' ];then
-( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/Tav/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
-[ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk"
+( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
+[ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk" || zipalign -f 4 "$Likk/YouT.apk" "$Likk/Tav/YouTube.apk"
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
@@ -145,8 +146,8 @@ echo '{
 }' > $Likk/Up-$ach$amoled2.json 
 echo > $Likk/done.txt ) & cpnn
 else
-( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/apk/YouTube.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
-[ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/apk/YouTube.apk"
+( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
+[ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/apk/YouTube.apk" || zipalign -f 4 "$Likk/YouT.apk" "$Likk/apk/YouTube.apk"
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$VERSION-$ach$amoled2.apk" 
 cp -rf "$Likk/Tools/Microg.apk" "$Likk/Up"
 echo > $Likk/done.txt ) & cpnn
