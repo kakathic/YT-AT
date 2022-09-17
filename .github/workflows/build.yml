@@ -209,6 +209,13 @@ jobs:
       - build4
     steps:
       - uses: actions/checkout@v3
+      - name: Upload Microg
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: YT-AT
+          tag_name: Vip
+          files: Tools/Microg.apk
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
         with:
