@@ -71,8 +71,7 @@ curl -s -k -L -H "$User" $Url2 -o $Likk/lib/$1
 }
 
 echo "
-- Download YouTube: $VERSION
-"
+- Download YouTube: $VERSION"
 Taiyt 'YouTube.apk' '-2'
 if [ ! -e $Likk/lib/YouTube.apk ];then
 echo "
