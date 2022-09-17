@@ -30,6 +30,21 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
+      - name: Upload json
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: Update
+          tag_name: Up
+          files: Up*.json
+          prerelease: true
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: YT-AT
+          tag_name: Vip
+          files: Up/*
 
   build2:
     name: 'ROOT...'
@@ -57,6 +72,21 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
+      - name: Upload json
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: Update
+          tag_name: Up
+          files: Up*.json
+          prerelease: true
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: YT-AT
+          tag_name: Vip
+          files: Up/*
 
   build3:
     name: 'AMOLED NO ROOT...'
@@ -84,6 +114,21 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
+      - name: Upload json
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: Update
+          tag_name: Up
+          files: Up*.json
+          prerelease: true
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: YT-AT
+          tag_name: Vip
+          files: Up/*
 
   build4:
     name: 'AMOLED ROOT...'
@@ -111,17 +156,6 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
-
-  build5:
-    name: 'Upload...'
-    runs-on: ubuntu-22.04
-    needs:
-      - build1
-      - build2
-      - build3
-      - build4
-    steps:
-      - uses: actions/checkout@v3
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
@@ -137,3 +171,4 @@ jobs:
           name: YT-AT
           tag_name: Vip
           files: Up/*
+
