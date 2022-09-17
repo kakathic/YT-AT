@@ -2,7 +2,51 @@ name: YT-AU
 on:
   schedule:
     - cron: '30 5 1 * *'
-  workflow_dispatch:
+workflow_dispatch:
+    inputs:
+      VERSION:
+        description: 'Leaving blank will be the latest version that revanced support builds. You can build the latest version of YouTube, but errors may occur. Example: 17.35.36'
+        required: false
+        default: 'Default'
+      DEVICE:
+        description: 'Select device'
+        required: false
+        default: 'arm64-v8a'
+        type: choice
+        options:
+          - armeabi-v7a
+          - arm64-v8a
+          - x86
+          - x86_64
+      FEATURE:
+        description: 'Turn off the feature, Add spaces to distinguish each feature'
+        required: false
+        default: 'always-autorepeat hide-autoplay-button '
+      ICONS:
+        description: 'Original icon & Name'
+        required: false
+        type: boolean
+        default: true
+      OPTIMIZATION:
+        description: 'Video loaded speed'
+        required: false
+        type: boolean
+        default: true
+      CREATE:
+        description: 'Show create video button'
+        required: false
+        type: boolean
+        default: true
+      SHORTS:
+        description: 'Show button shorts video'
+        required: false
+        type: boolean
+        default: true
+      ROUND:
+        description: 'Pip rounded (root)'
+        required: false
+        type: boolean
+        default: true
 jobs:
   build1:
     name: 'NO ROOT...'
@@ -16,16 +60,16 @@ jobs:
           distribution: 'adopt'
       - name: Run code
         env:
-          VERSION: 'Default'
-          DEVICE: 'arm64-v8a'
-          ICONS: 'true'
-          OPTIMIZATION: 'true'
+VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          ICONS: ${{ inputs.ICONS }}
+          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
           AMOLED: 'true'
-          FEATURE: 'always-autorepeat hide-autoplay-button'
-          ROUND: 'true'
+          FEATURE: ${{ inputs.FEATURE }}
+          ROUND: ${{ inputs.ROUND }}
           TYPE: 'true'
-          SHORTS: 'true'
-          CREATE: 'true'
+          SHORTS: ${{ inputs.SHORTS }}
+          CREATE: ${{ inputs.CREATE }}
 
         run: |
           # kakathic
@@ -58,16 +102,16 @@ jobs:
           distribution: 'adopt'
       - name: Run code
         env:
-          VERSION: 'Default'
-          DEVICE: 'arm64-v8a'
-          ICONS: 'true'
-          OPTIMIZATION: 'true'
+VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          ICONS: ${{ inputs.ICONS }}
+          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
           AMOLED: 'true'
-          FEATURE: 'always-autorepeat hide-autoplay-button '
-          ROUND: 'true'
+          FEATURE: ${{ inputs.FEATURE }}
+          ROUND: ${{ inputs.ROUND }}
           TYPE: 'false'
-          SHORTS: 'true'
-          CREATE: 'true'
+          SHORTS: ${{ inputs.SHORTS }}
+          CREATE: ${{ inputs.CREATE }}
 
         run: |
           # kakathic
@@ -100,16 +144,16 @@ jobs:
           distribution: 'adopt'
       - name: Run code
         env:
-          VERSION: 'Default'
-          DEVICE: 'arm64-v8a'
-          ICONS: 'true'
-          OPTIMIZATION: 'true'
+VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          ICONS: ${{ inputs.ICONS }}
+          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
           AMOLED: 'false'
-          FEATURE: 'always-autorepeat hide-autoplay-button'
-          ROUND: 'true'
+          FEATURE: ${{ inputs.FEATURE }}
+          ROUND: ${{ inputs.ROUND }}
           TYPE: 'true'
-          SHORTS: 'true'
-          CREATE: 'true'
+          SHORTS: ${{ inputs.SHORTS }}
+          CREATE: ${{ inputs.CREATE }}
 
         run: |
           # kakathic
@@ -142,16 +186,16 @@ jobs:
           distribution: 'adopt'
       - name: Run code
         env:
-          VERSION: 'Default'
-          DEVICE: 'arm64-v8a'
-          ICONS: 'true'
-          OPTIMIZATION: 'true'
+VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          ICONS: ${{ inputs.ICONS }}
+          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
           AMOLED: 'false'
-          FEATURE: 'always-autorepeat hide-autoplay-button '
-          ROUND: 'true'
-          TYPE: 'false'
-          SHORTS: 'true'
-          CREATE: 'true'
+          FEATURE: ${{ inputs.FEATURE }}
+          ROUND: ${{ inputs.ROUND }}
+          TYPE: 'true'
+          SHORTS: ${{ inputs.SHORTS }}
+          CREATE: ${{ inputs.CREATE }}
 
         run: |
           # kakathic
