@@ -215,4 +215,20 @@ jobs:
           name: YT-AT
           tag_name: Vip
           files: Up/*
-
+  build5:
+    name: 'Complete'
+    runs-on: ubuntu-22.04
+    needs:
+      - build1
+      - build2
+      - build3
+      - build4
+    steps:
+      - uses: actions/checkout@v3
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 1
+          keep_minimum_runs: 0
