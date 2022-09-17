@@ -74,14 +74,6 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
-      - name: Upload json
-        uses: softprops/action-gh-release@v1
-        with:
-          token: ${{ github.token }}
-          name: Update
-          tag_name: Up
-          files: Up*.json
-          prerelease: true
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -158,14 +150,6 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
-      - name: Upload json
-        uses: softprops/action-gh-release@v1
-        with:
-          token: ${{ github.token }}
-          name: Update
-          tag_name: Up
-          files: Up*.json
-          prerelease: true
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
