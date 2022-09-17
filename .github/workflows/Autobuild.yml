@@ -1,4 +1,3 @@
-name: AU-TO
 on:
   schedule:
     - cron: '30 5 1 * *'
