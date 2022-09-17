@@ -1,0 +1,137 @@
+name: AU-TO
+on:
+  schedule:
+    - cron: '30 5 1 * *'
+  workflow_dispatch:
+jobs-theme-noroot:
+  build:
+    name: 'Open build NO ROOT...'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+      - name: Run code
+        env:
+          VERSION: 'Default'
+          DEVICE: 'arm64-v8a'
+          ICONS: 'true'
+          OPTIMIZATION: 'true'
+          AMOLED: 'true'
+          FEATURE: 'always-autorepeat hide-autoplay-button'
+          ROUND: 'true'
+          TYPE: 'true'
+          SHORTS: 'true'
+          CREATE: 'true'
+
+        run: |
+          # kakathic
+          . .github/install.sh
+
+jobs-theme-root:
+  build:
+    name: 'Open build ROOT...'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+      - name: Run code
+        env:
+          VERSION: 'Default'
+          DEVICE: 'arm64-v8a'
+          ICONS: 'true'
+          OPTIMIZATION: 'true'
+          AMOLED: 'true'
+          FEATURE: 'always-autorepeat hide-autoplay-button '
+          ROUND: 'true'
+          TYPE: 'false'
+          SHORTS: 'true'
+          CREATE: 'true'
+
+        run: |
+          # kakathic
+          . .github/install.sh
+
+jobs-noroot:
+  build:
+    name: 'Open build Amoled NO ROOT...'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+      - name: Run code
+        env:
+          VERSION: 'Default'
+          DEVICE: 'arm64-v8a'
+          ICONS: 'true'
+          OPTIMIZATION: 'true'
+          AMOLED: 'false'
+          FEATURE: 'always-autorepeat hide-autoplay-button'
+          ROUND: 'true'
+          TYPE: 'true'
+          SHORTS: 'true'
+          CREATE: 'true'
+
+        run: |
+          # kakathic
+          . .github/install.sh
+
+jobs-root:
+  build:
+    name: 'Open build Amoled ROOT...'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+      - name: Run code
+        env:
+          VERSION: 'Default'
+          DEVICE: 'arm64-v8a'
+          ICONS: 'true'
+          OPTIMIZATION: 'true'
+          AMOLED: 'false'
+          FEATURE: 'always-autorepeat hide-autoplay-button '
+          ROUND: 'true'
+          TYPE: 'false'
+          SHORTS: 'true'
+          CREATE: 'true'
+
+        run: |
+          # kakathic
+          . .github/install.sh
+
+jobs-upload:
+  build:
+    name: 'Upload...'
+    steps:
+      - uses: actions/checkout@v3
+      - name: Upload json
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: Update
+          tag_name: Up
+          files: Up*.json
+          prerelease: true
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: YT-AT
+          tag_name: Vip
+          files: Up/*
