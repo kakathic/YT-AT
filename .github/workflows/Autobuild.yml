@@ -1,3 +1,4 @@
+name: YT-AU
 on:
   schedule:
     - cron: '30 5 1 * *'
