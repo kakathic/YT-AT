@@ -1,5 +1,7 @@
 name: YT-AT
-on: 
+on:
+  schedule:
+    - cron: '30 5 1 * *'
   workflow_dispatch:
     inputs:
       VERSION:
