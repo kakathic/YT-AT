@@ -3,8 +3,8 @@ on:
   schedule:
     - cron: '30 5 1 * *'
   workflow_dispatch:
-jobs-theme-noroot:
-  build:
+jobs:
+  build1:
     name: 'Open build NO ROOT...'
     runs-on: ubuntu-22.04
     steps:
@@ -31,8 +31,7 @@ jobs-theme-noroot:
           # kakathic
           . .github/install.sh
 
-jobs-theme-root:
-  build:
+  build2:
     name: 'Open build ROOT...'
     runs-on: ubuntu-22.04
     steps:
@@ -59,8 +58,7 @@ jobs-theme-root:
           # kakathic
           . .github/install.sh
 
-jobs-noroot:
-  build:
+  build3:
     name: 'Open build Amoled NO ROOT...'
     runs-on: ubuntu-22.04
     steps:
@@ -87,8 +85,7 @@ jobs-noroot:
           # kakathic
           . .github/install.sh
 
-jobs-root:
-  build:
+  build4:
     name: 'Open build Amoled ROOT...'
     runs-on: ubuntu-22.04
     steps:
@@ -115,8 +112,7 @@ jobs-root:
           # kakathic
           . .github/install.sh
 
-jobs-upload:
-  build:
+  build5:
     name: 'Upload...'
     steps:
       - uses: actions/checkout@v3
