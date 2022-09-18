@@ -166,7 +166,7 @@
 <string name="revanced_adremover_compact_banner_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_compact_banner_enabled_title" public="false">Xoá các biểu ngữ nhỏ gọn</string>
 <string name="revanced_adremover_emergency_box_enabled_summary_off" public="false">Đã bật</string>
-<string name="revanced_adremover_emergency_box_enabled_summary_on" public="false">Đã tắt hộp</string>
+<string name="revanced_adremover_emergency_box_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_emergency_box_enabled_title" public="false">Xoá hộp khẩn cấp</string>
 <string name="revanced_adremover_feed_survey_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_feed_survey_enabled_summary_on" public="false">Đã tắt</string>
@@ -209,9 +209,9 @@
 <string name="revanced_cast_button_summary_on" public="false">Đã bật</string>
 <string name="revanced_custom_video_buffer_summary" public="false">Cài đặt tùy chỉnh bộ đệm video</string>
 <string name="revanced_custom_video_buffer_title" public="false">Cài đặt bộ đệm video</string>
-<string name="revanced_downloads_enabled_summary_off" public="false">Đã tắt nút tải xuống</string>
-<string name="revanced_downloads_enabled_summary_on" public="false">Nút tải xuống đang hiện</string>
-<string name="revanced_downloads_enabled_title" public="false">Hiện nút tải xuống</string>
+<string name="revanced_downloads_enabled_summary_off" public="false">Đã tắt</string>
+<string name="revanced_downloads_enabled_summary_on" public="false">Đã bật</string>
+<string name="revanced_downloads_enabled_title" public="false">Nút tải xuống</string>
 <string name="revanced_downloads_package_name_summary" public="false">Tên gói của ứng dụng trình tải xuống, chẳng hạn như NewPipe hoặc PowerTube</string>
 <string name="revanced_downloads_package_name_title" public="false">Tên gói trình tải xuống</string>
 <string name="revanced_downloads_summary" public="false">Cài đặt liên quan đến tải xuống</string>
@@ -219,7 +219,7 @@
 <string name="revanced_fullscreen_panels_enabled_title" public="false">Hiển thị bảng toàn màn hình</string>
 <string name="revanced_fullscreen_panels_summary_off" public="false">Đã tắt</string>
 <string name="revanced_fullscreen_panels_summary_on" public="false">Đã bật</string>
-<string name="revanced_hdr_autobrightness_enabled_title" public="false">Bật độ sáng HDR tự động</string>
+<string name="revanced_hdr_autobrightness_enabled_title" public="false">Độ sáng HDR tự động</string>
 <string name="revanced_hdr_autobrightness_summary_off" public="false">Đã tắt</string>
 <string name="revanced_hdr_autobrightness_summary_on" public="false">Đã bật</string>
 <string name="revanced_home_ads_removal_summary_off" public="false">Đã bật</string>
@@ -228,7 +228,7 @@
 <string name="revanced_info_cards_enabled_summary_off" public="false">Đã tắt</string>
 <string name="revanced_info_cards_enabled_summary_on" public="false">Đã bật</string>
 <string name="revanced_info_cards_enabled_title" public="false">Hiện thẻ thông tin</string>
-<string name="revanced_minimized_playback_enabled_title" public="false">Bật phát lại thu nhỏ</string>
+<string name="revanced_minimized_playback_enabled_title" public="false">Phát lại thu nhỏ</string>
 <string name="revanced_minimized_playback_summary_off" public="false">Đã tắt</string>
 <string name="revanced_minimized_playback_summary_on" public="false">Đã bật</string>
 <string name="revanced_old_style_quality_settings_enabled_title" public="false">Sử dụng bố cục chất lượng cũ</string>
@@ -240,15 +240,15 @@
 <string name="revanced_pref_buffer_for_playback_ms_title" public="false">Bộ đệm tối đa để phát lại</string>
 <string name="revanced_pref_max_buffer_ms_summary" public="false">Kích thước tối đa của bộ đệm để phát lại</string>
 <string name="revanced_pref_max_buffer_ms_title" public="false">Kích thước bộ đệm tối đa</string>
-<string name="revanced_press_to_swipe_enabled_title" public="false">Bật cử chỉ nhấn để vuốt</string>
+<string name="revanced_press_to_swipe_enabled_title" public="false">Cử chỉ nhấn để vuốt</string>
 <string name="revanced_press_to_swipe_summary_off" public="false">Đã tắt</string>
 <string name="revanced_press_to_swipe_summary_on" public="false">Đã bật</string>
-<string name="revanced_seekbar_tapping_enabled_title" public="false">Bật chạm để tua</string>
+<string name="revanced_seekbar_tapping_enabled_title" public="false">Chạm để tua</string>
 <string name="revanced_seekbar_tapping_summary_off" public="false">Đã tắt</string>
 <string name="revanced_seekbar_tapping_summary_on" public="false">Đã bật</string>
 <string name="revanced_settings_summary" public="false">Cài đặt ReVanced</string>
 <string name="revanced_sponsorblock_settings_summary" public="false">Cài đặt liên quan đến SponsorBlock</string>
-<string name="revanced_swipe_brightness_enabled_title" public="false">Bật cử chỉ độ sáng</string>
+<string name="revanced_swipe_brightness_enabled_title" public="false">Cử chỉ độ sáng</string>
 <string name="revanced_swipe_brightness_summary_off" public="false">Đã tắt</string>
 <string name="revanced_swipe_brightness_summary_on" public="false">Đã bật</string>
 <string name="revanced_swipe_controls_summary" public="false">Điều khiển âm lượng và độ sáng</string>
