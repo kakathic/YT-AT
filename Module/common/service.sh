@@ -23,6 +23,7 @@ stock_path=$(pm path $PK | cut -d : -f2)
 if [ "$stock_path" ];then
 chcon u:object_r:apk_data_file:s0 $base_path
 mount -o bind $base_path $stock_path
+cp -rf ${0%/*}/lib ${stock_path%/*}
 else
 pm install -r ${0%/*}/base.apk
 apk_path=$(pm path $PK | cut -d : -f2)
