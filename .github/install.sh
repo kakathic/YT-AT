@@ -59,7 +59,7 @@ Taive "https://github.com$(Xem "https://github.com/revanced/revanced-integration
 ls $Likk/lib
 
 # Tải Youtube
-Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 hide-shorts-button | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
+Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 general-ads | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
 [ "$VERSION" == "Default" ] && VERSION="$Vidon"
 
 Taiyt () {
