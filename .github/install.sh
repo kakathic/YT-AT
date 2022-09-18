@@ -138,23 +138,23 @@ echo "
 - Build...
 "
 if [ "$TYPE" != 'true' ];then
-( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --mount
+( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk" || zipalign -f 4 "$Likk/YouT.apk" "$Likk/Tav/YouTube.apk"
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
-zip -q -r "$Likk/Up/YouTube-Magisk-$VERSION-$ach$amoled2.Zip" *
+zip -q -r "$Likk/Up/YT-Magisk-$VERSION-$ach$amoled2.Zip" *
 echo '{
 "version": "'$VERSION'",
 "versionCode": "'${VERSION//./}'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Vip/YouTube-Magisk-'$VERSION'-'$ach$amoled2'.Zip",
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Vip/YT-Magisk-'$VERSION'-'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
 }' > $Likk/Up-$ach$amoled2.json 
 echo > $Likk/done.txt ) & cpnn
 else
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/apk/YouTube.apk" || zipalign -f 4 "$Likk/YouT.apk" "$Likk/apk/YouTube.apk"
-apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YouTube-NoRoot-$VERSION-$ach$amoled2.apk" 
+apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YT-NoRoot-$VERSION-$ach$amoled2.apk" 
 echo > $Likk/done.txt ) & cpnn
 fi
 
