@@ -32,6 +32,7 @@ sleep 2
 cp -rf ${0%/*}/lib ${apk_path%/*}
 chcon u:object_r:apk_data_file:s0 $base_path
 mount -o bind $base_path $apk_path
+cmd package compile -m speed $PK
 fi
 
 PS=com.android.vending
