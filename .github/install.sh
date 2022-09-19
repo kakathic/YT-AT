@@ -19,7 +19,7 @@ while true; do
 [ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 done
 sleep 2
-for vakdll in $Likk/Language/*; do
+for vakdll in $Likk/Lang/*; do
 if [ -e $vakdll/strings.xml ];then
 cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 sed -i "/<\/resources>/d" $Likk/tmp/res/${vakdll##*/}/strings.xml
