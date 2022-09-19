@@ -32,11 +32,6 @@ on:
         required: false
         type: boolean
         default: true
-      CREATE:
-        description: 'Show create video button'
-        required: false
-        type: boolean
-        default: true
       SHORTS:
         description: 'Show button shorts video'
         required: false
@@ -69,7 +64,6 @@ jobs:
           ROUND: ${{ inputs.ROUND }}
           TYPE: 'true'
           SHORTS: ${{ inputs.SHORTS }}
-          CREATE: ${{ inputs.CREATE }}
 
         run: |
           # kakathic
@@ -106,7 +100,6 @@ jobs:
           ROUND: ${{ inputs.ROUND }}
           TYPE: 'false'
           SHORTS: ${{ inputs.SHORTS }}
-          CREATE: ${{ inputs.CREATE }}
 
         run: |
           # kakathic
@@ -151,7 +144,6 @@ jobs:
           ROUND: ${{ inputs.ROUND }}
           TYPE: 'true'
           SHORTS: ${{ inputs.SHORTS }}
-          CREATE: ${{ inputs.CREATE }}
 
         run: |
           # kakathic
