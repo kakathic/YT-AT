@@ -61,6 +61,7 @@ ls $Likk/lib
 # Tải Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 general-ads | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
 [ "$VERSION" == "Default" ] && VERSION="$Vidon"
+echo "VS=$Vidon" >> $GITHUB_ENV
 
 Taiyt () {
 Upk="https://www.apkmirror.com"
@@ -147,7 +148,7 @@ zip -q -r "$Likk/Up/YT-Magisk-$VERSION-$ach$amoled2.Zip" *
 echo '{
 "version": "'$VERSION'",
 "versionCode": "'${VERSION//./}'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Vip/YT-Magisk-'$VERSION'-'$ach$amoled2'.Zip",
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$Vidon'/YT-Magisk-'$VERSION'-'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
 }' > $Likk/Up-$ach$amoled2.json 
 echo > $Likk/done.txt ) & cpnn
