@@ -1,7 +1,10 @@
 **Notes**
 ---
+> 19.09.2022
 
-> 26.09.2022
++ Auto build cli
+
+> 16.09.2022
 
 + Fix modun magisk
 
