@@ -18,7 +18,7 @@ cpnn(){
 while true; do
 [ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 kakksks2=$(($kakksks2 + 1))
-[ "$kakksks2" == 150 ] && break || sleep 2
+[ "$kakksks2" == 300 ] && break
 done
 sleep 2
 for vakdll in $Likk/Lang/*; do
@@ -33,7 +33,7 @@ unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 while true; do
 [ -e "$Likk/done.txt" ] && break || sleep 1
 kakksks=$(($kakksks + 1))
-[ "$kakksks" == 150 ] && break || sleep 2
+[ "$kakksks" == 300 ] && break
 done
 sleep 2
 }
