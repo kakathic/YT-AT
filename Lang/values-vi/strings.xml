@@ -289,3 +289,6 @@
 <string name="revanced_hide_time_and_seekbar_title" public="false">Ẩn thời gian và thanh tua</string>
 <string name="revanced_hide_time_and_seekbar_summary_off" public="false">Đã tắt</string>
 <string name="revanced_hide_time_and_seekbar_summary_on" public="false">Đã bật</string>
+<string name="revanced_hide_email_address_title" public="false">Ẩn địa chỉ email</string>
+<string name="revanced_hide_email_address_summary_off" public="false">Đang hiện</string>
+<string name="revanced_hide_email_address_summary_on" public="false">Đã ẩn</string>
