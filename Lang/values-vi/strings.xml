@@ -292,3 +292,6 @@
 <string name="revanced_hide_email_address_title" public="false">Ẩn địa chỉ email</string>
 <string name="revanced_hide_email_address_summary_off" public="false">Đang hiện</string>
 <string name="revanced_hide_email_address_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_startup_shorts_player_title" public="false">Tắt trình phát short khi khởi động ứng dụng</string>
+<string name="revanced_startup_shorts_player_summary_on" public="false">Đã bật</string>
+<string name="revanced_startup_shorts_player_summary_off" public="false">Đã tắt</string>
