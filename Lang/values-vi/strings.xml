@@ -295,3 +295,23 @@
 <string name="revanced_startup_shorts_player_title" public="false">Tắt short khi khởi động ứng dụng</string>
 <string name="revanced_startup_shorts_player_summary_on" public="false">Đã bật</string>
 <string name="revanced_startup_shorts_player_summary_off" public="false">Đã tắt</string>
+<string name="revanced_hide_buttons_title" public="false">Ẩn các nút hành động</string>
+<string name="revanced_hide_buttons_summary" public="false">Ẩn hoặc hiện các nút bên dưới video</string>
+<string name="revanced_like_button_title" public="false">Ẩn nút like</string>
+<string name="revanced_like_button_on" public="false">Đã ẩn</string>
+<string name="revanced_like_button_off" public="false">Đang hiện</string>
+<string name="revanced_dislike_button" public="false">Ẩn nút dislike</string>
+<string name="revanced_dislike_button_on" public="false">Đã ẩn</string>
+<string name="revanced_dislike_button_off" public="false">Đang hiện</string>
+<string name="revanced_download_button_title" public="false">Ẩn nút tải</string>
+<string name="revanced_download_button_on" public="false">Đã ẩn</string>
+<string name="revanced_download_button_off" public="false">Đang hiện</string>
+<string name="revanced_playlist_button_title" public="false">Ẩn nút danh sách phát</string>
+<string name="revanced_playlist_button_on" public="false">Đã ẩn</string>
+<string name="revanced_playlist_button_off" public="false">Đang hiện</string>
+<string name="revanced_action_button_title" public="false">Ẩn nút tạo, đoạn và cảm ơn</string>
+<string name="revanced_action_button_on" public="false">Đã ẩn</string>
+<string name="revanced_action_button_off" public="false">Đang hiện</string>
+<string name="revanced_share_button_title" public="false">Ẩn nút chia sẻ</string>
+<string name="revanced_share_button_on" public="false">Đã ẩn</string>
+<string name="revanced_share_button_off" public="false">Đang hiện</string>
