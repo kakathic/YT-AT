@@ -300,7 +300,7 @@
 <string name="revanced_like_button_title" public="false">Ẩn nút like</string>
 <string name="revanced_like_button_on" public="false">Đã ẩn</string>
 <string name="revanced_like_button_off" public="false">Đang hiện</string>
-<string name="revanced_dislike_button" public="false">Ẩn nút dislike</string>
+<string name="revanced_dislike_button_title" public="false">Ẩn nút dislike</string>
 <string name="revanced_dislike_button_on" public="false">Đã ẩn</string>
 <string name="revanced_dislike_button_off" public="false">Đang hiện</string>
 <string name="revanced_download_button_title" public="false">Ẩn nút tải</string>
