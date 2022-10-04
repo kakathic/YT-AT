@@ -315,3 +315,6 @@
 <string name="revanced_share_button_title" public="false">Ẩn nút chia sẻ</string>
 <string name="revanced_share_button_on" public="false">Đã ẩn</string>
 <string name="revanced_share_button_off" public="false">Đang hiện</string>
+<string name="revanced_remember_video_quality_selection_title" public="false">Ghi nhớ chất lượng video hiện tại</string>
+<string name="revanced_remember_video_quality_selection_summary_on" public="false">Chất lượng video hiện tại hiện không thay đổi</string>
+<string name="revanced_remember_video_quality_selection_summary_off" public="false">Chất lượng video sẽ được ghi nhớ cho đến khi chọn chất lượng mới</string>
