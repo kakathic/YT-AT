@@ -70,7 +70,7 @@ jobs:
           if [ -z "$VERSION" ];then
           SHORTS=true; TYPE=true; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=true; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
-          bash .github/install.sh
+          . .github/install.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -106,7 +106,7 @@ jobs:
           if [ -z "$VERSION" ];then
           SHORTS=true; TYPE=false; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=true; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
-          bash .github/install.sh
+          . .github/install.sh
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
@@ -150,7 +150,7 @@ jobs:
           if [ -z "$VERSION" ];then
           SHORTS=true; TYPE=true; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=false; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
-          bash .github/install.sh
+          . .github/install.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -186,7 +186,7 @@ jobs:
           if [ -z "$VERSION" ];then
           SHORTS=true; TYPE=false; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=false; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
-          bash .github/install.sh
+          . .github/install.sh
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
