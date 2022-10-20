@@ -1,7 +1,7 @@
 name: YT-AT
 on:
   schedule:
-    - cron: '* * 1 * *'
+    - cron: '1 23 * * *'
   workflow_dispatch:
     inputs:
       VERSION:
