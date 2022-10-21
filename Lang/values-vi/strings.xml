@@ -318,3 +318,9 @@
 <string name="revanced_remember_video_quality_selection_title" public="false">Ghi nhớ chất lượng video hiện tại</string>
 <string name="revanced_remember_video_quality_selection_summary_on" public="false">Chất lượng video hiện tại hiện không thay đổi</string>
 <string name="revanced_remember_video_quality_selection_summary_off" public="false">Chất lượng video sẽ được ghi nhớ cho đến khi chọn chất lượng mới</string>
+<string name="revanced_mix_playlists_title" public="false">Ẩn danh sách phát kết hợp</string>
+<string name="revanced_mix_playlists_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_mix_playlists_summary_off" public="false">Đang hiện</string>
+<string name="revanced_hide_captions_button_title" public="false">Ẩn nút phụ đề</string>
+<string name="revanced_hide_captions_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_captions_button_summary_off" public="false">Đang hiện</string>
