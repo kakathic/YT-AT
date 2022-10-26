@@ -340,3 +340,4 @@
 <string name="revanced_hide_preview_comment_title" public="false">Ẩn nhận xét xem trước</string>
 <string name="revanced_hide_preview_comment_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_preview_comment_off" public="false">Đang hiện</string>
+<string name="revanced_comments_title" public="false">Nhận xét</string><string name="revanced_comments_summary" public="false">Quản lý khả năng hiển thị của phần nhận xét</string>
