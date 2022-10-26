@@ -324,3 +324,19 @@
 <string name="revanced_hide_captions_button_title" public="false">Ẩn nút phụ đề</string>
 <string name="revanced_hide_captions_button_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_captions_button_summary_off" public="false">Đang hiện</string>
+<string name="revanced_hide_hide_artist_card_title" public="false">Ẩn thẻ nghệ sĩ</string>
+<string name="revanced_hide_hide_artist_card_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_hide_artist_card_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_album_cards_title" public="false">Ẩn thẻ album</string>
+<string name="revanced_hide_album_cards_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_album_cards_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_comments_section_title" public="false">Xóa phần nhận xét</string>
+<string name="revanced_hide_comments_section_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_comments_section_summary_off" public="false">Đang hiện</string>
+
+
+<string name="revanced_hide_preview_comment_title" public="false">Ẩn nhận xét xem trước</string>
+<string name="revanced_hide_preview_comment_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_preview_comment_off" public="false">Đang hiện</string>
