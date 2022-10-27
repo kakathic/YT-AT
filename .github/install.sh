@@ -71,6 +71,7 @@ file $Likk/lib/revanced-integrations.apk
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 general-ads | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
 [ "$VERSION" == "Default" ] && VERSION="$Vidon"
 echo "VS=$Vidon" >> $GITHUB_ENV
+java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 general-ads
 
 Taiyt () {
 Upk="https://www.apkmirror.com"
