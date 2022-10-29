@@ -121,7 +121,7 @@ unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
 [ "$CREATE" == 'true' ] && echo -n "-e disable-create-button " >> $Likk/logk
 [ "$TYPE" != 'true' ] && lib='lib/*/*'
 
-bash -c "zip -qr $Likk/lib/YouTube.apk -d $lib"
+zip -qr $Likk/lib/YouTube.apk -d $lib || tee 1.txt
 
 if [ "$AMOLED" == 'true' ];then
 echo -n "-e theme " >> $Likk/logk
