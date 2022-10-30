@@ -349,3 +349,7 @@
 <string name="revanced_hide_shorts_comments_button_title" public="false">Ẩn nút bình luận cho Short video</string>
 <string name="revanced_hide_shorts_comments_button_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_shorts_comments_button_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_watch_in_vr_title" public="false">Ẩn tùy chọn Xem trong thực tế ảo</string>
+<string name="revanced_hide_watch_in_vr_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_watch_in_vr_summary_off" public="false">Đang hiện</string>
