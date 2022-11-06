@@ -353,3 +353,7 @@
 <string name="revanced_hide_watch_in_vr_title" public="false">Ẩn tùy chọn Xem trong thực tế ảo</string>
 <string name="revanced_hide_watch_in_vr_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_watch_in_vr_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_fix_playback_title" public="false">Khắc phục sự cố phát lại video</string>
+<string name="revanced_fix_playback_summary_on" public="false">Đã bật</string>
+<string name="revanced_fix_playback_summary_off" public="false">Đã tắt</string>
