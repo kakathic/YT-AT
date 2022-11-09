@@ -357,3 +357,11 @@
 <string name="revanced_fix_playback_title" public="false">Khắc phục sự cố phát lại video</string>
 <string name="revanced_fix_playback_summary_on" public="false">Đã bật</string>
 <string name="revanced_fix_playback_summary_off" public="false">Đã tắt</string>
+
+<string name="revanced_hide_endscreen_cards_title" public="false">Ẩn thẻ màn hình kết thúc</string>
+<string name="revanced_hide_endscreen_cards_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_endscreen_cards_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_infocards_title" public="false">Ẩn thẻ thông tin</string>
+<string name="revanced_hide_infocards_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_infocards_summary_off" public="false">Đang hiện</string>
