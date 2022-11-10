@@ -365,3 +365,7 @@
 <string name="revanced_hide_infocards_title" public="false">Ẩn thẻ thông tin</string>
 <string name="revanced_hide_infocards_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_infocards_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_uri_redirect_title" public="false">Mở liên kết trực tiếp</string>
+<string name="revanced_uri_redirect_summary_on" public="false">Đang bật</string>
+<string name="revanced_uri_redirect_summary_off" public="false">Đã tắt</string>
