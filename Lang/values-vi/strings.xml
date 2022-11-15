@@ -369,3 +369,15 @@
 <string name="revanced_uri_redirect_title" public="false">Mở liên kết trực tiếp</string>
 <string name="revanced_uri_redirect_summary_on" public="false">Đang bật</string>
 <string name="revanced_uri_redirect_summary_off" public="false">Đã tắt</string>
+
+<string name="revanced_hide_endscreen_cards_title" public="false">Ẩn thẻ màn hình kết thúc</string>
+<string name="revanced_hide_endscreen_cards_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_endscreen_cards_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_adremover_shorts_enabled_title" public="false">Loại bỏ short</string>
+<string name="revanced_adremover_shorts_enabled_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_adremover_shorts_enabled_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_adremover_chapter_teaser_enabled_title" public="false">Ẩn đoạn giới thiệu chương dưới video</string>
+<string name="revanced_adremover_chapter_teaser_enabled_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_adremover_chapter_teaser_enabled_summary_off" public="false">Đang hiện</string
