@@ -377,3 +377,7 @@
 <string name="revanced_adremover_chapter_teaser_enabled_title" public="false">Ẩn đoạn giới thiệu chương dưới video</string>
 <string name="revanced_adremover_chapter_teaser_enabled_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_adremover_chapter_teaser_enabled_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_adremover_self_sponsor_enabled_title" public="false">Ẩn thẻ tự tài trợ</string>
+<string name="revanced_adremover_self_sponsor_enabled_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_adremover_self_sponsor_enabled_summary_off" public="false">Đang hiện</string>
