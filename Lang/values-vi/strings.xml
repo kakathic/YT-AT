@@ -381,3 +381,7 @@
 <string name="revanced_adremover_self_sponsor_enabled_title" public="false">Ẩn thẻ tự tài trợ</string>
 <string name="revanced_adremover_self_sponsor_enabled_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_adremover_self_sponsor_enabled_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_debug_title" public="false">Gỡ lỗi</string>
+<string name="revanced_debug_on" public="false">Nhật ký gỡ lỗi đang bật</string>
+<string name="revanced_debug_off" public="false">Nhật ký gỡ lỗi đã tắt</string>
