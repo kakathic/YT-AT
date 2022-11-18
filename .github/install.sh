@@ -98,7 +98,6 @@ echo "
 exit 0
 fi
 
-echo
 if [ "$(unzip -l $Likk/lib/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
 mv $Likk/lib/YouTube.apk $Likk/lib/YouTube.apk2
 mv $Likk/lib/YouTube.apks $Likk/lib/YouTube.apk
