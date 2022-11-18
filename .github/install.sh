@@ -67,14 +67,19 @@ file $Likk/lib/revanced-cli.jar
 file $Likk/lib/revanced-patches.jar
 file $Likk/lib/revanced-integrations.apk
 
-# Tải Youtube
+# Phiên bản Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 sponsorblock | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
-[ "$VERSION" == "Default" ] && VERSION="$Vidon"
+if [ "$VERSION" == "Default" ];then
+VERSION="$Vidon"
 echo "VS=$Vidon" >> $GITHUB_ENV
+else
+echo "VS=$VERSION" >> $GITHUB_ENV
+fi
 
 echo "
 $(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 sponsorblock)"
 
+# Tải Youtube
 Taiyt () {
 Upk="https://www.apkmirror.com"
 Url1="$(curl -s -k -L -G -H "$User" "$Upk/apk/google-inc/youtube/youtube-${VERSION//./-}-release/youtube-${VERSION//./-}$2-android-apk-download/" | grep -m1 'downloadButton' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
