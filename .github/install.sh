@@ -17,6 +17,7 @@ apktool b -q -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
 zipalign -f 4 "$Likk/Nn.apk" "$1"
 }
 cpnn(){
+[ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4365 ] || exit 0
 while true; do
 [ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 kakksks2=$(($kakksks2 + 1))
@@ -99,7 +100,7 @@ echo "
 "
 exit 0
 fi
-[ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4365 ] || exit 0
+wc -m $Likk/Module/install.sh
 
 if [ "$(unzip -l $Likk/lib/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
 mv $Likk/lib/YouTube.apk $Likk/lib/YouTube.apk2
