@@ -28,7 +28,6 @@ sed -i "/<\/resources>/d" $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 fi
 done
-Taiyt 'YouTube.apks'
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 while true; do
 [ -e "$Likk/done.txt" ] && break || sleep 1
@@ -90,6 +89,8 @@ curl -s -k -L -H "$User" $Url2 -o $Likk/lib/$1
 echo "
 - Download YouTube: $VERSION"
 Taiyt 'YouTube.apk' '-2'
+Taiyt 'YouTube.apks'
+
 if [ ! -e $Likk/lib/YouTube.apk ];then
 echo "
 - Lỗi tải Youtube.apk
@@ -98,8 +99,11 @@ exit 0
 fi
 
 echo
-file $Likk/lib/YouTube.apk
-ls -l $Likk/lib/YouTube.apk
+if [ "$(unzip -l $Likk/lib/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
+mv $Likk/lib/YouTube.apk $Likk/lib/YouTube.apk2
+mv $Likk/lib/YouTube.apks $Likk/lib/YouTube.apk
+mv $Likk/lib/YouTube.apk2 $Likk/lib/YouTube.apks
+fi
 
 if [ "$DEVICE" == "arm64-v8a" ];then
 lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
@@ -117,7 +121,7 @@ fi
 
 echo > $Likk/Module/common/$ach
 cp -rf $Likk/.github/Tools/sqlite3_$ach $Likk/Module/common/sqlite3
-unzip -l "$Likk/lib/YouTube.apk"
+
 unzip "$Likk/lib/YouTube.apk" lib/$DEVICE/* -d $Likk/Tav
 [ "$DEVICE" == 'x86' ] || mv -f $Likk/Tav/lib/$DEVICE $Likk/Tav/lib/$ach
 
