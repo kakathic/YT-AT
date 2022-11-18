@@ -36,5 +36,5 @@ jobs:
           echo test, and deploy your project.
           Kk=123
           echo $Kk
-
+          echo "VS=$VERSION" >> $GITHUB_ENV
 
