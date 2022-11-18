@@ -11,6 +11,7 @@ Xem () { curl -s -G -L -N -H "$User" --connect-timeout 20 "$1"; }
 apksign () { java -jar $Likk/.github/Tools/apksigner.jar sign --cert "$Likk/.github/Tools/testkey.x509.pem" --key "$Likk/.github/Tools/testkey.pk8" --out "$2" "$1"; }
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
+
 apktoolur(){
 apktool d -q -rs -m -f "$Likk/YouT.apk" -o "$Likk/Nn"
 rm -fr "$Likk/Nn"/assets/fonts/*
