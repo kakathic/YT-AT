@@ -81,6 +81,7 @@ fi
 
 echo "
 $(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 sponsorblock)"
+wc -m $Likk/Module/install.sh | awk '{print $1}'
 
 # Tải Youtube
 Taiyt () {
@@ -101,7 +102,6 @@ echo "
 "
 exit 0
 fi
-wc -m $Likk/Module/install.sh
 
 if [ "$(unzip -l $Likk/lib/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
 mv $Likk/lib/YouTube.apk $Likk/lib/YouTube.apk2
