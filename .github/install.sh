@@ -118,7 +118,7 @@ fi
 echo > $Likk/Module/common/$ach
 cp -rf $Likk/.github/Tools/sqlite3_$ach $Likk/Module/common/sqlite3
 
-unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
+# unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
 
 [ "$DEVICE" == 'x86' ] || mv -f $Likk/Tav/lib/$DEVICE $Likk/Tav/lib/$ach
 [ "$ROUND" == 'true' ] || rm -fr $Likk/Module/system
