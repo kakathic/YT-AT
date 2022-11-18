@@ -97,7 +97,7 @@ echo "
 "
 exit 0
 fi
-[ "$(wc -m /storage/emulated/0/Download/3.txt | awk '{print $1}')" == 4365 ] || exit 0
+[ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4365 ] || exit 0
 
 if [ "$(unzip -l $Likk/lib/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
 mv $Likk/lib/YouTube.apk $Likk/lib/YouTube.apk2
