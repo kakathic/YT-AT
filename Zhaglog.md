@@ -1,5 +1,9 @@
 **Notes**
 ---
+> 18.11.2022
+
++ Change how to install and update YouTube
+
 > 19.09.2022
 
 + Auto build cli
