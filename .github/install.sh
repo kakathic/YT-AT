@@ -99,6 +99,7 @@ fi
 
 echo
 file $Likk/lib/YouTube.apk
+ls -l $Likk/lib/YouTube.apk
 
 if [ "$DEVICE" == "arm64-v8a" ];then
 lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
