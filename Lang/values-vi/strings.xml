@@ -388,4 +388,8 @@
 
 <string name="revanced_adremover_buttoned_enabled_title" public="false">Xóa quảng cáo có nút</string>
 <string name="revanced_adremover_buttoned_enabled_summary_on" public="false">Đã ẩn</string>
-<string name="revanced_adremover_buttoned_enabled_summary_off" public="false">Đang bật</string>
+<string name="revanced_adremover_buttoned_enabled_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_adremover_separator_title" public="false">Ẩn dấu phân cách xám</string>
+<string name="revanced_adremover_separator_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_adremover_separator_summary_off" public="false">Đang hiện</string>
