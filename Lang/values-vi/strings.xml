@@ -400,3 +400,7 @@
 <string name="revanced_adremover_custom_enabled_summary_off" public="false">Đã tắt</string>
 <string name="revanced_adremover_custom_strings_title" public="false">Tùy chỉnh bộ lọc</string>
 <string name="revanced_adremover_custom_strings_summary" public="false">Lọc các thành phần theo tên của chúng được phân tách bằng dấu phẩy</string>
+
+<string name="revanced_disable_zoom_haptics_title" public="false">Tắt phản hồi xúc giác thu phóng</string>
+<string name="revanced_disable_zoom_haptics_summary_on" public="false">Đã tắt</string>
+<string name="revanced_disable_zoom_haptics_summary_off" public="false">Đang bật</string>
