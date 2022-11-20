@@ -393,3 +393,10 @@
 <string name="revanced_adremover_separator_title" public="false">Ẩn dấu phân cách xám</string>
 <string name="revanced_adremover_separator_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_adremover_separator_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_adremover_custom_title" public="false">Bộ lọc tùy chỉnh</string>
+<string name="revanced_adremover_custom_enabled_title" public="false">Bật bộ lọc tùy chỉnh</string>
+<string name="revanced_adremover_custom_enabled_summary_on" public="false">Đã bật</string>
+<string name="revanced_adremover_custom_enabled_summary_off" public="false">Đã tắt</string>
+<string name="revanced_adremover_custom_strings_title" public="false">Tùy chỉnh bộ lọc</string>
+<string name="revanced_adremover_custom_strings_summary" public="false">Lọc các thành phần theo tên của chúng được phân tách bằng dấu phẩy</string>
