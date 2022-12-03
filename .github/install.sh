@@ -71,7 +71,7 @@ file $Likk/lib/revanced-patches.jar
 file $Likk/lib/revanced-integrations.apk
 
 # Phiên bản Youtube
-Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 sponsorblock | tr ' ' '\n' | tac | head -n 1 | awk '{print $1}')"
+Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 sponsorblock | tr '	' '\n' | tac | head -n 1 | awk '{print $1}')"
 if [ "$VERSION" == "Default" ];then
 VERSION="$Vidon"
 echo "VS=$Vidon" >> $GITHUB_ENV
