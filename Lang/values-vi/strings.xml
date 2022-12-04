@@ -1,7 +1,14 @@
-<string name="revanced_ryd_title">Bật khôi phục lượt Dislike</string>
-<string name="revanced_ryd_summary">Bật tùy chọn này để xem lại số lượt Dislike</string>
-<string name="revanced_ryd_attribution_title">Trả lại nút Dislike trên YouTube</string>
-<string name="revanced_ryd_attribution_summary">Bản vá này sử dụng API Return YouTube Dislike từ https://returnyoutubedislike.com. Nhấn để tìm hiểu thêm</string>
+<string name="revanced_ryd_enable_title">Khôi phục YouTube Dislike</string>
+<string name="revanced_ryd_enable_summary_on">Dislike đang hiện</string>
+<string name="revanced_ryd_enable_summary_off">Dislike đã ẩn</string>
+
+<string name="revanced_ryd_dislike_percentage_title">Hiển thị dislike theo tỷ lệ phần trăm</string>
+<string name="revanced_ryd_dislike_percentage_summary_on">Số lượt dislike được hiển thị dưới dạng phần trăm ước tính</string>
+<string name="revanced_ryd_dislike_percentage_summary_off">Số lượt dislike được hiển thị dưới dạng số ước tính</string>
+
+<string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
+<string name="revanced_ryd_attribution_summary">Dữ liệu dislike được cung cấp bởi Return YouTube Dislike API. Nhấn vào đây để tìm hiểu thêm.</string>
+
 <string name="downloader_not_installed_warning">không được cài đặt</string>
 <string name="enable_sb">Bật SponsorBlock</string>
 <string name="enable_sb_sum">SponsorBlock là một tiện ích được đóng góp từ cộng đồng để bỏ qua các đoạn video gây khó chịu trong video của YouTube</string>
@@ -204,7 +211,7 @@
 <string name="revanced_branding_watermark_enabled_title" public="false">Hình mờ thương hiệu</string>
 <string name="revanced_branding_watermark_summary_off" public="false">Đã tắt</string>
 <string name="revanced_branding_watermark_summary_on" public="false">Đã bật</string>
-<string name="revanced_cast_button_enabled_title" public="false">Nút truyền sang Tivi</string>
+<string name="revanced_cast_button_enabled_title" public="false">Nút truyền sang TV</string>
 <string name="revanced_cast_button_summary_off" public="false">Đã tắt</string>
 <string name="revanced_cast_button_summary_on" public="false">Đã bật</string>
 <string name="revanced_custom_video_buffer_summary" public="false">Cài đặt tùy chỉnh bộ đệm video</string>
