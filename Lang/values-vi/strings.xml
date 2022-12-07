@@ -217,7 +217,7 @@
 <string name="revanced_custom_video_buffer_summary" public="false">Cài đặt tùy chỉnh bộ đệm video</string>
 <string name="revanced_custom_video_buffer_title" public="false">Cài đặt bộ đệm video</string>
 <string name="revanced_downloads_enabled_summary_off" public="false">Đã tắt</string>
-<string name="revanced_downloads_enabled_summary_on" public="false">Đang hiện/string>
+<string name="revanced_downloads_enabled_summary_on" public="false">Đang hiện</string>
 <string name="revanced_downloads_enabled_title" public="false">Nút tải xuống</string>
 <string name="revanced_downloads_package_name_summary" public="false">Tên gói của ứng dụng trình tải xuống, chẳng hạn như NewPipe hoặc PowerTube</string>
 <string name="revanced_downloads_package_name_title" public="false">Tên gói trình tải xuống</string>
