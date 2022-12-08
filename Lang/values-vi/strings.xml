@@ -157,112 +157,147 @@
 <string name="microg_settings_summary" public="false">Cài đặt cho MicroG</string>
 <string name="misc_summary" public="false">Các bản vá lỗi khác</string>
 <string name="misc_title" public="false">Khác</string>
+
 <string name="revanced_adremover_ad_removal_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_ad_removal_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_ad_removal_enabled_title" public="false">Xoá quảng cáo chung</string>
+
 <string name="revanced_adremover_comments_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_comments_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_comments_enabled_title" public="false">Xoá phần bình luận</string>
+
 <string name="revanced_adremover_community_guidelines_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_community_guidelines_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_community_guidelines_enabled_title" public="false">Xoá nguyên tắc cộng đồng</string>
+
 <string name="revanced_adremover_community_posts_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_community_posts_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_community_posts_enabled_title" public="false">Xóa bài đăng trên cộng đồng</string>
+
 <string name="revanced_adremover_compact_banner_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_compact_banner_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_compact_banner_enabled_title" public="false">Xoá các biểu ngữ nhỏ gọn</string>
+
 <string name="revanced_adremover_emergency_box_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_emergency_box_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_emergency_box_enabled_title" public="false">Xoá hộp khẩn cấp</string>
+
 <string name="revanced_adremover_feed_survey_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_feed_survey_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_feed_survey_enabled_title" public="false">Xoá khảo sát</string>
+
 <string name="revanced_adremover_hide_channel_guidelines_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_hide_channel_guidelines_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_hide_channel_guidelines_enabled_title" public="false">Ẩn nguyên tắc kênh</string>
+
 <string name="revanced_adremover_hide_latest_posts_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_hide_latest_posts_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_hide_latest_posts_enabled_title" public="false">Ẩn các bài đăng mới nhất</string>
+
 <string name="revanced_adremover_hide_suggestions_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_hide_suggestions_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_hide_suggestions_enabled_title" public="false">Ẩn đề xuất</string>
+
 <string name="revanced_adremover_info_panel_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_info_panel_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_info_panel_enabled_title" public="false">Xóa bảng thông tin</string>
+
 <string name="revanced_adremover_medical_panel_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_medical_panel_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_medical_panel_enabled_title" public="false">Xoá bảng y tế</string>
+
 <string name="revanced_adremover_merchandise_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_merchandise_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_merchandise_enabled_title" public="false">Xoá biểu ngữ hàng hoá</string>
+
 <string name="revanced_adremover_movie_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_movie_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_movie_enabled_title" public="false">Xóa đoạn phim</string>
+
 <string name="revanced_adremover_paid_content_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_paid_content_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_paid_content_enabled_title" public="false">Xóa nội dung trả phí</string>
+
 <string name="revanced_adremover_shorts_shelf_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_shorts_shelf_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_shorts_shelf_enabled_title" public="false">Xoá thẻ video ngắn</string>
+
 <string name="revanced_adremover_suggested_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_suggested_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_suggested_enabled_title" public="false">Xoá đề xuất cá nhân</string>
-<string name="revanced_branding_watermark_enabled_title" public="false">Hình mờ thương hiệu</string>
-<string name="revanced_branding_watermark_summary_off" public="false">Đã tắt</string>
-<string name="revanced_branding_watermark_summary_on" public="false">Đã bật</string>
-<string name="revanced_cast_button_enabled_title" public="false">Nút truyền sang TV</string>
-<string name="revanced_cast_button_summary_off" public="false">Đã tắt</string>
-<string name="revanced_cast_button_summary_on" public="false">Đã bật</string>
+
+<string name="revanced_hide_video_watermark_title" public="false">Ẩn hình mờ của người tạo trên video</string>
+<string name="revanced_hide_video_watermark_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_video_watermark_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_cast_button_title" public="false">Ẩn nút truyền</string>
+<string name="revanced_hide_cast_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_cast_button_summary_off" public="false">Đang hiện</string>
+
 <string name="revanced_custom_video_buffer_summary" public="false">Cài đặt tùy chỉnh bộ đệm video</string>
 <string name="revanced_custom_video_buffer_title" public="false">Cài đặt bộ đệm video</string>
+
 <string name="revanced_downloads_enabled_summary_off" public="false">Đã tắt</string>
 <string name="revanced_downloads_enabled_summary_on" public="false">Đang hiện</string>
 <string name="revanced_downloads_enabled_title" public="false">Nút tải xuống</string>
+
 <string name="revanced_downloads_package_name_summary" public="false">Tên gói của ứng dụng trình tải xuống, chẳng hạn như NewPipe hoặc PowerTube</string>
 <string name="revanced_downloads_package_name_title" public="false">Tên gói trình tải xuống</string>
 <string name="revanced_downloads_summary" public="false">Cài đặt liên quan đến tải xuống</string>
 <string name="revanced_downloads_title" public="false">Cài đặt tải xuống</string>
-<string name="revanced_fullscreen_panels_enabled_title" public="false">Hiển thị bảng toàn màn hình</string>
-<string name="revanced_fullscreen_panels_summary_off" public="false">Đã tắt</string>
-<string name="revanced_fullscreen_panels_summary_on" public="false">Đã bật</string>
+
+<string name="revanced_hide_fullscreen_panels_title" public="false">Ẩn bảng toàn màn hình</string>
+<string name="revanced_hide_fullscreen_panels_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_fullscreen_panels_summary_off" public="false">Đang hiện</string>
+
 <string name="revanced_hdr_autobrightness_enabled_title" public="false">Độ sáng HDR tự động</string>
 <string name="revanced_hdr_autobrightness_summary_off" public="false">Đã tắt</string>
 <string name="revanced_hdr_autobrightness_summary_on" public="false">Đã bật</string>
+
 <string name="revanced_home_ads_removal_summary_off" public="false">Đã bật</string>
 <string name="revanced_home_ads_removal_summary_on" public="false">Đã tắt</string>
 <string name="revanced_home_ads_removal_title" public="false">Xóa quảng cáo trang chủ</string>
+
 <string name="revanced_info_cards_enabled_summary_off" public="false">Đã tắt</string>
 <string name="revanced_info_cards_enabled_summary_on" public="false">Đã bật</string>
 <string name="revanced_info_cards_enabled_title" public="false">Hiện thẻ thông tin</string>
+
 <string name="revanced_minimized_playback_enabled_title" public="false">Phát lại thu nhỏ</string>
 <string name="revanced_minimized_playback_summary_off" public="false">Đã tắt</string>
-<string name="revanced_minimized_playback_summary_on" public="false">Đã bật</string>
-<string name="revanced_old_style_quality_settings_enabled_title" public="false">Sử dụng bố cục chất lượng cũ</string>
-<string name="revanced_old_style_quality_settings_summary_off" public="false">Đã bật</string>
+<string name="revanced_minimized_playback_summary_on" public="false">Đang bật</string>
+
+<string name="revanced_old_style_quality_settings_enabled_title" public="false">Sử dụng menu chất lượng video cũ</string>
+<string name="revanced_old_style_quality_settings_summary_off" public="false">Đang tắt</string>
 <string name="revanced_old_style_quality_settings_summary_on" public="false">Đã bật</string>
+
 <string name="revanced_pref_buffer_for_playback_after_rebuffer_ms_summary" public="false">Kích thước tối đa của bộ đệm để phát lại sau khi đệm</string>
 <string name="revanced_pref_buffer_for_playback_after_rebuffer_ms_title" public="false">Bộ đệm tối đa để phát lại sau khi đệm</string>
 <string name="revanced_pref_buffer_for_playback_ms_summary" public="false">Kích thước tối đa của bộ đệm để phát lại</string>
 <string name="revanced_pref_buffer_for_playback_ms_title" public="false">Bộ đệm tối đa để phát lại</string>
 <string name="revanced_pref_max_buffer_ms_summary" public="false">Kích thước tối đa của bộ đệm để phát lại</string>
 <string name="revanced_pref_max_buffer_ms_title" public="false">Kích thước bộ đệm tối đa</string>
+
 <string name="revanced_press_to_swipe_enabled_title" public="false">Cử chỉ nhấn để vuốt</string>
 <string name="revanced_press_to_swipe_summary_off" public="false">Đã tắt</string>
 <string name="revanced_press_to_swipe_summary_on" public="false">Đã bật</string>
+
 <string name="revanced_seekbar_tapping_enabled_title" public="false">Chạm để tua</string>
 <string name="revanced_seekbar_tapping_summary_off" public="false">Đã tắt</string>
 <string name="revanced_seekbar_tapping_summary_on" public="false">Đã bật</string>
+
 <string name="revanced_settings_summary" public="false">Cài đặt ReVanced</string>
 <string name="revanced_sponsorblock_settings_summary" public="false">Cài đặt liên quan đến SponsorBlock</string>
 <string name="revanced_swipe_brightness_enabled_title" public="false">Cử chỉ độ sáng</string>
 <string name="revanced_swipe_brightness_summary_off" public="false">Đã tắt</string>
 <string name="revanced_swipe_brightness_summary_on" public="false">Đã bật</string>
+
 <string name="revanced_swipe_controls_summary" public="false">Điều khiển âm lượng và độ sáng</string>
 <string name="revanced_swipe_controls_title" public="false">Điều khiển vuốt</string>
+
 <string name="revanced_swipe_haptic_feedback_enabled_title" public="false">Phản hồi xúc giác</string>
 <string name="revanced_swipe_haptic_feedback_summary_off" public="false">Đã tắt</string>
 <string name="revanced_swipe_haptic_feedback_summary_on" public="false">Đã bật</string>
+
 <string name="revanced_swipe_magnitude_threshold_summary" public="false">Độ lớn tối thiểu trước khi phát hiện vuốt</string>
 <string name="revanced_swipe_magnitude_threshold_title" public="false">Độ rộng vuốt</string>
 <string name="revanced_swipe_overlay_background_alpha_summary" public="false">Giá trị trong suốt của nền lớp phủ</string>
@@ -271,63 +306,84 @@
 <string name="revanced_swipe_overlay_text_size_title" public="false">Kích thước văn bản lớp phủ</string>
 <string name="revanced_swipe_overlay_timeout_summary" public="false">Khoảng thời gian lớp phủ được hiển thị sau khi thay đổi (mili giây)</string>
 <string name="revanced_swipe_overlay_timeout_title" public="false">Thời gian chờ lớp phủ</string>
+
 <string name="revanced_swipe_volume_enabled_title" public="false">Điều khiển vuốt cho âm lượng</string>
 <string name="revanced_swipe_volume_summary_off" public="false">Đã tắt</string>
 <string name="revanced_swipe_volume_summary_on" public="false">Đã bật</string>
+
 <string name="revanced_tablet_miniplayer_summary_off" public="false">Đã tắt</string>
 <string name="revanced_tablet_miniplayer_summary_on" public="false">Đã bật</string>
 <string name="revanced_tablet_miniplayer_title" public="false">Trình phát thu nhỏ máy tính bảng</string>
+
 <string name="revanced_video_ads_removal_summary_off" public="false">Đã bật</string>
 <string name="revanced_video_ads_removal_summary_on" public="false">Đã tắt</string>
 <string name="revanced_video_ads_removal_title" public="false">Ẩn quảng cáo video</string>
+
 <string name="revanced_wide_searchbar_enabled_title" public="false">Thanh tìm kiếm rộng</string>
 <string name="revanced_wide_searchbar_summary_off" public="false">Đã tắt</string>
 <string name="revanced_wide_searchbar_summary_on" public="false">Đã bật</string>
+
 <string name="revanced_autocaptions_enabled_title">Phụ đề tự động</string>
 <string name="revanced_autocaptions_summary_on">Đã tắt</string>
 <string name="revanced_autocaptions_summary_off">Đã bật</string>
+
 <string name="sb_settings" public="false">Sponsorblock</string>
-<string name="revanced_create_button_enabled_title" public="false">Hiển thị nút tạo</string>
-<string name="revanced_create_button_summary_off" public="false">Đã tắt</string>
-<string name="revanced_create_button_summary_on" public="false">Đã bật</string>
+
+<string name="revanced_hide_create_button_title" public="false">Ẩn nút tạo</string>
+<string name="revanced_create_button_summary_off" public="false">Đang hiện</string>
+<string name="revanced_create_button_summary_on" public="false">Đã ẩn</string>
+
 <string name="revanced_player_popup_panels_title" public="false">Tắt bảng bật lên của trình phát</string>
 <string name="revanced_player_popup_panels_summary_off" public="false">Đã tắt</string>
 <string name="revanced_player_popup_panels_summary_on" public="false">Đã bật</string>
+
 <string name="revanced_hide_time_and_seekbar_title" public="false">Ẩn thời gian và thanh tua</string>
-<string name="revanced_hide_time_and_seekbar_summary_off" public="false">Đã tắt</string>
-<string name="revanced_hide_time_and_seekbar_summary_on" public="false">Đã bật</string>
-<string name="revanced_hide_email_address_title" public="false">Ẩn địa chỉ email</string>
+<string name="revanced_hide_time_and_seekbar_summary_off" public="false">Đang hiện</string>
+<string name="revanced_hide_time_and_seekbar_summary_on" public="false">Đã ẩn</string>
+
+<string name="revanced_hide_email_address_title" public="false">Ẩn email trong trình chuyển đổi tài khoản</string>
 <string name="revanced_hide_email_address_summary_off" public="false">Đang hiện</string>
 <string name="revanced_hide_email_address_summary_on" public="false">Đã ẩn</string>
+
 <string name="revanced_startup_shorts_player_title" public="false">Tắt short khi khởi động ứng dụng</string>
 <string name="revanced_startup_shorts_player_summary_on" public="false">Đã bật</string>
 <string name="revanced_startup_shorts_player_summary_off" public="false">Đã tắt</string>
+
 <string name="revanced_hide_buttons_title" public="false">Ẩn các nút hành động</string>
 <string name="revanced_hide_buttons_summary" public="false">Ẩn hoặc hiện các nút bên dưới video</string>
-<string name="revanced_like_button_title" public="false">Ẩn nút like</string>
-<string name="revanced_like_button_on" public="false">Đã ẩn</string>
-<string name="revanced_like_button_off" public="false">Đang hiện</string>
-<string name="revanced_dislike_button_title" public="false">Ẩn nút dislike</string>
-<string name="revanced_dislike_button_on" public="false">Đã ẩn</string>
-<string name="revanced_dislike_button_off" public="false">Đang hiện</string>
-<string name="revanced_download_button_title" public="false">Ẩn nút tải</string>
-<string name="revanced_download_button_on" public="false">Đã ẩn</string>
-<string name="revanced_download_button_off" public="false">Đang hiện</string>
-<string name="revanced_playlist_button_title" public="false">Ẩn nút danh sách phát</string>
-<string name="revanced_playlist_button_on" public="false">Đã ẩn</string>
-<string name="revanced_playlist_button_off" public="false">Đang hiện</string>
-<string name="revanced_action_button_title" public="false">Ẩn nút tạo, đoạn và cảm ơn</string>
-<string name="revanced_action_button_on" public="false">Đã ẩn</string>
-<string name="revanced_action_button_off" public="false">Đang hiện</string>
-<string name="revanced_share_button_title" public="false">Ẩn nút chia sẻ</string>
-<string name="revanced_share_button_on" public="false">Đã ẩn</string>
-<string name="revanced_share_button_off" public="false">Đang hiện</string>
-<string name="revanced_remember_video_quality_selection_title" public="false">Ghi nhớ chất lượng video hiện tại</string>
-<string name="revanced_remember_video_quality_selection_summary_on" public="false">Chất lượng video hiện tại hiện không thay đổi</string>
-<string name="revanced_remember_video_quality_selection_summary_off" public="false">Chất lượng video sẽ được ghi nhớ cho đến khi chọn chất lượng mới</string>
-<string name="revanced_mix_playlists_title" public="false">Ẩn danh sách phát kết hợp</string>
-<string name="revanced_mix_playlists_summary_on" public="false">Đã ẩn</string>
-<string name="revanced_mix_playlists_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_like_button_title" public="false">Ẩn nút like</string>
+<string name="revanced_hide_like_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_like_button_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_dislike_button_title" public="false">Ẩn nút dislike</string>
+<string name="revanced_hide_dislike_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_dislike_button_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_download_button_title" public="false">Ẩn nút tải</string>
+<string name="revanced_hide_download_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_download_button_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_playlist_button_title" public="false">Ẩn nút danh sách phát</string>
+<string name="revanced_hide_playlist_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_playlist_button_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_action_button_title" public="false">Ẩn nút tạo, đoạn và cảm ơn</string>
+<string name="revanced_hide_action_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_action_button_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_share_button" public="false">Ẩn nút chia sẻ</string>
+<string name="revanced_hide_share_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_share_button_summaryoff" public="false">Đang hiện</string>
+
+<string name="revanced_remember_video_quality_last_selected_title" public="false">Nhớ chất lượng video thay đổi</string>
+<string name="revanced_remember_video_quality_last_selected_summary_on" public="false">Chất lượng thay đổi áp dụng cho tất cả các video</string>
+<string name="revanced_remember_video_quality_last_selected_summary_off" public="false">Chất lượng thay đổi chỉ áp dụng cho video hiện tại và được hoàn nguyên về chất lượng được ghi nhớ gần đây nhất để phát lại trong tương lai</string>
+
+<string name="revanced_hide_mix_playlists_title" public="false">Ẩn danh sách phát kết hợp</string>
+<string name="revanced_hide_mix_playlists_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_mix_playlists_summary_off" public="false">Đang hiện</string>
+
 <string name="revanced_hide_captions_button_title" public="false">Ẩn nút phụ đề</string>
 <string name="revanced_hide_captions_button_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_captions_button_summary_off" public="false">Đang hiện</string>
@@ -339,7 +395,7 @@
 <string name="revanced_hide_album_cards_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_album_cards_summary_off" public="false">Đang hiện</string>
 
-<string name="revanced_hide_comments_section_title" public="false">Xóa phần nhận xét</string>
+<string name="revanced_hide_comments_section_title" public="false">Ẩn phần nhận xét</string>
 <string name="revanced_hide_comments_section_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_comments_section_summary_off" public="false">Đang hiện</string>
 
@@ -357,7 +413,7 @@
 <string name="revanced_hide_shorts_comments_button_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_shorts_comments_button_off" public="false">Đang hiện</string>
 
-<string name="revanced_hide_watch_in_vr_title" public="false">Ẩn tùy chọn Xem trong thực tế ảo</string>
+<string name="revanced_hide_watch_in_vr_title" public="false">Ẩn Xem trong VR</string>
 <string name="revanced_hide_watch_in_vr_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_watch_in_vr_summary_off" public="false">Đang hiện</string>
 
@@ -373,9 +429,9 @@
 <string name="revanced_hide_infocards_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_infocards_summary_off" public="false">Đang hiện</string>
 
-<string name="revanced_uri_redirect_title" public="false">Mở liên kết trực tiếp</string>
-<string name="revanced_uri_redirect_summary_on" public="false">Đang bật</string>
-<string name="revanced_uri_redirect_summary_off" public="false">Đã tắt</string>
+<string name="revanced_uri_redirect_title" public="false">Mở liên kết YouTube bên trong ứng dụng</string>
+<string name="revanced_uri_redirect_summary_on" public="false">Liên kết được mở bên trong YouTube ReVanced</string>
+<string name="revanced_uri_redirect_summary_off" public="false">Liên kết được mở trong trình duyệt web</string>
 
 <string name="revanced_adremover_shorts_enabled_title" public="false">Loại bỏ short</string>
 <string name="revanced_adremover_shorts_enabled_summary_on" public="false">Đã ẩn</string>
@@ -421,3 +477,15 @@
 <string name="revanced_debug_stacktrace_summary_off" public="false">Đã tắt</string>
 
 <string name="revanced_debug_summary" public="false">Bật hoặc tắt tùy chọn gỡ lỗi</string>
+
+<string name="revanced_hide_autoplay_button_title" public="false">Ẩn nút tự động phát</string>
+<string name="revanced_hide_autoplay_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_autoplay_button_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_shorts_button_title" public="false">Ẩn nút short</string>
+<string name="revanced_hide_shorts_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_shorts_button_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_reel_button_title" public="false">Ẩn nút cuộn</string>
+<string name="revanced_hide_reel_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_reel_button_summary_off" public="false">Đang hiện</string>
