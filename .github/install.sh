@@ -67,7 +67,7 @@ Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vd
 [ "$(file $Likk/lib/revanced-cli.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-cli.jar" || echo "Download failed: revanced-cli.jar"
 [ "$(file $Likk/lib/revanced-patches.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-patches.jar" || echo "Download failed: revanced-patches.jar"
 [ "$(file $Likk/lib/revanced-integrations.apk | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-integrations.apk" || echo "Download failed: revanced-integrations.apk"
-
+echo 123
 # Phiên bản Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 sponsorblock | tr '	' '\n' | tac | head -n 1 | awk '{print $1}')"
 if [ "$VERSION" == "Default" ];then
