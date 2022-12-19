@@ -69,7 +69,7 @@ Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vd
 [ "$(file $Likk/lib/revanced-integrations.apk | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-integrations.apk" || echo "Download failed: revanced-integrations.apk"
 
 # Phiên bản Youtube
-Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 sponsorblock | tr '	' '\n' | tac | head -n 1 | awk '{print $1}')"
+Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 hide-create-button | tr '	' '\n' | tac | head -n 1 | awk '{print $1}')"
 if [ "$VERSION" == "Default" ];then
 VERSION="$Vidon"
 echo "VS=$Vidon" >> $GITHUB_ENV
@@ -78,7 +78,7 @@ echo "VS=$VERSION" >> $GITHUB_ENV
 fi
 
 echo "
-$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 sponsorblock)"
+$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 hide-create-button)"
 wc -m $Likk/Module/install.sh | awk '{print $1}'
 
 # Tải Youtube
