@@ -330,8 +330,8 @@
 <string name="sb_settings" public="false">Sponsorblock</string>
 
 <string name="revanced_hide_create_button_title" public="false">Ẩn nút tạo</string>
-<string name="revanced_create_button_summary_off" public="false">Đang hiện</string>
-<string name="revanced_create_button_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_create_button_summary_off" public="false">Đang hiện</string>
+<string name="revanced_hide_create_button_summary_on" public="false">Đã ẩn</string>
 
 <string name="revanced_player_popup_panels_title" public="false">Tắt bảng bật lên của trình phát</string>
 <string name="revanced_player_popup_panels_summary_off" public="false">Đã tắt</string>
@@ -341,7 +341,7 @@
 <string name="revanced_hide_time_and_seekbar_summary_off" public="false">Đang hiện</string>
 <string name="revanced_hide_time_and_seekbar_summary_on" public="false">Đã ẩn</string>
 
-<string name="revanced_hide_email_address_title" public="false">Ẩn email trong trình chuyển đổi tài khoản</string>
+<string name="revanced_hide_email_address_title" public="false">Ẩn email phần chuyển đổi tài khoản</string>
 <string name="revanced_hide_email_address_summary_off" public="false">Đang hiện</string>
 <string name="revanced_hide_email_address_summary_on" public="false">Đã ẩn</string>
 
@@ -372,7 +372,7 @@
 <string name="revanced_hide_action_button_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_action_button_summary_off" public="false">Đang hiện</string>
 
-<string name="revanced_hide_share_button" public="false">Ẩn nút chia sẻ</string>
+<string name="revanced_hide_share_button_title" public="false">Ẩn nút chia sẻ</string>
 <string name="revanced_hide_share_button_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_share_button_summaryoff" public="false">Đang hiện</string>
 
@@ -409,7 +409,7 @@
 <string name="revanced_hide_crowdfunding_box_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_crowdfunding_box_summary_off" public="false">Đang hiện</string>
 
-<string name="revanced_hide_shorts_comments_button_title" public="false">Ẩn nút bình luận cho Short video</string>
+<string name="revanced_hide_shorts_comments_button_title" public="false">Ẩn nút bình luận cho short</string>
 <string name="revanced_hide_shorts_comments_button_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_shorts_comments_button_off" public="false">Đang hiện</string>
 
