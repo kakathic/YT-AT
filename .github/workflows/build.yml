@@ -19,7 +19,7 @@ on:
       FEATURE:
         description: 'Turn off the feature, Add spaces to distinguish each feature'
         required: false
-        default: 'always-autorepeat hide-autoplay-button '
+        default: 'always-autorepeat hide-autoplay-button custom-video-speed '
       ICONS:
         description: 'Original icon & Name'
         required: false
