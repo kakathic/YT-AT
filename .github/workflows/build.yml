@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'Lang/**'
+      - '.github/**'
   workflow_dispatch:
     inputs:
       VERSION:
