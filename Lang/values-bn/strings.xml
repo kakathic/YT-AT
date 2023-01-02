@@ -1,4 +1,5 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
     <string name="about">সম্পর্কে</string>
     <string name="about_api">এই অ্যাপ্লিকেশনটি SponsorBlock API ব্যবহার করে</string>
@@ -633,4 +634,5 @@
     <string name="vote_started">সেগমেন্টের জন্য ভোট হচ্ছে…</string>
     <string name="vote_succeeded">সফলভাবে ভোট দেয়া হয়ঞেছে</string>
     <string name="vote_upvote">আপ ভোট</string>
+</resources>
 
