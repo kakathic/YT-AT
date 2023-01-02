@@ -70,7 +70,7 @@ jobs:
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
-          SHORTS=true; TYPE=true; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=true; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
+          SHORTS=true; TYPE=true; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button custom-video-speed copy-video-url"; AMOLED=true; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
           . .github/install.sh
       - name: Upload File
@@ -106,7 +106,7 @@ jobs:
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
-          SHORTS=true; TYPE=false; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=true; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
+          SHORTS=true; TYPE=false; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button custom-video-speed copy-video-url"; AMOLED=true; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
           . .github/install.sh
       - name: Upload json
@@ -150,7 +150,7 @@ jobs:
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
-          SHORTS=true; TYPE=true; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=false; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
+          SHORTS=true; TYPE=true; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button custom-video-speed copy-video-url"; AMOLED=false; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
           . .github/install.sh
       - name: Upload File
@@ -186,7 +186,7 @@ jobs:
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
-          SHORTS=true; TYPE=false; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=false; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
+          SHORTS=true; TYPE=false; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button custom-video-speed copy-video-url"; AMOLED=false; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
           . .github/install.sh
       - name: Upload json
