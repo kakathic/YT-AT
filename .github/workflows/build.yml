@@ -1,5 +1,8 @@
 name: YT-AT
 on:
+  push:
+    paths:
+      - 'Lang/**'
   workflow_dispatch:
     inputs:
       VERSION:
