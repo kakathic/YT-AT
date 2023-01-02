@@ -1,5 +1,5 @@
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <string name="about">Haqqında (Romdeys)</string>
     <string name="about_api">Bu proqram SponsorBlock-dan API istifadə edir</string>
     <string name="about_api_sum">Ətraflı öyrənmək üçün toxunun və digər platformalar üçün endirmələrə baxın: sponsor.ajay.app</string>
@@ -631,4 +631,4 @@ Limitə çatılıb (eyni istifadəçi və ya IP-dən)"</string>
     <string name="vote_started">Seqmentə səs verilir…</string>
     <string name="vote_succeeded">Uğurla səs verdi</string>
     <string name="vote_upvote">Müsbət səs verin</string>
-
+</resources>
