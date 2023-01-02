@@ -503,4 +503,14 @@
 <string name="revanced_hide_breaking_news_title" public="false">Ẩn tin nóng</string>
 <string name="revanced_hide_breaking_news_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_breaking_news_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_copy_video_url_enabled_summary_off" public="false">Nút không được hiển thị</string>
+<string name="revanced_copy_video_url_enabled_summary_on" public="false">Nút được hiển thị, bấm vào để sao chép URL video mà không có dấu thời gian</string>
+<string name="revanced_copy_video_url_enabled_title" public="false">Hiển thị nút sao chép url video</string>
+<string name="revanced_copy_video_url_summary" public="false">Cài đặt liên quan đến việc sao chép các nút URL trong trình phát video</string>
+<string name="revanced_copy_video_url_timestamp_enabled_summary_off" public="false">Nút không được hiển thị</string>
+<string name="revanced_copy_video_url_timestamp_enabled_summary_on" public="false">Nút được hiển thị, bấm vào để sao chép URL video với dấu thời gian</string>
+<string name="revanced_copy_video_url_timestamp_enabled_title" public="false">Hiển thị nút url dấu thời gian sao chép</string>
+<string name="revanced_copy_video_url_title" public="false">Sao chép cài đặt url video</string>
+
 </resources>
