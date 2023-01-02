@@ -27,7 +27,7 @@ done
 sleep 2
 for vakdll in $Likk/Lang/*; do
 if [ -e $vakdll/strings.xml ];then
-cat $vakdll/strings.xml | sed -i -e 's|<?xml version="1.0" encoding="utf-8"?>||g' -e 's|<resources>||g' -e 's|</resources>||g' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
+cat $vakdll/strings.xml | sed -e 's|<?xml version="1.0" encoding="utf-8"?>||g' -e 's|<resources>||g' -e 's|</resources>||g' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 sed -i "/<\/resources>/d" $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 fi
