@@ -27,9 +27,14 @@ done
 sleep 2
 for vakdll in $Likk/Lang/*; do
 if [ -e $vakdll/strings.xml ];then
+if [ -e $Likk/tmp/res/${vakdll##*/}/strings.xml ];then
 cat $vakdll/strings.xml | sed -e 's|<?xml version="1.0" encoding="utf-8"?>||g' -e "/<\/resources>/d" -e "/<resources>/d" >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 sed -i "/<\/resources>/d" $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
+else
+mkdir -p $Likk/tmp/res/${vakdll##*/}
+cp -rf $vakdll $Likk/tmp/res
+fi
 fi
 done
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
