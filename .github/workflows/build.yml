@@ -23,7 +23,7 @@ on:
       FEATURE:
         description: 'Turn off the feature, Add spaces to distinguish each feature'
         required: false
-        default: 'always-autorepeat hide-autoplay-button custom-video-speed '
+        default: 'always-autorepeat hide-autoplay-button custom-video-speed copy-video-url '
       ICONS:
         description: 'Original icon & Name'
         required: false
