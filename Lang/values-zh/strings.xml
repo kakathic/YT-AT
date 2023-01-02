@@ -1,5 +1,5 @@
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <string name="about">关于</string>
     <string name="about_api">此应用使用来自 SponsorBlock 的 API</string>
     <string name="about_api_sum">点击了解更多信息，并查看其他平台的下载：sponsor.ajay.app</string>
@@ -631,4 +631,4 @@
     <string name="vote_started">正在为片段投票…</string>
     <string name="vote_succeeded">投票成功</string>
     <string name="vote_upvote">赞成票</string>
-
+</resources>
