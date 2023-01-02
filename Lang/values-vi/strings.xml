@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 <string name="revanced_ryd_enable_title">Khôi phục YouTube Dislike</string>
 <string name="revanced_ryd_enable_summary_on">Dislike đang hiện</string>
 <string name="revanced_ryd_enable_summary_off">Dislike không được hiển thị</string>
@@ -501,3 +503,4 @@
 <string name="revanced_hide_breaking_news_title" public="false">Ẩn tin nóng</string>
 <string name="revanced_hide_breaking_news_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_breaking_news_summary_off" public="false">Đang hiện</string>
+</resources>
