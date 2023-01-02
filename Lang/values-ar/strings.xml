@@ -1,4 +1,5 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <string name="about">لمحة</string>
     <string name="about_api">هذا التطبيق يستخدم API من SponsorBlock</string>
     <string name="about_api_sum">انقر لمعرفة المزيد؛ والتنزيل لمنصات أخرى على: sponsor.ajay.app</string>
@@ -599,3 +600,4 @@
     <string name="vote_started">جارٍ التصويت للمقطع…</string>
     <string name="vote_succeeded">تم التصويت بنجاح</string>
     <string name="vote_upvote">تأييد</string>
+</resources>
