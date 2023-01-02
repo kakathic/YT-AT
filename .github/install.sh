@@ -137,21 +137,21 @@ unzip -qo "$Likk/lib/YouTube.apk" lib/$DEVICE/* -d $Likk/Tav
 [ "$DEVICE" == 'x86' ] || mv -f $Likk/Tav/lib/$DEVICE $Likk/Tav/lib/$ach
 
 [ "$ROUND" == 'true' ] || rm -fr $Likk/Module/system
-[ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
-[ "$SHORTS" == 'true' ] && echo -n "-e hide-shorts-button " >> $Likk/logk
-[ "$CREATE" == 'true' ] && echo -n "-e disable-create-button " >> $Likk/logk
+[ "$ICONS" == 'true' ] && echo -n "--exclusive custom-branding " >> $Likk/logk
+[ "$SHORTS" == 'true' ] && echo -n "--exclusive hide-shorts-button " >> $Likk/logk
+[ "$CREATE" == 'true' ] && echo -n "--exclusive disable-create-button " >> $Likk/logk
 [ "$TYPE" != 'true' ] && lib='lib/*/*'
 
 zip -qr $Likk/lib/YouTube.apk -d $lib
 
 if [ "$AMOLED" == 'true' ];then
-echo -n "-e theme " >> $Likk/logk
+echo -n "--exclusive theme " >> $Likk/logk
 else
 amoled2=".Amoled"
 fi
 
 for vakl in $FEATURE; do
-echo -n "-e $vakl " >> $Likk/logk
+echo -n "--exclusive $vakl " >> $Likk/logk
 done
 
 echo '
