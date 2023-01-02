@@ -489,3 +489,15 @@
 <string name="revanced_hide_reel_button_title" public="false">Ẩn nút cuộn</string>
 <string name="revanced_hide_reel_button_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_reel_button_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_adremover_channel_member_shelf_enabled_title" public="false">Ẩn kệ thành viên kênh</string>
+<string name="revanced_adremover_channel_member_shelf_enabled_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_adremover_channel_member_shelf_enabled_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_adremover_subscribers_community_guidelines_enabled_title" public="false">Ẩn nguyên tắc cộng đồng của người đăng ký</string>
+<string name="revanced_adremover_subscribers_community_guidelines_enabled_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_adremover_subscribers_community_guidelines_enabled_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_breaking_news_title" public="false">Ẩn tin nóng</string>
+<string name="revanced_hide_breaking_news_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_breaking_news_summary_off" public="false">Đang hiện</string>
