@@ -137,21 +137,21 @@ unzip -qo "$Likk/lib/YouTube.apk" lib/$DEVICE/* -d $Likk/Tav
 [ "$DEVICE" == 'x86' ] || mv -f $Likk/Tav/lib/$DEVICE $Likk/Tav/lib/$ach
 
 [ "$ROUND" == 'true' ] || rm -fr $Likk/Module/system
-[ "$ICONS" == 'true' ] && echo -n "--exclusive custom-branding " >> $Likk/logk
-[ "$SHORTS" == 'true' ] && echo -n "--exclusive hide-shorts-button " >> $Likk/logk
-[ "$CREATE" == 'true' ] && echo -n "--exclusive disable-create-button " >> $Likk/logk
+[ "$ICONS" == 'true' ] && echo -n "-e custom-branding " >> $Likk/logk
+[ "$SHORTS" == 'true' ] && echo -n "-e hide-shorts-button " >> $Likk/logk
+[ "$CREATE" == 'true' ] && echo -n "-e disable-create-button " >> $Likk/logk
 [ "$TYPE" != 'true' ] && lib='lib/*/*'
 
 zip -qr $Likk/lib/YouTube.apk -d $lib
 
 if [ "$AMOLED" == 'true' ];then
-echo -n "--exclusive theme " >> $Likk/logk
+echo -n "-e theme " >> $Likk/logk
 else
 amoled2=".Amoled"
 fi
 
 for vakl in $FEATURE; do
-echo -n "--exclusive $vakl " >> $Likk/logk
+echo -n "-e $vakl " >> $Likk/logk
 done
 
 echo '
@@ -175,7 +175,7 @@ echo "
 - Build...
 "
 if [ "$TYPE" != 'true' ];then
-( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support
+( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support --exclusive
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk" || zipalign -f 4 "$Likk/YouT.apk" "$Likk/Tav/YouTube.apk"
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
@@ -189,7 +189,7 @@ echo '{
 }' > $Likk/Up-$ach$amoled2.json 
 echo > $Likk/done.txt ) & cpnn
 else
-( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
+( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) --exclusive
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/apk/YouTube.apk" || zipalign -f 4 "$Likk/YouT.apk" "$Likk/apk/YouTube.apk"
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YT-NoRoot-$VERSION-$ach$amoled2.apk" 
 echo > $Likk/done.txt ) & cpnn
