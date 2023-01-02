@@ -64,7 +64,9 @@ Taive "https://github.com/revanced/revanced-patches/releases/download/v${Vsiogdd
 Vdbbd="$(Xem https://github.com/revanced/revanced-integrations | grep -m1 'revanced/revanced-integrations/releases/tag' | sed 's|v||g' | tr "/" "\n" | grep -m1 '\">' | cut -d \" -f1)"
 Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/revanced-integrations-${Vdbbd##*/}.apk" "$Likk/lib/revanced-integrations.apk"       
 
-echo "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/revanced-integrations-${Vdbbd##*/}.apk"
+if [ "$(file $Likk/lib/revanced-integrations.apk | grep -cm1 "Zip archive")" != 1 ];then
+Taive "https://github.com/revanced/revanced-integrations/releases/download/v0.91.1/revanced-integrations-0.91.0.apk" "$Likk/lib/revanced-integrations.apk"
+fi
 
 [ "$(file $Likk/lib/revanced-cli.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-cli.jar" || echo "Download failed: revanced-cli.jar"
 [ "$(file $Likk/lib/revanced-patches.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-patches.jar" || echo "Download failed: revanced-patches.jar"
