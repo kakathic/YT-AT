@@ -62,6 +62,15 @@ echo "- Download cli tool...
 "
 
 # Tải tool Revanced
+Geturl(){ grep -m1 "$1=" $Likk/PathDL | cut -d = -f2; }
+
+if [ "$(Geturl Allow_the_use_of_download_links)" == 'true' ];then
+
+Taive "$(Geturl link_cli)" "$Likk/lib/revanced-cli.jar"       
+Taive "$(Geturl link_patches)" "$Likk/lib/revanced-patches.jar"       
+Taive "$(Geturl link_integrations)" "$Likk/lib/revanced-integrations.apk"       
+
+else
 Vsionnnnn="$(Xem https://github.com/revanced/revanced-cli | grep -m1 'revanced/revanced-cli/releases/tag' | sed 's|v||g' | tr "/" "\n" | grep -m1 '\">' | cut -d \" -f1)"
 Taive "https://github.com/revanced/revanced-cli/releases/download/v${Vsionnnnn##*/}/revanced-cli-${Vsionnnnn##*/}-all.jar" "$Likk/lib/revanced-cli.jar"       
 Vsiogddh="$(Xem https://github.com/revanced/revanced-patches | grep -m1 'revanced/revanced-patches/releases/tag' | sed 's|v||g' | tr "/" "\n" | grep -m1 '\">' | cut -d \" -f1)"
@@ -71,6 +80,7 @@ Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vd
 
 if [ "$(file $Likk/lib/revanced-integrations.apk | grep -cm1 "Zip archive")" != 1 ];then
 Taive "https://github.com/revanced/revanced-integrations/releases/download/v0.91.1/revanced-integrations-0.91.0.apk" "$Likk/lib/revanced-integrations.apk"
+fi
 fi
 
 [ "$(file $Likk/lib/revanced-cli.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-cli.jar" || echo "Download failed: revanced-cli.jar"
