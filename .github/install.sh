@@ -62,7 +62,7 @@ echo "- Download cli tool...
 "
 
 # Tải tool Revanced
-Geturl(){ grep -m1 "$1=" $Likk/PathDL | cut -d = -f2; }
+Geturl(){ grep -m1 "$1=" $Likk/PathDL.md | cut -d = -f2; }
 
 if [ "$(Geturl Allow_the_use_of_download_links)" == 'true' ];then
 
