@@ -87,9 +87,9 @@ Taive "https://github.com/revanced/revanced-integrations/releases/download/v0.91
 fi
 fi
 
-[ "$(file $Likk/lib/revanced-cli.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-cli.jar" || echo "Download failed: revanced-cli.jar"
-[ "$(file $Likk/lib/revanced-patches.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-patches.jar" || echo "Download failed: revanced-patches.jar"
-[ "$(file $Likk/lib/revanced-integrations.apk | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-integrations.apk" || echo "Download failed: revanced-integrations.apk"
+[ "$(file $Likk/lib/revanced-cli.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Successfully: revanced-cli.jar" || echo "Failed: revanced-cli.jar"
+[ "$(file $Likk/lib/revanced-patches.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Successfully: revanced-patches.jar" || echo "Failed: revanced-patches.jar"
+[ "$(file $Likk/lib/revanced-integrations.apk | grep -cm1 "Zip archive")" == 1 ] && echo "Successfully: revanced-integrations.apk" || echo "Failed: revanced-integrations.apk"
 
 # Phiên bản Youtube
 Vidon="$(Xem "https://www.apkmirror.com/apk/google-inc/youtube" | grep -m1 'h5 title="YouTube' | tr '\"' '\n' | grep -m1 'YouTube ' | awk '{print $2}')"
@@ -101,7 +101,7 @@ else
 echo "VS=$VERSION" >> $GITHUB_ENV
 fi
 
-echo "
+echo -n "
 $(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 hide-create-button)"
 wc -m $Likk/Module/install.sh | awk '{print $1}'
 
