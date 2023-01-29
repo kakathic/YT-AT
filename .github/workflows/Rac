@@ -1,0 +1,256 @@
+name: YT-AT
+on:
+  push:
+    paths:
+      - 'Lang/**'
+      - '.github/**'
+  schedule:
+    - cron: '30 23 * * *'
+  workflow_dispatch:
+    inputs:
+      VERSION:
+        description: 'Leaving blank will be the latest version that revanced support builds. You can build the latest version of YouTube, but errors may occur. Example: 17.35.36'
+        required: false
+        default: 'Default'
+      DEVICE:
+        description: 'Select device'
+        required: false
+        default: 'arm64-v8a'
+        type: choice
+        options:
+          - armeabi-v7a
+          - arm64-v8a
+          - x86
+          - x86_64
+      FEATURE:
+        description: 'Turn off the feature, Add spaces to distinguish each feature'
+        required: false
+        default: ''
+      ICONS:
+        description: 'Original icon & Name'
+        required: false
+        type: boolean
+        default: true
+      OPTIMIZATION:
+        description: 'Video loaded speed'
+        required: false
+        type: boolean
+        default: true
+      SHORTS:
+        description: 'Show button shorts video'
+        required: false
+        type: boolean
+        default: true
+      ROUND:
+        description: 'Pip rounded (root)'
+        required: false
+        type: boolean
+        default: true
+jobs:
+  build1:
+    name: 'NO ROOT...'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: Run code
+        env:
+          VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          ICONS: ${{ inputs.ICONS }}
+          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
+          AMOLED: 'true'
+          FEATURE: ${{ inputs.FEATURE }}
+          ROUND: ${{ inputs.ROUND }}
+          TYPE: 'true'
+          SHORTS: ${{ inputs.SHORTS }}
+        run: |
+          # kakathic
+          if [ -z "$VERSION" ]
+          then
+          SHORTS=true
+          TYPE=true
+          ROUND=true
+          FEATURE=""
+          AMOLED=true
+          ICONS=true
+          OPTIMIZATION=true
+          DEVICE='arm64-v8a'
+          VERSION='Default'
+          fi
+          . .github/install.sh
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-AT ${{ env.VS }}
+          tag_name: V${{ env.VS }}
+          files: Up/*
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: NO ROOT ${{ env.VS }}
+          path: Up/*
+
+  build2:
+    name: 'ROOT...'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: Run code
+        env:
+          VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          ICONS: ${{ inputs.ICONS }}
+          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
+          AMOLED: 'true'
+          FEATURE: ${{ inputs.FEATURE }}
+          ROUND: ${{ inputs.ROUND }}
+          TYPE: 'false'
+          SHORTS: ${{ inputs.SHORTS }}
+        run: |
+          # kakathic
+          if [ -z "$VERSION" ]
+          then
+          SHORTS=true
+          TYPE=false
+          ROUND=true
+          FEATURE=""
+          AMOLED=true
+          ICONS=true
+          OPTIMIZATION=true
+          DEVICE='arm64-v8a'
+          VERSION='Default'
+          fi
+          . .github/install.sh
+      - name: Upload json
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: Update
+          tag_name: Up
+          files: Up*.json
+          prerelease: true
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-AT ${{ env.VS }}
+          tag_name: V${{ env.VS }}
+          files: Up/*
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: ROOT ${{ env.VS }}
+          path: Up/*
+
+  build3:
+    name: 'AMOLED NO ROOT...'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: Run code
+        env:
+          VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          ICONS: ${{ inputs.ICONS }}
+          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
+          AMOLED: 'false'
+          FEATURE: ${{ inputs.FEATURE }}
+          ROUND: ${{ inputs.ROUND }}
+          TYPE: 'true'
+          SHORTS: ${{ inputs.SHORTS }}
+        run: |
+          # kakathic
+          if [ -z "$VERSION" ]
+          then
+          SHORTS=true
+          TYPE=true
+          ROUND=true
+          FEATURE=""
+          AMOLED=false
+          ICONS=true
+          OPTIMIZATION=true
+          DEVICE='arm64-v8a'
+          VERSION='Default'
+          fi
+          . .github/install.sh
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-AT ${{ env.VS }}
+          tag_name: V${{ env.VS }}
+          files: Up/*
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: AMOLED NO ROOT ${{ env.VS }}
+          path: Up/*
+
+  build4:
+    name: 'AMOLED ROOT...'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: Run code
+        env:
+          VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          ICONS: ${{ inputs.ICONS }}
+          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
+          AMOLED: 'false'
+          FEATURE: ${{ inputs.FEATURE }}
+          ROUND: ${{ inputs.ROUND }}
+          TYPE: 'false'
+          SHORTS: ${{ inputs.SHORTS }}
+        run: |
+          # kakathic
+          if [ -z "$VERSION" ]
+          then
+          SHORTS=true
+          TYPE=false
+          ROUND=true
+          FEATURE=""
+          AMOLED=false
+          ICONS=true
+          OPTIMIZATION=true
+          DEVICE='arm64-v8a'
+          VERSION='Default'
+          fi
+          . .github/install.sh
+      - name: Upload json
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: Update
+          tag_name: Up
+          files: Up*.json
+          prerelease: true
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-AT ${{ env.VS }}
+          tag_name: V${{ env.VS }}
+          files: Up/*
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: AMOLED ROOT ${{ env.VS }}
+          path: Up/*
