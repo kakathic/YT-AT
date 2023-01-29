@@ -51,7 +51,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu'
-      - name: Run code
+      - name: Process
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
@@ -71,7 +71,7 @@ jobs:
           name: YT-AT ${{ env.VS }}
           tag_name: V${{ env.VS }}
           files: Up/*
-      - name: Upload
+      - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
           name: NO ROOT ${{ env.VS }}
@@ -87,7 +87,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu'
-      - name: Run code
+      - name: Process
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
@@ -101,7 +101,7 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
-      - name: Upload json
+      - name: Upload Json
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ github.token }}
@@ -115,7 +115,7 @@ jobs:
           name: YT-AT ${{ env.VS }}
           tag_name: V${{ env.VS }}
           files: Up/*
-      - name: Upload
+      - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
           name: ROOT ${{ env.VS }}
@@ -131,7 +131,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu'
-      - name: Run code
+      - name: Process
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
@@ -151,7 +151,7 @@ jobs:
           name: YT-AT ${{ env.VS }}
           tag_name: V${{ env.VS }}
           files: Up/*
-      - name: Upload
+      - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
           name: AMOLED NO ROOT ${{ env.VS }}
@@ -167,7 +167,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu'
-      - name: Run code
+      - name: Process
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
@@ -195,7 +195,7 @@ jobs:
           name: YT-AT ${{ env.VS }}
           tag_name: V${{ env.VS }}
           files: Up/*
-      - name: Upload
+      - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
           name: AMOLED ROOT ${{ env.VS }}
