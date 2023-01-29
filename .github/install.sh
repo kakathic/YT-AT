@@ -14,7 +14,7 @@ ZHex(){ xxd -r -p "$@"; }
 apktoolur(){
 apktool d -q -rs -m -f "$Likk/YouT.apk" -o "$Likk/Nn"
 rm -fr "$Likk/Nn"/assets/fonts/* "$Likk/Nn"/res/*.*
-for sksb in $Likk/Nn/*; do
+for sksb in $Likk/Nn/res/*; do
 [ "$(file $sksb | grep -cm1 directory)" == 1 ] || rm -rf $sksb
 done
 apktool b -q -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
