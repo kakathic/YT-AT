@@ -9,6 +9,7 @@ on:
 jobs:
   build1:
     name: 'NO ROOT...'
+    if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -47,6 +48,7 @@ jobs:
 
   build2:
     name: 'ROOT...'
+    if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -93,6 +95,7 @@ jobs:
 
   build3:
     name: 'AMOLED NO ROOT...'
+    if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -131,6 +134,7 @@ jobs:
 
   build4:
     name: 'AMOLED ROOT...'
+    if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -174,3 +178,4 @@ jobs:
         with:
           name: AMOLED ROOT ${{ env.VS }}
           path: Up/*
+
