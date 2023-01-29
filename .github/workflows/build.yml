@@ -68,13 +68,13 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VS }}
+          name: YT-AT ${{ env.VS }} official
           tag_name: V${{ env.VS }}
           files: Up/*
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
-          name: NO ROOT ${{ env.VS }}
+          name: NO ROOT ${{ env.VS }} official
           path: Up/*
 
   build2:
@@ -112,13 +112,13 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VS }}
+          name: YT-AT ${{ env.VS }} official
           tag_name: V${{ env.VS }}
           files: Up/*
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
-          name: ROOT ${{ env.VS }}
+          name: ROOT ${{ env.VS }} official
           path: Up/*
 
   build3:
@@ -148,13 +148,13 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VS }}
+          name: YT-AT ${{ env.VS }} official
           tag_name: V${{ env.VS }}
           files: Up/*
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
-          name: AMOLED NO ROOT ${{ env.VS }}
+          name: AMOLED NO ROOT ${{ env.VS }} official
           path: Up/*
 
   build4:
@@ -192,11 +192,11 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VS }}
+          name: YT-AT ${{ env.VS }} official
           tag_name: V${{ env.VS }}
           files: Up/*
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
-          name: AMOLED ROOT ${{ env.VS }}
+          name: AMOLED ROOT ${{ env.VS }} official
           path: Up/*
