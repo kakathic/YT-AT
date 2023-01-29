@@ -1,5 +1,9 @@
 # kakathic
 
+sudo rm -rf /usr/share/dotnet
+sudo rm -rf /opt/ghc
+sudo rm -rf "/usr/local/share/boost"
+
 Likk="$GITHUB_WORKSPACE"
 sudo apt install zipalign >/dev/null
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
