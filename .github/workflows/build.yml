@@ -68,7 +68,6 @@ jobs:
           ROUND: ${{ inputs.ROUND }}
           TYPE: 'true'
           SHORTS: ${{ inputs.SHORTS }}
-
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -78,10 +77,14 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ github.token }}
           name: YT-AT ${{ env.VS }}
           tag_name: V${{ env.VS }}
           files: Up/*
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: NO ROOT ${{ env.VS }}
+          path: Up/*
 
   build2:
     name: 'ROOT...'
@@ -104,7 +107,6 @@ jobs:
           ROUND: ${{ inputs.ROUND }}
           TYPE: 'false'
           SHORTS: ${{ inputs.SHORTS }}
-
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -122,10 +124,14 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ github.token }}
           name: YT-AT ${{ env.VS }}
           tag_name: V${{ env.VS }}
           files: Up/*
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: ROOT ${{ env.VS }}
+          path: Up/*
 
   build3:
     name: 'AMOLED NO ROOT...'
@@ -148,7 +154,6 @@ jobs:
           ROUND: ${{ inputs.ROUND }}
           TYPE: 'true'
           SHORTS: ${{ inputs.SHORTS }}
-
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -158,10 +163,14 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ github.token }}
           name: YT-AT ${{ env.VS }}
           tag_name: V${{ env.VS }}
           files: Up/*
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: AMOLED NO ROOT ${{ env.VS }}
+          path: Up/*
 
   build4:
     name: 'AMOLED ROOT...'
@@ -184,7 +193,6 @@ jobs:
           ROUND: ${{ inputs.ROUND }}
           TYPE: 'false'
           SHORTS: ${{ inputs.SHORTS }}
-
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -202,12 +210,11 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ github.token }}
           name: YT-AT ${{ env.VS }}
           tag_name: V${{ env.VS }}
           files: Up/*
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
-          name: YT-AT ${{ env.VS }}
+          name: AMOLED ROOT ${{ env.VS }}
           path: Up/*
