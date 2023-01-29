@@ -36,6 +36,7 @@ mkdir -p $Likk/tmp/res/${vakdll##*/}
 cp -rf $vakdll $Likk/tmp/res
 fi
 fi
+rm -fr $Likk/tmp/res/*.*
 done
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 while true; do
