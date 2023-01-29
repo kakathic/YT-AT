@@ -13,7 +13,7 @@ ZHex(){ xxd -r -p "$@"; }
 
 apktoolur(){
 apktool d -q -rs -m -f "$Likk/YouT.apk" -o "$Likk/Nn"
-rm -fr "$Likk/Nn"/assets/fonts/*
+rm -fr "$Likk/Nn"/assets/fonts/* "$Likk/Nn"/res/*.*
 apktool b -q -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
 zipalign -f 4 "$Likk/Nn.apk" "$1"
 }
