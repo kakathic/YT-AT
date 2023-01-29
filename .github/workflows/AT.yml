@@ -44,7 +44,7 @@ jobs:
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
-          name: NO ROOT ${{ env.VS }}
+          name: NO ROOT ${{ env.VS }} auto
           path: Up/*
 
   build2:
@@ -92,7 +92,7 @@ jobs:
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
-          name: ROOT ${{ env.VS }}
+          name: ROOT ${{ env.VS }} auto
           path: Up/*
 
   build3:
@@ -132,7 +132,7 @@ jobs:
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
-          name: AMOLED NO ROOT ${{ env.VS }}
+          name: AMOLED NO ROOT ${{ env.VS }} auto
           path: Up/*
 
   build4:
@@ -180,6 +180,6 @@ jobs:
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
-          name: AMOLED ROOT ${{ env.VS }}
+          name: AMOLED ROOT ${{ env.VS }} auto
           path: Up/*
 
