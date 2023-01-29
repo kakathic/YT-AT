@@ -23,7 +23,6 @@ jobs:
           # kakathic
           if [ -z "$VERSION" ]
           then
-          VERSION=Auto
           SHORTS=true
           TYPE=true
           ROUND=true
@@ -32,7 +31,7 @@ jobs:
           ICONS=true
           OPTIMIZATION=true
           DEVICE='arm64-v8a'
-          VERSION='Default'
+          VERSION='Auto'
           fi
           . .github/install.sh
       - name: Upload File
@@ -63,7 +62,6 @@ jobs:
           # kakathic
           if [ -z "$VERSION" ]
           then
-          VERSION=Auto
           SHORTS=true
           TYPE=false
           ROUND=true
@@ -72,7 +70,7 @@ jobs:
           ICONS=true
           OPTIMIZATION=true
           DEVICE='arm64-v8a'
-          VERSION='Default'
+          VERSION='Auto'
           fi
           . .github/install.sh
       - name: Upload Json
@@ -111,7 +109,6 @@ jobs:
           # kakathic
           if [ -z "$VERSION" ]
           then
-          VERSION=Auto
           SHORTS=true
           TYPE=true
           ROUND=true
@@ -120,7 +117,7 @@ jobs:
           ICONS=true
           OPTIMIZATION=true
           DEVICE='arm64-v8a'
-          VERSION='Default'
+          VERSION='Auto'
           fi
           . .github/install.sh
       - name: Upload File
@@ -151,7 +148,6 @@ jobs:
           # kakathic
           if [ -z "$VERSION" ]
           then
-          VERSION=Auto
           SHORTS=true
           TYPE=false
           ROUND=true
@@ -160,7 +156,7 @@ jobs:
           ICONS=true
           OPTIMIZATION=true
           DEVICE='arm64-v8a'
-          VERSION='Default'
+          VERSION='Auto'
           fi
           . .github/install.sh
       - name: Upload Json
