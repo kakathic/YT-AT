@@ -38,7 +38,7 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VS }}
+          name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
           files: Up/*
       - name: Upload Zip
@@ -86,7 +86,7 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VS }}
+          name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
           files: Up/*
       - name: Upload Zip
@@ -126,7 +126,7 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VS }}
+          name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
           files: Up/*
       - name: Upload Zip
@@ -174,7 +174,7 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VS }}
+          name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
           files: Up/*
       - name: Upload Zip
