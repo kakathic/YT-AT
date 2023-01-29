@@ -23,6 +23,7 @@ jobs:
           # kakathic
           if [ -z "$VERSION" ]
           then
+          VERSION=Auto
           SHORTS=true
           TYPE=true
           ROUND=true
@@ -62,6 +63,7 @@ jobs:
           # kakathic
           if [ -z "$VERSION" ]
           then
+          VERSION=Auto
           SHORTS=true
           TYPE=false
           ROUND=true
@@ -109,6 +111,7 @@ jobs:
           # kakathic
           if [ -z "$VERSION" ]
           then
+          VERSION=Auto
           SHORTS=true
           TYPE=true
           ROUND=true
@@ -148,6 +151,7 @@ jobs:
           # kakathic
           if [ -z "$VERSION" ]
           then
+          VERSION=Auto
           SHORTS=true
           TYPE=false
           ROUND=true
