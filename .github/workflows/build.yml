@@ -206,3 +206,8 @@ jobs:
           name: YT-AT ${{ env.VS }}
           tag_name: V${{ env.VS }}
           files: Up/*
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: YT-AT ${{ env.VS }}
+          path: Up/*
