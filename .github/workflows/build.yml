@@ -70,8 +70,17 @@ jobs:
           SHORTS: ${{ inputs.SHORTS }}
         run: |
           # kakathic
-          if [ -z "$VERSION" ];then
-          SHORTS=true; TYPE=true; ROUND=true; FEATURE=""; AMOLED=true; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
+          if [ -z "$VERSION" ]
+          then
+          SHORTS=true
+          TYPE=true
+          ROUND=true
+          FEATURE=""
+          AMOLED=true
+          ICONS=true
+          OPTIMIZATION=true
+          DEVICE='arm64-v8a'
+          VERSION='Default'
           fi
           . .github/install.sh
       - name: Upload File
@@ -109,8 +118,17 @@ jobs:
           SHORTS: ${{ inputs.SHORTS }}
         run: |
           # kakathic
-          if [ -z "$VERSION" ];then
-          SHORTS=true; TYPE=false; ROUND=true; FEATURE=""; AMOLED=true; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
+          if [ -z "$VERSION" ]
+          then
+          SHORTS=true
+          TYPE=false
+          ROUND=true
+          FEATURE=""
+          AMOLED=true
+          ICONS=true
+          OPTIMIZATION=true
+          DEVICE='arm64-v8a'
+          VERSION='Default'
           fi
           . .github/install.sh
       - name: Upload json
@@ -156,8 +174,17 @@ jobs:
           SHORTS: ${{ inputs.SHORTS }}
         run: |
           # kakathic
-          if [ -z "$VERSION" ];then
-          SHORTS=true; TYPE=true; ROUND=true; FEATURE=""; AMOLED=false; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
+          if [ -z "$VERSION" ]
+          then
+          SHORTS=true
+          TYPE=true
+          ROUND=true
+          FEATURE=""
+          AMOLED=false
+          ICONS=true
+          OPTIMIZATION=true
+          DEVICE='arm64-v8a'
+          VERSION='Default'
           fi
           . .github/install.sh
       - name: Upload File
@@ -195,8 +222,17 @@ jobs:
           SHORTS: ${{ inputs.SHORTS }}
         run: |
           # kakathic
-          if [ -z "$VERSION" ];then
-          SHORTS=true; TYPE=false; ROUND=true; FEATURE=""; AMOLED=false; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
+          if [ -z "$VERSION" ]
+          then
+          SHORTS=true
+          TYPE=false
+          ROUND=true
+          FEATURE=""
+          AMOLED=false
+          ICONS=true
+          OPTIMIZATION=true
+          DEVICE='arm64-v8a'
+          VERSION='Default'
           fi
           . .github/install.sh
       - name: Upload json
