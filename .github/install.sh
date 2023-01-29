@@ -175,11 +175,12 @@ versionCode='${VERSION//./}'
 updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
 
 # Xử lý revanced patches
-if [ "$Vidon" != "$VERSION" ];then
+Vid2="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 hide-create-button | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
+if [ "$Vid2" != "$VERSION" ];then
 unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
-for vak in $(grep -Rl "$Vidon" $Likk/Pak); do
+for vak in $(grep -Rl "$Vid2" $Likk/Pak); do
 cp -rf $vak $Likk/tmp/test
-XHex "$Likk/tmp/test" | sed -e "s/$(echo -n "$Vidon" | XHex)/$(echo -n "$VERSION" | XHex)/" | ZHex > $vak
+XHex "$Likk/tmp/test" | sed -e "s/$(echo -n "$Vid2" | XHex)/$(echo -n "$VERSION" | XHex)/" | ZHex > $vak
 done
 cd $Likk/Pak
 zip -qr "$Likk/lib/revanced-patches.jar" *
