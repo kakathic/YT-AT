@@ -92,7 +92,8 @@ fi
 [ "$(file $Likk/lib/revanced-integrations.apk | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-integrations.apk" || echo "Download failed: revanced-integrations.apk"
 
 # Phiên bản Youtube
-Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 hide-create-button | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
+Vidon="$(Xem "https://www.apkmirror.com/apk/google-inc/youtube" | grep -m1 'h5 title="YouTube' | tr '\"' '\n' | grep -m1 'YouTube ' | awk '{print $2}')"
+[ "$Vidon" ] || Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 hide-create-button | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
 if [ "$VERSION" == "Default" ];then
 VERSION="$Vidon"
 echo "VS=$Vidon" >> $GITHUB_ENV
