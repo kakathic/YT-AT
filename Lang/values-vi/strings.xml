@@ -524,4 +524,16 @@
 <string name="revanced_debug_toast_on_error_summary_on" public="false">Thông báo ngắn được hiện nếu xảy ra lỗi</string>
 <string name="revanced_debug_toast_on_error_summary_off" public="false">Thông báo ngắn không hiện nếu xảy ra lỗi</string>
   
+<string name="revanced_spoof_app_version_title" public="false">Giả mạo phiên bản ứng dụng</string>
+<string name="revanced_spoof_app_version_summary_on" public="false">Phiên bản giả mạo thành 17.30.34. Nếu tắt, bố cục giao diện người dùng cũ có thể vẫn tồn tại cho đến khi đăng xuất hoặc xóa dữ liệu ứng dụng</string>
+<string name="revanced_spoof_app_version_summary_off" public="false">Phiên bản không giả mạo</string>
+  
+<string name="revanced_auto_repeat_enabled_title" public="false">Bật tự động lặp lại</string>
+<string name="revanced_auto_repeat_summary_on" public="false">Đã bật</string>
+<string name="revanced_auto_repeat_summary_off" public="false">Đang tắt</string>
+  
+<string name="revanced_remember_playback_rate_last_selected_title" public="false">Nhớ thay đổi tốc độ phát lại</string>
+<string name="revanced_remember_playback_rate_last_selected_summary_on" public="false">Đang áp dụng cho tất cả các video</string>
+<string name="revanced_remember_playback_rate_last_selected_summary_off" public="false">Chỉ áp dụng cho video hiện tại</string>
+  
 </resources>
