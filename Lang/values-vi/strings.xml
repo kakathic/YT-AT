@@ -470,13 +470,13 @@
 <string name="revanced_disable_zoom_haptics_summary_on" public="false">Đã tắt</string>
 <string name="revanced_disable_zoom_haptics_summary_off" public="false">Đang bật</string>
 
-<string name="revanced_debug_enabled_title" public="false">Bật nhật ký gỡ lỗi</string>
+<string name="revanced_debug_enabled_title" public="false">Nhật ký gỡ lỗi</string>
 <string name="revanced_debug_summary_on" public="false">Đang bật</string>
 <string name="revanced_debug_summary_off" public="false">Đã tắt</string>
 
-<string name="revanced_debug_stacktrace_enabled_title" public="false">Hiển thị stack trace</string>
-<string name="revanced_debug_stacktrace_summary_on" public="false">Đang hiện</string>
-<string name="revanced_debug_stacktrace_summary_off" public="false">Đã tắt</string>
+<string name="revanced_debug_stacktrace_enabled_title" public="false">Nhật ký stack trace</string>
+<string name="revanced_debug_stacktrace_summary_on" public="false">Nhật ký gỡ lỗi bao gồm stack trace</string>
+<string name="revanced_debug_stacktrace_summary_off" public="false">Nhật ký gỡ lỗi không bao gồm stack trace</string>
 
 <string name="revanced_debug_summary" public="false">Bật hoặc tắt tùy chọn gỡ lỗi</string>
 
@@ -513,4 +513,15 @@
 <string name="revanced_copy_video_url_timestamp_enabled_title" public="false">Hiển thị nút url dấu thời gian sao chép</string>
 <string name="revanced_copy_video_url_title" public="false">Sao chép cài đặt url video</string>
 
+<string name="revanced_enable_external_browser_title" public="false">Mở liên kết trong trình duyệt</string>
+<string name="revanced_enable_external_browser_summary_on" public="false">Mở liên kết bên ngoài</string>
+<string name="revanced_enable_external_browser_summary_off" public="false">Mở liên kết trong ứng dụng</string>
+  
+<string name="microg_not_installed_warning" public="false">Vanced MicroG chưa được cài đặt. Vui lòng cài đặt nó.</string>
+<string name="microg_not_running_warning" public="false">Vanced MicroG không chạy được. Vui lòng làm theo hướng dẫn "Không tắt ứng dụng của tôi" cho Vanced MicroG.</string>
+  
+<string name="revanced_debug_toast_on_error_enabled_title" public="false">Hiển thị thông báo ngắn khi ReVanced lỗi</string>
+<string name="revanced_debug_toast_on_error_summary_on" public="false">Thông báo ngắn được hiện nếu xảy ra lỗi</string>
+<string name="revanced_debug_toast_on_error_summary_off" public="false">Thông báo ngắn không hiện nếu xảy ra lỗi</string>
+  
 </resources>
