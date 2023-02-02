@@ -40,6 +40,7 @@ jobs:
           name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
           files: Up/*
+          prerelease: true
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
@@ -87,6 +88,7 @@ jobs:
           name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
           files: Up/*
+          prerelease: true
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
@@ -126,6 +128,7 @@ jobs:
           name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
           files: Up/*
+          prerelease: true
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
@@ -173,6 +176,7 @@ jobs:
           name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
           files: Up/*
+          prerelease: true
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
