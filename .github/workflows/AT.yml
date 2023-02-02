@@ -1,4 +1,4 @@
-name: Zzz Auto Build REvanced
+name: YT-AT
 on:
   push:
     paths:
