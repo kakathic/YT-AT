@@ -177,10 +177,17 @@ for vakl in $FEATURE; do
 echo -n "-e $vakl " >> $Likk/logk
 done
 
+if [ "$VERSION" != "Auto" ];then
 echo '
 version='$VERSION'
 versionCode='${VERSION//./}'
 updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
+else
+echo '
+version='$VERSION'
+versionCode='${VERSION//./}'
+' >> $Likk/Module/module.prop
+fi
 
 # Xử lý revanced patches
 Vid2="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 hide-create-button | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
@@ -209,12 +216,15 @@ cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
 zip -q -r "$Likk/Up/YT-Magisk-$VERSION-$ach$amoled2.Zip" *
+if [ "$VERSION" != "Auto" ];then
 echo '{
 "version": "'$VERSION'",
 "versionCode": "'${VERSION//./}'",
 "zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$Vidon'/YT-Magisk-'$VERSION'-'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
-}' > $Likk/Up-$ach$amoled2.json 
+}' > $Likk/Up-$ach$amoled2.json
+fi
+
 echo > $Likk/done.txt ) & cpnn
 else
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) >> 123.txt 2>> 123.txt
