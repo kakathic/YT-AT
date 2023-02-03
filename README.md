@@ -2,6 +2,8 @@
 
 - YouTube mod tool automatically
 
+- [![Zzz Auto Build REvanced](https://github.com/kakathic/YT-AT/actions/workflows/AT.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/AT.yml)
+
 **Use Revanced cli**
 ---
 
