@@ -104,6 +104,7 @@ elif [ "$VERSION" == "Auto" ];then
 Vidon="$(Xem "https://www.apkmirror.com/apk/google-inc/youtube" | grep -m1 'h5 title="YouTube' | tr '\"' '\n' | grep -m1 'YouTube ' | awk '{print $2}')"
 [ "$Vidon" ] || Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 hide-create-button | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
 VERSION="$Vidon"
+KEVS=1
 echo "VS=$Vidon" >> $GITHUB_ENV
 else
 echo "VS=$VERSION" >> $GITHUB_ENV
@@ -177,7 +178,7 @@ for vakl in $FEATURE; do
 echo -n "-e $vakl " >> $Likk/logk
 done
 
-if [ "$VERSION" != "Auto" ];then
+if [ "$KEVS" != 1 ];then
 echo '
 version='$VERSION'
 versionCode='${VERSION//./}'
@@ -216,7 +217,7 @@ cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
 cd $Likk/Module
 zip -q -r "$Likk/Up/YT-Magisk-$VERSION-$ach$amoled2.Zip" *
-if [ "$VERSION" != "Auto" ];then
+if [ "$KEVS" != 1 ];then
 echo '{
 "version": "'$VERSION'",
 "versionCode": "'${VERSION//./}'",
