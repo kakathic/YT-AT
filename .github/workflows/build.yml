@@ -40,6 +40,9 @@ on:
         required: false
         type: boolean
         default: true
+permissions:
+  contents: write
+  discussions: write
 jobs:
   build1:
     name: 'NO ROOT...'
