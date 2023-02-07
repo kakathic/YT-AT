@@ -50,7 +50,7 @@ jobs:
   build2:
     name: 'ROOT...'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -98,7 +98,7 @@ jobs:
   build3:
     name: 'AMOLED NO ROOT...'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -138,7 +138,7 @@ jobs:
   build4:
     name: 'AMOLED ROOT...'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
