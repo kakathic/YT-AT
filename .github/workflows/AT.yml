@@ -6,9 +6,7 @@ on:
       - '.github/**'
   schedule:
     - cron: '30 23 * * *'
-permissions:
-  contents: write
-  discussions: write
+permissions: write-all
 jobs:
   build1:
     name: 'NO ROOT...'
