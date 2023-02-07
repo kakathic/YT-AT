@@ -1,5 +1,8 @@
 name: Zzz Auto Build REvanced
 on:
+  permissions:
+    contents: write
+    discussions: write
   push:
     paths:
       - 'Lang/**'
