@@ -86,7 +86,8 @@ Vdbbd="$(Xem https://github.com/revanced/revanced-integrations | grep -m1 'revan
 Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/revanced-integrations-${Vdbbd##*/}.apk" "$Likk/lib/revanced-integrations.apk"       
 
 if [ "$(file $Likk/lib/revanced-integrations.apk | grep -cm1 "Zip archive")" != 1 ];then
-Taive "https://github.com/revanced/revanced-integrations/releases/download/v0.91.1/revanced-integrations-0.91.0.apk" "$Likk/lib/revanced-integrations.apk"
+echo "Fix Apk"
+Taive "https://github.com/revanced/revanced-integrations/releases/download/v0.95.0/revanced-integrations-0.95.0.apk" "$Likk/lib/revanced-integrations.apk"
 fi
 fi
 
