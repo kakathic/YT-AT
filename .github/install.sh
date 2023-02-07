@@ -205,6 +205,8 @@ fi
 #java -jar $Likk/.github/Tools/res-simplify-1.0.3-all.jar --in $Likk/lib/YouTube.apk --out $Likk/lib/YouTube2.apk
 #cp -rf $Likk/lib/YouTube2.apk $Likk/lib/YouTube.apk
 
+java -jar $Likk/lib/revanced-cli.jar --help
+
 # Xây dựng 
 echo "
 - Build...
