@@ -1,14 +1,14 @@
 name: Zzz Auto Build REvanced
 on:
-  permissions:
-    contents: write
-    discussions: write
   push:
     paths:
       - 'Lang/**'
       - '.github/**'
   schedule:
     - cron: '30 23 * * *'
+permissions:
+  contents: write
+  discussions: write
 jobs:
   build1:
     name: 'NO ROOT...'
