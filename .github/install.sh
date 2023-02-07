@@ -203,7 +203,7 @@ fi
 
 #java -jar $Likk/.github/Tools/res-simplify-1.0.3-all.jar --in $Likk/lib/YouTube.apk --out $Likk/lib/YouTube2.apk
 #cp -rf $Likk/lib/YouTube2.apk $Likk/lib/YouTube.apk
-java --help
+
 # Xây dựng 
 echo "
 - Build...
@@ -225,8 +225,10 @@ echo '{
 }' > $Likk/Up-$ach$amoled2.json
 fi
 
+echo 1
 echo > $Likk/done.txt ) & cpnn
 else
+echo 1
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) >> 123.txt 2>> 123.txt
 sed '/WARNING: warn: removing resource/d' 123.txt
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/apk/YouTube.apk" || zipalign -f 4 "$Likk/YouT.apk" "$Likk/apk/YouTube.apk"
