@@ -21,7 +21,8 @@ for sksb in $Likk/Nn/res/*; do
 [ "$(file $sksb | grep -cm1 directory)" == 1 ] || rm -rf $sksb
 done
 apktool b -q -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
-zipalign -f 4 "$Likk/Nn.apk" "$1"
+apksign "$Likk/Nn.apk" "$Likk/Nn2.apk" 
+zipalign -f 4 "$Likk/Nn2.apk" "$1"
 }
 
 cpnn(){
