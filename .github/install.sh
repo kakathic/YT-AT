@@ -217,8 +217,6 @@ sed '/WARNING: warn: removing resource/d' 123.txt
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk" || zipalign -f 4 "$Likk/YouT.apk" "$Likk/Tav/YouTube.apk"
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
-cd $Likk/Module
-zip -q -r "$Likk/Up/YT-Magisk-$VERSION-$ach$amoled2.Zip" *
 if [ "$KEVS" != 1 ];then
 echo '{
 "version": "'$VERSION'",
@@ -240,6 +238,8 @@ fi
 done
 " >> $Likk/Module/common/service.sh
 fi
+cd $Likk/Module
+zip -q -r "$Likk/Up/YT-Magisk-$VERSION-$ach$amoled2.Zip" *
 echo > $Likk/done.txt ) & cpnn
 
 else
