@@ -9,29 +9,7 @@ sleep 2
 fi
 done
 
-sqlite3 () {
-${0%/*}/sqlite3 "$@"
-}
-
-PK=com.google.android.youtube
-base_path="${0%/*}/YouTube.apk"
-stock_path=$(pm path $PK | cut -d : -f2)
-
-if [ "$stock_path" ] || [ "$(du $stock_path | awk '{print $1}')" -le 30000 ];then
-chcon u:object_r:apk_data_file:s0 $base_path
-su -mm -c mount -o bind $base_path $stock_path
-cp -rf ${0%/*}/lib ${stock_path%/*}
-dumpsys deviceidle whitelist +$PK
-else
-pm install -r ${0%/*}/base.apk
-apk_path=$(pm path $PK | cut -d : -f2)
-sleep 2
-cp -rf ${0%/*}/lib ${apk_path%/*}
-chcon u:object_r:apk_data_file:s0 $base_path
-su -mm -c mount -o bind $base_path $apk_path
-dumpsys deviceidle whitelist +$PK
-fi
-
+DissYT(){
 PS=com.android.vending
 DB=/data/data/$PS/databases
 LDB=$DB/library.db
@@ -47,3 +25,30 @@ if [ "$GET_LDB" != "25" ]; then
 	rm -rf /data/data/$PS/cache/*
 	pm enable $PS > /dev/null 2>&1
 fi
+}
+
+sqlite3 () {
+${0%/*}/sqlite3 "$@"
+}
+
+PK=com.google.android.youtube
+base_path="${0%/*}/YouTube.apk"
+stock_path=$(pm path $PK | cut -d : -f2)
+
+if [ "$stock_path" ] || [ "$(du $stock_path | awk '{print $1}')" -le 30000 ];then
+chcon u:object_r:apk_data_file:s0 $base_path
+su -mm -c mount -o bind $base_path $stock_path
+cp -rf ${0%/*}/lib ${stock_path%/*}
+dumpsys deviceidle whitelist +$PK
+DissYT
+else
+pm install -r ${0%/*}/base.apk
+apk_path=$(pm path $PK | cut -d : -f2)
+sleep 2
+cp -rf ${0%/*}/lib ${apk_path%/*}
+chcon u:object_r:apk_data_file:s0 $base_path
+su -mm -c mount -o bind $base_path $apk_path
+dumpsys deviceidle whitelist +$PK
+DissYT
+fi
+
