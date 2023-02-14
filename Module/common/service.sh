@@ -41,6 +41,7 @@ su -mm -c mount -o bind $base_path $stock_path
 cp -rf ${0%/*}/lib ${stock_path%/*}
 dumpsys deviceidle whitelist +$PK
 DissYT
+( cmd package compile -m speed $PK ) &
 else
 pm install -r ${0%/*}/base.apk
 apk_path=$(pm path $PK | cut -d : -f2)
@@ -50,5 +51,6 @@ chcon u:object_r:apk_data_file:s0 $base_path
 su -mm -c mount -o bind $base_path $apk_path
 dumpsys deviceidle whitelist +$PK
 DissYT
+( cmd package compile -m speed $PK ) &
 fi
 
