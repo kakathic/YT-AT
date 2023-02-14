@@ -17,19 +17,19 @@ PK=com.google.android.youtube
 base_path="${0%/*}/YouTube.apk"
 stock_path=$(pm path $PK | cut -d : -f2)
 
-if [ "$stock_path" ];then
+if [ "$stock_path" ] || [ "$(du $stock_path | awk '{print $1}')" -le 30000 ];then
 chcon u:object_r:apk_data_file:s0 $base_path
-mount -o bind $base_path $stock_path
+su -mm -c mount -o bind $base_path $stock_path
 cp -rf ${0%/*}/lib ${stock_path%/*}
-cmd package compile -m speed $PK
+dumpsys deviceidle whitelist +$PK
 else
 pm install -r ${0%/*}/base.apk
 apk_path=$(pm path $PK | cut -d : -f2)
 sleep 2
 cp -rf ${0%/*}/lib ${apk_path%/*}
 chcon u:object_r:apk_data_file:s0 $base_path
-mount -o bind $base_path $apk_path
-cmd package compile -m speed $PK
+su -mm -c mount -o bind $base_path $apk_path
+dumpsys deviceidle whitelist +$PK
 fi
 
 PS=com.android.vending
