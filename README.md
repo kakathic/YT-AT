@@ -62,7 +62,7 @@
 
 - I'm just the author of this github automation tool.
 
-  > [Paypal](http://paypal.me/kakathic)
+  > [☕ Donate](http://paypal.me/kakathic)
 
 **Instructions**
 ---
