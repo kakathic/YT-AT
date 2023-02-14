@@ -1,6 +1,10 @@
 **Notes**
 ---
 
+> 14.02.2023
+
++ Thêm tính năng tự động update nếu có bản mới mỗi khi khởi động lại. 
+
 > 29.01.2023
 
 + Add auto build REYouTube daily 
