@@ -232,7 +232,7 @@ if [ \"\$Pbyt\" ] && [ \"\$Pbyt\" != \"\$(grep -m1 'version=' \${0%/*}/module.pr
 curl -sL \"https://github.com/kakathic/YT-AT/releases/download/V\$Pbyt/YT-Magisk-\$Pbyt-$ach$amoled2.Zip\" -o \${0%/*}/YouTube.zip
 magisk --install-module \${0%/*}/YouTube.zip
 cp -rf /data/adb/modules_update/YouTube /data/adb/modules
-rm -fr /data/adb/modules/YouTube /data/adb/modules/YouTube/update
+rm -fr /data/adb/modules_update/YouTube /data/adb/modules/YouTube/update
 DissYT
 ( cmd package compile -m speed \$PK ) &
 break
