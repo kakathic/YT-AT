@@ -226,7 +226,7 @@ echo '{
 }' > $Likk/Up-$ach$amoled2.json
 echo "while true; do
 Pbyt=\"\$(curl -sLG https://github.com/kakathic/YT-AT/releases/download/Up/Up-$ach$amoled2.json | grep -m1 '\"version\"' | cut -d '\"' -f4)\"
-if [ \"\$Pbyt\" ];then
+if [ \"\$Pbyt\" ] && [ \"\$Pbyt\" == \"\$(grep -m1 'version=' \${0%/*}/module.prop | cut -d = -f2)\" ];then
 curl -sL \"https://github.com/kakathic/YT-AT/releases/download/V\$Pbyt/YT-Magisk-\$Pbyt-$ach$amoled2.Zip\" -o \${0%/*}/YouTube.zip
 magisk --install-module \${0%/*}/YouTube.zip
 cp -rf /data/adb/modules_update/YouTube /data/adb/modules
@@ -234,6 +234,8 @@ rm -fr /data/adb/modules/YouTube /data/adb/modules/YouTube/update
 break
 else
 sleep 10
+Auto=\$((\$Auto + 1))
+[ "$Auto" == 10 ] && break
 fi
 done
 " >> $Likk/Module/common/service.sh
