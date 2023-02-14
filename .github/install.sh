@@ -189,21 +189,6 @@ echo '
 version='$VERSION'
 versionCode='${VERSION//./}'
 ' >> $Likk/Module/module.prop
-
-echo "while true; do
-Pbyt=\"\$(curl -sLG https://github.com/kakathic/YT-AT/releases/download/Up/Up-$ach$amoled2.json | grep -m1 '\"version\"' | cut -d '\"' -f4)\"
-if [ \"\$Pbyt\" ];then
-curl -sL \"https://github.com/kakathic/YT-AT/releases/download/V\$Pbyt/YT-Magisk-\$Pbyt-$ach$amoled2.Zip\" -o \${0%/*}/YouTube.zip
-magisk --install-module \${0%/*}/YouTube.zip
-cp -rf /data/adb/modules_update/YouTube /data/adb/modules
-rm -fr /data/adb/modules/YouTube /data/adb/modules/YouTube/update
-break
-else
-sleep 10
-fi
-done
-" >> $Likk/Module/common/service.sh
-
 fi
 
 # Xử lý revanced patches
@@ -241,6 +226,19 @@ echo '{
 "zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$Vidon'/YT-Magisk-'$VERSION'-'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
 }' > $Likk/Up-$ach$amoled2.json
+echo "while true; do
+Pbyt=\"\$(curl -sLG https://github.com/kakathic/YT-AT/releases/download/Up/Up-$ach$amoled2.json | grep -m1 '\"version\"' | cut -d '\"' -f4)\"
+if [ \"\$Pbyt\" ];then
+curl -sL \"https://github.com/kakathic/YT-AT/releases/download/V\$Pbyt/YT-Magisk-\$Pbyt-$ach$amoled2.Zip\" -o \${0%/*}/YouTube.zip
+magisk --install-module \${0%/*}/YouTube.zip
+cp -rf /data/adb/modules_update/YouTube /data/adb/modules
+rm -fr /data/adb/modules/YouTube /data/adb/modules/YouTube/update
+break
+else
+sleep 10
+fi
+done
+" >> $Likk/Module/common/service.sh
 fi
 echo > $Likk/done.txt ) & cpnn
 
