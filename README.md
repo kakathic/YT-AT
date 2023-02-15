@@ -1,6 +1,6 @@
 # YT-AT [![YT-AT](https://github.com/kakathic/YT-AT/actions/workflows/build.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/build.yml)
 
-- YouTube mod tool automatically
+- YouTube mod tool auto, and auto update.
 
 **Use Revanced cli**
 ---
@@ -17,10 +17,12 @@
 
    > [Apkmirror](https://www.apkmirror.com/apk/google-inc/youtube/)
 
-**Build by yourself**
+**Build YouTube**
 ---
 
-- [Instructions](./Auto.md)
+- You can build your own version with models suitable for your machine. 
+
+   > [Instructions](./Auto.md)
 
 **Microg**
 ---
