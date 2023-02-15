@@ -20,7 +20,7 @@
 **Build by yourself**
 ---
 
-- [See the instructions](./Auto.md)
+- [Instructions](./Auto.md)
 
 **Microg**
 ---
