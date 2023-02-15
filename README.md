@@ -66,4 +66,5 @@
 
   > [☕ Donate](http://paypal.me/kakathic)
 
-> Good luck!
+**Good luck!**
+---
