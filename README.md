@@ -46,6 +46,15 @@
 
    > [SnapTube](https://www.snaptubeapp.com)
 
+**Language Contribution**
+---
+
+- I don't know many languages, you can contribute languages ​​at the link below.
+
+   > [Language](./Lang)
+
+- Or submit the language file to the issue.
+
 **Support**
 ---
 
