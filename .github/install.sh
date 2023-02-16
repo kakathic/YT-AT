@@ -227,7 +227,7 @@ echo '{
 }' > $Likk/Up-$ach$amoled2.json
 
 echo 'while true; do
-Pbyt="$(curl -sLG https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$ach$amoled2'.json | grep -m1 \'"versionCode"\' | cut -d \'"\' -f4)"
+Pbyt="$(curl -sLG https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$ach$amoled2'.json | grep -m1 \"versionCode\" | cut -d \" -f4)"
 if [ "$Pbyt" ] && [ "$Pbyt" -gt "$(grep -m1 "versionCode=" ${0%/*}/module.prop | cut -d = -f2)" ];then
 curl -sL "https://github.com/kakathic/YT-AT/releases/download/V$Pbyt/YT-Magisk-$Pbyt-$ach$amoled2.Zip" -o ${0%/*}/YouTube.zip
 if [ -e ${0%/*}/YouTube.zip ];then
