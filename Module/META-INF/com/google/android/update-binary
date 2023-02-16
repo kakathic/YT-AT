@@ -30,6 +30,4 @@ mount /data 2>/dev/null
 [ $MAGISK_VER_CODE -lt 20400 ] && require_new_magisk
 
 install_module
-sleep 1
-[ "$(pm path com.google.android.youtube)" ] && am start com.google.android.youtube >&2 || am start com.topjohnwu.magisk/.ui.MainActivity >&2
 exit 0
