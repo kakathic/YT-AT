@@ -200,9 +200,9 @@
 <string name="revanced_adremover_hide_suggestions_enabled_summary_on" public="false">Đã tắt</string>
 <string name="revanced_adremover_hide_suggestions_enabled_title" public="false">Ẩn đề xuất</string>
 
-<string name="revanced_adremover_info_panel_enabled_summary_off" public="false">Đã bật</string>
-<string name="revanced_adremover_info_panel_enabled_summary_on" public="false">Đã tắt</string>
-<string name="revanced_adremover_info_panel_enabled_title" public="false">Xóa bảng thông tin</string>
+<string name="revanced_adremover_info_panel_enabled_summary_off" public="false">Đã ẩn</string>
+<string name="revanced_adremover_info_panel_enabled_summary_on" public="false">Đang hiện</string>
+<string name="revanced_adremover_info_panel_enabled_title" public="false">Ẩn bảng thông tin</string>
 
 <string name="revanced_adremover_medical_panel_enabled_summary_off" public="false">Đã bật</string>
 <string name="revanced_adremover_medical_panel_enabled_summary_on" public="false">Đã tắt</string>
@@ -314,8 +314,8 @@
 <string name="revanced_swipe_volume_summary_on" public="false">Đã bật</string>
 
 <string name="revanced_tablet_miniplayer_summary_off" public="false">Đã tắt</string>
-<string name="revanced_tablet_miniplayer_summary_on" public="false">Đã bật</string>
-<string name="revanced_tablet_miniplayer_title" public="false">Trình phát thu nhỏ máy tính bảng</string>
+<string name="revanced_tablet_miniplayer_summary_on" public="false">Đang bật</string>
+<string name="revanced_tablet_miniplayer_title" public="false">Bật trình phát thu nhỏ máy tính bảng</string>
 
 <string name="revanced_video_ads_removal_summary_off" public="false">Đã bật</string>
 <string name="revanced_video_ads_removal_summary_on" public="false">Đã tắt</string>
@@ -325,9 +325,9 @@
 <string name="revanced_wide_searchbar_summary_off" public="false">Đã tắt</string>
 <string name="revanced_wide_searchbar_summary_on" public="false">Đã bật</string>
 
-<string name="revanced_autocaptions_enabled_title">Phụ đề tự động</string>
+<string name="revanced_autocaptions_enabled_title">Tắt phụ đề tự động</string>
 <string name="revanced_autocaptions_summary_on">Đã tắt</string>
-<string name="revanced_autocaptions_summary_off">Đã bật</string>
+<string name="revanced_autocaptions_summary_off">Đang bật</string>
 
 <string name="sb_settings" public="false">Sponsorblock</string>
 
@@ -415,7 +415,7 @@
 <string name="revanced_hide_shorts_comments_button_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_shorts_comments_button_off" public="false">Đang hiện</string>
 
-<string name="revanced_hide_watch_in_vr_title" public="false">Ẩn Xem trong VR</string>
+<string name="revanced_hide_watch_in_vr_title" public="false">Ẩn cài đặt VR</string>
 <string name="revanced_hide_watch_in_vr_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_watch_in_vr_summary_off" public="false">Đang hiện</string>
 
@@ -430,10 +430,6 @@
 <string name="revanced_hide_infocards_title" public="false">Ẩn thẻ thông tin</string>
 <string name="revanced_hide_infocards_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_infocards_summary_off" public="false">Đang hiện</string>
-
-<string name="revanced_uri_redirect_title" public="false">Mở liên kết YouTube bên trong ứng dụng</string>
-<string name="revanced_uri_redirect_summary_on" public="false">Liên kết được mở bên trong YouTube ReVanced</string>
-<string name="revanced_uri_redirect_summary_off" public="false">Liên kết được mở trong trình duyệt web</string>
 
 <string name="revanced_adremover_shorts_enabled_title" public="false">Loại bỏ short</string>
 <string name="revanced_adremover_shorts_enabled_summary_on" public="false">Đã ẩn</string>
@@ -539,5 +535,20 @@
 <string name="revanced_hide_player_buttons_summary_off" public="false">Đang hiện</string>
 <string name="revanced_hide_player_buttons_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_player_buttons_title" public="false">Ẩn các nút video trước đó và tiếp theo</string>
+  
+<string name="revanced_adremover_view_products_title" public="false">Ẩn banner để xem sản phẩm</string>
+<string name="revanced_adremover_view_products_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_adremover_view_products_summary_off" public="false">Đang hiện</string>
+  
+<string name="revanced_adremover_web_search_result_panel_title" public="false">Ẩn kết quả tìm kiếm trên web</string>
+<string name="revanced_adremover_web_search_result_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_adremover_web_search_result_summary_off" public="false">Đang hiện</string>
+  
+<string name="revanced_horizontal_video_shelf_title" public="false">Ẩn kệ video ngang</string>
+<string name="revanced_horizontal_video_shelf_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_horizontal_video_shelf_summary_off" public="false">Đang hiện</string>
 
+<string name="revanced_hide_channel_bar_title" public="false">Ẩn thanh kênh</string>
+<string name="revanced_hide_channel_bar_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_channel_bar_summary_off" public="false">Đang hiện</string>
 </resources>
