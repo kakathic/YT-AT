@@ -551,4 +551,20 @@
 <string name="revanced_hide_channel_bar_title" public="false">Ẩn thanh kênh</string>
 <string name="revanced_hide_channel_bar_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_channel_bar_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_artist_cards_title" public="false">Ẩn thẻ nghệ sĩ</string>
+<string name="revanced_hide_artist_cards_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_artist_cards_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_seekbar_title" public="false">Ẩn thanh tìm kiếm</string>
+<string name="revanced_hide_seekbar_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_seekbar_summary_off" public="false">Đang hiện</string>
+  
+<string name="revanced_hide_time_title" public="false">Ẩn thời gian</string>
+<string name="revanced_hide_time_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_time_summary_off" public="false">Đang hiện</string>
+  
+<string name="revanced_uri_redirect_title" public="false">Bỏ qua chuyển hướng URL</string>
+<string name="revanced_uri_redirect_summary_on" public="false">Đang bỏ qua</string>
+<string name="revanced_uri_redirect_summary_off" public="false">Theo chính sách chuyển hướng mặc định</string>
 </resources>
