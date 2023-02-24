@@ -563,8 +563,12 @@
 <string name="revanced_hide_time_title" public="false">Ẩn thời gian</string>
 <string name="revanced_hide_time_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_time_summary_off" public="false">Đang hiện</string>
+    
+<string name="revanced_hide_quick_actions_title" public="false">Ẩn hành động nhanh ở toàn màn hình</string>
+<string name="revanced_hide_quick_actions_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_quick_actions_summary_off" public="false">Đang hiện</string>
   
-<string name="revanced_uri_redirect_title" public="false">Bỏ qua chuyển hướng URL</string>
-<string name="revanced_uri_redirect_summary_on" public="false">Đang bỏ qua</string>
-<string name="revanced_uri_redirect_summary_off" public="false">Theo chính sách chuyển hướng mặc định</string>
+<string name="revanced_hide_related_videos_title" public="false">Ẩn video liên quan trong hành động nhanh</string>
+<string name="revanced_hide_related_videos_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_related_videos_summary_off" public="false">Đang hiện</string>
 </resources>
