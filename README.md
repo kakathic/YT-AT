@@ -64,7 +64,7 @@
 
 - I'm just the author of this github automation tool.
 
-  > [☕ Donate](http://paypal.me/kakathic)
+  > [☕ Buy Me a Coffee](http://paypal.me/kakathic)
 
 **Good luck!**
 ---
