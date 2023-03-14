@@ -25,11 +25,6 @@ on:
         required: false
         type: boolean
         default: true
-      OPTIMIZATION:
-        description: 'Video loaded speed'
-        required: false
-        type: boolean
-        default: true
       SHORTS:
         description: 'Show button shorts video'
         required: false
@@ -57,7 +52,6 @@ jobs:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
           ICONS: ${{ inputs.ICONS }}
-          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
           AMOLED: 'true'
           FEATURE: ${{ inputs.FEATURE }}
           ROUND: ${{ inputs.ROUND }}
@@ -93,7 +87,6 @@ jobs:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
           ICONS: ${{ inputs.ICONS }}
-          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
           AMOLED: 'true'
           FEATURE: ${{ inputs.FEATURE }}
           ROUND: ${{ inputs.ROUND }}
@@ -137,7 +130,6 @@ jobs:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
           ICONS: ${{ inputs.ICONS }}
-          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
           AMOLED: 'false'
           FEATURE: ${{ inputs.FEATURE }}
           ROUND: ${{ inputs.ROUND }}
@@ -173,7 +165,6 @@ jobs:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
           ICONS: ${{ inputs.ICONS }}
-          OPTIMIZATION: ${{ inputs.OPTIMIZATION }}
           AMOLED: 'false'
           FEATURE: ${{ inputs.FEATURE }}
           ROUND: ${{ inputs.ROUND }}
