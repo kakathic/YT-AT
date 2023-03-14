@@ -27,6 +27,9 @@ zipalign -f 4 "$Likk/Nn2.apk" "$1"
 
 cpnn(){
 [ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4466 ] || exit 0
+for sksb in $Likk/tmp/res/*; do
+[ "$(file $sksb | grep -cm1 directory)" == 1 ] || rm -rf $sksb
+done
 while true; do
 [ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 kakksks2=$(($kakksks2 + 1))
