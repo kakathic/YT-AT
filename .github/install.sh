@@ -14,19 +14,9 @@ apksign () { java -jar $Likk/.github/Tools/apksigner.jar sign --cert "$Likk/.git
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 
-apktoolur(){
-apktool d -q -rs -m -f "$Likk/YouT.apk" -o "$Likk/Nn"
-rm -fr "$Likk/Nn"/assets/fonts/* "$Likk/Nn"/res/*.*
-for sksb in $Likk/Nn/res/*; do
-[ "$(file $sksb | grep -cm1 directory)" == 1 ] || rm -rf $sksb
-done
-apktool b -q -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
-apksign "$Likk/Nn.apk" "$Likk/Nn2.apk" 
-zipalign -f 4 "$Likk/Nn2.apk" "$1"
-}
-
 cpnn(){
 [ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4466 ] || exit 0
+rm -fr "$Likk/tmp"/res/*.*
 for sksb in $Likk/tmp/res/*; do
 [ "$(file $sksb | grep -cm1 directory)" == 1 ] || rm -rf $sksb
 done
