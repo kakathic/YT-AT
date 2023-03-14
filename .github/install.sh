@@ -99,12 +99,12 @@ fi
 
 # Phiên bản Youtube
 if [ "$VERSION" == "Default" ];then
-Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 hide-create-button | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
+Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 general-ads | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
 VERSION="$Vidon"
 echo "VS=$Vidon" >> $GITHUB_ENV
 elif [ "$VERSION" == "Auto" ];then
 Vidon="$(Xem "https://www.apkmirror.com/apk/google-inc/youtube" | grep -m1 'h5 title="YouTube' | tr '\"' '\n' | grep -m1 'YouTube ' | awk '{print $2}')"
-[ "$Vidon" ] || Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 hide-create-button | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
+[ "$Vidon" ] || Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions 2>/dev/null | grep -m1 general-ads | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
 VERSION="$Vidon"
 KEVS=1
 echo "VS=$Vidon" >> $GITHUB_ENV
