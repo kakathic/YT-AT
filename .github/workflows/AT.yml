@@ -30,7 +30,6 @@ jobs:
           FEATURE=""
           AMOLED=true
           ICONS=true
-          OPTIMIZATION=true
           DEVICE='arm64-v8a'
           VERSION='Default'
           fi
@@ -70,7 +69,6 @@ jobs:
           FEATURE=""
           AMOLED=true
           ICONS=true
-          OPTIMIZATION=true
           DEVICE='arm64-v8a'
           VERSION='Default'
           fi
@@ -118,7 +116,6 @@ jobs:
           FEATURE=""
           AMOLED=false
           ICONS=true
-          OPTIMIZATION=true
           DEVICE='arm64-v8a'
           VERSION='Default'
           fi
@@ -158,7 +155,6 @@ jobs:
           FEATURE=""
           AMOLED=false
           ICONS=true
-          OPTIMIZATION=true
           DEVICE='arm64-v8a'
           VERSION='Default'
           fi
