@@ -16,6 +16,7 @@ ZHex(){ xxd -r -p "$@"; }
 
 cpnn(){
 [ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4466 ] || exit 0
+sleep 5
 find $Likk/*/res/*.png
 rm -fr "$Likk/tmp"/res/*.*
 for sksb in $Likk/tmp/res/*; do
@@ -38,9 +39,6 @@ mkdir -p $Likk/tmp/res/${vakdll##*/}
 cp -rf $vakdll $Likk/tmp/res
 fi
 fi
-
-git add .
-git commit -m "Uploaded"
 
 done
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
