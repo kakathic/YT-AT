@@ -17,7 +17,7 @@ ZHex(){ xxd -r -p "$@"; }
 cpnn(){
 [ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4466 ] || exit 0
 sleep 2
-find $Likk/tmp/res/*.png
+#find $Likk/tmp/res/*
 rm -fr "$Likk/tmp"/res/*.*
 for sksb in $Likk/tmp/res/*; do
 [ "$(file $sksb | grep -cm1 directory)" == 1 ] || rm -rf $sksb
