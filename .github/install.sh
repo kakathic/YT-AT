@@ -16,6 +16,7 @@ ZHex(){ xxd -r -p "$@"; }
 
 cpnn(){
 [ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4466 ] || exit 0
+ls $Likk/*/res/*
 rm -fr "$Likk/tmp"/res/*.*
 for sksb in $Likk/tmp/res/*; do
 [ "$(file $sksb | grep -cm1 directory)" == 1 ] || rm -rf $sksb
@@ -208,6 +209,7 @@ echo "
 if [ "$TYPE" != 'true' ];then
 ( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) -e microg-support >> 123.txt 2>> 123.txt
 sed '/WARNING: warn: removing resource/d' 123.txt
+zip -0 -d "$Likk/YouT.apk" "res/*.*"
 zipalign -f 4 "$Likk/YouT.apk" "$Likk/Tav/YouTube.apk"
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
