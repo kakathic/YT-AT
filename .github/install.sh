@@ -39,6 +39,9 @@ cp -rf $vakdll $Likk/tmp/res
 fi
 fi
 
+git add .
+git commit -m "Uploaded"
+
 done
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 while true; do
