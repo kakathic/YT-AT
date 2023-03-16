@@ -18,10 +18,10 @@ cpnn(){
 [ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4466 ] || exit 0
 sleep 2
 #find $Likk/tmp/res/*
-rm -fr "$Likk/tmp"/res/*.*
-for sksb in $Likk/tmp/res/*; do
-[ "$(file $sksb | grep -cm1 directory)" == 1 ] || rm -rf $sksb
-done
+#rm -fr "$Likk/tmp"/res/*.*
+#for sksb in $Likk/tmp/res/*; do
+#[ "$(file $sksb | grep -cm1 directory)" == 1 ] || rm -rf $sksb
+#done
 while true; do
 [ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 kakksks2=$(($kakksks2 + 1))
