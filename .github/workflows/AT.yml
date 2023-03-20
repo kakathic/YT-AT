@@ -39,8 +39,7 @@ jobs:
         with:
           name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
-          files: Up/*
-          
+          files: Up/* 
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
@@ -91,13 +90,11 @@ jobs:
           name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
           files: Up/*
-          
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
           name: ROOT ${{ env.VS }} auto
           path: Up/*
-
   build3:
     name: 'AMOLED NO ROOT...'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
@@ -130,13 +127,16 @@ jobs:
           name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
           files: Up/*
-          
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
           name: AMOLED NO ROOT ${{ env.VS }} auto
           path: Up/*
-
+      - uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Add the very useful text file'
+          add: '*.apk --force'
+          cwd: './Up/'
   build4:
     name: 'AMOLED ROOT...'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
@@ -177,7 +177,6 @@ jobs:
           name: YT-AT ${{ env.VS }} auto
           tag_name: V${{ env.VS }}
           files: Up/*
-          
       - name: Upload Zip
         uses: actions/upload-artifact@v3
         with:
