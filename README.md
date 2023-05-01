@@ -22,7 +22,7 @@
 
 - You can build your own version with models suitable for your machine. 
 
-   > [Instructions](.github/Auto.md)
+   > [Instructions](./.github/Auto.md)
 
 **Microg**
 ---
