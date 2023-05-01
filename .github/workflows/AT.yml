@@ -45,11 +45,7 @@ jobs:
         with:
           name: NO ROOT ${{ env.VS }} auto
           path: Up/*
-      - uses: EndBug/add-and-commit@v9
-        with:
-          message: 'Add the very useful text file'
-          add: '*.apk --force'
-          cwd: './Up/'
+
   build2:
     name: 'ROOT...'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
@@ -132,11 +128,7 @@ jobs:
         with:
           name: AMOLED NO ROOT ${{ env.VS }} auto
           path: Up/*
-      - uses: EndBug/add-and-commit@v9
-        with:
-          message: 'Add the very useful text file'
-          add: '*.apk --force'
-          cwd: './Up/'
+
   build4:
     name: 'AMOLED ROOT...'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
