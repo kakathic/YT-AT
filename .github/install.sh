@@ -5,7 +5,7 @@ sudo rm -rf /opt/ghc
 sudo rm -rf /usr/local/share/boost
 
 HOME="$GITHUB_WORKSPACE"
-sudo apt install zipalign bash 2>/dev/null
+sudo apt install zipalign bash 2>&1 >/dev/null
 cd $HOME
 
 phienban="sta"
