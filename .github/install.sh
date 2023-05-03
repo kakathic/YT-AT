@@ -25,6 +25,7 @@ checkzip(){ [ "$(file $1 | grep -cm1 'Zip')" == 1 ] && echo "  Zip ok ${1##*/}" 
 Loading(){
 while true; do
 if [ -e "$1" ] && [ -e "$2" ];then
+echo "  Xác nhận file ok"
 break
 else
 sleep 1
