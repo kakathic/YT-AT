@@ -23,7 +23,7 @@ echo > "apk/$1.txt"; }
 
 # Tải tool cli
 echo "- Tải tool cli, patches, integrations..."
-if [ "$DEV" == "dev" ];then
+if [ "$DEV" == "Develop" ];then
 echo "- Tải Dev"
 pbdev revanced-cli jar -all
 pbdev revanced-patches jar
