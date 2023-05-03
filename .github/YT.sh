@@ -7,12 +7,9 @@ for kck in $Vik; do
 Vidon="$(java -jar $lib1 -a $lib3 -b $lib2 -l --with-versions | grep -m1 "$kck" | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
 [ "$Vidon" ] && break
 done
-Vidon="18.15.40"
 VER="$Vidon"
 echo "  $VER"
 echo
-
-
 
 echo "- Tải YouTube apk apks..."
 # Tải YouTube apk
@@ -64,12 +61,14 @@ cd jar
 zip -qr "lib/revanced-patches.jar" *
 fi
 
-# mod YouTube 
+# MOD YouTube 
 (
+echo '- Bắt đầu quá trình xây dựng..."
+echo
 java -Djava.io.tmpdir=tmp -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o YT.apk \
 -t tmp --options=$HOME/.github/options.toml $Tof $Ton
 ) & (
-Loading "tmp/res/values" "tmp/res/values/string.xml"
+Loading "tmp/res/values" "tmp/res/values"
 zip -qr apk/YouTube.apk -d res/*
 )
 
