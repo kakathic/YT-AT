@@ -1,5 +1,5 @@
 # Load dữ liệu cài đặt 
-. options/YouTube.md
+. $HOME/.github/options/YouTube.md
 
 # lấy dữ liệu phiên bản mặc định
 echo "- Lấy dữ liệu phiên bản YouTube..."
