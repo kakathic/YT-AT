@@ -19,3 +19,5 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
+          . .github/Tai-Tool.sh
+          . .github/Tai-YT.sh
