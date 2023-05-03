@@ -20,6 +20,14 @@ on:
           - arm64-v8a
           - x86
           - x86_64
+      DEV:
+        description: 'Tool cli'
+        required: false
+        default: 'Stable'
+        type: choice
+        options:
+          - Stable
+          - Develop
       FEATURE:
         description: 'Turn off the feature'
         required: false
@@ -39,11 +47,13 @@ jobs:
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
+          DEV: ${{ inputs.DEV }}
           FEATURE: ${{ inputs.FEATURE }}
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
           DEVICE='arm64-v8a'
+          DEV='Stable'
           VERSION='Auto'
           fi
           . .github/install.sh
