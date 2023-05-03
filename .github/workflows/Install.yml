@@ -20,7 +20,10 @@ on:
           - arm64-v8a
           - x86
           - x86_64
-
+      FEATURE:
+        description: 'Turn off the feature'
+        required: false
+        default: ''
 jobs:
   build1:
     name: 'Buid arm64 root...'
@@ -36,6 +39,7 @@ jobs:
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
+          FEATURE: ${{ inputs.FEATURE }}
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -46,23 +50,3 @@ jobs:
           . .github/Tai-Tool.sh
           . .github/YT.sh
 
-
-
-
-
-  build2:
-    name: 'YouTube...'
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup JDK
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'zulu'
-      - name: Show log build...
-        run: |
-          # kakathic
-          . .github/install.sh
-          . .github/Tai-Tool.sh
-          . .github/YT.sh
