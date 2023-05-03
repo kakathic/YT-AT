@@ -24,10 +24,12 @@ echo > "apk/$1.txt"; }
 # Tải tool cli
 echo "- Tải tool cli, patches, integrations..."
 if [ "$phienban" == "dev" ];then
+echo "- Tải Dev"
 pbdev revanced-cli jar -all
 pbdev revanced-patches jar
 pbdev revanced-integrations apk
 else
+echo "- Tải Sta"
 pbsta revanced-cli jar -all
 pbsta revanced-patches jar
 pbsta revanced-integrations apk
