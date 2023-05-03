@@ -27,6 +27,6 @@ break
 else
 sleep 1
 gfdgv=$(($gfdgv + 1))
-[ "$gfdgv" == 300 ] && ( echo "- Tải apk quá thời gian cho phép..."; exit 1; )
+[ "$gfdgv" == 100 ] && ( echo "- Quá thời gian cho phép..."; exit 1; )
 fi
 done; }
