@@ -13,7 +13,7 @@ Ton="
 # Features are turned off
 Tof="
 
--e premium-heading
+
 
 "
 
