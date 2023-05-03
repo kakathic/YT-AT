@@ -1,5 +1,5 @@
 # Load dữ liệu cài đặt 
-. options/YouTube.md
+#. options/YouTube.md
 
 # lấy dữ liệu phiên bản mặc định
 echo "- Lấy dữ liệu phiên bản YouTube..."
@@ -7,7 +7,6 @@ Vidon="$(java -jar $lib1 -a $lib3 -b $lib2 -l --with-versions 2>/dev/null | grep
 VER="$Vidon"
 echo "- $VER"
 
-ksjs(){
 echo "- Tải YouTube apk apks..."
 # Tải YouTube apk
 kkk1="google-inc/youtube/youtube-${VER//./-}-release/youtube-${VER//./-}-2-android-apk-download"
@@ -22,7 +21,7 @@ mv apk/YouTube.apk apk/YouTube.apk2
 mv apk/YouTube.apks apk/YouTube.apk
 mv apk/YouTube.apk2 apk/YouTube.apks
 fi
-}
+
 
 # xoá lib dựa vào abi
 if [ "$DEVICE" == "arm64-v8a" ];then
