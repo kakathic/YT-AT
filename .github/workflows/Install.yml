@@ -6,7 +6,7 @@ on:
       - '.github/**'
 jobs:
   build1:
-    name: 'YouTube...'
+    name: 'Buid arm64 root...'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -15,12 +15,17 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu'
-      - name: Show log build...
+      - name: See build...
         run: |
           # kakathic
           . .github/install.sh
           . .github/Tai-Tool.sh
           . .github/YT.sh
+
+
+
+
+
   build2:
     name: 'YouTube...'
     runs-on: ubuntu-22.04
