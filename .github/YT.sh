@@ -8,7 +8,7 @@ Vidon="$(java -jar $lib1 -a $lib3 -b $lib2 -l --with-versions | grep -m1 "$kck" 
 [ "$Vidon" ] && break
 done
 VER="$Vidon"
-echo "- $VER"
+echo "  $VER"
 echo
 
 echo "- Tải YouTube apk apks..."
@@ -22,9 +22,6 @@ TaiYT 'YouTube.apk' "$kkk1" & TaiYT 'YouTube.apks' "$kkk2"
 # Chờ tải xong
 Loading apk/YouTube.apk.txt apk/YouTube.apks.txt
 echo
-
-ls apk
-exit
 
 # Xem xét apk
 if [ "$(unzip -l apk/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
