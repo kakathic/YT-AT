@@ -81,6 +81,7 @@ Loading "tmp/res/values" "tmp/res/values" >/dev/null
 zip -qr apk/YouTube.apk -d res/*
 )
 
+Loading "YT.apk" "YT.apk"
 ls
 
 # Tạo module.prop
