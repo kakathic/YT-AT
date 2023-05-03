@@ -4,7 +4,10 @@
 # lấy dữ liệu phiên bản mặc định
 echo
 echo "- Lấy dữ liệu phiên bản YouTube..."
-Vidon="$(java -jar $lib1 -a $lib3 -b $lib2 -l --with-versions | grep -m1 hide-create-button | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
+for kck in $Vik; do
+Vidon="$(java -jar $lib1 -a $lib3 -b $lib2 -l --with-versions | grep -m1 "$kck" | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
+[ "$Vidon" ] && break
+done
 VER="$Vidon"
 echo "- $VER"
 
