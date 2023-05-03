@@ -15,7 +15,7 @@ mkdir -p apk lib tmp jar
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 
 # khu vực fusion 
-Taive () { curl -# -L -N -H "$User" --connect-timeout 20 "$1" -o "$2"; }
+Taive () { curl -s -L -N -H "$User" --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L -N -H "$User" --connect-timeout 20 "$1"; }
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
