@@ -11,6 +11,8 @@ VER="$Vidon"
 echo "  $VER"
 echo
 
+DEVICE=arm64-v8a
+
 echo "- Tải YouTube apk apks..."
 # Tải YouTube apk
 kkk1="google-inc/youtube/youtube-${VER//./-}-release/youtube-${VER//./-}-2-android-apk-download"
@@ -25,6 +27,8 @@ echo
 
 # Xem xét apk
 if [ "$(unzip -l apk/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
+echo "- Thay đổi apks thành apk."
+echo
 mv apk/YouTube.apk apk/YouTube.apk2
 mv apk/YouTube.apks apk/YouTube.apk
 mv apk/YouTube.apk2 apk/YouTube.apks
