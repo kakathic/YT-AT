@@ -50,6 +50,8 @@ fi
 
 # Xử lý revanced patches
 if [ "$Vidon" != "$VER" ];then
+echo "- Chuyển đổi phiên bản thành $VER"
+echo
 unzip -qo "lib/revanced-patches.jar" -d jar
 for vak in $(grep -Rl "$Vidon" jar); do
 cp -rf $vak test
@@ -61,8 +63,8 @@ fi
 
 # mod YouTube 
 (
-java -Djava.io.tmpdir=tmp -jar $lib1 -m $lib3 -b $lib2 -a apk/YouTube.apk -o YT.apk \
--t tmp --options=$HOME/.github/options.toml $(echo $Tof) $(echo $Ton) 2>&1
+java -Djava.io.tmpdir=tmp -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o YT.apk \
+-t tmp --options=$HOME/.github/options.toml $Tof $Ton
 ) & (
 Loading "tmp/res/values" "tmp/res/values/string.xml"
 zip -qr apk/YouTube.apk -d res/*
