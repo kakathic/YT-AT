@@ -79,8 +79,10 @@ java -Djava.io.tmpdir=tmp -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o YT.
 ) & (
 Loading "tmp/res/values" "tmp/res/values" >/dev/null
 zip -qr apk/YouTube.apk -d res/*
+echo "YT.apk" > app.txt
 )
 
+echo "- Chờ xây dựng file xong..."
 Loading "YT.apk" "YT.apk"
 
 # Tạo module.prop
