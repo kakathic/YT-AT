@@ -46,8 +46,8 @@ ach="arm"
 fi
 
 # Xoá lib
-echo > $HOME/Module/common/$ach
-cp -rf $HOME/.github/Tools/sqlite3_$ach $HOME/Module/common/sqlite3
+#echo > $HOME/Module/common/$ach
+#cp -rf $HOME/.github/Tools/sqlite3_$ach $HOME/Module/common/sqlite3
 
 unzip -qo "apk/YouTube.apk" lib/$DEVICE/* -d Tav
 zip -qr apk/YouTube.apk -d 'lib/*/*'
