@@ -19,7 +19,7 @@ Taive () { curl -s -L -N -H "$User" --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L -N -H "$User" --connect-timeout 20 "$1"; }
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
-checkfile(){ [ -e "$1" ] || ( echo "$2"; exit 1 ); }
+checkfile(){ [ -e "$1" ] && echo "- Ok $1" || ( echo "$2"; exit 1 ); }
 Loading(){
 while true; do
 if [ -e "$1" ] && [ -e "$2" ];then
