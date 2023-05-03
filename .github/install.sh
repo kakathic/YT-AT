@@ -20,7 +20,7 @@ Xem () { curl -s -G -L -N -H "$User" --connect-timeout 20 "$1"; }
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
 checkfile(){ [ -e "$1" ] && echo "- Ok ${1##*/}" || ( echo "- Lỗi không không thấy file ${1##*/}"; exit 1 ); }
-checkzip(){ [ "$(file $1 | grep -cm1 'Zip')" == 1 ] && echo "- Zip ok ${1##*/}" || ( echo "- Lỗi zip ${1##*/}"; exit 1; )
+checkzip(){ [ "$(file $1 | grep -cm1 'Zip')" == 1 ] && echo "- Zip ok ${1##*/}" || ( echo "- Lỗi zip ${1##*/}"; exit 1; ); }
 Loading(){
 while true; do
 if [ -e "$1" ] && [ -e "$2" ];then
