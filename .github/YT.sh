@@ -11,6 +11,8 @@ VER="$Vidon"
 echo "  $VER"
 echo
 
+VER="18.05.40"
+
 echo "- Tải YouTube apk apks..."
 # Tải YouTube apk
 kkk1="google-inc/youtube/youtube-${VER//./-}-release/youtube-${VER//./-}-2-android-apk-download"
