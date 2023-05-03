@@ -2,8 +2,9 @@
 . $HOME/.github/options/YouTube.md
 
 # lấy dữ liệu phiên bản mặc định
+echo
 echo "- Lấy dữ liệu phiên bản YouTube..."
-Vidon="$(java -jar $lib1 -a $lib3 -b $lib2 -l --with-versions 2>/dev/null | grep -m1 hide-create-button | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
+Vidon="$(java -jar $lib1 -a $lib3 -b $lib2 -l --with-versions | grep -m1 hide-create-button | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
 VER="$Vidon"
 echo "- $VER"
 
@@ -14,6 +15,8 @@ kkk2="google-inc/youtube/youtube-${VER//./-}-release/youtube-${VER//./-}-android
 TaiYT 'YouTube.apk' "$kkk1" & TaiYT 'YouTube.apks' "$kkk2"
 # Chờ tải xong
 Loading apk/YouTube.apk.txt apk/YouTube.apks.txt
+
+exit 1
 
 # Xem xét apk
 if [ "$(unzip -l apk/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
