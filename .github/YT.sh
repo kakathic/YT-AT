@@ -77,7 +77,27 @@ echo
 java -Djava.io.tmpdir=tmp -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o YT.apk \
 -t tmp --options=$HOME/.github/options.toml $Tof $Ton
 ) & (
-Loading "tmp/res/values" "tmp/res/values"
+Loading "tmp/res/values" "tmp/res/values" >/dev/null
 zip -qr apk/YouTube.apk -d res/*
 )
+
+ls
+
+# Tạo module.prop
+echo 'id=YouTube
+name=YouTube PiP
+author=kakathic
+description=YouTube edited tool by Revanced mod added disable play store updates, mod rounded pip window.
+version='$VER'
+versionCode=${VER//./}
+updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-arm64.json
+' > $HOME/.github/Modun/module.prop
+
+# Tạo json
+echo '{
+"version": "'$VER'",
+"versionCode": "'${VER//./}'",
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$Vidon'/YT-Magisk-'$VERSION'-'$ach$amoled2'.Zip",
+"changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
+}' > Up-$ach$amoled2.json
 
