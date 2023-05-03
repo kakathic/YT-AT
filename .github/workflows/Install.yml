@@ -59,7 +59,6 @@ jobs:
           TYPE='true'
           fi
           . .github/install.sh
-          . .github/Tai-Tool.sh
           . .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
