@@ -72,7 +72,7 @@ fi
 
 # MOD YouTube 
 (
-echo '- Bắt đầu quá trình xây dựng..."
+echo "- Bắt đầu quá trình xây dựng..."
 echo
 java -Djava.io.tmpdir=tmp -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o YT.apk \
 -t tmp --options=$HOME/.github/options.toml $Tof $Ton
