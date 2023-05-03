@@ -11,8 +11,6 @@ VER="$Vidon"
 echo "  $VER"
 echo
 
-DEVICE=arm64-v8a
-
 echo "- Tải YouTube apk apks..."
 # Tải YouTube apk
 kkk1="google-inc/youtube/youtube-${VER//./-}-release/youtube-${VER//./-}-2-android-apk-download"
