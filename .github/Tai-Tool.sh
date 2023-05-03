@@ -37,3 +37,4 @@ fi
 checkzip "lib/revanced-cli.jar"
 checkzip "lib/revanced-patches.jar"
 checkzip "lib/revanced-integrations.apk"
+echo
