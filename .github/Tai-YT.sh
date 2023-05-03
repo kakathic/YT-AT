@@ -1,5 +1,5 @@
 # Load dữ liệu cài đặt 
-#. options/YouTube.md
+. options/YouTube.md
 
 # lấy dữ liệu phiên bản mặc định
 echo "- Lấy dữ liệu phiên bản YouTube..."
@@ -15,7 +15,7 @@ TaiYT 'YouTube.apk' "$kkk1" & TaiYT 'YouTube.apks' "$kkk2"
 # Chờ tải xong
 Loading apk/YouTube.apk.txt apk/YouTube.apks.txt
 
-# Xem xet apk
+# Xem xét apk
 if [ "$(unzip -l apk/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
 mv apk/YouTube.apk apk/YouTube.apk2
 mv apk/YouTube.apks apk/YouTube.apk
@@ -54,13 +54,10 @@ fi
 
 # mod YouTube 
 (
-java -Djava.io.tmpdir=tmp -jar $lib1 -m $lib3 -b $lib2 -a apk/base.apk -o yt.apk \
--t tmp --options=options.toml $(echo $Tof) $(echo $Ton) 2>&1 | tee log.txt
-
+java -Djava.io.tmpdir=tmp -jar $lib1 -m $lib3 -b $lib2 -a apk/YouTube.apk -o YT.apk \
+-t tmp --options=$HOME/.github/options.toml $(echo $Tof) $(echo $Ton) 2>&1
 ) & (
-
 Loading "tmp/res/values" "tmp/res/values/string.xml"
-cp -rf apk/base.apk apk/base2.apk
-zip -qr apk/base.apk -d res/*
+zip -qr apk/YouTube.apk -d res/*
 )
 
