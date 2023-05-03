@@ -30,7 +30,7 @@ mv apk/YouTube.apks apk/YouTube.apk
 mv apk/YouTube.apk2 apk/YouTube.apks
 fi
 
-# xoá lib dựa vào abi
+# Xoá lib dựa vào abi
 if [ "$DEVICE" == "arm64-v8a" ];then
 lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
 ach="arm64"
@@ -45,8 +45,13 @@ lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
 ach="arm"
 fi
 
-#echo > $HOME/Module/common/$ach
-#cp -rf $HOME/.github/Tools/sqlite3_$ach $HOME/Module/common/sqlite3
+# Xoá lib
+echo > $HOME/Module/common/$ach
+cp -rf $HOME/.github/Tools/sqlite3_$ach $HOME/Module/common/sqlite3
+
+unzip -qo "apk/YouTube.apk" lib/$DEVICE/* -d Tav
+zip -qr apk/YouTube.apk -d 'lib/*/*'
+
 
 # Xử lý revanced patches
 if [ "$Vidon" != "$VER" ];then
