@@ -1,5 +1,5 @@
 name: Zzz Auto Build REvanced
-on:
+#on:
   push:
     paths:
       - 'Lang/**'
