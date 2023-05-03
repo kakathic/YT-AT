@@ -49,12 +49,14 @@ lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
 ach="arm"
 fi
 
-# copy 
+# Copy 
 echo > $HOME/.github/Modun/common/$ach
 cp -rf $HOME/.github/Tools/sqlite3_$ach $HOME/.github/Modun/common/sqlite3
 
-# xoá lib
+# Xoá lib
 unzip -qo "apk/YouTube.apk" lib/$DEVICE/* -d Tav
+mv -f Tav/lib/$DEVICE Tav/lib/$ach
+unzip -qo apk/YouTube.apks 'base.apk' -d Tav
 zip -qr apk/YouTube.apk -d 'lib/*/*'
 
 # Xử lý revanced patches
@@ -68,6 +70,7 @@ XHex test | sed -e "s/$(echo -n "$Vidon" | XHex)/$(echo -n "$VERSION" | XHex)/" 
 done
 cd jar
 zip -qr "lib/revanced-patches.jar" *
+cd $HOME
 fi
 
 # MOD YouTube 
@@ -79,27 +82,35 @@ java -Djava.io.tmpdir=tmp -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o YT.
 ) & (
 Loading "tmp/res/values" "tmp/res/values" >/dev/null
 zip -qr apk/YouTube.apk -d res/*
-echo "YT.apk" > app.txt
 )
 
 echo "- Chờ xây dựng file xong..."
 Loading "YT.apk" "YT.apk"
 
+mv YT.apk Tav/YouTube.apk
+cd Tav
+tar -cf - * | xz -9kz > $HOME/Module/common/lib.tar.xz
+cd $HOME
+
 # Tạo module.prop
 echo 'id=YouTube
 name=YouTube PiP
 author=kakathic
-description=YouTube edited tool by Revanced mod added disable play store updates, mod rounded pip window.
+description=Auto build '$(date)', YouTube edited tool by Revanced mod added disable play store updates, mod rounded pip window.
 version='$VER'
-versionCode=${VER//./}
-updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-arm64.json
+versionCode='${VER//./}'
+updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$ach'.json
 ' > $HOME/.github/Modun/module.prop
 
 # Tạo json
 echo '{
 "version": "'$VER'",
 "versionCode": "'${VER//./}'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$Vidon'/YT-Magisk-'$VERSION'-'$ach$amoled2'.Zip",
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$VER'/YT-Magisk-'$VER'-'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
 }' > Up-$ach$amoled2.json
 
+# Tạo module magisk
+cd $HOME/.github/Modun
+zip -qr $HOME/zip/$Na *
+cd $HOME
