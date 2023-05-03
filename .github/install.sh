@@ -6,6 +6,7 @@ sudo rm -rf /usr/local/share/boost
 
 HOME="$GITHUB_WORKSPACE"
 sudo apt install zipalign bash >/dev/null
+cd $HOME
 
 phienban="dev"
 
