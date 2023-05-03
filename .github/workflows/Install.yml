@@ -59,4 +59,9 @@ jobs:
           . .github/install.sh
           . .github/Tai-Tool.sh
           . .github/YT.sh
-
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-AT ${{ env.VS }}
+          tag_name: V${{ env.VER }}
+          files: Up/*
