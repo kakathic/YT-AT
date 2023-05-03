@@ -4,8 +4,7 @@
 # lấy dữ liệu phiên bản mặc định
 echo
 echo "- Lấy dữ liệu phiên bản YouTube..."
-#Vidon="$(
-java
+#Vidon="$(ls
 echo $lib1 $lib2 $lib3
 java -jar $lib1 -a $lib3 -b $lib2 --help -l --with-versions | grep -m1 hide-create-button
 # | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g"
