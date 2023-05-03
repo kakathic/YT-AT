@@ -84,9 +84,8 @@ Loading "tmp/res/values" "tmp/res/values" >/dev/null
 zip -qr apk/YouTube.apk -d res/*
 )
 
-echo "- Chờ xây dựng file xong..."
-Loading "YT.apk" "YT.apk"
-
+# Chờ xây dựng xong
+Loading "YT.apk" "YT.apk" >/dev/null
 mv YT.apk Tav/YouTube.apk
 cd Tav
 tar -cf - * | xz -9kz > $HOME/Module/common/lib.tar.xz
