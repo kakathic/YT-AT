@@ -33,8 +33,7 @@ pbsta revanced-patches jar
 pbsta revanced-integrations apk
 fi
 
-
 # kiểm tra tải tool
-checkfile "lib/revanced-cli.jar" "- Lỗi tải file revanced-cli"
-checkfile "lib/revanced-patches.jar" "- Lỗi tải file revanced-patches"
-checkfile "lib/revanced-integrations.apk" "- Lỗi tải file revanced-integrations"
+checkzip "lib/revanced-cli.jar"
+checkzip "lib/revanced-patches.jar"
+checkzip "lib/revanced-integrations.apk"
