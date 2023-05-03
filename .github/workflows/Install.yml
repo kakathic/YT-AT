@@ -4,6 +4,24 @@ on:
     paths:
       - 'Lang/**'
       - '.github/**'
+  workflow_dispatch:
+    inputs:
+      VERSION:
+        description: 'Example: 18.15.40'
+        required: false
+        default: 'Auto'
+      DEVICE:
+        description: 'Select device'
+        required: false
+        default: 'arm64-v8a'
+        type: choice
+        options:
+          - armeabi-v7a
+          - arm64-v8a
+          - x86
+          - x86_64
+
+
 jobs:
   build1:
     name: 'Buid arm64 root...'
