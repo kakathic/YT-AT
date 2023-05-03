@@ -5,7 +5,9 @@
 echo
 echo "- Lấy dữ liệu phiên bản YouTube..."
 #Vidon="$(
-java -jar $lib1 -a $lib3 -b $lib2 -l --with-versions | grep -m1 hide-create-button | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g"
+echo $lib1
+java -jar $lib1 -a $lib3 -b $lib2 -l --with-versions | grep -m1 hide-create-button
+# | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g"
 #)"
 VER="$Vidon"
 echo "- $VER"
