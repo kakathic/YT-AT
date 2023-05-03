@@ -48,10 +48,10 @@ fi
 # copy 
 echo > $HOME/.github/Modun/common/$ach
 cp -rf $HOME/.github/Tools/sqlite3_$ach $HOME/.github/Modun/common/sqlite3
+
 # xoá lib
 unzip -qo "apk/YouTube.apk" lib/$DEVICE/* -d Tav
 zip -qr apk/YouTube.apk -d 'lib/*/*'
-
 
 # Xử lý revanced patches
 if [ "$Vidon" != "$VER" ];then
