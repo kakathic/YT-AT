@@ -29,7 +29,7 @@ on:
           - Stable
           - Develop
       FEATURE:
-        description: 'Turn off the feature'
+        description: 'Turn off feature'
         required: false
         default: ''
 jobs:
