@@ -21,4 +21,3 @@ jobs:
           . .github/install.sh
           . .github/Tai-Tool.sh
           . .github/YT.sh
-          . .github/Tool-Buid.sh
