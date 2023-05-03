@@ -21,7 +21,6 @@ uak2="$urrl$(Xem "$uak1" | grep -m1 '>here<' | tr ' ' '\n' | grep -m1 'href=' | 
 Taive "$uak2" "apk/$1"
 echo > "apk/$1.txt"; }
 
-skdjdj(){
 # Tải tool cli
 echo "- Tải tool cli, patches, integrations..."
 if [ "$phienban" == "dev" ];then
@@ -33,7 +32,7 @@ pbsta revanced-cli jar -all
 pbsta revanced-patches jar
 pbsta revanced-integrations apk
 fi
-}
+
 
 # kiểm tra tải tool
 checkfile "lib/revanced-cli.jar" "- Lỗi tải file revanced-cli"
