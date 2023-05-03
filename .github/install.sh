@@ -8,7 +8,7 @@ HOME="$GITHUB_WORKSPACE"
 sudo apt install zipalign bash >/dev/null
 cd $HOME
 
-phienban="dev"
+phienban="sta"
 
 # Tạo thư mục
 mkdir -p apk lib tmp jar
