@@ -88,7 +88,7 @@ zip -qr apk/YouTube.apk -d res/*
 Loading "YT.apk" "YT.apk" >/dev/null
 mv YT.apk Tav/YouTube.apk
 cd Tav
-tar -cf - * | xz -9kz > $HOME/Module/common/lib.tar.xz
+tar -cf - * | xz -9kz > $HOME/.github/Modun/common/lib.tar.xz
 cd $HOME
 
 # Tạo module.prop
