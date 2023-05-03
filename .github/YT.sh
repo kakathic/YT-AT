@@ -83,7 +83,7 @@ zip -qr apk/YouTube.apk -d res/*
 
 # Chờ xây dựng xong
 Loading "YT.apk" "YT.apk" >/dev/null
-mv YT.apk Tav/YouTube.apk
+[ "$TYPE" == 'true' ] && mv YT.apk Tav/YouTube.apk || ( mv YT.apk up/YT-$ach$amoled.apk; exit; )
 cd Tav
 tar -cf - * | xz -9kz > $HOME/.github/Modun/common/lib.tar.xz
 cd $HOME
