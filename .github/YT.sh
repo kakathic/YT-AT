@@ -81,6 +81,8 @@ java -Djava.io.tmpdir=$HOME -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o Y
 ) & (
 Loading "tmp/res/values" "tmp/res/values" >/dev/null
 zip -qr apk/YouTube.apk -d res/*
+Loading "tmp/res/values/string.xml" "tmp/res/values/string.xml" >/dev/null
+sleep 5
 for kvc in $(ls $HOME/Language); do
 sed -i "/<\/resources>/d" $HOME/tmp/res/${kvc%.*}/strings.xml
 cat $HOME/Language/$kvc | sed -e 's|<?xml version="1.0" encoding="utf-8"?>||g' -e "/<\/resources>/d" -e "/<resources>/d" >> $HOME/tmp/res/${kvc%.*}/strings.xml
