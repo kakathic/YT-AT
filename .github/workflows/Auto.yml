@@ -2,7 +2,7 @@ name: YT-RE AUTO
 on:
   push:
     paths:
-      - '.github/workflow/Auto.yml'
+      - '.github/workflows/Auto.yml'
       - '.github/YT.sh'
   schedule:
     - cron: '30 23 * * *'
