@@ -117,7 +117,7 @@ author=kakathic
 description=Build '$(date)', YouTube edited tool by Revanced mod added disable play store updates, mod rounded pip window.
 version='$VER'
 versionCode='${VER//./}'
-updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$ach'.json
+updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$ach$amoled2'.json
 ' > $HOME/.github/Modun/module.prop
 
 # Tạo json
@@ -125,7 +125,7 @@ echo '{
 "version": "'$VER'",
 "versionCode": "'${VER//./}'",
 "zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$VER'/YT-Magisk-'$VER'-'$ach$amoled2'.Zip",
-"changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
+"changelog": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-notes.json"
 }' > Up-$ach$amoled2.json
 
 echo 'Update '$(date)'' > Up-notes.json
