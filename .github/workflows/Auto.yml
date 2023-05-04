@@ -8,35 +8,10 @@ on:
     - cron: '30 23 * * *'
 permissions: write-all
 jobs:
-  build0:
-    name: 'Check'
-    if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
-      - name: Delete workflow runs
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          token: ${{ github.token }}
-          repository: ${{ github.repository }}
-          retain_days: 0
-          keep_minimum_runs: 0
-      - name: See build
-        run: |
-          # kakathic
-          . .github/YT.sh
-      - name: Upload cli
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: 'Add the very useful text file'
-          add: '*.apk --force'
-          cwd: './Up/'
   build1:
     name: 'Buid arm64 root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
-    needs:
-      - build0
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -72,8 +47,6 @@ jobs:
     name: 'Buid arm64 no-root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
-    needs:
-      - build0
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -102,8 +75,6 @@ jobs:
     name: 'Buid arm64 amoled root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
-    needs:
-      - build0
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -140,8 +111,6 @@ jobs:
     name: 'Buid arm64 amoled no-root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
-    needs:
-      - build0
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
