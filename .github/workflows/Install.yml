@@ -149,7 +149,7 @@ jobs:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
           DEV: ${{ inputs.DEV }}
-          TYPE: 'true'
+          TYPE: 'false'
           AMOLED: 'false'
           FEATURE: ${{ inputs.FEATURE }}
         run: |
