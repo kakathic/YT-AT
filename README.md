@@ -29,7 +29,7 @@
 
 - Use to log non-root version, click on the link below to download.
 
-   > [inotia00](https://github.com/inotia00/VancedMicroG)
+   > [mMicroG](https://github.com/inotia00/mMicroG/releases)
 
 **Add-on Download**
 ---
@@ -47,7 +47,7 @@
 
 - I don't know many languages, you can contribute languages ​​at the link below.
 
-   > [Language](./Lang)
+   > [Language](./.github/Language)
 
 - Or submit the language file to the issue.
 
@@ -59,8 +59,6 @@
 - You should support the revanced development team for making a great tool.
 
 - I'm just the author of this github automation tool.
-
-  > [☕ Buy Me a Coffee](http://paypal.me/kakathic)
 
 **Good luck!**
 ---
