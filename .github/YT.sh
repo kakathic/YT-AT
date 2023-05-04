@@ -69,6 +69,9 @@ zip -qr "lib/revanced-patches.jar" *
 cd $HOME
 fi
 
+# là amoled
+[ "$amoled" == 'true' ] && amoled2='-Amoled'
+
 # MOD YouTube 
 (
 echo "▼ Bắt đầu quá trình xây dựng..."
@@ -81,7 +84,7 @@ zip -qr apk/YouTube.apk -d res/*
 
 # Chờ xây dựng xong
 Loading "YT.apk" "YT.apk" >/dev/null
-[ "$TYPE" == 'true' ] && mv YT.apk Tav/YouTube.apk || ( mv YT.apk up/YT-$VER-$ach$amoled.apk; exit; )
+[ "$TYPE" == 'true' ] && mv YT.apk Tav/YouTube.apk || ( mv YT.apk up/YT-$VER-$ach$amoled2.apk; exit; )
 cd Tav
 tar -cf - * | xz -9kz > $HOME/.github/Modun/common/lib.tar.xz
 cd $HOME
@@ -106,5 +109,5 @@ echo '{
 
 # Tạo module magisk
 cd $HOME/.github/Modun
-zip -qr $HOME/Up/YT-Magisk-$VER-$ach$amoled.zip *
+zip -qr $HOME/Up/YT-Magisk-$VER-$ach$amoled2.zip *
 cd $HOME
