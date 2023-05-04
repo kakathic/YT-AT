@@ -1,7 +1,6 @@
 # Load dữ liệu cài đặt 
 . $HOME/.github/options/YouTube.md
 
-
 # lấy dữ liệu phiên bản mặc định
 echo "- Lấy dữ liệu phiên bản YouTube..."
 for kck in $Vik; do
@@ -73,6 +72,7 @@ fi
 # là amoled
 [ "$AMOLED" == 'true' ] && amoled2='-Amoled'
 [ "$AMOLED" == 'true' ] || theme='-e theme'
+[ "$TYPE" == 'true' ] && Mro="-e vanced-microg-support"
 
 # MOD YouTube 
 (
