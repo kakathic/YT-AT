@@ -106,5 +106,5 @@ echo '{
 
 # Tạo module magisk
 cd $HOME/.github/Modun
-zip -qr YT-Magisk-$ach$amoled.zip *
+zip -qr $HOME/Up/YT-Magisk-$ach$amoled.zip *
 cd $HOME
