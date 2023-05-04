@@ -87,6 +87,7 @@ else
 lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
 ach="arm"
 fi
+[ "$TYPE" == 'true' ] && lib='lib/*/*'
 
 # Copy 
 echo > $HOME/.github/Modun/common/$ach
@@ -96,7 +97,7 @@ cp -rf $HOME/.github/Tools/sqlite3_$ach $HOME/.github/Modun/common/sqlite3
 unzip -qo "apk/YouTube.apk" lib/$DEVICE/* -d Tav
 mv -f Tav/lib/$DEVICE Tav/lib/$ach
 unzip -qo apk/YouTube.apks 'base.apk' -d Tav
-zip -qr apk/YouTube.apk -d 'lib/*/*'
+zip -qr apk/YouTube.apk -d $lib
 
 # Xử lý revanced patches
 if [ "$Vidon" != "$VER" ];then
