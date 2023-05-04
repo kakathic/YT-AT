@@ -1,0 +1,139 @@
+name: YT-EXT AUTO
+on:
+  push:
+    paths:
+      - '.github/workflows/Auto.yml'
+      - '.github/XYT.sh'
+  schedule:
+    - cron: '30 23 * * *'
+permissions: write-all
+jobs:
+  build1:
+    name: 'Buid arm64 root'
+    if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: See build
+        run: |
+          # kakathic
+          if [ -z "$VERSION" ];then
+          DEVICE='arm64-v8a'
+          DEV='Stable'
+          VERSION='Auto'
+          TYPE='true'
+          fi
+          . .github/install.sh
+          . .github/XYT.sh
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-EXT ${{ env.VER }}
+          tag_name: X${{ env.VER }}
+          files: Up/*
+      - name: Upload Json
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Update
+          tag_name: Up
+          files: Up*.json
+          prerelease: true
+  build2:
+    name: 'Buid arm64 no-root'
+    if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: See build
+        run: |
+          # kakathic
+          if [ -z "$VERSION" ];then
+          DEVICE='arm64-v8a'
+          DEV='Stable'
+          VERSION='Auto'
+          TYPE='false'
+          fi
+          . .github/install.sh
+          . .github/XYT.sh
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-EXT ${{ env.VER }}
+          tag_name: X${{ env.VER }}
+          files: Up/*
+  build3:
+    name: 'Buid arm64 amoled root'
+    if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: See build
+        run: |
+          # kakathic
+          if [ -z "$VERSION" ];then
+          DEVICE='arm64-v8a'
+          DEV='Stable'
+          VERSION='Auto'
+          TYPE='true'
+          AMOLED='true'
+          fi
+          . .github/install.sh
+          . .github/XYT.sh
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-EXT ${{ env.VER }}
+          tag_name: X${{ env.VER }}
+          files: Up/*
+      - name: Upload Json
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Update
+          tag_name: Up
+          files: Up*.json
+          prerelease: true
+  build4:
+    name: 'Buid arm64 amoled no-root'
+    if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: See build
+        run: |
+          # kakathic
+          if [ -z "$VERSION" ];then
+          DEVICE='arm64-v8a'
+          DEV='Stable'
+          VERSION='Auto'
+          TYPE='false'
+          AMOLED='true'
+          fi
+          . .github/install.sh
+          . .github/XYT.sh
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-EXT ${{ env.VER }}
+          tag_name: X${{ env.VER }}
+          files: Up/*
+          
