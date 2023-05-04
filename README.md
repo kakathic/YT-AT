@@ -49,14 +49,5 @@
 
 - Or submit the language file to the issue.
 
-**Support**
----
-
-- [Group Telegram](https://t.me/toolvn)
-
-- You should support the revanced development team for making a great tool.
-
-- I'm just the author of this github automation tool.
-
 **Good luck!**
 ---
