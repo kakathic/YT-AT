@@ -67,7 +67,7 @@ cpLIB $MODPATH/lib "$(linkAPK)"
 
 ui_print2 "Mount YouTube"
 ui_print
-mountYT $MODPATH/YouTube.apk "$(linkAPK)"
+mountYT $MODPATH/YouTube.apk "$(linkAPK)" &
 
 ui_print2 "Turn off update"
 ui_print
