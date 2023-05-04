@@ -29,6 +29,6 @@ hide-album-cards
 "
 
 # sự dụng microg
-[ "$TYPE" == "true" ] || Mro="
+[ "$TYPE" == "true" ] && Mro="
 -e vanced-microg-support
 "
