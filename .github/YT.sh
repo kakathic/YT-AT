@@ -70,7 +70,7 @@ cd $HOME
 fi
 
 # là amoled
-[ "$amoled" == 'true' ] && amoled2='-Amoled'
+[ "$AMOLED" == 'true' ] && amoled2='-Amoled'
 
 # MOD YouTube 
 (
