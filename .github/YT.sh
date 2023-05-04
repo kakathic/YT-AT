@@ -2,17 +2,16 @@
 . $HOME/.github/options/YouTube.md
 
 # lấy dữ liệu phiên bản mặc định
-echo "- Lấy dữ liệu phiên bản YouTube..."
+echo "▼ Lấy dữ liệu phiên bản YouTube..."
 for kck in $Vik; do
 Vidon="$(java -jar $lib1 -a $lib3 -b $lib2 -l --with-versions | grep -m1 "$kck" | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
 [ "$Vidon" ] && break
 done
 [ "$VERSION" == 'Auto' ] && VER="$Vidon" || VER="$VERSION"
-Upenv VIR "$VER"
+Upenv VER "$VER"
 echo "  $VER"
-echo
 
-echo "- Tải YouTube apk apks..."
+echo "▼ Tải YouTube apk apks..."
 # Tải YouTube apk
 kkk1="google-inc/youtube/youtube-${VER//./-}-release/youtube-${VER//./-}-2-android-apk-download"
 kkk2="google-inc/youtube/youtube-${VER//./-}-release/youtube-${VER//./-}-android-apk-download"
@@ -22,11 +21,10 @@ TaiYT 'YouTube.apk' "$kkk1" & TaiYT 'YouTube.apks' "$kkk2"
 
 # Chờ tải xong
 Loading apk/YouTube.apk.txt apk/YouTube.apks.txt
-echo
 
 # Xem xét apk
 if [ "$(unzip -l apk/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
-echo "- Thay đổi apks thành apk."
+echo "▼ Thay đổi apks thành apk."
 echo
 mv apk/YouTube.apk apk/YouTube.apk2
 mv apk/YouTube.apks apk/YouTube.apk
@@ -60,8 +58,7 @@ zip -qr apk/YouTube.apk -d 'lib/*/*'
 
 # Xử lý revanced patches
 if [ "$Vidon" != "$VER" ];then
-echo "- Chuyển đổi phiên bản thành $VER"
-echo
+echo "▼ Chuyển đổi phiên bản thành $VER"
 unzip -qo "lib/revanced-patches.jar" -d jar
 for vak in $(grep -Rl "$Vidon" jar); do
 cp -rf $vak test
