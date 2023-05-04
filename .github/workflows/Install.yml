@@ -66,3 +66,106 @@ jobs:
           name: YT-AT ${{ env.VER }}
           tag_name: V${{ env.VER }}
           files: Up/*
+  build2:
+    name: 'Buid arm64 no-root...'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: See build...
+        env:
+          VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          DEV: ${{ inputs.DEV }}
+          TYPE: 'false'
+          FEATURE: ${{ inputs.FEATURE }}
+        run: |
+          # kakathic
+          if [ -z "$VERSION" ];then
+          DEVICE='arm64-v8a'
+          DEV='Stable'
+          VERSION='Auto'
+          TYPE='false'
+          fi
+          . .github/install.sh
+          . .github/YT.sh
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-AT ${{ env.VER }}
+          tag_name: V${{ env.VER }}
+          files: Up/*
+  build3:
+    name: 'Buid arm64 amoled root...'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: See build...
+        env:
+          VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          DEV: ${{ inputs.DEV }}
+          TYPE: 'true'
+          AMOLED: 'true'
+          FEATURE: ${{ inputs.FEATURE }}
+        run: |
+          # kakathic
+          if [ -z "$VERSION" ];then
+          DEVICE='arm64-v8a'
+          DEV='Stable'
+          VERSION='Auto'
+          TYPE='true'
+          AMOLED='true'
+          fi
+          . .github/install.sh
+          . .github/YT.sh
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-AT ${{ env.VER }}
+          tag_name: V${{ env.VER }}
+          files: Up/*
+  build4:
+    name: 'Buid arm64 amoled no-root...'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+      - name: See build...
+        env:
+          VERSION: ${{ inputs.VERSION }}
+          DEVICE: ${{ inputs.DEVICE }}
+          DEV: ${{ inputs.DEV }}
+          TYPE: 'true'
+          AMOLED: 'false'
+          FEATURE: ${{ inputs.FEATURE }}
+        run: |
+          # kakathic
+          if [ -z "$VERSION" ];then
+          DEVICE='arm64-v8a'
+          DEV='Stable'
+          VERSION='Auto'
+          TYPE='true'
+          AMOLED='false'
+          fi
+          . .github/install.sh
+          . .github/YT.sh
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
+        with:
+          name: YT-AT ${{ env.VER }}
+          tag_name: V${{ env.VER }}
+          files: Up/*
