@@ -79,7 +79,7 @@ fi
 
 echo "▼ Bắt đầu quá trình xây dựng..."
 java -Djava.io.tmpdir=$HOME -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o YT.apk \
--t tmp $Tof $Ton $Mro $theme $(cat feature) > Log.txt 2>> Log.txt
+-t tmp $Tof $Ton $Mro $theme $feature > Log.txt 2>> Log.txt
 sed -e '/WARNING: warn: removing resource/d' Log.txt
 
 ) & (
