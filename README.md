@@ -22,18 +22,14 @@
 
 - You can build your own version with models suitable for your machine. 
 
-   > [Instructions](./.github/Auto.md)
+   > [Instructions](./.github/Tools/Auto.md)
 
 **Microg**
 ---
 
 - Use to log non-root version, click on the link below to download.
 
-   > [TeamVanced](https://github.com/TeamVanced/VancedMicroG)
-
    > [inotia00](https://github.com/inotia00/VancedMicroG)
-
-   > [Microg.apk](https://github.com/kakathic/YT-AT/raw/Vip/.github/Tools/Microg.apk)
 
 **Add-on Download**
 ---
