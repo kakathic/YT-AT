@@ -114,7 +114,7 @@ fi
 # là amoled
 [ "$AMOLED" == 'true' ] && amoled2='-Amoled'
 [ "$AMOLED" == 'true' ] || theme='-e theme'
-[ "$TYPE" == 'true' ] && Mro="-e vanced-microg-support"
+[ "$TYPE" == 'true' ] && Mro="-e microg-support"
 
 # MOD YouTube 
 (
@@ -154,7 +154,7 @@ cd $HOME
 
 # Tạo module.prop
 echo 'id=YouTube
-name=YouTube PiP
+name=YouTube PiP Ext
 author=kakathic
 description=Build '$(date)', YouTube edited tool by Revanced mod added disable play store updates, mod rounded pip window.
 version='$VER'
