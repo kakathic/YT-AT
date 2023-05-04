@@ -32,7 +32,7 @@ permissions: write-all
 jobs:
   build1:
     name: 'Buid arm64 root'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -66,7 +66,7 @@ jobs:
           prerelease: true
   build2:
     name: 'Buid arm64 no-root'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -93,7 +93,7 @@ jobs:
           files: Up/*
   build3:
     name: 'Buid arm64 amoled root'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -128,7 +128,7 @@ jobs:
           prerelease: true
   build4:
     name: 'Buid arm64 amoled no-root'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
