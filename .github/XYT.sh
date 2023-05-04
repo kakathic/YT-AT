@@ -67,7 +67,6 @@ Loading apk/YouTube.apk.txt apk/YouTube.apks.txt
 # Xem xét apk
 if [ "$(unzip -l apk/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
 echo "- Thay đổi apks thành apk."
-echo
 mv apk/YouTube.apk apk/YouTube.apk2
 mv apk/YouTube.apks apk/YouTube.apk
 mv apk/YouTube.apk2 apk/YouTube.apks
