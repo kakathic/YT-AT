@@ -49,14 +49,8 @@ jobs:
           FEATURE: ${{ inputs.FEATURE }}
         run: |
           # kakathic
-          if [ -z "$VERSION" ];then
-          DEVICE='arm64-v8a'
-          DEV='Stable'
-          VERSION='Auto'
-          TYPE='true'
-          fi
           . .github/install.sh
-          . .github/YT.sh
+          bash .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -89,14 +83,8 @@ jobs:
           FEATURE: ${{ inputs.FEATURE }}
         run: |
           # kakathic
-          if [ -z "$VERSION" ];then
-          DEVICE='arm64-v8a'
-          DEV='Stable'
-          VERSION='Auto'
-          TYPE='false'
-          fi
           . .github/install.sh
-          . .github/YT.sh
+          bash .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -123,15 +111,8 @@ jobs:
           FEATURE: ${{ inputs.FEATURE }}
         run: |
           # kakathic
-          if [ -z "$VERSION" ];then
-          DEVICE='arm64-v8a'
-          DEV='Stable'
-          VERSION='Auto'
-          TYPE='true'
-          AMOLED='true'
-          fi
           . .github/install.sh
-          . .github/YT.sh
+          bash .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -165,18 +146,12 @@ jobs:
           FEATURE: ${{ inputs.FEATURE }}
         run: |
           # kakathic
-          if [ -z "$VERSION" ];then
-          DEVICE='arm64-v8a'
-          DEV='Stable'
-          VERSION='Auto'
-          TYPE='false'
-          AMOLED='true'
-          fi
           . .github/install.sh
-          . .github/YT.sh
+          bash .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
           name: YT-RE ${{ env.VER }}
           tag_name: V${{ env.VER }}
           files: Up/*
+          
