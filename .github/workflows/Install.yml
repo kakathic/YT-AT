@@ -4,6 +4,9 @@ on:
     paths:
       - 'Lang/**'
       - '.github/**'
+  schedule:
+    - cron: '30 23 * * *'
+permissions: write-all
   workflow_dispatch:
     inputs:
       VERSION:
