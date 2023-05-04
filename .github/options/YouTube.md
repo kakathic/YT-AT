@@ -21,6 +21,3 @@ hdr-auto-brightness
 disable-shorts-on-startup
 hide-album-cards
 "
-
-# sự dụng microg
-[ "$TYPE" == "true" ] && Mro="-e vanced-microg-support"
