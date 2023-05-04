@@ -114,7 +114,7 @@ cd $HOME
 echo 'id=YouTube
 name=YouTube PiP
 author=kakathic
-description=Auto build '$(date)', YouTube edited tool by Revanced mod added disable play store updates, mod rounded pip window.
+description=Build '$(date)', YouTube edited tool by Revanced mod added disable play store updates, mod rounded pip window.
 version='$VER'
 versionCode='${VER//./}'
 updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$ach'.json
@@ -127,6 +127,8 @@ echo '{
 "zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$VER'/YT-Magisk-'$VER'-'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
 }' > Up-$ach$amoled2.json
+
+echo 'Update '$(date)'' > Up-notes.json
 
 # Tạo module magisk
 cd $HOME/.github/Modun
