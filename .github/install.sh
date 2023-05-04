@@ -16,6 +16,7 @@ User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firef
 for kskn in $FEATURE; do
 echo "-e $kskn" >> feature
 done
+[ -e feature ] && feature="$(cat feature)"
 
 # khu vực fusion 
 Taive () { curl -s -L -N -H "$User" --connect-timeout 20 "$1" -o "$2"; }
