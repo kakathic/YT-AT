@@ -11,7 +11,7 @@ jobs:
   build1:
     name: 'Buid arm64 root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -46,7 +46,7 @@ jobs:
   build2:
     name: 'Buid arm64 no-root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -74,7 +74,7 @@ jobs:
   build3:
     name: 'Buid arm64 amoled root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -110,7 +110,7 @@ jobs:
   build4:
     name: 'Buid arm64 amoled no-root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
