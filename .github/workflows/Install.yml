@@ -69,6 +69,12 @@ jobs:
           name: YT-RE ${{ env.VER }}
           tag_name: V${{ env.VER }}
           files: Up/*
+      - name: Upload Json
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: Up
+          files: Up*.json
+          prerelease: true
   build2:
     name: 'Buid arm64 no-root'
     runs-on: ubuntu-22.04
@@ -137,6 +143,12 @@ jobs:
           name: YT-RE ${{ env.VER }}
           tag_name: V${{ env.VER }}
           files: Up/*
+      - name: Upload Json
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: Up
+          files: Up*.json
+          prerelease: true
   build4:
     name: 'Buid arm64 amoled no-root'
     runs-on: ubuntu-22.04
