@@ -40,8 +40,6 @@
 
    > [PowerTube](https://github.com/razar-dev/PowerTube)
 
-   > [SnapTube](https://www.snaptubeapp.com)
-
 **Language Contribution**
 ---
 
