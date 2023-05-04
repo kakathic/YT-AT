@@ -1,4 +1,4 @@
-# YT-AT [![YT-AT](https://github.com/kakathic/YT-AT/actions/workflows/build.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/build.yml)
+# YT-AT [![YT-AT](https://github.com/kakathic/YT-AT/actions/workflows/Install.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/Install.yml)
 
 - YouTube mod tool auto, and auto update.
 
