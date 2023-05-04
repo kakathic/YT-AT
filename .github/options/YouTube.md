@@ -3,10 +3,6 @@
 # Features enabled
 Ton="
 
--i custom-video-buffer
--i remove-screenshot-restriction
--i spoof-wifi-connection
-
 "
 
 # Features are turned off
