@@ -8,7 +8,7 @@ Vidon="$(java -jar $lib1 -a $lib3 -b $lib2 -l --with-versions | grep -m1 "$kck" 
 [ "$Vidon" ] && break
 done
 [ "$VERSION" == 'Auto' ] && VER="$Vidon" || VER="$VERSION"
-Upenv VER "$VER"
+Upenv VIR "$VER"
 echo "  $VER"
 echo
 
