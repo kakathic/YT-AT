@@ -10,6 +10,7 @@ permissions: write-all
 jobs:
   build0:
     name: 'Check'
+    if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -20,7 +21,11 @@ jobs:
           repository: ${{ github.repository }}
           retain_days: 0
           keep_minimum_runs: 0
-      - name: Tool cli
+      - name: See build
+        run: |
+          # kakathic
+          . .github/YT.sh
+      - name: Upload cli
         uses: EndBug/add-and-commit@v9
         with:
           message: 'Add the very useful text file'
