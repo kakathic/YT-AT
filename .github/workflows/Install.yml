@@ -34,7 +34,7 @@ on:
         default: ''
 jobs:
   build1:
-    name: 'Buid arm64 root...'
+    name: 'Buid arm64 root'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -43,7 +43,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu'
-      - name: See build...
+      - name: See build
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
@@ -67,7 +67,7 @@ jobs:
           tag_name: V${{ env.VER }}
           files: Up/*
   build2:
-    name: 'Buid arm64 no-root...'
+    name: 'Buid arm64 no-root'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -76,7 +76,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu'
-      - name: See build...
+      - name: See build
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
@@ -100,7 +100,7 @@ jobs:
           tag_name: V${{ env.VER }}
           files: Up/*
   build3:
-    name: 'Buid arm64 amoled root...'
+    name: 'Buid arm64 amoled root'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -109,7 +109,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu'
-      - name: See build...
+      - name: See build
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
@@ -135,7 +135,7 @@ jobs:
           tag_name: V${{ env.VER }}
           files: Up/*
   build4:
-    name: 'Buid arm64 amoled no-root...'
+    name: 'Buid arm64 amoled no-root'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -144,7 +144,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu'
-      - name: See build...
+      - name: See build
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
