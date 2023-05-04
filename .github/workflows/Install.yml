@@ -63,6 +63,6 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VER }}
-          tag_name: V${{ env.VER }}
+          name: YT-AT ${{ env.VIR }}
+          tag_name: V${{ env.VIR }}
           files: Up/*
