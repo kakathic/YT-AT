@@ -59,12 +59,12 @@ echo > "apk/$1.txt"; }
 # Tải tool cli
 echo "- Tải tool cli, patches, integrations..."
 if [ "$DEV" == "Develop" ];then
-echo "- Tải Dev"
+echo "  Tải Dev"
 pbdev revanced-cli jar -all
 pbdev revanced-patches jar
 pbdev revanced-integrations apk
 else
-echo "- Tải Sta"
+echo "  Tải Sta"
 pbsta revanced-cli jar -all
 pbsta revanced-patches jar
 pbsta revanced-integrations apk
@@ -74,5 +74,3 @@ fi
 checkzip "lib/revanced-cli.jar"
 checkzip "lib/revanced-patches.jar"
 checkzip "lib/revanced-integrations.apk"
-echo
-
