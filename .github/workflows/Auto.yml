@@ -29,7 +29,7 @@ jobs:
           TYPE='true'
           fi
           . .github/install.sh
-          bash .github/YT.sh
+          . .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -64,7 +64,7 @@ jobs:
           TYPE='false'
           fi
           . .github/install.sh
-          bash .github/YT.sh
+          . .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -93,7 +93,7 @@ jobs:
           AMOLED='true'
           fi
           . .github/install.sh
-          bash .github/YT.sh
+          . .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -129,7 +129,7 @@ jobs:
           AMOLED='true'
           fi
           . .github/install.sh
-          bash .github/YT.sh
+          . .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
