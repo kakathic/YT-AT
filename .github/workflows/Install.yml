@@ -4,7 +4,8 @@ on:
     paths:
       - 'Lang/**'
       - '.github/**'
-  
+  schedule:
+    - cron: '30 23 * * *'
   workflow_dispatch:
     inputs:
       VERSION:
@@ -33,6 +34,7 @@ on:
         description: 'Turn off feature'
         required: false
         default: ''
+permissions: write-all
 jobs:
   build1:
     name: 'Buid arm64 root'
