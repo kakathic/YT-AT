@@ -14,7 +14,7 @@ chcon u:object_r:apk_data_file:s0 $1
 [ $(pm install -r $1 | grep -cm1 'Success') == 1 ] && inYT="done" || inYT="failure"
 [ "$inYT" == "failure" ] && pm uninstall com.google.android.youtube >&2
 [ $(pm install -r $1 | grep -cm1 'Success') == 1 ] && inYT="done" || inYT="failure"
-[ "$inYT" == "done" ] && echo "- Apk install successful" || abort "- Error cannot install apk"; }
+[ "$inYT" == "done" ] || abort "- Error cannot install apk"; }
 
 linkAPK(){ pm path com.google.android.youtube | grep base | cut -d : -f2; }
 
@@ -23,7 +23,7 @@ cpLIB(){ cp -af $1 ${2%/*}; }
 mountYT(){
 chcon u:object_r:apk_data_file:s0 "$1"
 su -mm -c mount -o bind "$1" "$2"
-cmd package compile -m speed com.google.android.youtube; }
+cmd package compile -m speed com.google.android.youtube >&2; }
 
 offCH(){
 Sqlite3=$MODPATH/sqlite3
