@@ -71,7 +71,7 @@ fi
 
 # là amoled
 [ "$AMOLED" == 'true' ] && amoled2='-Amoled'
-[ "$AMOLED" == 'true' ] || theme='- theme'
+[ "$AMOLED" == 'true' ] || theme='-e theme'
 
 # MOD YouTube 
 (
