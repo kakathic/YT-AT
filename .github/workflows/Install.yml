@@ -158,7 +158,7 @@ jobs:
           DEVICE='arm64-v8a'
           DEV='Stable'
           VERSION='Auto'
-          TYPE='true'
+          TYPE='false'
           AMOLED='false'
           fi
           . .github/install.sh
