@@ -1,4 +1,4 @@
-name: YT-RE
+name: YT-RE AUTO
 on:
   push:
     paths:
@@ -6,34 +6,6 @@ on:
       - '.github/**'
   schedule:
     - cron: '30 23 * * *'
-  workflow_dispatch:
-    inputs:
-      VERSION:
-        description: 'Example: 18.15.40'
-        required: false
-        default: 'Auto'
-      DEVICE:
-        description: 'Select device'
-        required: false
-        default: 'arm64-v8a'
-        type: choice
-        options:
-          - armeabi-v7a
-          - arm64-v8a
-          - x86
-          - x86_64
-      DEV:
-        description: 'Tool cli'
-        required: false
-        default: 'Stable'
-        type: choice
-        options:
-          - Stable
-          - Develop
-      FEATURE:
-        description: 'Turn off feature'
-        required: false
-        default: ''
 permissions: write-all
 jobs:
   build1:
