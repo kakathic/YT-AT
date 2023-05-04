@@ -8,6 +8,29 @@ on:
     - cron: '30 23 * * *'
 permissions: write-all
 jobs:
+  build0:
+    name: 'Check'
+    runs-on: ubuntu-22.04
+    needs:
+      - build1
+      - build2
+      - build3
+      - build4
+    steps:
+      - uses: actions/checkout@v3
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 0
+      - name: Tool cli
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Add the very useful text file'
+          add: '*.apk --force'
+          cwd: './Up/'
   build1:
     name: 'Buid arm64 root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
