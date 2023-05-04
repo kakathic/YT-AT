@@ -50,7 +50,7 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
-          bash .github/YT.sh
+          . .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -84,7 +84,7 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
-          bash .github/YT.sh
+          . .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -112,7 +112,7 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
-          bash .github/YT.sh
+          . .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -147,11 +147,10 @@ jobs:
         run: |
           # kakathic
           . .github/install.sh
-          bash .github/YT.sh
+          . .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
           name: YT-RE ${{ env.VER }}
           tag_name: V${{ env.VER }}
           files: Up/*
-          
