@@ -40,12 +40,6 @@ jobs:
           java-version: '17'
           distribution: 'zulu'
       - name: See build
-        env:
-          VERSION: ${{ inputs.VERSION }}
-          DEVICE: ${{ inputs.DEVICE }}
-          DEV: ${{ inputs.DEV }}
-          TYPE: 'true'
-          FEATURE: ${{ inputs.FEATURE }}
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -83,12 +77,6 @@ jobs:
           java-version: '17'
           distribution: 'zulu'
       - name: See build
-        env:
-          VERSION: ${{ inputs.VERSION }}
-          DEVICE: ${{ inputs.DEVICE }}
-          DEV: ${{ inputs.DEV }}
-          TYPE: 'false'
-          FEATURE: ${{ inputs.FEATURE }}
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -119,13 +107,6 @@ jobs:
           java-version: '17'
           distribution: 'zulu'
       - name: See build
-        env:
-          VERSION: ${{ inputs.VERSION }}
-          DEVICE: ${{ inputs.DEVICE }}
-          DEV: ${{ inputs.DEV }}
-          TYPE: 'true'
-          AMOLED: 'true'
-          FEATURE: ${{ inputs.FEATURE }}
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -164,13 +145,6 @@ jobs:
           java-version: '17'
           distribution: 'zulu'
       - name: See build
-        env:
-          VERSION: ${{ inputs.VERSION }}
-          DEVICE: ${{ inputs.DEVICE }}
-          DEV: ${{ inputs.DEV }}
-          TYPE: 'false'
-          AMOLED: 'true'
-          FEATURE: ${{ inputs.FEATURE }}
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
