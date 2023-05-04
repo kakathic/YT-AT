@@ -5,7 +5,7 @@
 
 # Features are turned off
 Tof="
--e custom-branding
+-e custom-branding-name
 "
 
 # check vison
