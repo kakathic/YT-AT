@@ -11,11 +11,6 @@ jobs:
   build0:
     name: 'Check'
     runs-on: ubuntu-22.04
-    needs:
-      - build1
-      - build2
-      - build3
-      - build4
     steps:
       - uses: actions/checkout@v3
       - name: Delete workflow runs
@@ -35,6 +30,8 @@ jobs:
     name: 'Buid arm64 root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
+    needs:
+      - build0
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -76,6 +73,8 @@ jobs:
     name: 'Buid arm64 no-root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
+    needs:
+      - build0
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -110,6 +109,8 @@ jobs:
     name: 'Buid arm64 amoled root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
+    needs:
+      - build0
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
@@ -153,6 +154,8 @@ jobs:
     name: 'Buid arm64 amoled no-root'
     if: github.repository == 'kakathic/YT-AT' && github.ref == 'refs/heads/Vip'
     runs-on: ubuntu-22.04
+    needs:
+      - build0
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK
