@@ -30,4 +30,6 @@ mount /data 2>/dev/null
 [ $MAGISK_VER_CODE -lt 20400 ] && require_new_magisk
 
 install_module
+[ -e $MODPATH/YouTube.apk ] && am start com.google.android.youtube >&2
+
 exit 0
