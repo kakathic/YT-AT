@@ -77,7 +77,7 @@ fi
 (
 echo "▼ Bắt đầu quá trình xây dựng..."
 java -Djava.io.tmpdir=$HOME -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o YT.apk \
--t tmp $Tof $Ton $Mro $theme $(cat feature)
+--options=options.toml -t tmp $Tof $Ton $Mro $theme $(cat feature)
 
 ) & (
 Loading "tmp/res/values" "tmp/res/values" >/dev/null
