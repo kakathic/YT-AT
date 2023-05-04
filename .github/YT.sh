@@ -78,14 +78,13 @@ fi
 (
 echo "▼ Bắt đầu quá trình xây dựng..."
 java -Djava.io.tmpdir=$HOME -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o YT.apk \
--t tmp $Tof $Ton $Mro $theme $(cat feature) | sed '/WARNING: warn: removing resource/d' 
+-t tmp $Tof $Ton $Mro $theme $(cat feature) | sed -e '/WARNING: warn: removing resource/d' -e '/WARNING: warn: removing resource/d'
 
 ) & (
 
 Loading "tmp/res/values" "tmp/res/values" >/dev/null
 zip -qr apk/YouTube.apk -d res/*
-Loading "tmp/res/values-vi/strings.xml" "tmp/res/values-vi/strings.xml" >/dev/null
-
+sleep 2
 for kvc in $(ls $HOME/.github/Language); do
 mkdir -p $HOME/tmp/res/${kvc%.*}
 sed -i "/<\/resources>/d" $HOME/tmp/res/${kvc%.*}/strings.xml
