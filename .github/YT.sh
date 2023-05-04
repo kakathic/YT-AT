@@ -78,13 +78,14 @@ fi
 (
 echo "▼ Bắt đầu quá trình xây dựng..."
 java -Djava.io.tmpdir=$HOME -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o YT.apk \
---options=$HOME/.github/options.toml -t tmp $Tof $Ton $Mro $theme $(cat feature)
+-t tmp $Tof $Ton $Mro $theme $(cat feature)
 
 ) & (
 Loading "tmp/res/values" "tmp/res/values" >/dev/null
 zip -qr apk/YouTube.apk -d res/*
 Loading "tmp/res/values-vi/strings.xml" "tmp/res/values-vi/strings.xml" >/dev/null
 for kvc in $(ls $HOME/Language); do
+echo "${kvc%.*}"
 sed -i "/<\/resources>/d" $HOME/tmp/res/${kvc%.*}/strings.xml
 cat $HOME/.github/Language/$kvc | sed -e 's|<?xml version="1.0" encoding="utf-8"?>||g' -e "/<\/resources>/d" -e "/<resources>/d" >> $HOME/tmp/res/${kvc%.*}/strings.xml
 echo '</resources>' >> $HOME/tmp/res/${kvc%.*}/strings.xml
