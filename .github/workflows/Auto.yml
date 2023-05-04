@@ -20,7 +20,6 @@ jobs:
           java-version: '17'
           distribution: 'zulu'
       - name: See build
-        shell: bash
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -30,7 +29,7 @@ jobs:
           TYPE='true'
           fi
           . .github/install.sh
-          . .github/YT.sh
+          bash .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -56,7 +55,6 @@ jobs:
           java-version: '17'
           distribution: 'zulu'
       - name: See build
-        shell: bash
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -66,7 +64,7 @@ jobs:
           TYPE='false'
           fi
           . .github/install.sh
-          . .github/YT.sh
+          bash .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -85,7 +83,6 @@ jobs:
           java-version: '17'
           distribution: 'zulu'
       - name: See build
-        shell: bash
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -96,7 +93,7 @@ jobs:
           AMOLED='true'
           fi
           . .github/install.sh
-          . .github/YT.sh
+          bash .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -122,7 +119,6 @@ jobs:
           java-version: '17'
           distribution: 'zulu'
       - name: See build
-        shell: bash
         run: |
           # kakathic
           if [ -z "$VERSION" ];then
@@ -133,7 +129,7 @@ jobs:
           AMOLED='true'
           fi
           . .github/install.sh
-          . .github/YT.sh
+          bash .github/YT.sh
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
