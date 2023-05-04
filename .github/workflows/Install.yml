@@ -60,7 +60,7 @@ jobs:
           fi
           . .github/install.sh
           . .github/YT.sh
-          sleep 5
+          sleep 2
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -94,7 +94,7 @@ jobs:
           fi
           . .github/install.sh
           . .github/YT.sh
-          sleep 5
+          sleep 4
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -130,6 +130,7 @@ jobs:
           fi
           . .github/install.sh
           . .github/YT.sh
+          sleep 6
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
@@ -165,6 +166,7 @@ jobs:
           fi
           . .github/install.sh
           . .github/YT.sh
+          sleep 10
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
