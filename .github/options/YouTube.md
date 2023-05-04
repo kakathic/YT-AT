@@ -1,9 +1,7 @@
 # kakathic
 
 # Features enabled
-Ton="
-
-"
+#Ton=""
 
 # Features are turned off
 Tof="
@@ -25,6 +23,4 @@ hide-album-cards
 "
 
 # sự dụng microg
-[ "$TYPE" == "true" ] && Mro="
--e vanced-microg-support
-"
+[ "$TYPE" == "true" ] && Mro="-e vanced-microg-support"
