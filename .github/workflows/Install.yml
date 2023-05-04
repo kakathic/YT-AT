@@ -1,4 +1,4 @@
-name: YT-AT
+name: YT-RE
 on:
   push:
     paths:
@@ -63,7 +63,7 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VER }}
+          name: YT-RE ${{ env.VER }}
           tag_name: V${{ env.VER }}
           files: Up/*
   build2:
@@ -96,7 +96,7 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VER }}
+          name: YT-RE ${{ env.VER }}
           tag_name: V${{ env.VER }}
           files: Up/*
   build3:
@@ -131,7 +131,7 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VER }}
+          name: YT-RE ${{ env.VER }}
           tag_name: V${{ env.VER }}
           files: Up/*
   build4:
@@ -166,6 +166,6 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-AT ${{ env.VER }}
+          name: YT-RE ${{ env.VER }}
           tag_name: V${{ env.VER }}
           files: Up/*
