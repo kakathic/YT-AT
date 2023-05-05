@@ -52,14 +52,20 @@ done
 
 if [ "$VERSION" == 'Auto' ];then
 VER="$Vidon"
-Kad='Buid'
+Kad=Build
+V=V
 elif [ "$VERSION" == 'Autu' ];then
 VER="$Vidon"
-Kad='Auto'
+Kad=Auto
+V=U
 else
 VER="$VERSION"
+Kad=News
+V=N
 fi
 
+Upenv V "$V"
+Upenv Kad "Kad"
 Upenv VER "$VER"
 echo "  $VER"
 
@@ -158,26 +164,26 @@ cd $HOME
 
 # Tạo module.prop
 echo 'id=YouTube
-name=YouTube PiP Ext
+name=YouTube PiP Ext '$Kad'
 author=kakathic
 description=Build '$(date)', YouTube edited tool by Revanced mod added disable play store updates, mod rounded pip window.
 version='$VER'
 versionCode='${VER//./}'
-updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-X'$ach$amoled2'.json
+updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-X'$V$ach$amoled2'.json
 ' > $HOME/.github/Modun/module.prop
 
 # Tạo json
 echo '{
 "version": "'$VER'",
 "versionCode": "'${VER//./}'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/X'$VER'/XYT-Magisk-'$VER'-'$ach$amoled2'.Zip",
-"changelog": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-Xnotes.json"
-}' > Up-X$ach$amoled2.json
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/X'$VER'/XYT-Magisk-'$VER'-'$V$ach$amoled2'.Zip",
+"changelog": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-X'$V'notes.json"
+}' > Up-X$V$ach$amoled2.json
 
-echo 'Update '$(date)', YouTube: '$VER'' > Up-Xnotes.json
+echo 'Update '$(date)', YouTube: '$VER'' > Up-X'$V'notes.json
 
 # Tạo module magisk
 cd $HOME/.github/Modun
-zip -qr $HOME/Up/XYT-Magisk-$VER-$ach$amoled2.zip *
+zip -qr $HOME/Up/XYT-Magisk-$VER-$V$ach$amoled2.zip *
 cd $HOME
 ls Up
