@@ -1,10 +1,7 @@
 # kakathic
 RD="$RANDOM"
 while true; do
-[ -e /sdcard/Android ] && break
-else
-sleep 1
-fi
+[ -e /sdcard/Android ] && break || sleep 1
 done
 MODPATH="${0%/*}"
 . $MODPATH/YT.sh
