@@ -171,7 +171,7 @@ echo '{
 "changelog": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-notes.json"
 }' > Up-$ach$amoled2.json
 
-echo 'Update '$(date)'' > Up-notes.json
+echo 'Update '$(date)', YouTube: '$VER'' > Up-notes.json
 
 # Tạo module magisk
 cd $HOME/.github/Modun
