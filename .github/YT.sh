@@ -123,6 +123,7 @@ echo "▼ Bắt đầu quá trình xây dựng..."
 java -Djava.io.tmpdir=$HOME -jar $lib1 -b $lib2 -m $lib3 -a apk/YouTube.apk -o YT.apk \
 -t tmp $Tof $Ton $Mro $theme $feature > Log.txt 2>> Log.txt
 sed '/WARNING: warn: removing resource/d' Log.txt
+echo > 2.txt
 
 ) & (
 
@@ -136,11 +137,11 @@ sed -i "/<\/resources>/d" $HOME/tmp/res/${kvc%.*}/strings.xml
 [ -e $HOME/tmp/res/${kvc%.*} ] && cat $HOME/.github/Language/$kvc | sed -e 's|<?xml version="1.0" encoding="utf-8"?>||g' -e "/<\/resources>/d" -e "/<resources>/d" >> $HOME/tmp/res/${kvc%.*}/strings.xml || cat $HOME/.github/Language/$kvc | sed "/<\/resources>/d" >> $HOME/tmp/res/${kvc%.*}/strings.xml
 echo '</resources>' >> $HOME/tmp/res/${kvc%.*}/strings.xml
 done
-
+echo > 1.txt
 )
 
 # Chờ xây dựng xong
-Loading "YT.apk" "YT.apk" >/dev/null
+Loading "1.txt" "2.txt" >/dev/null
 if [ "$TYPE" == 'true' ];then
 mv YT.apk $HOME/Tav/YouTube.apk
 else
