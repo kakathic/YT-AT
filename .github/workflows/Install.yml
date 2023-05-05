@@ -54,8 +54,8 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-RE ${{ env.VER }}
-          tag_name: V${{ env.VER }}
+          name: YT-RE ${{ env.VER }} ${{ env.Kad }}
+          tag_name: V${{ env.V }}${{ env.VER }}
           files: Up/*
       - name: Upload Json
         uses: softprops/action-gh-release@v1
@@ -88,8 +88,8 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-RE ${{ env.VER }}
-          tag_name: V${{ env.VER }}
+          name: YT-RE ${{ env.VER }} ${{ env.Kad }}
+          tag_name: V${{ env.V }}${{ env.VER }}
           files: Up/*
   build3:
     name: 'Buid arm64 amoled root'
@@ -116,8 +116,8 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-RE ${{ env.VER }}
-          tag_name: V${{ env.VER }}
+          name: YT-RE ${{ env.VER }} ${{ env.Kad }}
+          tag_name: V${{ env.V }}${{ env.VER }}
           files: Up/*
       - name: Upload Json
         uses: softprops/action-gh-release@v1
@@ -151,6 +151,6 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          name: YT-RE ${{ env.VER }}
-          tag_name: V${{ env.VER }}
+          name: YT-RE ${{ env.VER }} ${{ env.Kad }}
+          tag_name: V${{ env.V }}${{ env.VER }}
           files: Up/*
