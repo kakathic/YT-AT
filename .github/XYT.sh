@@ -164,7 +164,7 @@ echo '{
 "changelog": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-Xnotes.json"
 }' > Up-X$ach$amoled2.json
 
-echo 'Update '$(date)'' > Up-Xnotes.json
+echo 'Update '$(date)', YouTube: '$VER'' > Up-Xnotes.json
 
 # Tạo module magisk
 cd $HOME/.github/Modun
