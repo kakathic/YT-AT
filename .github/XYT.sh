@@ -176,7 +176,7 @@ updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-X'$V$ach$am
 echo '{
 "version": "'$VER'",
 "versionCode": "'${VER//./}'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/X'$VER'/XYT-Magisk-'$VER'-'$ach$amoled2'.Zip",
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/X'$V$VER'/XYT-Magisk-'$VER'-'$ach$amoled2'.Zip",
 "changelog": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-X'$V'notes.json"
 }' > Up-X$V$ach$amoled2.json
 
