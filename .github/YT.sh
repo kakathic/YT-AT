@@ -183,7 +183,7 @@ updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$V$ach$amo
 echo '{
 "version": "'$VER'",
 "versionCode": "'${VER//./}'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$VER'/YT-Magisk-'$VER'-'$V$ach$amoled2'.Zip",
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$V$VER'/YT-Magisk-'$VER'-'$ach$amoled2'.Zip",
 "changelog": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$V'notes.json"
 }' > Up-$V$ach$amoled2.json
 
@@ -191,6 +191,6 @@ echo 'Update '$(date)', YouTube: '$VER'' > Up-${V}notes.json
 
 # Tạo module magisk
 cd $HOME/.github/Modun
-zip -qr $HOME/Up/YT-Magisk-$VER-$V$ach$amoled2.zip *
+zip -qr $HOME/Up/YT-Magisk-$VER-$ach$amoled2.zip *
 cd $HOME
 ls Up
