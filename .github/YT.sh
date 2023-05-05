@@ -64,6 +64,8 @@ Kad=News
 V=N
 fi
 
+Upenv V "$V"
+Upenv Kad "Kad"
 Upenv VER "$VER"
 echo "  $VER"
 
