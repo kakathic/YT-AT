@@ -55,6 +55,21 @@ done
 [ "$AMOLED" == 'true' ] || theme='-e theme'
 [ "$TYPE" == 'true' ] && Mro="-e vanced-microg-support"
 
+# Xoá lib dựa vào abi
+if [ "$DEVICE" == "arm64-v8a" ];then
+lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
+ach="arm64"
+elif [ "$DEVICE" == "x86" ];then
+lib="lib/x86_64/* lib/arm64-v8a/* lib/armeabi-v7a/*"
+ach="x86"
+elif [ "$DEVICE" == "x86_64" ];then
+lib="lib/x86/* lib/arm64-v8a/* lib/armeabi-v7a/*"
+ach="x64"
+else
+lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
+ach="arm"
+fi
+
 if [ "$VERSION" == 'Auto' ];then
 VER="$Vidon"
 Kad=Build
@@ -94,20 +109,6 @@ mv apk/YouTube.apks apk/YouTube.apk
 mv apk/YouTube.apk2 apk/YouTube.apks
 fi
 
-# Xoá lib dựa vào abi
-if [ "$DEVICE" == "arm64-v8a" ];then
-lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
-ach="arm64"
-elif [ "$DEVICE" == "x86" ];then
-lib="lib/x86_64/* lib/arm64-v8a/* lib/armeabi-v7a/*"
-ach="x86"
-elif [ "$DEVICE" == "x86_64" ];then
-lib="lib/x86/* lib/arm64-v8a/* lib/armeabi-v7a/*"
-ach="x64"
-else
-lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
-ach="arm"
-fi
 [ "$TYPE" == 'true' ] && lib='lib/*/*'
 
 # Copy 
