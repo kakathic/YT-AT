@@ -25,11 +25,13 @@ echo > "apk/$1.txt"; }
 echo "- Tải tool cli, patches, integrations..."
 if [ "$DEV" == "Develop" ];then
 echo "  Dùng Dev"
+echo
 pbdev revanced-cli jar -all
 pbdev revanced-patches jar
 pbdev revanced-integrations apk
 else
 echo "  Dùng Sta"
+echo
 pbsta revanced-cli jar -all
 pbsta revanced-patches jar
 pbsta revanced-integrations apk
@@ -82,7 +84,7 @@ Kad=Auto
 V=U
 if [ "$(Xem https://github.com/kakathic/YT-AT/releases/download/Up/Up-X$V$ach$amoled2.json | grep -cm1 "${VER//./}")" == 1 ];then
 echo
-echo "- Là phiên bản mới nhất."
+echo "! Là phiên bản mới nhất."
 exit 0
 fi
 else
