@@ -45,7 +45,6 @@ echo
 
 # Load dữ liệu cài đặt 
 . $HOME/.github/options/YouTube.md
-Upenv A "0"
 
 # lấy dữ liệu phiên bản mặc định
 echo "- Lấy dữ liệu phiên bản YouTube..."
@@ -86,7 +85,6 @@ V=U
 if [ "$(Xem https://github.com/kakathic/YT-AT/releases/download/Up/Up-Z$V$ach$amoled2.json | grep -cm1 "${VER//./}")" == 1 ];then
 echo
 echo "! Là phiên bản mới nhất."
-Upenv A "1"
 exit 0
 fi
 else
