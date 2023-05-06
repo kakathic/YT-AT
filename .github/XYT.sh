@@ -178,9 +178,9 @@ echo '{
 "versionCode": "'${VER//./}'",
 "zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/X'$V$VER'/XYT-Magisk-'$VER'-'$ach$amoled2'.Zip",
 "changelog": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-X'$V'notes.json"
-}' > Up-X$V$ach$amoled2.json
+}' > "Up-X$V$ach$amoled2.json"
 
-echo 'Update '$(date)', YouTube: '$VER'' > Up-X${V}notes.json
+echo 'Update '$(date)', YouTube: '$VER'' > "Up-X${V}notes.json"
 
 # Tạo module magisk
 cd $HOME/.github/Modun
