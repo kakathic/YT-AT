@@ -25,12 +25,12 @@ echo > "apk/$1.txt"; }
 # Tải tool cli
 echo "- Tải tool cli, patches, integrations..."
 if [ "$DEV" == "Develop" ];then
-echo "  Tải Dev"
+echo "  Dùng Dev"
 pbdev revanced-cli jar -all
 pbdev revanced-patches jar
 pbdev revanced-integrations apk
 else
-echo "  Tải Sta"
+echo "  Dùng Sta"
 pbsta revanced-cli jar -all
 pbsta revanced-patches jar
 pbsta revanced-integrations apk
@@ -72,7 +72,7 @@ lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
 ach="arm"
 fi
 
-echo "  $VER"
+echo "  $Vidon"
 if [ "$VERSION" == 'Auto' ];then
 VER="$Vidon"
 Kad=Build
