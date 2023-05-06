@@ -50,6 +50,11 @@ Vidon="$(java -jar "$lib1" -a "$lib3" -b "$lib2" -l --with-versions | grep -m1 "
 [ "$Vidon" ] && break
 done
 
+# là amoled
+[ "$AMOLED" == 'true' ] && amoled2='-Amoled'
+[ "$AMOLED" == 'true' ] || theme='-e theme'
+[ "$TYPE" == 'true' ] && Mro="-e microg-support"
+
 if [ "$VERSION" == 'Auto' ];then
 VER="$Vidon"
 Kad=Build
@@ -58,6 +63,7 @@ elif [ "$VERSION" == 'Autu' ];then
 VER="$Vidon"
 Kad=Auto
 V=U
+[ "$(Xem https://github.com/kakathic/YT-AT/releases/download/Up/Up-X$V$ach$amoled2.json | grep -cm1 $VER)" == 1 ] && exit 0
 else
 VER="$VERSION"
 Kad=News
@@ -126,11 +132,6 @@ cd jar
 zip -qr "lib/revanced-patches.jar" *
 cd $HOME
 fi
-
-# là amoled
-[ "$AMOLED" == 'true' ] && amoled2='-Amoled'
-[ "$AMOLED" == 'true' ] || theme='-e theme'
-[ "$TYPE" == 'true' ] && Mro="-e microg-support"
 
 # MOD YouTube 
 (
