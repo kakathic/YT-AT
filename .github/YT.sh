@@ -40,6 +40,7 @@ fi
 checkzip "lib/revanced-cli.jar"
 checkzip "lib/revanced-patches.jar"
 checkzip "lib/revanced-integrations.apk"
+echo
 
 # Load dữ liệu cài đặt 
 . $HOME/.github/options/YouTube.md
@@ -71,6 +72,7 @@ lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
 ach="arm"
 fi
 
+echo "  $VER"
 if [ "$VERSION" == 'Auto' ];then
 VER="$Vidon"
 Kad=Build
@@ -89,7 +91,7 @@ fi
 Upenv V "$V"
 Upenv Kad "$Kad"
 Upenv VER "$VER"
-echo "  $VER"
+echo
 
 echo "- Tải YouTube apk apks..."
 # Tải YouTube apk
