@@ -1,4 +1,3 @@
-
 # load dữ liệu 
 lib1="lib/revanced-cli.jar"
 lib2="lib/revanced-patches.jar"
@@ -81,7 +80,11 @@ elif [ "$VERSION" == 'Autu' ];then
 VER="$Vidon"
 Kad=Auto
 V=U
-[ "$(Xem https://github.com/kakathic/YT-AT/releases/download/Up/Up-Z$V$ach$amoled2.json | grep -cm1 "${VER//./}")" == 1 ] && (echo; echo "- Là phiên bản mới nhất."; exit 0;)
+if [ "$(Xem https://github.com/kakathic/YT-AT/releases/download/Up/Up-Z$V$ach$amoled2.json | grep -cm1 "${VER//./}")" == 1 ];then
+echo
+echo "- Là phiên bản mới nhất."
+exit 0
+fi
 else
 VER="$VERSION"
 Kad=News
