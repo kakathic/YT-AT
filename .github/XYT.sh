@@ -169,18 +169,18 @@ author=kakathic
 description=Build '$(date)', YouTube edited tool by Revanced mod added disable play store updates, mod rounded pip window.
 version='$VER'
 versionCode='${VER//./}'
-updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-X'$V$ach$amoled2'.json
+updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$V$ach$amoled2'.json
 ' > $HOME/.github/Modun/module.prop
 
 # Tạo json
 echo '{
 "version": "'$VER'",
 "versionCode": "'${VER//./}'",
-"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/X'$V$VER'/XYT-Magisk-'$VER'-'$ach$amoled2'.Zip",
-"changelog": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-X'$V'notes.json"
-}' > "Up-X$V$ach$amoled2.json"
+"zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/'$V$VER'/XYT-Magisk-'$VER'-'$ach$amoled2'.Zip",
+"changelog": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$V'notes.json"
+}' > "Up-$V$ach$amoled2.json"
 
-echo 'Update '$(date)', YouTube: '$VER'' > "Up-X${V}notes.json"
+echo 'Update '$(date)', YouTube: '$VER'' > "Up-${V}notes.json"
 
 # Tạo module magisk
 cd $HOME/.github/Modun
