@@ -45,6 +45,7 @@ echo
 
 # Load dữ liệu cài đặt 
 . $HOME/.github/options/YouTube.md
+Upenv A "0"
 
 # lấy dữ liệu phiên bản mặc định
 echo "- Lấy dữ liệu phiên bản YouTube..."
