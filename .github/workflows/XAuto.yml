@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/Auto.yml'
+      - '.github/workflows/XAuto.yml'
       - '.github/XYT.sh'
   schedule:
     - cron: '30 23 * * *'
