@@ -34,12 +34,12 @@ pbsta revanced-cli jar -all
 pbsta revanced-patches jar
 pbsta revanced-integrations apk
 fi
-echo
 
 # kiểm tra tải tool
 checkzip "lib/revanced-cli.jar"
 checkzip "lib/revanced-patches.jar"
 checkzip "lib/revanced-integrations.apk"
+echo
 
 # Load dữ liệu cài đặt 
 . $HOME/.github/options/Ytx.md
