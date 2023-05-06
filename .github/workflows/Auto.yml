@@ -1,5 +1,6 @@
 name: YT-RE AUTO
 on:
+  workflow_dispatch:
   push:
     paths:
       - '.github/workflows/Auto.yml'
