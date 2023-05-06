@@ -34,6 +34,7 @@ pbsta revanced-cli jar -all
 pbsta revanced-patches jar
 pbsta revanced-integrations apk
 fi
+echo
 
 # kiểm tra tải tool
 checkzip "lib/revanced-cli.jar"
@@ -70,6 +71,7 @@ lib="lib/arm64-v8a/* lib/x86/* lib/x86_64/*"
 ach="arm"
 fi
 
+echo "  $VER"
 if [ "$VERSION" == 'Auto' ];then
 VER="$Vidon"
 Kad=Build
@@ -88,7 +90,7 @@ fi
 Upenv V "$V"
 Upenv Kad "$Kad"
 Upenv VER "$VER"
-echo "  $VER"
+echo
 
 echo "- Tải YouTube apk, apks..."
 # Tải YouTube apk
