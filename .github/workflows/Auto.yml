@@ -32,6 +32,7 @@ jobs:
           . .github/install.sh
           . .github/YT.sh
       - name: Upload File
+        if: ${{ env.A }} == 0
         uses: softprops/action-gh-release@v1
         with:
           name: YT-RE ${{ env.VER }} ${{ env.Kad }}
