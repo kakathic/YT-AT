@@ -63,7 +63,7 @@ elif [ "$VERSION" == 'Autu' ];then
 VER="$Vidon"
 Kad=Auto
 V=U
-[ "$(Xem https://github.com/kakathic/YT-AT/releases/download/Up/Up-X$V$ach$amoled2.json | grep -cm1 $VER)" == 1 ] && exit 0
+[ "$(Xem https://github.com/kakathic/'$GITHUB_REPOSITORY'/releases/download/Up/Up-X$V$ach$amoled2.json | grep -cm1 "$VER")" == 1 ] && exit 0
 else
 VER="$VERSION"
 Kad=News
@@ -170,7 +170,7 @@ author=kakathic
 description=Build '$(date)', YouTube edited tool by Revanced mod added disable play store updates, mod rounded pip window.
 version='$VER'
 versionCode='${VER//./}'
-updateJson=https://github.com/kakathic/YT-AT/releases/download/Up/Up-X'$V$ach$amoled2'.json
+updateJson=https://github.com/kakathic/'$GITHUB_REPOSITORY'/releases/download/Up/Up-X'$V$ach$amoled2'.json
 ' > $HOME/.github/Modun/module.prop
 
 # Tạo json
