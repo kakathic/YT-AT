@@ -6,6 +6,7 @@
 # Features are turned off
 Tof="
 -e custom-branding-name
+-e custom-branding-icon-afn-red
 "
 
 # check vison
