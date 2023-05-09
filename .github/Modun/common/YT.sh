@@ -36,8 +36,8 @@ GET_LDB=$($Sqlite3 $LDB "SELECT doc_id,doc_type FROM ownership" | grep $PK | hea
 if [ "$GET_LDB" != "25" ]; then
 cmd appops set --uid $PS GET_USAGE_STATS ignore
 pm disable $PS >&2
-sqlite3 $LDB "UPDATE ownership SET doc_type = '25' WHERE doc_id = '$PK'";
-sqlite3 $LADB "UPDATE appstate SET auto_update = '2' WHERE package_name = '$PK'";
+$Sqlite3 $LDB "UPDATE ownership SET doc_type = '25' WHERE doc_id = '$PK'";
+$Sqlite3 $LADB "UPDATE appstate SET auto_update = '2' WHERE package_name = '$PK'";
 rm -rf /data/data/$PS/cache/*
 pm enable $PS >&2
 fi; }
