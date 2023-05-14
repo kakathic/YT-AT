@@ -6,6 +6,10 @@
 
 - `Build`: only update when manual build is safe and error-free.
 
+- `YT-RE`: revanced's default mod
+
+- `YT-EXT`: 's mod revanced extended
+
 **Use Revanced cli**
 ---
 
