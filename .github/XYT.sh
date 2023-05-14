@@ -82,7 +82,7 @@ elif [ "$VERSION" == 'Autu' ];then
 VER="$Vidon"
 Kad=Auto
 V=U
-if [ "$(Xem https://github.com/kakathic/YT-AT/releases/download/Up/Up-XU$ach$amoled2.json | grep -cm1 "${VER//./}")" == 1 ];then
+if [ "$(Xem https://github.com/kakathic/YT-AT/releases/download/Up/Up-X${V}notes.json | grep -cm1 "${VER//./}")" == 1 ];then
 echo
 echo "! Là phiên bản mới nhất."
 exit 0
@@ -190,7 +190,7 @@ echo '{
 "changelog": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-X'$V'notes.json"
 }' > "Up-X$V$ach$amoled2.json"
 
-echo 'Update '$(date)', YouTube: '$VER'' > "Up-X${V}notes.json"
+echo 'Update '$(date)', YouTube: '$VER', Version: '${VER//./}' ' > Up-X${V}notes.json
 
 # Tạo module magisk
 cd $HOME/.github/Modun
