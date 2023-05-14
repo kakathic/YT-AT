@@ -2,6 +2,10 @@
 
 - YouTube mod tool auto, and auto update.
 
+- `Auto`: it will automatically update when a new version is available.
+
+- `Build`: only update when manual build is safe and error-free.
+
 **Use Revanced cli**
 ---
 
