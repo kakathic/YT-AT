@@ -173,7 +173,7 @@ Loading "1.txt" "2.txt" >/dev/null
 if [ "$TYPE" == 'true' ];then
 mv YT.apk $HOME/Tav/YouTube.apk
 else
-mv YT.apk $HOME/Up/YT-$VER-$ach${amoled2}.apk
+apksign YT.apk $HOME/Up/YT-$VER-$ach${amoled2}.apk
 ls Up
 exit 0
 fi
