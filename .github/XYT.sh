@@ -82,7 +82,7 @@ elif [ "$VERSION" == 'Autu' ];then
 VER="$Vidon"
 Kad=Auto
 V=U
-if [ "$(Xem https://github.com/kakathic/YT-AT/releases/download/Up/Up-X$V$ach$amoled2.json | grep -cm1 "${VER//./}")" == 1 ];then
+if [ "$(Xem https://github.com/kakathic/YT-AT/releases/download/Up/Up-XU$ach$amoled2.json | grep -cm1 "${VER//./}")" == 1 ];then
 echo
 echo "! Là phiên bản mới nhất."
 exit 0
