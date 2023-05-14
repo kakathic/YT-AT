@@ -53,7 +53,7 @@
 
 - I don't know many languages, you can contribute languages ​​at the link below.
 
-   > [Language](https://github.com/kakathic/YT-AT/blob/.github/Language)
+   > [Language](https://github.com/kakathic/YT-AT/tree/Vip/.github/Language)
 
 - Or submit the language file to the issue.
 
