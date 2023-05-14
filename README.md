@@ -6,9 +6,9 @@
 
 - `Build`: only update when manual build is safe and error-free.
 
-- `YT-RE`: revanced's default mod
+- `YT-RE`: Revanced default mod
 
-- `YT-EXT`: 's mod revanced extended
+- `YT-EXT`: Revanced Extended mod
 
 **Use Revanced cli**
 ---
@@ -30,7 +30,7 @@
 
 - You can build your own version with models suitable for your machine. 
 
-   > [Instructions](./.github/Tools/Auto.md)
+   > [Instructions](https://github.com/kakathic/YT-AT/.github/Tools/Auto.md)
 
 **Microg**
 ---
@@ -53,7 +53,7 @@
 
 - I don't know many languages, you can contribute languages ​​at the link below.
 
-   > [Language](./.github/Language)
+   > [Language](https://github.com/kakathic/YT-AT/.github/Language)
 
 - Or submit the language file to the issue.
 
