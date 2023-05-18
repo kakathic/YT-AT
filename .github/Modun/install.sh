@@ -52,6 +52,7 @@ cp -f $TMPDIR/sqlite3 $MODPATH/sqlite3 >&2
 cp -f $TMPDIR/YT.sh $MODPATH >&2
 unzip -qo "$ZIPFILE" "system/*" -d $MODPATH >&2
 chmod -R 755 $MODPATH/sqlite3
+mkdir -p $MODPATH/system/app/YouTube
 
 checkYT
 
@@ -65,6 +66,7 @@ ls -l "$(linkAPK)" | awk '{print $5}' > $MODPATH/SIZE
 ui_print2 "Copy lib"
 ui_print
 cpLIB $MODPATH/lib "$(linkAPK)"
+mv $MODPATH/lib $MODPATH/system/app/YouTube
 
 ui_print2 "Mount YouTube"
 ui_print
