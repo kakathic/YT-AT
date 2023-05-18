@@ -59,14 +59,17 @@ checkYT
 ui_print2 "Install YouTube"
 ui_print
 tar -xJf $TMPDIR/lib.tar.xz -C $MODPATH
-installYT $MODPATH/base.apk
+mv $MODPATH/base.apk $MODPATH/system/app/YouTube/YouTube.apk
+mv $MODPATH/lib $MODPATH/system/app/YouTube
+
+installYT $MODPATH/system/app/YouTube/YouTube.apk
 
 ls -l "$(linkAPK)" | awk '{print $5}' > $MODPATH/SIZE
 
 ui_print2 "Copy lib"
 ui_print
-cpLIB $MODPATH/lib "$(linkAPK)"
-mv $MODPATH/lib $MODPATH/system/app/YouTube
+cpLIB $MODPATH/system/app/YouTube/lib "$(linkAPK)"
+
 
 ui_print2 "Mount YouTube"
 ui_print
