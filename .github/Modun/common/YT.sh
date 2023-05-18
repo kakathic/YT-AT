@@ -14,7 +14,10 @@ chcon u:object_r:apk_data_file:s0 $1
 [ $(pm install -r $1 | grep -cm1 'Success') == 1 ] && inYT="done" || inYT="failure"
 [ "$inYT" == "failure" ] && pm uninstall com.google.android.youtube >&2
 [ $(pm install -r $1 | grep -cm1 'Success') == 1 ] && inYT="done" || inYT="failure"
-[ "$inYT" == "done" ] || abort "- Error cannot install apk"; }
+[ "$inYT" == "done" ] || abort "- Error cannot install apk"
+mkdir -p $MODPATH/system/app/YouTube
+cp -rf $1 $MODPATH/system/app/YouTube/YouTube.apk
+}
 
 linkAPK(){ pm path com.google.android.youtube | grep base | cut -d : -f2; }
 
