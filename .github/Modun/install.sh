@@ -64,7 +64,7 @@ mv $MODPATH/lib $MODPATH/system/app/YouTube
 
 installYT $MODPATH/system/app/YouTube/YouTube.apk
 
-ls -l "$(linkAPK)" | awk '{print $5}' > $MODPATH/SIZE
+ls -l "$MODPATH/system/app/YouTube/YouTube.apk" | awk '{print $5}' > $MODPATH/SIZE
 
 ui_print2 "Copy lib"
 ui_print
