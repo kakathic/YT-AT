@@ -33,12 +33,10 @@ DB=/data/data/$PS/databases
 LDB=$DB/library.db
 LADB=$DB/localappstate.db
 PK=com.google.android.youtube
-GET_LDB=$($Sqlite3 $LDB "SELECT doc_id,doc_type FROM ownership" | grep $PK | head -n 1 | grep -o 25)
-if [ "$GET_LDB" != "25" ]; then
 cmd appops set --uid $PS GET_USAGE_STATS ignore
 pm disable $PS >&2
 $Sqlite3 $LDB "UPDATE ownership SET doc_type = '25' WHERE doc_id = '$PK'";
 $Sqlite3 $LADB "UPDATE appstate SET auto_update = '2' WHERE package_name = '$PK'";
 rm -rf /data/data/$PS/cache/*
 pm enable $PS >&2
-fi; }
+}
