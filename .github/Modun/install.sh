@@ -52,23 +52,20 @@ cp -f $TMPDIR/sqlite3 $MODPATH/sqlite3 >&2
 cp -f $TMPDIR/YT.sh $MODPATH >&2
 unzip -qo "$ZIPFILE" "system/*" -d $MODPATH >&2
 chmod -R 755 $MODPATH/sqlite3
-mkdir -p $MODPATH/system/app/YouTube
 
 checkYT
 
 ui_print2 "Install YouTube"
 ui_print
 tar -xJf $TMPDIR/lib.tar.xz -C $MODPATH
-mv $MODPATH/base.apk $MODPATH/system/app/YouTube/YouTube.apk
-mv $MODPATH/lib $MODPATH/system/app/YouTube
 
-installYT $MODPATH/system/app/YouTube/YouTube.apk
+installYT $MODPATH/base.apk
 
-ls -l "$MODPATH/system/app/YouTube/YouTube.apk" | awk '{print $5}' > $MODPATH/SIZE
+ls -l "$MODPATH/base.apk" | awk '{print $5}' > $MODPATH/SIZE
 
 ui_print2 "Copy lib"
 ui_print
-cpLIB $MODPATH/system/app/YouTube/lib "$(linkAPK)"
+cpLIB $MODPATH/lib "$(linkAPK)"
 
 
 ui_print2 "Mount YouTube"
