@@ -10,6 +10,8 @@
 
 - `YT-EXT`: Revanced Extended mod
 
+- Turn off auto-update of Youtube manually in play store, because haven't found out how to turn it off in magisk module
+
 **Use Revanced cli**
 ---
 
