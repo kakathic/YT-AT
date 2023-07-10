@@ -7,6 +7,7 @@
 Tof="
 -e custom-branding-name
 -e custom-branding-icon-afn-red
+-e custom-branding-youtube-name
 "
 
 # check vison
