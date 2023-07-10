@@ -43,7 +43,7 @@ checkzip "lib/revanced-patches.jar"
 checkzip "lib/revanced-integrations.apk"
 echo
 
-java -jar "$lib1" -a "$lib3" -b "$lib2" -l --with-packages
+java -jar "$lib1" -a "$lib3" -b "$lib2" -l --with-versions
 echo
 
 
