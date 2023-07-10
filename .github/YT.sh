@@ -43,6 +43,11 @@ checkzip "lib/revanced-patches.jar"
 checkzip "lib/revanced-integrations.apk"
 echo
 
+java -jar "$lib1" -a "$lib3" -b "$lib2" --help
+
+echo
+
+
 # Load dữ liệu cài đặt 
 . $HOME/.github/options/YouTube.md
 
