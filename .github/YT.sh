@@ -7,7 +7,7 @@ lib3="lib/revanced-integrations.apk"
 pbsta(){
 Vsion1="$(Xem https://github.com/revanced/$1 | grep -om1 'revanced/'$1'/releases/tag/.*\"' | sed -e 's|dev|zzz|g' -e 's|v||g' -e 's|zzz|dev|g' -e 's|\"||g')"
 Taive "https://github.com/revanced/$1/releases/download/v${Vsion1##*/}/$1-${Vsion1##*/}$3.$2" "lib/$1.$2"; 
-echo "Url: https://github.com/revanced/$1/releases/download/v${Vsion1##*/}/$1-${Vsion1##*/}$3.$2"
+echo "Version:$Vsion1 Url: https://github.com/revanced/$1/releases/download/v${Vsion1##*/}/$1-${Vsion1##*/}$3.$2"
 }
  
 # tải tool dev
