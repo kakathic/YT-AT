@@ -10,7 +10,7 @@ cd $HOME
 
 # Tạo thư mục
 mkdir -p apk lib tmp jar Tav Up
-User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
+User="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"
 
 # Tính năng 
 for kskn in $FEATURE; do
