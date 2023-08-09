@@ -35,7 +35,10 @@ break
 else
 sleep 1
 gfdgv=$(($gfdgv + 1))
-[ "$gfdgv" == 200 ] && ( echo "- Quá thời gian cho phép..."; exit 1; )
+if [ "$gfdgv" == 200 ];then
+echo "- Quá thời gian cho phép...";
+exit 1;
+fi
 fi
 done; }
 echo
