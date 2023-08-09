@@ -23,8 +23,8 @@ urrl="https://www.apkmirror.com"
 uak1="$urrl$(Xem "$urrl/apk/$2" | grep -m1 'downloadButton' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
 uak2="$urrl$(Xem "$uak1" | grep -m1 '>here<' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
 Taive "$uak2" "apk/$1"
-file apk/$1
-echo > "apk/$1.txt"; }
+
+[ "$(file apk/$1 | grep -cm1 'Zip')" == 1 ] && echo > "apk/$1.txt"; }
 
 # Tải tool cli
 echo "- Tải tool cli, patches, integrations..."
