@@ -8,6 +8,7 @@ MODPATH="${0%/*}"
 
 if [ "$(ls -l $MODPATH/base.apk | awk '{print $5}')" == "$(cat $MODPATH/SIZE)" ];then
 mountYT "$MODPATH/YouTube.apk" "$(linkAPK)"
+cpLIB $MODPATH/lib "$(linkAPK)"
 offCH
 else
 installYT $MODPATH/base.apk
