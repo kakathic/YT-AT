@@ -26,11 +26,11 @@ ZHex(){ xxd -r -p "$@"; }
 apksign () { java -jar $HOME/.github/Tools/apksigner.jar sign --cert "$HOME/.github/Tools/testkey.x509.pem" --key "$HOME/.github/Tools/testkey.pk8" --out "$2" "$1"; }
 Upenv(){ echo "$1=$2" >> $GITHUB_ENV; }
 checkfile(){ [ -e "$1" ] && echo "  Ok ${1##*/}" || ( echo "- Lỗi không không thấy file ${1##*/}"; exit 1 ); }
-checkzip(){ [ "$(file $1 | grep -cm1 'Zip')" == 1 ] && echo "  Zip ok ${1##*/}" || ( echo "- Lỗi zip ${1##*/}"; exit 1; ); }
+checkzip(){ [ "$(file $1 | grep -cm1 'Zip')" == 1 ] && echo "Zip ok ${1##*/}" || ( echo "- Lỗi zip ${1##*/}"; exit 1; ); }
 Loading(){
 while true; do
 if [ -e "$1" ] && [ -e "$2" ];then
-echo "  Xác nhận file ok"
+echo "Xác nhận file ok"
 break
 else
 sleep 1
