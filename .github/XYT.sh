@@ -5,17 +5,17 @@ lib3="lib/revanced-integrations.apk"
 
 # Tải tool sta
 pbsta(){
-Vsion1="$(Xem https://github.com/inotia00/$1 | grep -om1 'inotia00/'$1'/releases/tag/.*\"' | sed -e 's|dev|zzz|g' -e 's|v||g' -e 's|zzz|dev|g' -e 's|\"||g')"
-Taive "https://github.com/inotia00/$1/releases/download/v${Vsion1##*/}/$1-${Vsion1##*/}$3.$2" "lib/$1.$2"; 
+Vsion1="$(Xem https://github.com/YT-Advanced/$1 | grep -om1 'YT-Advanced/'$1'/releases/tag/.*\"' | sed -e 's|dev|zzz|g' -e 's|v||g' -e 's|zzz|dev|g' -e 's|\"||g')"
+Taive "https://github.com/YT-Advanced/$1/releases/download/v${Vsion1##*/}/$1-${Vsion1##*/}$3.$2" "lib/$1.$2"; 
 
-echo "- Url: https://github.com/inotia00/$1/releases/download/v${Vsion1##*/}/$1-${Vsion1##*/}$3.$2
+echo "- Url: https://github.com/YT-Advanced/$1/releases/download/v${Vsion1##*/}/$1-${Vsion1##*/}$3.$2
 "
 }
 
 # tải tool dev
 pbdev(){
-Vsion2="$(Xem https://github.com/inotia00/$1/releases | grep -om1 'inotia00/'$1'/releases/tag/.*dev*..\"' | sed -e 's|dev|zzz|g' -e 's|v||g' -e 's|zzz|dev|g' -e 's|\"||g')"
-Taive "https://github.com/inotia00/$1/releases/download/v${Vsion2##*/}/$1-${Vsion2##*/}$3.$2" "lib/$1.$2"; }
+Vsion2="$(Xem https://github.com/YT-Advanced/$1/releases | grep -om1 'YT-Advanced/'$1'/releases/tag/.*dev*..\"' | sed -e 's|dev|zzz|g' -e 's|v||g' -e 's|zzz|dev|g' -e 's|\"||g')"
+Taive "https://github.com/YT-Advanced/$1/releases/download/v${Vsion2##*/}/$1-${Vsion2##*/}$3.$2" "lib/$1.$2"; }
 
 # tải apk
 TaiYT(){
@@ -31,15 +31,15 @@ echo "- Tải tool cli, patches, integrations..."
 if [ "$DEV" == "Develop" ];then
 echo "  Dùng Dev"
 echo
-pbdev revanced-cli jar -all
-pbdev revanced-patches jar
-pbdev revanced-integrations apk
+pbdev ReX-cli jar -all
+pbdev ReX-patches jar
+pbdev ReX-integrations apk
 else
 echo "  Dùng Sta"
 echo
-pbsta revanced-cli jar -all
-pbsta revanced-patches jar
-pbsta revanced-integrations apk
+pbsta ReX-cli jar -all
+pbsta ReX-patches jar
+pbsta ReX-integrations apk
 fi
 
 # kiểm tra tải tool
