@@ -35,7 +35,7 @@ break
 else
 sleep 1
 gfdgv=$(($gfdgv + 1))
-if [ "$gfdgv" == 200 ];then
+if [ "$gfdgv" == 250 ];then
 echo "- Quá thời gian cho phép...";
 exit 1;
 fi
