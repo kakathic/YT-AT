@@ -36,7 +36,7 @@ else
 sleep 1
 gfdgv=$(($gfdgv + 1))
 if [ "$gfdgv" == 200 ];then
-echo "- Quá thời gian cho phép...";
+echo "- Quá thời gian cho phép, hoặc thiếu file apk...";
 exit 1;
 fi
 fi
