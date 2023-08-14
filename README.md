@@ -1,7 +1,7 @@
 
-# YT-AT [![YT-AT](https://github.com/kakathic/YT-AT/actions/workflows/Auto.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/Auto.yml)
+# YT-AT <br/>[![YT-RE](https://github.com/kakathic/YT-AT/actions/workflows/Install.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/Install.yml) [![YT-AT](https://github.com/kakathic/YT-AT/actions/workflows/Auto.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/Auto.yml)
 
-# YT-EXT [![YT-EXT AUTO](https://github.com/kakathic/YT-AT/actions/workflows/XAuto.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/XAuto.yml)
+# YT-EXT <br/>[![YT-EXT](https://github.com/kakathic/YT-AT/actions/workflows/XInstall.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/XInstall.yml) [![YT-EXT AUTO](https://github.com/kakathic/YT-AT/actions/workflows/XAuto.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/XAuto.yml)
  
 - YouTube mod tool auto, and auto update.
 
