@@ -5,17 +5,16 @@ lib3="lib/revanced-integrations.apk"
 
 # Tải tool sta
 pbsta(){
-Vsion1="$(Xem https://github.com/YT-Advanced/$1 | grep -om1 'YT-Advanced/'$1'/releases/tag/.*\"' | sed -e 's|dev|zzz|g' -e 's|v||g' -e 's|zzz|dev|g' -e 's|\"||g')"
-Taive "https://github.com/YT-Advanced/$1/releases/download/v${Vsion1##*/}/$1-${Vsion1##*/}$3.$2" "lib/$1.$2"; 
-
-echo "- Url: https://github.com/YT-Advanced/$1/releases/download/v${Vsion1##*/}/$1-${Vsion1##*/}$3.$2
+Vsion1="$(Xem https://github.com/$1 | grep -om1 ''$1'/releases/tag/.*\"' | sed -e 's|dev|zzz|g' -e 's|v||g' -e 's|zzz|dev|g' -e 's|\"||g')"
+Taive "https://github.com/$1/releases/download/v${Vsion1##*/}/$2-${Vsion1##*/}$4.$3" "lib/$2.$3"; 
+echo "- Url: https://github.com/$1/releases/download/v${Vsion1##*/}/$2-${Vsion1##*/}$4.$3
 "
 }
 
 # tải tool dev
 pbdev(){
-Vsion2="$(Xem https://github.com/YT-Advanced/$1/releases | grep -om1 'YT-Advanced/'$1'/releases/tag/.*dev*..\"' | sed -e 's|dev|zzz|g' -e 's|v||g' -e 's|zzz|dev|g' -e 's|\"||g')"
-Taive "https://github.com/YT-Advanced/$1/releases/download/v${Vsion2##*/}/$1-${Vsion2##*/}$3.$2" "lib/$1.$2"; }
+Vsion2="$(Xem https://github.com/$1/releases | grep -om1 ''$1'/releases/tag/.*dev*..\"' | sed -e 's|dev|zzz|g' -e 's|v||g' -e 's|zzz|dev|g' -e 's|\"||g')"
+Taive "https://github.com/$1/releases/download/v${Vsion2##*/}/$2-${Vsion2##*/}$4.$3" "lib/$2.$3"; }
 
 # tải apk
 TaiYT(){
@@ -31,15 +30,15 @@ echo "- Tải tool cli, patches, integrations..."
 if [ "$DEV" == "Develop" ];then
 echo "  Dùng Dev"
 echo
-pbdev ReX-cli jar -all
-pbdev ReX-patches jar
-pbdev ReX-integrations apk
+pbdev inotia00/revanced-cli revanced-cli jar -all
+pbdev YT-Advanced/ReX-patches revanced-patches jar
+pbdev YT-Advanced/ReX-integrations revanced-integrations apk
 else
 echo "  Dùng Sta"
 echo
-pbsta ReX-cli jar -all
-pbsta ReX-patches jar
-pbsta ReX-integrations apk
+pbsta inotia00/revanced-cli revanced-cli jar -all
+pbsta YT-Advanced/ReX-patches revanced-patches jar
+pbsta YT-Advanced/ReX-integrations revanced-integrations apk
 fi
 
 # kiểm tra tải tool
