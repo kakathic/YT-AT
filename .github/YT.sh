@@ -146,8 +146,8 @@ cp -rf $vak test
 XHex test | sed -e "s/$(echo -n "$Vidon" | XHex)/$(echo -n "$VERSION" | XHex)/" | ZHex > $vak
 done
 cd $HOME/jar
-rm lib/revanced-patches.jar
-zip -q -r "lib/revanced-patches.jar" *
+rm -fr $lib2
+zip -q -r "$lib2" *
 cd $HOME
 fi
 
