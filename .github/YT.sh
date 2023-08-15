@@ -140,13 +140,13 @@ zip -qr apk/YouTube.apk -d $lib
 # Xử lý revanced patches
 if [ "$Vidon" != "$VER" ];then
 echo "- Chuyển đổi phiên bản $VER"
-ls -lh lib/revanced-patches.jar
 unzip -qo "lib/revanced-patches.jar" -d $HOME/jar
 for vak in $(grep -Rl "$Vidon" $HOME/jar); do
 cp -rf $vak test
 XHex test | sed -e "s/$(echo -n "$Vidon" | XHex)/$(echo -n "$VERSION" | XHex)/" | ZHex > $vak
 done
 cd $HOME/jar
+rm lib/revanced-patches.jar
 zip -q -r "lib/revanced-patches.jar" *
 cd $HOME
 fi
