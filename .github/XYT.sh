@@ -99,7 +99,7 @@ exit 0
 fi
 else
 VER="$VERSION"
-Kad=News
+Kad=Edit
 V=N
 fi
 
