@@ -139,6 +139,7 @@ mv -f Tav/lib/$DEVICE Tav/lib/$ach
 unzip -qo apk/YouTube.apks 'base.apk' -d Tav
 zip -qr apk/YouTube.apk -d $lib
 
+if [ "$(java -jar "$lib1" -a "$lib3" -b "$lib2" -l --with-versions | grep -m1 "custom-playback-speed" | grep -cm1 "$VER")" != 1 ]; then
 # Xử lý revanced patches
 if [ "$Vidon" != "$VER" ];then
 echo "- Chuyển đổi phiên bản $VER"
@@ -148,9 +149,9 @@ cp -rf $vak test
 XHex test | sed -e "s/$(echo -n "$Vidon" | XHex)/$(echo -n "$VERSION" | XHex)/" | ZHex > $vak
 done
 cd jar
-ls
 zip -qr "lib/revanced-patches.jar" *
 cd $HOME
+fi
 fi
 
 # MOD YouTube 
