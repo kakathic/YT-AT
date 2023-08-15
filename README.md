@@ -1,7 +1,7 @@
 
 # YT-AT <br/>[![YT-RE](https://github.com/kakathic/YT-AT/actions/workflows/Install.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/Install.yml) [![YT-AT](https://github.com/kakathic/YT-AT/actions/workflows/Auto.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/Auto.yml)
 
-# YT-EXT <br/>[![YT-EXT](https://github.com/kakathic/YT-AT/actions/workflows/XInstall.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/XInstall.yml) [![YT-EXT AUTO](https://github.com/kakathic/YT-AT/actions/workflows/XAuto.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/XAuto.yml)
+# YT-EXT <br/>[![YT-EXT](https://github.com/kakathic/YT-AT/actions/workflows/XInstall.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/XInstall.yml) [![EXT-AUTO](https://github.com/kakathic/YT-AT/actions/workflows/XAuto.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/XAuto.yml)
 
 > Notes Error nearest: YT-EXT temporarily the apk source does not have an apkm file in some versions will repair itself if their source uploads the apkm file
 
