@@ -50,6 +50,7 @@ echo
 
 java -jar "$lib1" -a "$lib3" -b "$lib2" -l --with-versions | grep -m1 'copy-video-url'
 echo
+chmod 777 $lib2
 
 # Load dữ liệu cài đặt 
 . $HOME/.github/options/YouTube.md
@@ -140,14 +141,14 @@ zip -qr apk/YouTube.apk -d $lib
 # Xử lý revanced patches
 if [ "$Vidon" != "$VER" ];then
 echo "- Chuyển đổi phiên bản $VER"
-unzip -qo "lib/revanced-patches.jar" -d $HOME/jar
+unzip -qo "$lib2" -d $HOME/jar
 for vak in $(grep -Rl "$Vidon" $HOME/jar); do
 cp -rf $vak test
 XHex test | sed -e "s/$(echo -n "$Vidon" | XHex)/$(echo -n "$VERSION" | XHex)/" | ZHex > $vak
 done
 cd $HOME/jar
 rm -fr $lib2
-zip -q -r "$lib2" *
+zip -q -o -r "$lib2" *
 cd $HOME
 fi
 
