@@ -100,7 +100,7 @@ fi
 else
 VER="$VERSION"
 Kad=News
-V=N
+V=V
 fi
 
 Upenv V "$V"
