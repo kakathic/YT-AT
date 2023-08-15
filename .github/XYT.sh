@@ -48,7 +48,7 @@ checkzip "lib/revanced-integrations.apk"
 echo
 
 # kiểm tra chi tiết
-ls -lh lib
+#ls -lh lib
 
 java -jar "$lib1" -a "$lib3" -b "$lib2" -l --with-versions | grep -m1 "custom-playback-speed"
 echo
