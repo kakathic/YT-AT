@@ -105,7 +105,7 @@ Upenv Kad "$Kad"
 Upenv VER "$VER"
 echo
 
-echo "- Tải YouTube apk, apks..."
+echo "- Tải YouTube $VER apk, apks..."
 # Tải YouTube apk
 kkk1="google-inc/youtube/youtube-${VER//./-}-release/youtube-${VER//./-}-2-android-apk-download"
 kkk2="google-inc/youtube/youtube-${VER//./-}-release/youtube-${VER//./-}-android-apk-download"
