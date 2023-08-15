@@ -47,6 +47,9 @@ checkzip "lib/revanced-patches.jar"
 checkzip "lib/revanced-integrations.apk"
 echo
 
+# kiểm tra chi tiết
+ls -lh lib
+
 java -jar "$lib1" -a "$lib3" -b "$lib2" -l --with-versions | grep -m1 "custom-playback-speed"
 echo
 
@@ -54,7 +57,7 @@ echo
 . $HOME/.github/options/Ytx.md
 
 # lấy dữ liệu phiên bản mặc định
-echo "- Lấy dữ liệu phiên bản YouTube..."
+echo "- Lấy dữ liệu phiên bản YouTube mới nhất..."
 for kck in $Vik; do
 Vidon="$(java -jar "$lib1" -a "$lib3" -b "$lib2" -l --with-versions | grep -m1 "$kck" | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
 [ "$Vidon" ] && break
@@ -115,9 +118,6 @@ TaiYT 'YouTube.apk' "$kkk1" & TaiYT 'YouTube.apks' "$kkk2"
 
 # Chờ tải xong
 Loading apk/YouTube.apk.txt apk/YouTube.apks.txt
-
-# kiểm tra chi tiết apk
-ls -lh apk
 
 # Xem xét apk
 if [ "$(unzip -l apk/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
