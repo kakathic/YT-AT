@@ -1,4 +1,4 @@
-name: YT-EXT AUTO
+name: EXT-AUTO
 on:
   workflow_dispatch:
   push:
