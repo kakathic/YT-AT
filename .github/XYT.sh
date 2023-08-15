@@ -57,7 +57,7 @@ echo
 . $HOME/.github/options/Ytx.md
 
 # lấy dữ liệu phiên bản mặc định
-echo "- Lấy dữ liệu phiên bản YouTube mới nhất..."
+echo "- Patches YouTube mới nhất..."
 for kck in $Vik; do
 Vidon="$(java -jar "$lib1" -a "$lib3" -b "$lib2" -l --with-versions | grep -m1 "$kck" | tr ' ' '\n' | sed -e "s| |\n|g" | tail -n2 | sed -e "s|\n||g")"
 [ "$Vidon" ] && break
@@ -141,13 +141,14 @@ zip -qr apk/YouTube.apk -d $lib
 
 # Xử lý revanced patches
 if [ "$Vidon" != "$VER" ];then
-echo "- Chuyển đổi phiên bản thành $VER"
+echo "- Chuyển đổi phiên bản $VER"
 unzip -qo "lib/revanced-patches.jar" -d jar
 for vak in $(grep -Rl "$Vidon" jar); do
 cp -rf $vak test
 XHex test | sed -e "s/$(echo -n "$Vidon" | XHex)/$(echo -n "$VERSION" | XHex)/" | ZHex > $vak
 done
 cd jar
+ls
 zip -qr "lib/revanced-patches.jar" *
 cd $HOME
 fi
