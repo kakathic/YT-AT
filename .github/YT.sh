@@ -148,7 +148,7 @@ XHex test | sed -e "s/$(echo -n "$Vidon" | XHex)/$(echo -n "$VERSION" | XHex)/" 
 done
 cd $HOME/jar
 rm -fr $lib2
-zip -q -o -r "$lib2" *
+zip -r "$lib2" *
 cd $HOME
 fi
 
