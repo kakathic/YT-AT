@@ -116,6 +116,9 @@ TaiYT 'YouTube.apk' "$kkk1" & TaiYT 'YouTube.apks' "$kkk2"
 # Chờ tải xong
 Loading apk/YouTube.apk.txt apk/YouTube.apks.txt
 
+# kiểm tra chi tiết apk
+ls -lh apk
+
 # Xem xét apk
 if [ "$(unzip -l apk/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
 echo "! Thay đổi apks thành apk."
