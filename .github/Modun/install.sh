@@ -50,7 +50,7 @@ ui_print
 
 cp -f $TMPDIR/sqlite3 $MODPATH/sqlite3 >&2
 cp -f $TMPDIR/YT.sh $MODPATH >&2
-[ -e /vendor/overlay/YT.apk ] || unzip -qo "$ZIPFILE" "system/*" -d $MODPATH >&2
+[ -e /vendor/overlay/Pip.apk ] || unzip -qo "$ZIPFILE" "system/*" -d $MODPATH >&2
 chmod -R 755 $MODPATH/sqlite3
 
 checkYT
