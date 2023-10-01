@@ -1,8 +1,8 @@
 
-**Use Revanced cli**
+**CHANGE PROJECT LINK**
 ---
 
-**- The project has moved to a new account**
+**- Because the old account has been lost, so the project has moved to a new home:
 
 
-   > [Home Page](https://github.com/Zelooooo/AT-YT)
+   > [New Home](https://github.com/Zelooooo/AT-YT)
